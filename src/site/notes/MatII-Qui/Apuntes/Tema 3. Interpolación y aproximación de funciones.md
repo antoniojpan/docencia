@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/mat-ii-qui/apuntes/tema-3-interpolacion-y-aproximacion-de-funciones/","updated":"2025-09-15T10:05:23.176+02:00"}
+{"dg-publish":true,"permalink":"/mat-ii-qui/apuntes/tema-3-interpolacion-y-aproximacion-de-funciones/","updated":"2026-01-08T11:53:24.864+01:00"}
 ---
 
 
@@ -28,6 +28,7 @@ En muchas ocasiones, tras realizar medidas experimentales, obtenemos una tabla d
 | $x_3$ | $y_3$ |
 | ⋮     | ⋮     |
 | $x_n$ | $y_n$ |
+
 Frecuentemente, necesitamos más información de la función:
 - Aproximación analítica.
 - Estimación de derivadas en los puntos conocidos.
@@ -77,7 +78,7 @@ P_N (x) = d_1 + d_{1,2} (x - x_1) + d_{1,2,3} (x - x_1)(x - x_2) + d_{1,2,3,4} (
 $$
 ### Ejemplo
 Dados los puntos (1, 2), (3, 3), (4, 2) y (8, 10), se quiere obtener el polinomio interpolador que pasa por ellos. Hallarlo por medio de las diferencias divididas de Newton.
-![[Pasted image 20250223131312.png\|Pasted image 20250223131312.png]]
+![Pasted image 20250223131312.png](/img/user/imagenes/Pasted%20image%2020250223131312.png)
 $$
 P_N(x) = 2 + \frac{1}{2}(x - 1) - \frac{1}{2}(x - 1)(x - 3) + \frac{11}{70}(x - 1)(x - 3)(x - 4)
 $$
@@ -146,7 +147,7 @@ $$
   d_{2i-1,2i} = y_i', \quad i = 1, 2, \ldots, n.
   $$
 	Pares  
-	$$
+$$
 	  d_{2i,2i+1} = \frac{d_{2i+1} - d_{2i}}{z_{2i+1} - z_{2i}}, \quad i = 1, 2, \ldots, n - 1.
 	$$
 - **A partir de la cuarta columna:** Se construyen como las diferencias divididas de Newton.
@@ -201,45 +202,45 @@ El _overfitting_ ocurre cuando un modelo se ajusta demasiado a los datos, captur
 
 ## 5. Ejercicios
 
-10. En una estación de metro pasan convoyes cada 10 minutos durante las primeras horas de la mañana. A las 8:00 suben al convoy 30 personas, 26 a las 8:30 y 21 a las 9:00. Estima (usando el polinomio de interpolación de Newton) cuántas personas suben a las 8:20.
+1. En una estación de metro pasan convoyes cada 10 minutos durante las primeras horas de la mañana. A las 8:00 suben al convoy 30 personas, 26 a las 8:30 y 21 a las 9:00. Estima (usando el polinomio de interpolación de Newton) cuántas personas suben a las 8:20.
 
-11. Se considera la función $f(x) = 5^x$.  
+2. Se considera la función $f(x) = 5^x$.  
    - (a) Utilizar el método de diferencias divididas de Newton para calcular el polinomio de interpolación de los puntos $(-1, f(-1))$, $(0, f(0))$ y $(1, f(1))$.  
    - (b) Utilízalo para dar una aproximación de $\sqrt{5}$ y calcular el error cometido.  
 
-12. Se consideran los puntos $Q_1 = (2,3)$, $Q_2 = (4,-1)$, $Q_3 = (6,4)$, $Q_4 = (8,0)$ y $Q_5 = (10,-1)$.  
+3. Se consideran los puntos $Q_1 = (2,3)$, $Q_2 = (4,-1)$, $Q_3 = (6,4)$, $Q_4 = (8,0)$ y $Q_5 = (10,-1)$.  
    - (a) Calcular el polinomio de interpolación de los puntos $Q_1, Q_2, Q_3, Q_4$ usando las diferencias divididas de Newton.  
    - (b) Utilizar las diferencias divididas del apartado anterior para calcular el polinomio de interpolación de los puntos $Q_1, Q_2, Q_3, Q_4, Q_5$.  
 
-13. Consideremos la función $f(x) = e^{\sin x}$.  
+4. Consideremos la función $f(x) = e^{\sin x}$.  
    - (a) Utilizar el método de las diferencias divididas de Newton para calcular su polinomio de interpolación en los mismos puntos.  
    - (c) Calcular el error cometido al considerar el valor $p(1.5)$ como aproximación de $f(1.5)$.
 
-14. Se considera la función $f(x) = \ln(1 + x)$.  
+5. Se considera la función $f(x) = \ln(1 + x)$.  
    - (a) Calcular el polinomio de interpolación de Hermite en los puntos $x_1 = 0$, $x_2 = 1$, $x_3 = 2$.  
    - (b) Dar una aproximación de $\ln(2.5)$.  
 
-15. Consideremos la función $f(x) = \frac{x}{1 + x^2}$.  
+6. Consideremos la función $f(x) = \frac{x}{1 + x^2}$.  
    - (a) Utilizar el método de las diferencias divididas de Newton para calcular su polinomio de interpolación en los mismos puntos.  
    - (c) Aproximar $f(1.5)$.
 
-16. Sea $f(x) = \sin x$.  
+7. Sea $f(x) = \sin x$.  
    - (a) Utilizar el método de las diferencias divididas de Newton para calcular su polinomio de interpolación en $x_0 = 0$, $x_1 = \frac{\pi}{6}$, $x_2 = \frac{\pi}{4}$, $x_3 = \frac{\pi}{2}$.  
    - (b) Utilizar el polinomio de interpolación de Hermite en los puntos $x_0$ y $x_2$.  
 
-17. Sea $f(x) = \cos x$.  
+8. Sea $f(x) = \cos x$.  
    - (a) Calcular el polinomio de interpolación de Hermite en los mismos puntos que antes.  
    - (b) Obtener la aproximación del valor $\cos\left(\frac{\pi}{4}\right)$.
 
-18. Dada la función $f(x) = 2^{1/x}$.  
+9. Dada la función $f(x) = 2^{1/x}$.  
    - (a) Hallar el polinomio de interpolación de $f(x)$ sobre el conjunto de puntos $x_0 = 0.5$, $x_1 = 1$, $x_2 = 1.5$, $x_3 = 2$ y $x_4 = 2.5$, mediante el método de las diferencias divididas de Newton.  
    - (b) Usar dicho polinomio para calcular un valor aproximado de $\sqrt{2}$. Hallar una estimación del error cometido.  
 
-19. Utilizar el método de Hermite para hallar un polinomio $P(x)$ que satisfaga $P(-1) = -1$, $P'(-1) = 14$, $P(2) = 4$ y $P'(2) = 5$.  
+10. Utilizar el método de Hermite para hallar un polinomio $P(x)$ que satisfaga $P(-1) = -1$, $P'(-1) = 14$, $P(2) = 4$ y $P'(2) = 5$.  
 
-20. Calcular $f\left(\frac{1}{8}\right)$ a partir de una aproximación de la función $f(x) = \tan(\pi x)$ con el polinomio de interpolación de Hermite en los puntos $0$ y $\frac{1}{4}$.  
+11. Calcular $f\left(\frac{1}{8}\right)$ a partir de una aproximación de la función $f(x) = \tan(\pi x)$ con el polinomio de interpolación de Hermite en los puntos $0$ y $\frac{1}{4}$.  
 
-21. Calcular el polinomio de Hermite que interpola la siguiente tabla:  
+12. Calcular el polinomio de Hermite que interpola la siguiente tabla:  
 
 | x   | y   | y'  |     |
 | --- | --- | --- | --- |
