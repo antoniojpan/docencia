@@ -70,7 +70,7 @@ P_N(x) = d_1 + d_{1,2}(x - x_1) + d_{1,2,3}(x - x_1)(x - x_2) + \cdots + d_{1,2,
 $$
 
 El cálculo de las diferencias divididas puede llevarse a cabo de forma sencilla mediante la construcción de una tabla. Por ejemplo, si tenemos $n = 5$, la tabla nos quedaría de la siguiente forma:  
-![[Pasted image 20250223130645.png\|Pasted image 20250223130645.png]]
+![Pasted image 20250223130645.png](/img/user/imagenes/Pasted%20image%2020250223130645.png)
 El polinomio de interpolación tiene la forma:
 $$
 P_N (x) = d_1 + d_{1,2} (x - x_1) + d_{1,2,3} (x - x_1)(x - x_2) + d_{1,2,3,4} (x - x_1)(x - x_2)(x - x_3)+d_{1,2,3,4,5}(x - x_1)(x - x_2)(x - x_3)(x-x_4)

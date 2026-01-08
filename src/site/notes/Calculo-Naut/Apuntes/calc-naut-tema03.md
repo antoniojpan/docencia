@@ -13,7 +13,7 @@
 ## 1. Integrales Dobles
 
 **Idea:** De manera análoga a cómo en una variable sumamos una infinidad de rectángulos diminutos para calcular el área bajo una curva, en el cálculo de varias variables extendemos este concepto. Con las integrales dobles, sumamos una infinidad de prismas rectangulares infinitesimalmente delgados para determinar el volumen total que se encuentra bajo una superficie.
-![[Pasted image 20251124121347.png\|600]]
+![Pasted image 20251124121347.png|600](/img/user/imagenes/Pasted%20image%2020251124121347.png)
 ### Teorema de Fubini
 Permite calcular integrales dobles como integrales iteradas (o sucesivas).
 - **Sobre Rectángulos**: Si $\Omega = [a,b] \times [c,d]$: 

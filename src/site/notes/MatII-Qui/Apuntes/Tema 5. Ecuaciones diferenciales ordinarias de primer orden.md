@@ -94,9 +94,9 @@ $$
 y' = F(x, y)
 $$
 se puede interpretar como un campo de direcciones en $\mathbb{R}^2$. En cada punto $(x, y)$, la ecuación define la pendiente de una recta tangente. Al dibujar estas direcciones en varios puntos, obtenemos un campo de direcciones, que nos da una idea visual del comportamiento de las soluciones.
-![[Pasted image 20250330094204.png\|Pasted image 20250330094204.png]]
+![Pasted image 20250330094204.png](/img/user/imagenes/Pasted%20image%2020250330094204.png)
 Las soluciones de la ecuación son curvas cuya derivada en cada punto coincide con la dirección del campo. Es decir, son trayectorias tangentes a los vectores del campo de direcciones (curvas negras de la siguiente imagen). Cuando se impone una condición inicial $y(x_0) = y_0$, es decir, un PVI, se selecciona una única curva de solución que pasa por $(x_0, y_0)$ (la curva roja).
-![[Pasted image 20250330094315.png\|Pasted image 20250330094315.png]]
+![Pasted image 20250330094315.png](/img/user/imagenes/Pasted%20image%2020250330094315.png)
 
 
 

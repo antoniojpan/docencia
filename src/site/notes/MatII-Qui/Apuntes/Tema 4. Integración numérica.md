@@ -27,7 +27,7 @@
 
 ## 1. Introducción
 Consideremos la función $f(x) = e^{-x^2}$, cuya gráfica en el intervalo $[-2, 2]$ es:
-![[Pasted image 20250210090748.png\|600]]
+![Pasted image 20250210090748.png|600](/img/user/imagenes/Pasted%20image%2020250210090748.png)
 **¿Cómo calcularías el área que encierra dicha función con el eje $OX$?**
 Sabemos que dicha área corresponde con el valor de la integral:
 $$
