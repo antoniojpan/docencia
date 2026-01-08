@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/mat-ii-qui/apuntes/tema-3-interpolacion-y-aproximacion-de-funciones/","updated":"2026-01-08T11:53:24.864+01:00"}
+{"dg-publish":true,"permalink":"/mat-ii-qui/apuntes/tema-3-interpolacion-y-aproximacion-de-funciones/","updated":"2026-01-08T13:37:57.178+01:00"}
 ---
 
 
@@ -151,6 +151,7 @@ $$
 	  d_{2i,2i+1} = \frac{d_{2i+1} - d_{2i}}{z_{2i+1} - z_{2i}}, \quad i = 1, 2, \ldots, n - 1.
 	$$
 - **A partir de la cuarta columna:** Se construyen como las diferencias divididas de Newton.
+
 
 El polinomio de Hermite viene dado por:
 $$
