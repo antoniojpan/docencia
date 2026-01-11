@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/calculo-naut/apuntes/calc-naut-tema03/","updated":"2026-01-07T10:12:12.907+01:00"}
+{"dg-publish":true,"permalink":"/calculo-naut/apuntes/calc-naut-tema03/","updated":"2026-01-11T17:50:40.804+01:00"}
 ---
 
 [[Calculo-Naut/calc-naut-indice\|volver al índice]]
@@ -50,11 +50,76 @@ Se calculan de forma análoga a las dobles, usando el Teorema de Fubini.
     
     $$\iiint_{\Omega} f(x,y,z) \, dV = \int_a^b \int_c^d \int_e^f f(x,y,z) \, dz \, dy \, dx \quad \text{(y los otros 5 órdenes)}$$
     
+Ejemplo: Calcular la integral de la función $f(x,y,z) = x + yz$ sobre la caja $B = [0,1] \times [0,2] \times [0,1]$.
+Al ser una caja rectangular, los límites son constantes. Podemos elegir cualquier orden. Usaremos el orden $dz\,dy\,dx$.
+
+$$I = \int_0^1 \int_0^2 \int_0^1 (x + yz) \, dz \, dy \, dx$$
+
+**Resolución paso a paso:**
+    $$\int_0^1 (x + yz) \, dz = \left[ xz + y\frac{z^2}{2} \right]_{z=0}^{z=1} = \left(x(1) + \frac{y}{2}\right) - 0 = x + \frac{y}{2}$$
+    $$\int_0^2 \left( x + \frac{y}{2} \right) \, dy = \left[ xy + \frac{y^2}{4} \right]_{y=0}^{y=2} = \left(2x + \frac{4}{4}\right) - 0 = 2x + 1$$
+        $$\int_0^1 (2x + 1) \, dx = \left[ x^2 + x \right]_0^1 = (1+1) - 0 = \mathbf{2}$$
+    
+
 - Sobre Regiones Generales: Si $W \subset \mathbb{R}^3$ se proyecta sobre una región $\Omega$ en el plano $XY$, y está limitada superior e inferiormente por $z=u_2(x,y)$ y $z=u_1(x,y)$:
     
     $$\iiint_W f(x,y,z) \, dV = \iint_{\Omega} \left( \int_{u_1(x,y)}^{u_2(x,y)} f(x,y,z) \, dz \right) dA$$
     - Otra forma de hacerlo consiste en  proyectar sobre el eje $z$, dando lugar a un intervalo $[a,b]$, y luego integrar la sección horizontal (rebanadas) $\Omega_z$ resultante para cada $z$:
     $$\iiint_W f(x,y,z) \, dV = \int_a^b \left( \iint_{\Omega(z)} f(x,y,z) \, dA \right) dz$$
+    Ejemplo: Imagina un tetraedro (una pirámide triangular) limitado por los planos coordenados ($x=0, y=0, z=0$) y el plano inclinado $x + y + z = 1$.
+
+El objetivo: Calcular $\iiint_W 2z \, dV$ usando el método de rebanadas horizontales.
+
+Análisis de la proyección (La "Rebanada"):
+
+En lugar de proyectar la sombra en el suelo, fijamos una altura $z$.
+
+- **Límites de $z$:** El sólido va desde el suelo ($z=0$) hasta el pico más alto donde $x=0, y=0$, por lo que $z=1$. El intervalo es $[0,1]$.
+    
+- **La sección $\Omega(z)$:** Para un $z$ fijo, cortamos la pirámide horizontalmente. La forma resultante es un **triángulo** en el plano $XY$ limitado por $x=0$, $y=0$ y la recta $x+y = 1-z$ (despejando de la ecuación del plano).
+    
+
+Planteamiento:
+
+La integral se ve así: $\int_0^1 \left[ \iint_{\Omega(z)} f(x,y,z) \, dA \right] dz$
+
+1. Resolvemos primero la integral doble (la rebanada):
+    
+    Como la función a integrar es $2z$, y dentro de la integral doble $z$ es una constante, podemos sacarla fuera de la integral interior:
+    
+    $$\iint_{\Omega(z)} 2z \, dA = 2z \cdot \iint_{\Omega(z)} 1 \, dA = 2z \cdot \text{Área}(\Omega(z))$$
+    
+    Nota: $\iint 1 dA$ es simplemente el área de la región.
+    
+    La región $\Omega(z)$ es un triángulo rectángulo con catetos de longitud $(1-z)$.
+    
+    $$\text{Área} = \frac{\text{base} \cdot \text{altura}}{2} = \frac{(1-z)(1-z)}{2} = \frac{(1-z)^2}{2}$$
+    
+    Por tanto, el resultado de la integral interior es:
+    
+    $$2z \cdot \frac{(1-z)^2}{2} = z(1-z)^2$$
+    
+2. Resolvemos la integral exterior (respecto a $z$):
+    
+    Ahora integramos ese resultado desde $z=0$ hasta $z=1$:
+    
+    $$I = \int_0^1 z(1-z)^2 \, dz$$
+    
+    Expandimos el binomio: $(1-z)^2 = 1 - 2z + z^2$. Multiplicamos por $z$:
+    
+    $$I = \int_0^1 (z - 2z^2 + z^3) \, dz$$
+    
+    Calculamos la primitiva:
+    
+    $$\left[ \frac{z^2}{2} - \frac{2z^3}{3} + \frac{z^4}{4} \right]_0^1 = \frac{1}{2} - \frac{2}{3} + \frac{1}{4}$$
+    
+    Mínimo común múltiplo (12):
+    
+    $$\frac{6}{12} - \frac{8}{12} + \frac{3}{12} = \frac{1}{12}$$
+    
+
+**Resultado Final:** $\mathbf{\frac{1}{12}}$
+
 ### Aplicaciones en Sólidos (3D)
 
 Dada una región sólida $W$ con función de densidad volumétrica $\rho(x,y,z)$:
