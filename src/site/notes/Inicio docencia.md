@@ -6,10 +6,10 @@
 ATENCIÓN: Estos documentos son unas anotaciones rápidas e informales, elaboradas durante la preparación de las clases. Por ello, puede que no estén exentas de errores. Se ruega que, ante la detección de un error, se notifique a la mayor brevedad mediante el correo del campus virtual.
 
 ## Asignaturas
-- [[MatII-Qui/Matemáticas II- Química- Índice\|Matemáticas II. Grado en Química]] 
-- [[Calculo-Naut/calc-naut-indice\|Cálculo. Grado en Náutica y Transporte Marítimo]]
-- [[Mat-CCMar/mat-CCmar-indice\|Matemáticas. Ciencias del Mar]]
-- [[Variable Compleja/VC-indice\|Variable Compleja. Matemáticas]]
+- [[04 MatII-Qui/Matemáticas II- Química- Índice\|Matemáticas II. Grado en Química]] 
+- [[01 Calculo-Naut/calc-naut-indice\|Cálculo. Grado en Náutica y Transporte Marítimo]]
+- [[02 Mat-CCMar/mat-CCmar-indice\|Matemáticas. Ciencias del Mar]]
+- [[03 Variable Compleja/VC-indice\|Variable Compleja. Matemáticas]]
 
 ## Otros
 - [[Otro material/año 24-25 sept Cálculo Num-GCCMar\|año 24-25 sept Cálculo Num-GCCMar]]
