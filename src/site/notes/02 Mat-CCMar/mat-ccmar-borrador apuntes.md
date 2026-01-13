@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/mat-ccmar-borrador-apuntes/","updated":"2025-12-01T09:45:56.071+01:00"}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/mat-ccmar-borrador-apuntes/","created":"2026-01-08T10:24:16.930+01:00","updated":"2025-12-01T09:45:56.071+01:00"}
 ---
 
 [[02 Mat-CCMar/mat-CCmar-indice\|volver al índice]]

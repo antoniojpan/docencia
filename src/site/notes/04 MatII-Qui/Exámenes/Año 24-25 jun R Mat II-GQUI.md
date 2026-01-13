@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/examenes/ano-24-25-jun-r-mat-ii-gqui/","updated":"2026-01-13T12:01:28.719+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/examenes/ano-24-25-jun-r-mat-ii-gqui/","created":"2026-01-08T10:24:16.933+01:00","updated":"2026-01-13T12:01:28.719+01:00"}
 ---
 
 #### EXAMEN MATEMÁTICAS II. GRADO EN QUÍMICA. 27 de junio de 2025

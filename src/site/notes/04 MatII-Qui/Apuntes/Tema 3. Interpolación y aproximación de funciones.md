@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-3-interpolacion-y-aproximacion-de-funciones/","updated":"2026-01-08T13:37:57.178+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-3-interpolacion-y-aproximacion-de-funciones/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-01-08T13:37:57.178+01:00"}
 ---
 
 

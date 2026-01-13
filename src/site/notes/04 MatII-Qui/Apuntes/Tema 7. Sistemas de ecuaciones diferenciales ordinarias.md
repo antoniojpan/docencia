@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-7-sistemas-de-ecuaciones-diferenciales-ordinarias/","updated":"2025-09-15T17:21:14.234+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-7-sistemas-de-ecuaciones-diferenciales-ordinarias/","created":"2026-01-08T10:24:16.931+01:00","updated":"2025-09-15T17:21:14.234+02:00"}
 ---
 
 

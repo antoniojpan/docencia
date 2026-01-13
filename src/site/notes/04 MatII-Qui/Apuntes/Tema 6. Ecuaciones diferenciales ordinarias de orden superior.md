@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-6-ecuaciones-diferenciales-ordinarias-de-orden-superior/","updated":"2025-11-08T15:54:29.357+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-6-ecuaciones-diferenciales-ordinarias-de-orden-superior/","created":"2026-01-08T10:24:16.932+01:00","updated":"2025-11-08T15:54:29.357+01:00"}
 ---
 
 

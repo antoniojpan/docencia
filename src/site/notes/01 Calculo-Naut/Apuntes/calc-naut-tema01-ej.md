@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema01-ej/","updated":"2025-11-06T10:59:25.116+01:00"}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema01-ej/","created":"2026-01-08T10:24:16.929+01:00","updated":"2025-11-06T10:59:25.116+01:00"}
 ---
 
 # Ejercicios

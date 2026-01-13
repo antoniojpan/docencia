@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/examenes/ano-23-24-mat-ii-gqui/","updated":"2025-06-05T09:26:52.329+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/examenes/ano-23-24-mat-ii-gqui/","created":"2026-01-08T10:24:16.933+01:00","updated":"2025-06-05T09:26:52.329+02:00"}
 ---
 
 #### EXAMEN MATEMÁTICAS II. GRADO EN QUÍMICA . 3 DE FEBRERO DE 2024

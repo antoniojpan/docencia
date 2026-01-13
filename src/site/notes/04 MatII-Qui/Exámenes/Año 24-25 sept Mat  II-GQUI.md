@@ -1,10 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/examenes/ano-24-25-sept-mat-ii-gqui/","created":"2026-01-08T10:24:16.933+01:00","updated":"2026-01-13T12:01:50.862+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/examenes/ano-24-25-sept-mat-ii-gqui/","created":"2026-01-08T10:24:16.933+01:00","updated":"2026-01-13T12:06:00.848+01:00"}
 ---
 
 #### EXAMEN MATEMÁTICAS II. GRADO EN QUÍMICA. 11 de septiembre de 2025
 (Duración: 2h )
-
 1. a) Se considera la función $f(x) = 5^x$. Utilizar el método de interpolación de Newton para aproximar la función mediante un polinomio, usando los puntos $(−1, f (−1)), (0, f (0))$ y $(1, f (1))$.
    b) Matando moscas a cañonazos. Todo el mundo sabe que la ecuación $x^2=2$ tiene dos soluciones, una de ellas $x=\sqrt{2}$. Usa el método de Newton-Raphson para encontrar, de manera aproximada esa solución. Empieza con la aproximación $x_0=5$, y usa tres iteraciones.
 **(2.5 puntos)**

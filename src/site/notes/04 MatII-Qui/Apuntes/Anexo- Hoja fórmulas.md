@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/anexo-hoja-formulas/","updated":"2025-09-15T10:05:23.090+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/anexo-hoja-formulas/","created":"2026-01-08T10:24:16.932+01:00","updated":"2025-09-15T10:05:23.090+02:00"}
 ---
 
 

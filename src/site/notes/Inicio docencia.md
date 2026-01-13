@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/inicio-docencia/","tags":["gardenEntry"],"updated":"2026-01-08T10:59:03.687+01:00"}
+{"dg-publish":true,"permalink":"/inicio-docencia/","tags":["gardenEntry"],"created":"2026-01-08T10:24:16.930+01:00","updated":"2026-01-08T10:59:03.687+01:00"}
 ---
 
 # Material docencia

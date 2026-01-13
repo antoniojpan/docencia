@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/matematicas-ii-quimica-indice/","updated":"2025-09-15T10:24:51.988+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/matematicas-ii-quimica-indice/","created":"2026-01-08T10:24:16.934+01:00","updated":"2025-09-15T10:24:51.988+02:00"}
 ---
 
 

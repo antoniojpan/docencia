@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-5-ecuaciones-diferenciales-ordinarias-de-primer-orden/","updated":"2025-09-15T10:05:23.236+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-5-ecuaciones-diferenciales-ordinarias-de-primer-orden/","created":"2026-01-08T10:24:16.932+01:00","updated":"2025-09-15T10:05:23.236+02:00"}
 ---
 
 

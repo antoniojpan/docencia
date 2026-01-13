@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/examenes/calc-naut-examenes/","updated":"2026-01-09T11:22:12.852+01:00"}
+{"dg-publish":true,"permalink":"/01-calculo-naut/examenes/calc-naut-examenes/","created":"2026-01-09T11:14:22.815+01:00","updated":"2026-01-09T11:22:12.852+01:00"}
 ---
 
 # Exámenes anteriores

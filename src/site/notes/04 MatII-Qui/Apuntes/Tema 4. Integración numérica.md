@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-4-integracion-numerica/","updated":"2025-09-15T10:05:23.211+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-4-integracion-numerica/","created":"2026-01-08T10:24:16.931+01:00","updated":"2025-09-15T10:05:23.211+02:00"}
 ---
 
 
