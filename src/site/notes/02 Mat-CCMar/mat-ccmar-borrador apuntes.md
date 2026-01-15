@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/mat-ccmar-borrador-apuntes/","created":"2026-01-08T10:24:16.930+01:00","updated":"2025-12-01T09:45:56.071+01:00"}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/mat-ccmar-borrador-apuntes/","created":"2026-01-08T10:24:16.930+01:00","updated":"2026-01-14T14:34:11.942+01:00"}
 ---
 
 [[02 Mat-CCMar/mat-CCmar-indice\|volver al índice]]
@@ -137,10 +137,10 @@
     
     - Ejemplo: Para $\overline{x}=3x+y$, $\overline{y}=2x+2y$, la matriz es $A = \begin{pmatrix} 3 & 1 \\ 2 & 2 \end{pmatrix}$.
         
-- La **diagonalización** es necesaria para simplificar el cálculo de $A^{20}$. La idea es cambiar a unas "series imaginarias A y B que se comportan mejor" (es decir, a un sistema independiente).
+- La **diagonalización** es necesaria para simplificar el cálculo de $A^{20}$. La idea es cambiar a unos "seres imaginarios A y B que se comportan mejor" (es decir, a un sistema con variables independiente).
     
 
-3.2 Procedimiento
+### 3.2 Procedimiento
 
 1. **Cálculo de valores propios ($\lambda$):** Resolver la ecuación característica $|(A-\lambda I)|=0$.
     
