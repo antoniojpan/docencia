@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-4-integracion-numerica/","created":"2026-01-08T10:24:16.931+01:00","updated":"2025-09-15T10:05:23.211+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-4-integracion-numerica/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-01-19T11:57:53.085+01:00"}
 ---
 
 
@@ -235,3 +235,8 @@ Error cometido:
 $$
 |E| = |1.5708 - 1.5417| \approx 0.0361
 $$
+
+### Aclaración sobre nodos, subintervalos...
+- $n$ es el número de subintervalos
+- $n+1$ es el número de nodos
+- $h$ varía según el método, pero no es que dé lugar a más _nodos_, sino a más puntos $x_i$. En trapecio los $x_i$ son todos los nodos, pero en punto medio y Simpson los nodos son solamente $x_{2i}$.

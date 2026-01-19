@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/matematicas-ii-quimica-indice/","created":"2026-01-08T10:24:16.934+01:00","updated":"2025-09-15T10:24:51.988+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/matematicas-ii-quimica-indice/","created":"2026-01-08T10:24:16.934+01:00","updated":"2026-01-19T08:36:41.049+01:00"}
 ---
 
 
@@ -18,7 +18,7 @@
 ---
 ## Exámenes
 - [[04 MatII-Qui/Exámenes/Año 23-24 Mat II-GQUI\|Año 23-24 Mat II-GQUI]] 
-- [[04 MatII-Qui/Exámenes/Año 24-25 jun Mat II-GQUI\|Año 24-25 jun Mat II-GQUI]], [[04 MatII-Qui/Exámenes/Año 24-25 jun R Mat II-GQUI\|Año 24-25 jun R Mat II-GQUI]], [[04 MatII-Qui/Exámenes/wxmaxima 24-25 Mat II-GQUI\|wxmaxima 24-25 Mat II-GQUI]]. [[04 MatII-Qui/Exámenes/Soluciones 24-25 jun Mat II-GQUI\|Soluciones 24-25 jun Mat II-GQUI]] .  
+- [[04 MatII-Qui/Exámenes/Año 24-25 jun Mat II-GQUI\|Año 24-25 jun Mat II-GQUI]], [[04 MatII-Qui/Exámenes/Año 24-25 jun R Mat II-GQUI\|Año 24-25 jun R Mat II-GQUI]], [[04 MatII-Qui/Exámenes/ev global\|04 MatII-Qui/Exámenes/ev global]]. [[04 MatII-Qui/Exámenes/Soluciones 24-25 jun Mat II-GQUI\|Soluciones 24-25 jun Mat II-GQUI]] .  
 - [[04 MatII-Qui/Exámenes/Año 24-25 sept Mat  II-GQUI\|Año 24-25 sept Mat  II-GQUI]], [[04 MatII-Qui/Exámenes/Soluciones 24-25 sept Mat II-GQUI\|Soluciones 24-25 sept Mat II-GQUI]]. [[04 MatII-Qui/Exámenes/Año 24-25 sept R Mat II-GQUI\|Año 24-25 sept R Mat II-GQUI]], [[04 MatII-Qui/Exámenes/Soluciones 24-25 sept R Mat II-GQUI\|Soluciones 24-25 sept R Mat II-GQUI]].
 
 ## Otros
