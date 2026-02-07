@@ -1,29 +1,17 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-07T13:04:37.582+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-07T13:10:17.747+01:00"}
 ---
 
 
 [[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
 # Tema 2. Métodos numéricos en ecuaciones de una variable
+
 - [[04 MatII-Qui/Apuntes/matii-quim-tema02#1. Introducción\|1. Introducción]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema02#2. Separación de los ceros de una función\|2. Separación de los ceros de una función]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#2. Separación de los ceros de una función\|Proceso para encontrar los intervalos deseados:]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#2. Separación de los ceros de una función\|Ejemplos]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema02#3. Método de la bisección\|3. Método de la bisección]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#3. Método de la bisección\|Pasos del método:]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#3. Método de la bisección\|Ventajas y desventajas:]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#3. Método de la bisección\|Ejemplo]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema02#4. Método de la “regula falsi”\|4. Método de la “regula falsi”]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#4. Método de la “regula falsi”\|Pasos del método:]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#4. Método de la “regula falsi”\|Criterio de paro:]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#4. Método de la “regula falsi”\|Ventajas y desventajas:]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#4. Método de la “regula falsi”\|Ejemplo]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema02#5. Método de Newton-Raphson\|5. Método de Newton-Raphson]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#5. Método de Newton-Raphson\|Pasos del método:]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#5. Método de Newton-Raphson\|Criterio de paro:]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#5. Método de Newton-Raphson\|Ventajas y desventajas:]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema02#5. Método de Newton-Raphson\|Ejemplo]]
-- [[04 MatII-Qui/Apuntes/matii-quim-tema02#6. Actividad académicamente dirigida\|6. Actividad académicamente dirigida]]
+- [[04 MatII-Qui/Apuntes/matii-quim-tema02#6. Ejercicios\|6. Ejercicios]]
 
 ---
 ## 1. Introducción
