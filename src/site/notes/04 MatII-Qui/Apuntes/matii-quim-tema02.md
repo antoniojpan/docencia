@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-09T07:14:58.297+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-11T12:39:59.138+01:00"}
 ---
 
 
@@ -105,17 +105,17 @@ tales que $x \in [a_n, b_n]$ para $n = 1, 2, \ldots$ y $(b_{n+1} - a_{n+1}) = \f
 ### Pasos del método:
 1. Tomamos el punto medio del intervalo $[a_n, b_n]$:
 $$
- c_n = \frac{a_n + b_n}{2}
+ x_n = \frac{a_n + b_n}{2}
  $$
-2. Si $f(c_n) = 0$, entonces $x = c_n$ y hemos terminado.
-3. Si $f(c_n) \neq 0$, entonces:
-    a. Si $f(a_n) \cdot f(c_n) < 0$, escogemos como nuevo intervalo $[a_{n+1}, b_{n+1}] = [a_n, c_n]$.
-    b. Si $f(c_n) \cdot f(b_n) < 0$, escogemos como nuevo intervalo $[a_{n+1}, b_{n+1}] = [c_n, b_n]$.
+2. Si $f(x_n) = 0$, entonces $x = c_n$ y hemos terminado.
+3. Si $f(x_n) \neq 0$, entonces:
+    a. Si $f(a_n) \cdot f(x_n) < 0$, escogemos como nuevo intervalo $[a_{n+1}, b_{n+1}] = [a_n, x_n]$.
+    b. Si $f(x_n) \cdot f(b_n) < 0$, escogemos como nuevo intervalo $[a_{n+1}, b_{n+1}] = [x_n, b_n]$.
     c. Volvemos al paso 1 con el intervalo escogido.
 
-Después de realizar $n$ pasos o iteraciones, la solución debe estar en el intervalo $[a_n, b_n]$ de longitud $\frac{(b - a)}{2^n}$. Si tomamos $c_n = \frac{(a_n + b_n)}{2}$ como aproximación de $X$, el error absoluto verifica:
+Después de realizar $n$ pasos o iteraciones, la solución debe estar en el intervalo $[a_n, b_n]$ de longitud $\frac{(b - a)}{2^n}$. Si tomamos $x_n = \frac{(a_n + b_n)}{2}$ como aproximación de $X$, el error absoluto verifica:
 $$
-|c_n - X| \leq \frac{b - a}{2^{n+1}}.
+|x_n - X| \leq \frac{b - a}{2^{n+1}}.
 $$
 Para asegurarnos una aproximación con un error inferior a una tolerancia dada $\varepsilon$, debemos tomar $n$ tal que:
 $$
@@ -145,7 +145,7 @@ Dado que $f(1) \cdot f(3) = (-7)(109) < 0$, por el **Teorema de Bolzano**, exist
 **Iteración 1**
 Punto medio:
 $$
-c_1 = \frac{1+3}{2} = 2
+x_1 = \frac{1+3}{2} = 2
 $$
 Evaluamos $f(2)$:
 $$
@@ -157,7 +157,7 @@ $$
 $$
 **Resto de iteraciones:**
 
-| Iteración ($n$) | $a_n$ | $b_n$ | $c_n$ | $f(c_n)$ | Nuevo intervalo |
+| Iteración ($n$) | $a_n$ | $b_n$ | $x_n$ | $f(x_n)$ | Nuevo intervalo |
 | --------------- | ----- | ----- | ----- | -------- | --------------- |
 | 1               | 1     | 3     | 2     | 14       | $[1,2]$         |
 | 2               | 1     | 2     | 1.5   | -2.1875  | $[1.5,2]$       |
@@ -193,19 +193,19 @@ El método de la falsa posición o “regula falsi” consiste en dividir el int
 $$
    y(x) = \frac{f(b_n) - f(a_n)}{b_n - a_n} (x - b_n) + f(b_n).
    $$
-y definimos $c_n$ tal que $y(c_n) = 0$, es decir:
+y definimos $x_n$ tal que $y(x_n) = 0$, es decir:
 $$
-   c_n = b_n - \frac{b_n - a_n}{f(b_n) - f(a_n)} f(b_n).
+   x_n = b_n - \frac{b_n - a_n}{f(b_n) - f(a_n)} f(b_n).
    $$
 2. Tomamos el nuevo intervalo $[a_{n+1}, b_{n+1}]$ de acuerdo con:
- - Si $f(a_n) \cdot f(c_n) < 0$, escogemos como nuevo intervalo $[a_{n+1}, b_{n+1}] = [a_n, c_n]$.
-- Si $f(c_n) \cdot f(b_n) < 0$, escogemos como nuevo intervalo $[a_{n+1}, b_{n+1}] = [c_n, b_n]$.
+ - Si $f(a_n) \cdot f(x_n) < 0$, escogemos como nuevo intervalo $[a_{n+1}, b_{n+1}] = [a_n, x_n]$.
+- Si $f(x_n) \cdot f(b_n) < 0$, escogemos como nuevo intervalo $[a_{n+1}, b_{n+1}] = [x_n, b_n]$.
 - Volvemos al paso 2 con el intervalo escogido.
 
 ### Criterio de paro:
 En este método, los intervalos no tienen la misma longitud, por lo que no podemos encontrar un criterio para determinar el número de iteraciones necesarias para parar el método dada una tolerancia $\varepsilon$. El criterio de paro será:
 $$
-|c_n - c_{n+1}| < \varepsilon.
+|x_n - x_{n+1}| < \varepsilon.
 $$
 
 ### Ventajas y desventajas:
@@ -217,10 +217,10 @@ $$
 ### Ejemplo
 Aproximar la solución de la ecuación $3x + 1 + \sin(x) = 0$ en el intervalo $[-1,1]$ mediante 2 iteraciones del método de la "regula falsi".
 
-| Iteración | a                   | b   | c                   | Error                |
-| --------- | ------------------- | --- | ------------------- | -------------------- |
-| 1         | -1.0                | 1.0 | -0.2603169473242832 | 0.2603169473242832   |
-| 2         | -0.2603169473242832 | 1.0 | -0.2504154069722839 | 0.009901540351999305 |
+| Iteración | $a_n$               | $b_n$ | $x_n$               | Error                |
+| --------- | ------------------- | ----- | ------------------- | -------------------- |
+| 1         | -1.0                | 1.0   | -0.2603169473242832 | 0.2603169473242832   |
+| 2         | -0.2603169473242832 | 1.0   | -0.2504154069722839 | 0.009901540351999305 |
 
 **Raíz aproximada:** -0.2504154069722839
 
