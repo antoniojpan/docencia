@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-11T12:39:59.138+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-11T13:40:40.475+01:00"}
 ---
 
 
@@ -99,7 +99,7 @@ En el resto del tema vamos a ver técnicas para aproximar las soluciones, una ve
 ## 3. Método de la bisección
 Supongamos que partimos de una función $f(x)$ y un intervalo $[a, b]$ en el que sabemos que $f(a) \cdot f(b) < 0$. El método de la bisección consiste en construir una sucesión de intervalos encajados:
 $$
-[a, b] = [a_0, b_0] \supseteq [a_1, b_1] \supseteq [a_2, b_2] \supseteq \cdots \supseteq [a_n, b_n] \supseteq \cdots
+[a, b] = [a_1, b_1] \supseteq [a_2, b_2] \supseteq \cdots \supseteq [a_n, b_n] \supseteq \cdots
 $$
 tales que $x \in [a_n, b_n]$ para $n = 1, 2, \ldots$ y $(b_{n+1} - a_{n+1}) = \frac{(b_n - a_n)}{2}$.
 ### Pasos del método:
@@ -214,7 +214,34 @@ $$
 - **Desventajas:**
   - No se puede predecir el número mínimo de iteraciones necesarias para acotar el error.
 
-### Ejemplo
+
+### Ejemplo 1
+Calcular cuatro aproximaciones con el método de la falsa posición (regula falsi) del cero de la función $f(x) = x^4 + 2x^3 - 8x - 2$ en el intervalo $[1, 3]$.
+Evaluamos la función en los extremos del intervalo inicial:
+$$f(1) = -7$$
+$$f(3) = 109$$
+Como $f(1) \cdot f(3) < 0$, existe una raíz en el intervalo $[1, 3]$.
+**Iteración 1**
+Aplicamos la fórmula de la secante para encontrar $x_1$:
+$$x_1 = b_1 - \frac{b_1 - a_1}{f(b_1) - f(a_1)} f(b_1)$$
+Sustituyendo $a_1 = 1$ y $b_1 = 3$:
+$$x_1 = 3 - \frac{3 - 1}{109 - (-7)} \cdot 109 = 3 - \frac{2}{116} \cdot 109 \approx 3 - 1.8793 = 1.1207$$
+Evaluamos $f(x_1)$:
+$$f(1.1207) \approx (1.1207)^4 + 2(1.1207)^3 - 8(1.1207) - 2 \approx -6.575$$
+Nuevo intervalo:
+$$[a_2, b_2] = [1.1207, 3]$$
+**Resto de iteraciones:**
+
+| **Iteración (n)** | **an​** | **bn​** | **xn​** | **f(xn​)** | **Nuevo intervalo** |
+| ----------------- | ------- | ------- | ------- | ---------- | ------------------- |
+| 1                 | 1       | 3       | 1.1207  | -6.575     | $[1.1207, 3]$       |
+| 2                 | 1.1207  | 3       | 1.2276  | -5.850     | $[1.2276, 3]$       |
+| 3                 | 1.2276  | 3       | 1.3178  | -5.046     | $[1.3178, 3]$       |
+| 4                 | 1.3178  | 3       | 1.3922  | -4.234     | $[1.3922, 3]$       |
+
+Valor de la raíz: $x\approx 1.602299$. En este caso gana el método de la bisección por la forma de la función.
+
+### Ejemplo 2
 Aproximar la solución de la ecuación $3x + 1 + \sin(x) = 0$ en el intervalo $[-1,1]$ mediante 2 iteraciones del método de la "regula falsi".
 
 | Iteración | $a_n$               | $b_n$ | $x_n$               | Error                |
