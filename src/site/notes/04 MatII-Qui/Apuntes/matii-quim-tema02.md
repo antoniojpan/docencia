@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-07T13:10:17.747+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-09T07:14:58.297+01:00"}
 ---
 
 
@@ -92,6 +92,8 @@ Para determinar cuántas soluciones tiene la ecuación $x^3 + 8x^2 - 3 = 0$ en e
 7. **Conclusión:**
    La ecuación tiene **tres soluciones** en el intervalo $[-10, 2]$.
 
+En el resto del tema vamos a ver técnicas para aproximar las soluciones, una vez que las hemos separado.
+
 ---
 
 ## 3. Método de la bisección
@@ -128,7 +130,7 @@ $$
 - **Ventajas:**
   - Es muy sencillo de calcular.
   - Permite decidir con anterioridad cuántas iteraciones hacen falta para controlar el error.
-  - **Desventajas:**
+- **Desventajas:**
   - La convergencia es lenta, necesita muchas iteraciones para una buena aproximación.
 ### Ejemplo
 Calcular cuatro aproximaciones con el método de la bisección del cero de la función $f(x) = x^4 + 2x^3 - 8x - 2$ en el intervalo $[1, 3]$. Calcular el número de iteraciones necesarias para que el error sea menor que $10^{-2}$.
