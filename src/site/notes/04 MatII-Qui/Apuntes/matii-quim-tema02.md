@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-11T13:40:40.475+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-24T08:03:32.311+01:00"}
 ---
 
 
@@ -256,6 +256,26 @@ Aproximar la solución de la ecuación $3x + 1 + \sin(x) = 0$ en el intervalo $[
 ## 5. Método de Newton-Raphson
 El método de Newton es un método que converge más rápido que los dos anteriores, pero las condiciones para la convergencia son más estrictas, ya que hay que comprobar que la función sea dos veces derivable, cerca de $x$, es decir, la derivada no se puede anular, y necesitamos una aproximación inicial $x_0$.
 
+## Motivación
+Resolver $x^2=2$. Sabemos que su valor es aproximadamente $1.4142$, pero hagamos como que no lo conocemos.
+**Definimos la función:** $f(x) = x^2 - 2$ , y tomamos como primer valor $x_0=2$.
+En lugar de hacer la "cuenta de la vieja", buscamos la **ecuación de la recta tangente:** $y - 2 = 4(x - 2)$.
+
+**Corte con el eje X ($y=0$):**
+
+$$-2 = 4x - 8 \implies 4x = 6 \implies \mathbf{x_1 = 1.5}$$
+![Pasted image 20260224080115.png|400](/img/user/imagenes/Pasted%20image%2020260224080115.png)
+Repetimos con $x_1 = 1.5$
+**Ecuación de la recta:**
+
+$$y - 0.25 = 3(x - 1.5)$$
+**Corte con el eje X ($y=0$):**
+$$-0.25 = 3x - 4.5$$
+$$\mathbf{x_2 = \frac{4.25}{3} \approx 1.4166}$$
+![Pasted image 20260224080201.png|400](/img/user/imagenes/Pasted%20image%2020260224080201.png)
+Como vemos, con solo dos rectas tangentes la precisión es excelente.
+
+
 ### Pasos del método:
 
 1. Consideramos una aproximación inicial, $x_0$. Podemos usar el método de la bisección o de la “regula falsi” para obtenerlo.
@@ -314,18 +334,15 @@ Lista completa: [[04 MatII-Qui/Apuntes/matii-quim-tema02-ej\|Ejercicios Tema 2]]
 
 
 
-Alternativa:
-1. Dada la ecuación $x^3 - e^{x} = 0$, aplica el método de la "regula falsi" para aproximar una raíz en el intervalo $[0,2]$. Usa una tolerancia de 0.01.
+
+2. Dada la ecuación $x^3 - e^{x} = 0$, aplica el método de la "regula falsi" para aproximar una raíz en el intervalo $[0,2]$. Usa una tolerancia de 0.01.
 
 
-
-
-
-"Iteración: "" "1" ""a:"" "0" ""b:"" "2" "" c: "" "1.241508160943651" "" Error: "" "1.241508160943651" "
-"Iteración: "" "2" ""a:"" "1.241508160943651" ""b:"" "2" "" c: "" "1.785284272828892" "" Error: "" "0.5437761118852411" "
-"Iteración: "" "3" ""a:"" "1.785284272828892" ""b:"" "2" "" c: "" "1.851285666364146" "" Error: "" "0.06600139353525325" "
-"Iteración: "" "4" ""a:"" "1.851285666364146" ""b:"" "2" "" c: "" "1.856718804637825" "" Error: "" "0.005433138273678972 "
-"Raíz aproximada: "" "1.856718804637825
-
+| **Iteración** | **a**        | **b** | **c (Aproximación)** | **Error**    |
+| ------------- | ------------ | ----- | -------------------- | ------------ |
+| **1**         | 0            | 2     | 1.2415081609         | 1.2415081609 |
+| **2**         | 1.2415081609 | 2     | 1.7852842728         | 0.5437761119 |
+| **3**         | 1.7852842728 | 2     | 1.8512856664         | 0.0660013935 |
+| **4**         | 1.8512856664 | 2     | 1.8567188046         | 0.0054331383 |
 
  
