@@ -1,10 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema03-ej/","created":"2026-03-02T13:54:05.252+01:00","updated":"2026-03-02T14:01:56.527+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema03-ej/","created":"2026-03-02T13:54:05.252+01:00","updated":"2026-03-02T14:03:38.315+01:00"}
 ---
 
 # Tema 3: Interpolación y aproximación de funciones
-**Matemáticas II - Grado en Química** **UCA Universidad - Curso 2021-2022**
-
 ---
 
 
