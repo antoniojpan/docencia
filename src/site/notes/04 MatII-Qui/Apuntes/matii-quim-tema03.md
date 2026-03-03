@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema03/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-01-08T13:37:57.178+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema03/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-03T11:24:58.330+01:00"}
 ---
 
 
@@ -190,61 +190,34 @@ P(x) = -x^5 + 3x^4 - x^3 - x^2 - x + 1
 $$
 
 
-**Ejemplo 2.** Un ingeniero aeronáutico está modelando la trayectoria de descenso de un avión antes de aterrizar. Se quiere estimar la altura del avión en función de la distancia hasta el inicio de la pista.
-Se tienen las siguientes mediciones:
-- A 1000 metros antes de la pista, el avión está a 2000 metros de altura, con una velocidad de descenso de -3 m/m (metros por metro recorrido).
-- A 500 metros antes de la pista, el avión está a 480 metros de altura, con una velocidad de descenso de -2 m/m.
-Se pide:
-	a. Construir el polinomio de interpolación de Hermite que modele la altura del avión en función de la distancia hasta la pista.
-	b. Usar el polinomio para estimar la altura del avión a 750 metros antes de la pista.
-	
+**Ejemplo 2.** El ordenador de a bordo está modelando la trayectoria de aproximación final de un avión, para garantizar un aterrizaje seguro y confortable. Se han establecido los siguientes parámetros de control basados en el tiempo transcurrido (t):
+- **En el instante inicial (t = 0 min):** El avión se encuentra a una altitud de **5000 metros** y desciende a una tasa de **-100 metros/minuto**.  
+- **En el momento del aterrizaje (t = 70 min):** El avión debe tocar la pista a una altitud de **0 metros** y con una velocidad vertical de **0 metros/minuto** (condición de contacto suave o _flare_).  
+
+**Se pide:**
+1. Construir el polinomio de interpolación de Hermite que modele la altura h(t).
+2. Estimar la altura del avión cuando han transcurrido **35 minutos** de descenso.
+
+![Pasted image 20260303112011.png](/img/user/imagenes/Pasted%20image%2020260303112011.png)
+
+**Resolución**
+Para construir el polinomio, duplicamos los nodos $t_i$ para incluir la información de las derivadas ($h'(t)$). Los nodos son $z_0=0, z_1=0, z_2=70, z_3=70$.
+
+| **zi​** | **f(zi​)** | **1ª Diferencia**    | **2ª Diferencia** | **3ª Diferencia** |
+| ------- | ---------- | -------------------- | ----------------- | ----------------- |
+| **0**   | **5000**   |                      |                   |                   |
+| 0       | 5000       | **-100** (dato $f'$) |                   |                   |
+| 70      | 0          | -71.4286             | **0.4082**        |                   |
+| 70      | 0          | 0 (dato $f'$)        | 1.0204            | **0.00875**       |
+
+
+Utilizando los coeficientes de la diagonal superior de la tabla (marcados en negrita), el polinomio de Hermite de grado 3 es:
+$$H_3(t) = 5000 - 100(t - 0) + 0.4082(t - 0)^2 + 0.00875(t - 0)^2(t - 70)$$
+Simplificando la expresión:
+$$H_3(t) = 5000 - 100t + 0.4082t^2 + 0.00875t^2(t - 70)$$
+Para estimar la altura a los **35 minutos**, evaluamos $H_3(35)$:
+$$H_3(35) \approx \mathbf{1624.89 \text{ metros}}$$
+
 ## 4. Overfitting
 El _overfitting_ ocurre cuando un modelo se ajusta demasiado a los datos, capturando ruido y perdiendo capacidad de generalización, lo que suele suceder con polinomios de alto grado que generan oscilaciones no deseadas. Sus causas incluyen el uso de polinomios excesivamente complejos, la presencia de ruido en los datos y una mala extrapolación que conduce a predicciones incorrectas. Para evitarlo, se recomienda usar polinomios de menor grado o splines, elegir nodos de Chebyshev, optar por aproximaciones en lugar de interpolaciones y aplicar regularización para suavizar el modelo, equilibrando así ajuste y generalización.
 
-## 5. Ejercicios
-
-1. En una estación de metro pasan convoyes cada 10 minutos durante las primeras horas de la mañana. A las 8:00 suben al convoy 30 personas, 26 a las 8:30 y 21 a las 9:00. Estima (usando el polinomio de interpolación de Newton) cuántas personas suben a las 8:20.
-
-2. Se considera la función $f(x) = 5^x$.  
-   - (a) Utilizar el método de diferencias divididas de Newton para calcular el polinomio de interpolación de los puntos $(-1, f(-1))$, $(0, f(0))$ y $(1, f(1))$.  
-   - (b) Utilízalo para dar una aproximación de $\sqrt{5}$ y calcular el error cometido.  
-
-3. Se consideran los puntos $Q_1 = (2,3)$, $Q_2 = (4,-1)$, $Q_3 = (6,4)$, $Q_4 = (8,0)$ y $Q_5 = (10,-1)$.  
-   - (a) Calcular el polinomio de interpolación de los puntos $Q_1, Q_2, Q_3, Q_4$ usando las diferencias divididas de Newton.  
-   - (b) Utilizar las diferencias divididas del apartado anterior para calcular el polinomio de interpolación de los puntos $Q_1, Q_2, Q_3, Q_4, Q_5$.  
-
-4. Consideremos la función $f(x) = e^{\sin x}$.  
-   - (a) Utilizar el método de las diferencias divididas de Newton para calcular su polinomio de interpolación en los mismos puntos.  
-   - (c) Calcular el error cometido al considerar el valor $p(1.5)$ como aproximación de $f(1.5)$.
-
-5. Se considera la función $f(x) = \ln(1 + x)$.  
-   - (a) Calcular el polinomio de interpolación de Hermite en los puntos $x_1 = 0$, $x_2 = 1$, $x_3 = 2$.  
-   - (b) Dar una aproximación de $\ln(2.5)$.  
-
-6. Consideremos la función $f(x) = \frac{x}{1 + x^2}$.  
-   - (a) Utilizar el método de las diferencias divididas de Newton para calcular su polinomio de interpolación en los mismos puntos.  
-   - (c) Aproximar $f(1.5)$.
-
-7. Sea $f(x) = \sin x$.  
-   - (a) Utilizar el método de las diferencias divididas de Newton para calcular su polinomio de interpolación en $x_0 = 0$, $x_1 = \frac{\pi}{6}$, $x_2 = \frac{\pi}{4}$, $x_3 = \frac{\pi}{2}$.  
-   - (b) Utilizar el polinomio de interpolación de Hermite en los puntos $x_0$ y $x_2$.  
-
-8. Sea $f(x) = \cos x$.  
-   - (a) Calcular el polinomio de interpolación de Hermite en los mismos puntos que antes.  
-   - (b) Obtener la aproximación del valor $\cos\left(\frac{\pi}{4}\right)$.
-
-9. Dada la función $f(x) = 2^{1/x}$.  
-   - (a) Hallar el polinomio de interpolación de $f(x)$ sobre el conjunto de puntos $x_0 = 0.5$, $x_1 = 1$, $x_2 = 1.5$, $x_3 = 2$ y $x_4 = 2.5$, mediante el método de las diferencias divididas de Newton.  
-   - (b) Usar dicho polinomio para calcular un valor aproximado de $\sqrt{2}$. Hallar una estimación del error cometido.  
-
-10. Utilizar el método de Hermite para hallar un polinomio $P(x)$ que satisfaga $P(-1) = -1$, $P'(-1) = 14$, $P(2) = 4$ y $P'(2) = 5$.  
-
-11. Calcular $f\left(\frac{1}{8}\right)$ a partir de una aproximación de la función $f(x) = \tan(\pi x)$ con el polinomio de interpolación de Hermite en los puntos $0$ y $\frac{1}{4}$.  
-
-12. Calcular el polinomio de Hermite que interpola la siguiente tabla:  
-
-| x   | y   | y'  |     |
-| --- | --- | --- | --- |
-| -1  | 5   | 12  |     |
-| 0   | 2   | -7  |     |
-| 2   | -40 | -51 |     |
