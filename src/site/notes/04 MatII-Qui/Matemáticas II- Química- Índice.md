@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/matematicas-ii-quimica-indice/","created":"2026-01-08T10:24:16.934+01:00","updated":"2026-03-03T11:38:57.276+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/matematicas-ii-quimica-indice/","created":"2026-01-08T10:24:16.934+01:00","updated":"2026-03-05T08:33:35.026+01:00"}
 ---
 
 
@@ -13,6 +13,7 @@
 - [[04 MatII-Qui/Apuntes/matii-quim-tema03\|Tema 3. Interpolación y aproximación de funciones]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema03-ej\|Ejercicios tema 3]].
 - [[04 MatII-Qui/Apuntes/matii-quim-tema04\|Tema 4. Integración numérica]]
+- [Ejercicios tema 4](matii-quim-tema04-ej).
 - [[04 MatII-Qui/Apuntes/Tema 5. Ecuaciones diferenciales ordinarias de primer orden\|Tema 5. Ecuaciones diferenciales ordinarias de primer orden]]
 - [[04 MatII-Qui/Apuntes/Tema 6. Ecuaciones diferenciales ordinarias de orden superior\|Tema 6. Ecuaciones diferenciales ordinarias de orden superior]]
 - [[04 MatII-Qui/Apuntes/Tema 7. Sistemas de ecuaciones diferenciales ordinarias\|Tema 7. Sistemas de ecuaciones diferenciales ordinarias]]

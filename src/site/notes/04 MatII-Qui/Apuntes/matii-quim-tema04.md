@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-03T11:57:43.035+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-03T11:59:11.606+01:00"}
 ---
 
 
@@ -27,7 +27,7 @@
 
 ## 1. Introducción
 Consideremos la función $f(x) = e^{-x^2}$, cuya gráfica en el intervalo $[-2, 2]$ es:
-![Pasted image 20250210090748.png|600](/img/user/imagenes/Pasted%20image%2020250210090748.png)
+![Pasted image 20250210090748.png|400](/img/user/imagenes/Pasted%20image%2020250210090748.png)
 **¿Cómo calcularías el área que encierra dicha función con el eje $OX$?**
 Sabemos que dicha área corresponde con el valor de la integral:
 $$
