@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-12T07:49:36.684+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-12T07:54:35.075+01:00"}
 ---
 
 
@@ -11,7 +11,7 @@
 - [[04 MatII-Qui/Apuntes/matii-quim-tema04#3. Regla del trapecio\|3. Regla del trapecio]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema04#4. Regla de Simpson\|4. Regla de Simpson]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema04#5. Aclaración sobre nodos, subintervalos y el incremento $h$:\|5. Aclaración sobre nodos, subintervalos y el incremento $h$:]]
-- [[04 MatII-Qui/Apuntes/matii-quim-tema04#6. Acotación del error:\|6. Acotación del error:]]
+- [[04 MatII-Qui/Apuntes/matii-quim-tema04#6. Acotación del error\|6. Acotación del error]]
 
 
 ---
@@ -115,10 +115,13 @@ $$
 ### Fórmula de cuadratura
 Aproximamos $f(x)$ por una recta que une los puntos $(a, f(a))$ y $(b, f(b))$:
 $$
-\int_{a}^{b} f(x) \, dx \approx \frac{b - a}{2} (f(a) + f(b))
+\int_{a}^{b} f(x) \, dx \approx \frac{f(a) + f(b)}{2} (b - a)
 $$
 
-**Interpretación geométrica:** Aproximamos el área bajo la curva por el área de un trapecio con bases $f(a)$ y $f(b)$.
+**Interpretación geométrica:** Aproximamos el área bajo la curva por el área de un trapecio con bases $f(a)$ y $f(b)$. Recuerda que la fórmula del área de un trapecio es 
+$$
+A=\frac{B_{mayor}+B_{menor}}{2}\cdot altura
+$$
 
 
 ### Fórmula compuesta
@@ -235,7 +238,7 @@ $$
 - $h$ varía según el método, pero no es que dé lugar a más _nodos_, sino a más puntos $x_i$. En trapecio los $x_i$ son todos los nodos, pero en punto medio y Simpson los nodos son solamente los puntos en posición par: $x_{2i}$.
 
 
-## 6. Acotación del error:
+## 6. Acotación del error
 ### **Ejemplo 1: Punto Medio Compuesto**
 
 **Enunciado:** Determina el número mínimo de subintervalos ($n$) necesarios para aproximar la integral $\int_{0}^{1} x^3 dx$ mediante la regla del punto medio compuesto con un error absoluto menor que $0.001$.

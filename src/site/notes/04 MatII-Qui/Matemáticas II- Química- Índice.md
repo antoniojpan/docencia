@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/matematicas-ii-quimica-indice/","created":"2026-01-08T10:24:16.934+01:00","updated":"2026-03-12T07:23:52.844+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/matematicas-ii-quimica-indice/","created":"2026-01-08T10:24:16.934+01:00","updated":"2026-03-12T08:07:10.086+01:00"}
 ---
 
 
@@ -8,12 +8,12 @@
 
 ## Apuntes
 - Tema 1. Introducción a la programación (en las prácticas)
-- [[04 MatII-Qui/Apuntes/matii-quim-tema02\|Tema 2. Métodos numéricos en ecuaciones de una variable]]. 
-- [[04 MatII-Qui/Apuntes/matii-quim-tema02-ej\|Ejercicios tema 2]].
+- [[04 MatII-Qui/Apuntes/matii-quim-tema02\|Tema 2. Métodos numéricos en ecuaciones de una variable]]
+- [[04 MatII-Qui/Apuntes/matii-quim-tema02-ej\|Ejercicios tema 2]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema03\|Tema 3. Interpolación y aproximación de funciones]]
-- [[04 MatII-Qui/Apuntes/matii-quim-tema03-ej\|Ejercicios tema 3]].
+- [[04 MatII-Qui/Apuntes/matii-quim-tema03-ej\|Ejercicios tema 3]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema04\|Tema 4. Integración numérica]]
-- [Ejercicios tema 4](matii-quim-tema04-ej.md).
+- [[04 MatII-Qui/Apuntes/matii-quim-tema04-ej\|Ejercicios tema 4]]
 - [[04 MatII-Qui/Apuntes/Tema 5. Ecuaciones diferenciales ordinarias de primer orden\|Tema 5. Ecuaciones diferenciales ordinarias de primer orden]]
 - [[04 MatII-Qui/Apuntes/Tema 6. Ecuaciones diferenciales ordinarias de orden superior\|Tema 6. Ecuaciones diferenciales ordinarias de orden superior]]
 - [[04 MatII-Qui/Apuntes/Tema 7. Sistemas de ecuaciones diferenciales ordinarias\|Tema 7. Sistemas de ecuaciones diferenciales ordinarias]]
