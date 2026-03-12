@@ -1,26 +1,17 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-03T11:59:11.606+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-12T07:49:36.684+01:00"}
 ---
 
 
 [[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
 # Tema 4. Métodos de integración numérica
+
 - [[04 MatII-Qui/Apuntes/matii-quim-tema04#1. Introducción\|1. Introducción]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema04#2. Regla del punto medio\|2. Regla del punto medio]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#2. Regla del punto medio\|2.1 Fórmula de cuadratura]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#2. Regla del punto medio\|2.2 Cota del error]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#2. Regla del punto medio\|2.3 Fórmula compuesta]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#2. Regla del punto medio\|2.4 Cota del error y cálculo del número de nodos]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#2. Regla del punto medio\|Ejemplo]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema04#3. Regla del trapecio\|3. Regla del trapecio]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#3. Regla del trapecio\|Fórmula de cuadratura]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#3. Regla del trapecio\|Fórmula compuesta]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#3. Regla del trapecio\|Ejemplo]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema04#4. Regla de Simpson\|4. Regla de Simpson]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#4. Regla de Simpson\|4.1 Fórmula de cuadratura]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#4. Regla de Simpson\|4.2 Cota del error]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#4. Regla de Simpson\|4.3 Fórmula compuesta y cota del error]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema04#4. Regla de Simpson\|Ejemplo]]
+- [[04 MatII-Qui/Apuntes/matii-quim-tema04#5. Aclaración sobre nodos, subintervalos y el incremento $h$:\|5. Aclaración sobre nodos, subintervalos y el incremento $h$:]]
+- [[04 MatII-Qui/Apuntes/matii-quim-tema04#6. Acotación del error:\|6. Acotación del error:]]
 
 
 ---
@@ -238,7 +229,59 @@ $$
 |E| = |1.5708 - 1.5417| \approx 0.0361
 $$
 
-# Aclaración sobre nodos, subintervalos y el incremento $h$:
+## 5. Aclaración sobre nodos, subintervalos y el incremento $h$:
 - $n$ es el número de subintervalos
 - $n+1$ es el número de nodos. No son los puntos $x_i$, en general.
 - $h$ varía según el método, pero no es que dé lugar a más _nodos_, sino a más puntos $x_i$. En trapecio los $x_i$ son todos los nodos, pero en punto medio y Simpson los nodos son solamente los puntos en posición par: $x_{2i}$.
+
+
+## 6. Acotación del error:
+### **Ejemplo 1: Punto Medio Compuesto**
+
+**Enunciado:** Determina el número mínimo de subintervalos ($n$) necesarios para aproximar la integral $\int_{0}^{1} x^3 dx$ mediante la regla del punto medio compuesto con un error absoluto menor que $0.001$.
+
+Para el método compuesto, la fórmula es:
+$$|E_M| \leq \frac{(b-a)^3}{24n^2} \max_{x \in [a,b]} |f''(x)|$$
+* Intervalo: $[0, 1] \implies b-a = 1$
+* Función: $f(x) = x^3 \implies f'(x) = 3x^2 \implies f''(x) = 6x$
+* Máximo de $|f''(x)|$ en $[0, 1]$ es $6$ (en $x=1$).
+
+Queremos que $|E_M| < 0.001$:
+$$\frac{1^3}{24n^2} \cdot 6 < 0.001$$
+$$\frac{6}{24n^2} < 0.001 \implies \frac{1}{4n^2} < 0.001$$
+$$4n^2 > \frac{1}{0.001} \implies 4n^2 > 1000 \implies n^2 > 250$$
+$$n > \sqrt{250} \approx 15.81$$
+**Resultado:** Se necesitan al menos **$n = 16$** subintervalos.
+
+---
+
+### **Ejemplo 2: Simpson Compuesto**
+
+**Enunciado:** Determina el número mínimo de subintervalos ($n$) necesarios para aproximar $\int_{0}^{\pi/2} \sin(x) dx$ mediante la regla de Simpson compuesta con un error menor que $0.001$.
+
+En este caso tenemos:
+$$|E_S(f)| \leq \frac{(b - a)^5}{2880n^4} \max_{x \in [a, b]} |f^{iv}(x)| < 0.001$$
+
+* Intervalo: $[0, \pi/2] \implies b-a = \pi/2 \approx 1.5708$
+* Derivadas: $f(x) = \sin(x) \dots \implies f^{(4)}(x) = \sin(x)$
+* Máximo de $|f^{(4)}(x)|$ en $[0, \pi/2]$ es $1$ (en $x=\pi/2$).
+
+Queremos que el error sea menor que $0.001$:
+$$\frac{(1.5708)^5}{2880 \cdot n^4} \cdot 1 < 0.001$$
+$$\frac{9.5885}{2880 \cdot n^4} < 0.001$$
+$$9.5885 < 0.001 \cdot 2880 \cdot n^4$$
+$$9.5885 < 2.88 \cdot n^4$$
+$$n^4 > \frac{9.5885}{2.88} \approx 3.3293$$
+$$n > \sqrt[4]{3.3293}$$
+$$n > 1.3506$$
+
+Como $n$ debe ser un número entero de subintervalos:
+**$n = 2$ subintervalos.**
+
+Aclaración:
+![Pasted image 20260312074806.png|600](/img/user/imagenes/Pasted%20image%2020260312074806.png)
+1. Divides $[0, \pi/2]$ en **dos subintervalos**: $[0, \pi/4]$ y $[\pi/4, \pi/2]$.
+    
+2. En cada uno usas el **punto medio** ($\pi/8$ y $3\pi/8$).
+    
+3. En total estarás evaluando la función en **5 puntos** (los 3 extremos y los 2 puntos medios).

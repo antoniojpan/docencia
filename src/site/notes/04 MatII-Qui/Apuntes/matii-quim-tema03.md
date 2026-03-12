@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema03/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-03T11:24:58.330+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema03/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-12T07:49:33.406+01:00"}
 ---
 
 
@@ -8,13 +8,8 @@
 
 - [[04 MatII-Qui/Apuntes/matii-quim-tema03#1. Introducción\|1. Introducción]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema03#2. Diferencias Divididas de Newton\|2. Diferencias Divididas de Newton]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema03#2. Diferencias Divididas de Newton\|Ejemplo]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema03#2. Diferencias Divididas de Newton\|Aproximación de funciones]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema03#2. Diferencias Divididas de Newton\|Ejemplo]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema03#3. Interpolación de Hermite\|3. Interpolación de Hermite]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema03#3. Interpolación de Hermite\|Ejemplos]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema03#4. Overfitting\|4. Overfitting]]
-- [[04 MatII-Qui/Apuntes/matii-quim-tema03#5. Ejercicios\|5. Ejercicios]]
 
 
 ---
