@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-6-ecuaciones-diferenciales-ordinarias-de-orden-superior/","created":"2026-01-08T10:24:16.932+01:00","updated":"2025-11-08T15:54:29.357+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/tema-6-ecuaciones-diferenciales-ordinarias-de-orden-superior/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-03-17T17:24:01.099+01:00"}
 ---
 
 
@@ -34,7 +34,7 @@ x'(0) = 1 \\
 \end{cases}
 $$
 a) Gravedad constante
-b) Ley de Gravitación universal, hacer con [[lowering order by chain rule\|lowering order by chain rule]].
+b) Ley de Gravitación universal
 
 El **teorema de existencia y unicidad** establece que si exigimos ciertas condiciones de continuidad para $F$ entonces existe una única solución que satisface estas condiciones iniciales.
 

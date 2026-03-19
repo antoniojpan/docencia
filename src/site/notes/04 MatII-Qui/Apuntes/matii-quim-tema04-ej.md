@@ -1,7 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04-ej/","created":"2026-03-05T08:33:36.717+01:00","updated":"2026-03-12T07:25:38.744+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04-ej/","created":"2026-03-05T08:33:36.717+01:00","updated":"2026-03-19T10:52:35.126+01:00"}
 ---
 
+[Volver al temario](Matemáticas%20II-%20Química-%20Índice).
 # Tema 4: Métodos de integración numérica — Ejercicios aplicables
 
 ## Ejercicio 1
