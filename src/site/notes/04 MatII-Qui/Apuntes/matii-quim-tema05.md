@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-03-17T16:27:42.512+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-03-25T08:57:34.839+01:00"}
 ---
 
 
@@ -86,7 +86,7 @@ $$
 Solución particular: valor concreto de $C$ en la solución general.
 
 **Teorema de Existencia y Unicidad**. 
-Si $F(x, y)$ y su derivada parcial $\frac{\partial F}{\partial y}$ son continuas en una región $R$, entonces existe una única solución en un intervalo $I$ que satisface la ecuación diferencial y la condición inicial.
+Si $F(x, y)$ es derivable y su derivada parcial $\frac{\partial F}{\partial y}$ es continua en una región $R$ tal que $(x_0,y_0)\in R$, entonces existe una única solución en un intervalo $I$ que satisface la ecuación diferencial y la condición inicial.
 
 ### Interpretación geométrica
 Una ecuación diferencial de primer orden de la forma  
@@ -147,18 +147,19 @@ $$ \frac{1}{2} \ln\left(\frac{y^2}{x^2} + 1\right) + \arctan\left(\frac{y}{x}\ri
 
 
 ### Ecuaciones Lineales
-De la forma:
+Tienen la forma:
 $$ y' + P(x)y = Q(x) $$
-**Si homogénea**, i.e., $Q(x)=0$, entonces es de variables separables. 
+- **Si homogénea**, i.e., $Q(x)=0$, entonces es de variables separables. 
+
 **Ejemplo**: $y'+\cos(x)y=0$.
 
-**Si no homogénea**, derivada de un producto:
+- **Si no homogénea**, derivada de un producto:
 **Ejemplo motivador**: Resolver $y' + 2xy = x$.
 Nos damos cuenta de que si multiplicamos ambos miembros por $\mu$
 $$
 \mu y' + 2x \mu y = \mu x
 $$
-en la parte izquierda tenemos casi la derivada de un producto. Para que sea $\mu y' + 2x \mu y=(\mu y)'$ debe ser:
+en la parte izquierda tenemos "casi" la derivada de un producto. Para que sea $\mu y' + 2x \mu y=(\mu y)'$ debe ser:
 $$
 \mu' = \mu 2x
 $$
