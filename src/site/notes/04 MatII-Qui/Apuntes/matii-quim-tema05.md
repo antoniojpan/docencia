@@ -1,28 +1,16 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-03-25T08:57:34.839+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-09T07:50:34.812+02:00"}
 ---
 
 
 [[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
 # Tema 5. Ecuaciones diferenciales ordinarias de primer orden.
+
 - [[04 MatII-Qui/Apuntes/matii-quim-tema05#Introducción\|Introducción]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema05#Definiciones\|Definiciones]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Definiciones\|Problema de Valores Iniciales]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Definiciones\|Interpretación geométrica]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema05#Resolución de EDOs de Primer Orden\|Resolución de EDOs de Primer Orden]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Resolución de EDOs de Primer Orden\|Ecuaciones de Variables Separables]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Resolución de EDOs de Primer Orden\|Ecuaciones Homogéneas]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Resolución de EDOs de Primer Orden\|Ecuaciones Lineales]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Resolución de EDOs de Primer Orden\|Ecuaciones Exactas]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Resolución de EDOs de Primer Orden\|Factor Integrante]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema05#Diagrama de flujo\|Diagrama de flujo]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema05#Aplicaciones y Modelización\|Aplicaciones y Modelización]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Aplicaciones y Modelización\|Desintegración Radiactiva]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Aplicaciones y Modelización\|Cinética de reacciones químicas]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Aplicaciones y Modelización\|Ley de Enfriamiento de Newton]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Aplicaciones y Modelización\|Mezclas de sustancia]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Aplicaciones y Modelización\|Mezcla térmica]]
-
 
 ## Introducción
 En ciencia suele ocurrir que las magnitudes que nos interesan no son directamente "accesibles", pero sí somos capaces de encontrar relaciones entre ellas y sus derivadas. Ejemplo base: una población de cualquier ser vivo crece, al principio, de manera proporcional al tamaño de la población: cuantos más individuos hay, mayor descendencia tienen. Esto nos lleva a plantear la ecuación:
@@ -271,14 +259,15 @@ Decimos que es exacta si
 $$
 \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \tag{1} %\label{cond_exacta}
 $$
-Para resolverla, buscamos una solución implícita general $F(x,y)=C$, que debe cumplir que
-$$
-\frac{\partial F}{\partial x}+\frac{\partial F}{\partial y}y'=0,
-$$
+Para resolverla, buscamos una solución implícita general $F(x,y)=C$, que debe cumplir
 $$
 \frac{\partial F}{\partial x}dx+\frac{\partial F}{\partial y}dy=0,
 $$
-luego podemos probar con una $F$ que cumpla
+Comparando con
+$$
+M(x, y)dx + N(x, y)dy = 0 .
+$$
+podemos probar con una $F$ que cumpla
 $$
 \frac{\partial F}{\partial x}=M.
 $$
@@ -600,7 +589,7 @@ Un café se sirve a una temperatura de 90°C en una habitación a 25°C. Despué
 
 
 ### Mezclas de sustancia
-Cuando se mezclan dos sustancias con diferentes concentraciones de una misma sustancia, la concentración varía con el tiempo según un balance de flujo de entrada y salida. En un sistema de mezcla continua, la tasa de cambio de la cantidad de sustancia disuelta está dada por la ecuación:
+Cuando se mezclan dos disoluciones con diferentes concentraciones de una misma sustancia, la concentración varía con el tiempo según un balance de flujo de entrada y salida. En un sistema de mezcla continua, la tasa de cambio de la cantidad de sustancia disuelta está dada por la ecuación:
 $$
 \frac{dQ}{dt} = \, \text{tasa de entrada} - \text{tasa de salida}.
 $$
