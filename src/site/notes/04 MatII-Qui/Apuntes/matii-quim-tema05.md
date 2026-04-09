@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-09T07:50:34.812+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-09T08:13:49.631+02:00"}
 ---
 
 
@@ -315,20 +315,32 @@ $$
 F(x, y) = x^2y + 3x + 2y^2 = C.
 $$
 
-### Factor Integrante
+### ¿Y si no es exacta? Factor Integrante
 Si la ecuación no es exacta, se busca una función $\mu(x, y)$ tal que multiplicando la ecuación se convierta en exacta.
-Se dice que una función $\mu(x, y)$ es un factor integrante de una EDO de primer orden si al multiplicar $\mu$ por ambos miembros de la EDO, ésta se convierte en exacta.  
+Se dice que una función $\mu(x, y)$ es un factor integrante de una EDO de primer orden si al multiplicar $\mu$ por ambos miembros de la EDO, ésta se convierte en exacta.  En condiciones típicas, tenemos la garantía de que el factor integrante siempre existe, pero en la práctica puede ser imposible encontrarlo.
 
 **Ejemplo:**  
 Comprobar que $\mu(x, y)=y^3$ es un factor integrante de la ecuación:  
 $$
 x y \, dx + (2x^2 + 3y^2 - 20) \, dy = 0
 $$
+Para comprobar que $\mu(x, y) = y^3$ es factor integrante, multiplicamos la ecuación y verificamos si es **exacta**:
+1.  **Multiplicar:**
+$$(xy \cdot y^3) \, dx + (2x^2 + 3y^2 - 20)y^3 \, dy = 0$$
+$$xy^4 \, dx + (2x^2y^3 + 3y^5 - 20y^3) \, dy = 0$$
+2.  **Derivadas parciales cruzadas:**
+    * $M_y = \frac{\partial}{\partial y}(xy^4) = \mathbf{4xy^3}$
+    * $N_x = \frac{\partial}{\partial x}(2x^2y^3 + 3y^5 - 20y^3) = \mathbf{4xy^3}$
+
+**Conclusión:** Como $M_y = N_x$, se confirma que $\mu(x, y) = y^3$ es un factor integrante.
+
+---
+
 Para una EDO escrita en la forma:
 $$
 M \, dx + N \, dy = 0
 $$
-obtenemos un factor integrante dependiente de $x$ o de $y$, "si tenemos suerte".
+buscaremos un factor integrante dependiente de $x$ o de $y$, "por si tenemos suerte". La búsqueda de un factor integrante dependiendo de ambas variables $x,y$ es, en general, un problema más difícil que la propia EDO (es una EDP)
 
 **Ejemplo 0:**
 Veamos cómo obtener el factor integrante para
@@ -399,7 +411,23 @@ graph TD;
 ```
 
 
-## Aplicaciones y Modelización
+## Aplicaciones
+
+### Ley de Enfriamiento de Newton
+La Ley de Enfriamiento de Newton establece que la tasa de cambio de la temperatura de un objeto es proporcional a la diferencia entre la temperatura del objeto y la temperatura del medio ambiente. Si $T(t)$ es la temperatura del objeto en el tiempo $t$ y $T_a$ es la temperatura del medio ambiente, entonces la ecuación diferencial que describe el enfriamiento es:
+$$
+\frac{dT}{dt} = -k (T - T_a),
+$$
+donde $k > 0$ es una constante que depende de las propiedades térmicas del objeto y del medio en el que se encuentra.
+
+Para determinar completamente el modelo, se usa una medición de la temperatura en un instante concreto, por ejemplo, en un tiempo $t_1$, lo que permite calcular la constante $k$.
+
+**Ejemplo descafeinado (nunca mejor dicho):**  
+Un café se sirve a una temperatura de 90°C en una habitación a 25°C. Por experimentos previos, sabemos que la constante de enfriamiento es $k=0.9$. ¿Cuál será la temperatura del café después de 15 minutos?
+
+**Ejemplo real:**
+Un café se sirve a una temperatura de 90°C en una habitación a 25°C. Después de 5 minutos, la temperatura del café es de 70°C. ¿Cuál será la temperatura del café después de 15 minutos?
+¿Cuánto tiempo debe pasar para que se encuentre a 25'5 grados?
 
 ### Desintegración Radiactiva
 Muchos elementos radiactivos se desintegran con una tasa de desintegración proporcional a la cantidad de sustancia presente en el medio. Si $X$ denota a la sustancia y $Q(t)$ a la cantidad presente en el instante $t$, entonces la tasa de cambio de $Q(t)$ con respecto a $t$ está dada por:
@@ -574,17 +602,6 @@ $$
 
 
 
-### Ley de Enfriamiento de Newton
-La Ley de Enfriamiento de Newton establece que la tasa de cambio de la temperatura de un objeto es proporcional a la diferencia entre la temperatura del objeto y la temperatura del medio ambiente. Si $T(t)$ es la temperatura del objeto en el tiempo $t$ y $T_a$ es la temperatura del medio ambiente, entonces la ecuación diferencial que describe el enfriamiento es:
-$$
-\frac{dT}{dt} = -k (T - T_a),
-$$
-donde $k > 0$ es una constante que depende de las propiedades térmicas del objeto y del medio en el que se encuentra.
-
-Para determinar completamente el modelo, se usa una medición de la temperatura en un instante concreto, por ejemplo, en un tiempo $t_1$, lo que permite calcular la constante $k$.
-
-**Ejemplo:**
-Un café se sirve a una temperatura de 90°C en una habitación a 25°C. Después de 5 minutos, la temperatura del café es de 70°C. ¿Cuál será la temperatura del café después de 15 minutos?
 
 
 
