@@ -605,7 +605,7 @@ Un tanque contiene inicialmente 300 litros de agua pura. Se bombea una solución
 
 ### Mezcla térmica
 Considera un termo eléctrico de 100L, que se encuentra inicialmente a 60ºC. Cuando el usuario abre el grifo, entra agua a 15ºC, a razón de 3L/min; y sale ese mismo caudal de agua, a la nueva temperatura del depósito una vez mezclado todo (se supone que la mezcla es instantánea). ¿Cómo podríamos describir la temperatura del agua que le llega al usuario?
-![[Pasted image 20250407082723.png\|Pasted image 20250407082723.png]]
+![Pasted image 20250407082723.png](/img/user/imagenes/Pasted%20image%2020250407082723.png)
 
 Considera un intervalo de tiempo $t \mapsto t+dt$, la temperatura del tanque, y por tanto de salida, cambia $T_1 \mapsto T_2$, siendo $dT=T_2-T_1$, porque habrá entrado una cantidad de agua a 15ºC $da$ que se habrá mezclado con los $100-da$ litros restantes.
 La energía que pierde o gana una sustancia al cambiar su temperatura es
