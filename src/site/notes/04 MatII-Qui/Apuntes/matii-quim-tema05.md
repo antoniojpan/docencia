@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-09T08:13:49.631+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-10T13:07:51.215+02:00"}
 ---
 
 
@@ -74,7 +74,7 @@ $$
 Solución particular: valor concreto de $C$ en la solución general.
 
 **Teorema de Existencia y Unicidad**. 
-Si $F(x, y)$ es derivable y su derivada parcial $\frac{\partial F}{\partial y}$ es continua en una región $R$ tal que $(x_0,y_0)\in R$, entonces existe una única solución en un intervalo $I$ que satisface la ecuación diferencial y la condición inicial.
+Si $F(x, y)$ es continua y su derivada parcial $\frac{\partial F}{\partial y}$ es continua en una región $R$ tal que $(x_0,y_0)\in R$, entonces existe una única solución en un intervalo $I$ que satisface la ecuación diferencial y la condición inicial.
 
 ### Interpretación geométrica
 Una ecuación diferencial de primer orden de la forma  
