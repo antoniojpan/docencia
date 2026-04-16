@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-10T13:07:51.215+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-16T08:36:52.293+02:00"}
 ---
 
 
@@ -10,7 +10,7 @@
 - [[04 MatII-Qui/Apuntes/matii-quim-tema05#Definiciones\|Definiciones]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema05#Resolución de EDOs de Primer Orden\|Resolución de EDOs de Primer Orden]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema05#Diagrama de flujo\|Diagrama de flujo]]
-- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Aplicaciones y Modelización\|Aplicaciones y Modelización]]
+- [[04 MatII-Qui/Apuntes/matii-quim-tema05#Aplicaciones\|Aplicaciones]]
 
 ## Introducción
 En ciencia suele ocurrir que las magnitudes que nos interesan no son directamente "accesibles", pero sí somos capaces de encontrar relaciones entre ellas y sus derivadas. Ejemplo base: una población de cualquier ser vivo crece, al principio, de manera proporcional al tamaño de la población: cuantos más individuos hay, mayor descendencia tienen. Esto nos lleva a plantear la ecuación:
@@ -452,158 +452,69 @@ $$
 **Ejemplo 2:** Un reactor convierte el uranio-238, relativamente estable, en plutonio-239, un isótopo radiactivo. Al cabo de 15 años, se ha desintegrado el 0.043% de la cantidad inicial de una muestra de plutonio. Calcular la semivida del isótopo.
 
 ### Cinética de reacciones químicas
-En muchas reacciones químicas, la velocidad de formación de un producto es proporcional a las cantidades restantes de los reactivos. Si dos sustancias, A y B, se combinan para formar una tercera sustancia C, la rapidez o velocidad de reacción es proporcional al producto de las cantidades de A y B que no han reaccionado aún.
-
-Matemáticamente, si $A(t)$ y $B(t)$ representan las cantidades de A y B en el tiempo $t$, y la reacción sigue una ley de velocidad de segundo orden:
-$$
-\frac{da}{dt} = k (A_0 -  a C)(B_0 - b C),
-$$
-donde $A_0$ y $B_0$ son las cantidades iniciales de A y B, respectivamente, $a$ y $b$ reflejan la estequiometría de la reacción, y $k$ es una constante de proporcionalidad.
 
 **Ejemplo**
-3 g de A junto con 5 g de B dan lugar a 2 g de C y 6 g de D. Inicialmente tenemos 80g de A y 120 g de B. Si la formación de C es proporcional a la cantidad de reactivos que queda, calcula el modelo e cantidad de C en función del tiempo, sabiendo que al minuto de comenzar la reacción se ha producido 5 g de C.
+3 g de A junto con 5 g de B dan lugar a 2 g de C y 6 g de D. Inicialmente tenemos 80g de A y 120 g de B. Si la formación de C es proporcional a la cantidad de reactivos que queda, calcula el modelo de cantidad de C en función del tiempo, sabiendo que al minuto de comenzar la reacción se ha producido 5 g de C.
+Para resolver este problema, debemos seguir la estequiometría de la reacción y aplicar la ley de acción de masas según las condiciones dadas.
 
-**Reacción química (en proporciones):**  
-$3g \, A + 5g \, B \rightarrow 2g \, C + 6g \, D$
+1. **Análisis de la Estequiometría**
+La reacción nos dice que por cada **2 g de C** producidos, se consumen cantidades específicas de A y B. Definimos $c(t)$ como la cantidad de C en el tiempo $t$. 
+* **Relación de consumo de A:** Para obtener 2 g de C se usan 3 g de A. Por tanto, se consumen $\frac{3}{2}$ g de A por cada gramo de C.
+* **Relación de consumo de B:** Para obtener 2 g de C se usan 5 g de B. Por tanto, se consumen $\frac{5}{2}$ g de B por cada gramo de C.
 
-**Cantidades iniciales:**  
-- $A_0 = 80g$  
-- $B_0 = 120g$
-
-La **formación de $C$** es **proporcional a la cantidad de reactivos que queda**, es decir:  
-$$
-\frac{dC}{dt} = k \cdot A(t) \cdot B(t)
-$$
-
-A medida que se forma $C$, se consumen 3g de $A$ y 5g de $B$ por cada 2g de $C$.  
-Entonces, si se han formado $C(t)$ gramos de producto:
-- Se han consumido $\frac{3}{2} C(t)$ gramos de $A$
-- Se han consumido $\frac{5}{2} C(t)$ gramos de $B$
-Por lo tanto:
-$$
-A(t) = 80 - \frac{3}{2} C(t)
-$$
-$$
-B(t) = 120 - \frac{5}{2} C(t)
-$$
-
-$$
-\frac{dC}{dt} = k \cdot \left(80 - \frac{3}{2} C\right) \cdot \left(120 - \frac{5}{2} C\right)
-$$
-
-
-**Separación de variables**
-Llevamos todos los términos de $C$ a un lado y los de $t$ al otro:
-
-$$
-\frac{dC}{\left(80 - \frac{3}{2} C\right) \cdot \left(120 - \frac{5}{2} C\right)} = k \, dt
-$$
-$$
-\int \frac{dC}{\left(80 - \frac{3}{2} C\right) \cdot \left(120 - \frac{5}{2} C\right)} = \int k \, dt
-$$
-
-$$
-\frac{0.05}{k} \left[ \log(C - 53.33) - \log(C - 48) \right] = t + C_1
-$$
-
-Donde:
-- $C_1$ es la constante de integración
-- Los valores $53.33$ y $48$ provienen de resolver las raíces de los factores lineales:  
-  $$
-  80 - \frac{3}{2}C = 0 \Rightarrow C = \frac{160}{3} \approx 53.33
-  $$
-  $$
-  120 - \frac{5}{2}C = 0 \Rightarrow C = \frac{240}{5} = 48
-  $$
-
-$$
-\frac{0.05}{k} \log\left( \frac{C - 53.33}{C - 48} \right) = t + C_1
-$$
-
-
-$$
-\log\left( \frac{C - 53.33}{C - 48} \right) = k_1(t + C_1)
-$$
+Las cantidades de reactivos en cualquier instante $t$ son:
+* $a(t) = 80 - \frac{3}{2}c$
+* $b(t) = 120 - \frac{5}{2}c$
 
 ---
-$$
-\frac{C - 53.33}{C - 48} = e^{k_1(t + C_1)} = A e^{k_1 t}
-$$
-Multiplicamos ambos lados por $C - 48$:
 
-$$
-C - 53.33 = A e^{k_1 t}(C - 48)
-$$
+2. **Planteamiento de la EDO**
 
-$$
-C - 53.33 = A e^{k_1 t} C - 48 A e^{k_1 t}
-$$
+El enunciado indica que la formación de C es proporcional a la cantidad de reactivos que queda:
+$$\frac{dc}{dt} = k \cdot a(t) \cdot b(t)$$
+Sustituimos $a$ y $b$:
+$$\frac{dc}{dt} = k \left( 80 - \frac{3}{2}c \right) \left( 120 - \frac{5}{2}c \right)$$
+Para trabajar con un **polinomio mónico** en el denominador (coeficiente de $c^2$ igual a 1), extraemos los factores comunes de los coeficientes de $c$:
+$$\frac{dc}{dt} = k \left[ \frac{3}{2} \left( \frac{160}{3} - c \right) \right] \left[ \frac{5}{2} (48 - c) \right]$$
+$$\frac{dc}{dt} = \frac{15}{4}k \left( c - \frac{160}{3} \right) (c - 48)$$
+Agrupamos la constante $K = \frac{15}{4}k$ y separamos variables:
+$$\frac{dc}{(c - \frac{160}{3})(c - 48)} = K \, dt$$
 
+---
 
-$$
-C - A e^{k_1 t} C = 53.33 - 48 A e^{k_1 t}
-$$
+3. **Resolución de la Integral**
+Usamos fracciones parciales para el lado izquierdo:
+$$\frac{1}{(c - \frac{160}{3})(c - 48)} = \frac{A}{c - \frac{160}{3}} + \frac{B}{c - 48}$$
+Resolviendo para $A$ y $B$:
+* Si $c = 48 \implies 1 = B(48 - \frac{160}{3}) = B(-\frac{16}{3}) \implies B = -\frac{3}{16}$
+* Si $c = \frac{160}{3} \implies 1 = A(\frac{160}{3} - 48) = A(\frac{16}{3}) \implies A = \frac{3}{16}$
+La integral queda:
+$$\frac{3}{16} \int \left( \frac{1}{c - \frac{160}{3}} - \frac{1}{c - 48} \right) dc = K \int dt$$
+$$\ln \left| \frac{c - \frac{160}{3}}{c - 48} \right| = \frac{16}{3}Kt + C_1$$
 
+---
 
+4. **Determinación de Constantes y Modelo Final**
 
-$$
-C (1 - A e^{k_1 t}) = 53.33 - 48 A e^{k_1 t}
-$$
+**Condición inicial:** En $t=0$, $c=0$.
+$$\ln \left| \frac{-160/3}{-48} \right| = C_1 \implies \ln \left( \frac{160}{144} \right) = \ln \left( \frac{10}{9} \right) = C_1$$
+Sustituyendo $C_1$ y aplicando la exponencial (llamamos $K' = \frac{16}{3}K$):
+$$\frac{c - \frac{160}{3}}{c - 48} = \frac{10}{9} e^{K't}$$
 
-Finalmente, despejamos $C(t)$:
+**Cálculo de $K'$:** Sabemos que en $t=1$, $c=5$.
+$$\frac{5 - \frac{160}{3}}{5 - 48} = \frac{-145/3}{-43} = \frac{145}{129}$$
+$$\frac{145}{129} = \frac{10}{9} e^{K'(1)} \implies e^{K'} = \frac{145 \cdot 9}{129 \cdot 10} = \frac{1305}{1290} = \frac{87}{86}$$
+$$K' = \ln \left( \frac{87}{86} \right)$$
 
-$$
-\boxed{
-C(t) = \frac{53.33 - 48 A e^{k_1 t}}{1 - A e^{k_1 t}}
-}
-$$
-Ahora debemos hallar $A$ y $k_1$, usando los datos concretos $C(0)=0$ y $C(1)=5$.
-- $C(0)=0$
-$$
-0 = \frac{53.33 - 48 A}{1 - A}
-$$
+**Expresión explícita: despejando $c(t)$:**
+$$\frac{c - \frac{160}{3}}{c - 48} = \frac{10}{9} \left( \frac{87}{86} \right)^t$$
 
-$$
-48 A = 53.33
-$$
+Multiplicamos cruzado y despejamos $c$:
+$$9(c - \frac{160}{3}) = 10(c - 48) \left( \frac{87}{86} \right)^t$$
+$$9c - 480 = 10c \left( \frac{87}{86} \right)^t - 480 \left( \frac{87}{86} \right)^t$$
+$$480 \left[ \left( \frac{87}{86} \right)^t - 1 \right] = c \left[ 10 \left( \frac{87}{86} \right)^t - 9 \right]$$
 
-$$
-A = \frac{53.33}{48}=1.111
-$$
--  $C(1) = 5$
-
-$$
-5 = \frac{53.33 - 53.33 e^{k_1 \cdot 1}}{1 - 1.111 e^{k_1 \cdot 1}}
-$$
-$$
-5 (1 - 1.111 e^{k_1}) = 53.33 - 53.33 e^{k_1}
-$$
-$$
-5 - 5.555 e^{k_1} = 53.33 - 53.33 e^{k_1}
-$$
-$$
-53.33 e^{k_1} - 5.555 e^{k_1} = 53.33 - 5
-$$
-$$
-47.775 e^{k_1} = 48.33
-$$
-$$
-e^{k_1} = \frac{48.33}{47.775} \approx 1.0116
-$$
-$$
-k_1 = \ln(1.0116) \approx 0.01155
-$$
-Finalmente, sustituimos $A=1.111$ y $k_1 \approx 0.01155$ en la expresión para $C(t)$:
-$$
-\boxed{
-C(t) \approx \frac{53.33 (1 - e^{0.01155 t})}{1 - 1.111 e^{0.01155 t}}
-}
-$$
-
-
-
-
-
+$$c(t) = \frac{480 \left[ \left( \frac{87}{86} \right)^t - 1 \right]}{10 \left( \frac{87}{86} \right)^t - 9}$$
 
 ### Mezclas de sustancia
 Cuando se mezclan dos disoluciones con diferentes concentraciones de una misma sustancia, la concentración varía con el tiempo según un balance de flujo de entrada y salida. En un sistema de mezcla continua, la tasa de cambio de la cantidad de sustancia disuelta está dada por la ecuación:
