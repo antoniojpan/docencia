@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-16T08:36:52.293+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-16T08:47:44.356+02:00"}
 ---
 
 
@@ -451,6 +451,7 @@ $$
 
 **Ejemplo 2:** Un reactor convierte el uranio-238, relativamente estable, en plutonio-239, un isótopo radiactivo. Al cabo de 15 años, se ha desintegrado el 0.043% de la cantidad inicial de una muestra de plutonio. Calcular la semivida del isótopo.
 
+---
 ### Cinética de reacciones químicas
 
 **Ejemplo**
@@ -515,7 +516,7 @@ $$9c - 480 = 10c \left( \frac{87}{86} \right)^t - 480 \left( \frac{87}{86} \righ
 $$480 \left[ \left( \frac{87}{86} \right)^t - 1 \right] = c \left[ 10 \left( \frac{87}{86} \right)^t - 9 \right]$$
 
 $$c(t) = \frac{480 \left[ \left( \frac{87}{86} \right)^t - 1 \right]}{10 \left( \frac{87}{86} \right)^t - 9}$$
-
+---
 ### Mezclas de sustancia
 Cuando se mezclan dos disoluciones con diferentes concentraciones de una misma sustancia, la concentración varía con el tiempo según un balance de flujo de entrada y salida. En un sistema de mezcla continua, la tasa de cambio de la cantidad de sustancia disuelta está dada por la ecuación:
 $$
@@ -529,8 +530,55 @@ $$
 **Ejemplo:**
 Un tanque contiene inicialmente 300 litros de agua pura. Se bombea una solución salina a una tasa de 3 litros por minuto con una concentración de 2 g/L, y la mezcla se mantiene bien agitada mientras se extrae líquido 2 l/min. ¿Cuál será la cantidad de sal en el tanque después de 10 minutos?
 
+Para resolver este problema, utilizaremos una **ecuación diferencial lineal de primer orden** que modele el cambio de la cantidad de sal en el tanque respecto al tiempo ($t$).
+
+1. **Definición de variables**
+* $A(t)$: Cantidad de sal en el tanque en el tiempo $t$ (en gramos).
+* $V(t)$: Volumen de líquido en el tanque en el tiempo $t$.
+* $t$: Tiempo transcurrido (en minutos).
+
+2. **Planteamiento de la Ecuación**
+La tasa de cambio de la sal es la diferencia entre la tasa de entrada y la tasa de salida:
+$$\frac{dA}{dt} = \text{Razón de entrada} - \text{Razón de salida}$$
+
+**Razón de entrada:**
+$$\text{Flujo de entrada} \times \text{Concentración de entrada} = 3 \, \text{L/min} \times 2 \, \text{g/L} = 6 \, \text{g/min}$$
+
+**Razón de salida:**
+Primero, definimos el volumen $V(t)$. Como entran 3 L/min y salen 2 L/min, el volumen aumenta 1 litro cada minuto:
+$$V(t) = 300 + (3 - 2)t = 300 + t$$
+La concentración de salida es la cantidad actual de sal dividida por el volumen actual: $\frac{A(t)}{300 + t}$.
+$$\text{Razón de salida} = \text{Flujo de salida} \times \text{Concentración} = 2 \times \frac{A}{300 + t}$$
+
+**Ecuación Diferencial:**
+$$\frac{dA}{dt} = 6 - \frac{2A}{300 + t}$$
 
 
+3. **Resolución de la Ecuación**
+Reescribimos la ecuación en su forma estándar:
+$$\frac{dA}{dt} + \frac{2}{300 + t}A = 6$$
+
+Utilizamos la fórmula de teoría [[04 MatII-Qui/Apuntes/matii-quim-tema05#Ecuaciones Lineales\|para las lineales]] $\mu(t)$:
+$$\mu(t) = e^{\int \frac{2}{300 + t} dt} = e^{2 \ln(300 + t)} = (300 + t)^2$$
+4. **Condición Inicial y Resultado**
+Sabemos que inicialmente el tanque tenía agua pura, por lo tanto, en $t = 0$, $A = 0$:
+$$0 = 2(300) + \frac{C}{(300)^2} \implies 0 = 600 + \frac{C}{90,000}$$
+$$C = -54,000,000$$
+
+La función de la cantidad de sal es:
+$$A(t) = 2(300 + t) - \frac{54,000,000}{(300 + t)^2}$$
+
+**Cálculo para $t = 10$ minutos:**
+1.  $300 + 10 = 310$
+2.  $A(10) = 2(310) - \frac{54,000,000}{310^2}$
+3.  $A(10) = 620 - \frac{54,000,000}{96,100}$
+4.  $A(10) \approx 620 - 561.91$
+
+**$A(10) \approx 58.09$ gramos**
+
+Después de 10 minutos, habrá aproximadamente **58.09 gramos de sal** en el tanque.
+
+---
 ### Mezcla térmica
 Considera un termo eléctrico de 100L, que se encuentra inicialmente a 60ºC. Cuando el usuario abre el grifo, entra agua a 15ºC, a razón de 3L/min; y sale ese mismo caudal de agua, a la nueva temperatura del depósito una vez mezclado todo (se supone que la mezcla es instantánea). ¿Cómo podríamos describir la temperatura del agua que le llega al usuario?
 ![Pasted image 20250407082723.png](/img/user/imagenes/Pasted%20image%2020250407082723.png)
