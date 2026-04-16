@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-16T08:47:44.356+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05/","created":"2026-01-08T10:24:16.932+01:00","updated":"2026-04-16T09:58:56.131+02:00"}
 ---
 
 
@@ -558,8 +558,13 @@ $$\frac{dA}{dt} = 6 - \frac{2A}{300 + t}$$
 Reescribimos la ecuación en su forma estándar:
 $$\frac{dA}{dt} + \frac{2}{300 + t}A = 6$$
 
-Utilizamos la fórmula de teoría [[04 MatII-Qui/Apuntes/matii-quim-tema05#Ecuaciones Lineales\|para las lineales]] $\mu(t)$:
-$$\mu(t) = e^{\int \frac{2}{300 + t} dt} = e^{2 \ln(300 + t)} = (300 + t)^2$$
+Utilizamos la fórmula de teoría [[04 MatII-Qui/Apuntes/matii-quim-tema05#Ecuaciones Lineales\|para las lineales]]:
+
+
+$$\mu(t) =\int Pdx =\int \frac{2}{300 + t} dt = 2 \ln(300 + t)$$
+$$I =\int Qe^\mu dx= \int 6(300 + t)^2 dt = 2(300 + t)^3$$
+$$A(t) =e^{-\mu}(I+C) =\frac{1}{(300+t)^2} (2(300 + t)^3 + C) = 2(300 + t) + \frac{C}{(300 + t)^2}$$
+
 4. **Condición Inicial y Resultado**
 Sabemos que inicialmente el tanque tenía agua pura, por lo tanto, en $t = 0$, $A = 0$:
 $$0 = 2(300) + \frac{C}{(300)^2} \implies 0 = 600 + \frac{C}{90,000}$$
