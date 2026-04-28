@@ -1,8 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema06-ej/","created":"2026-04-28T16:54:25.785+02:00","updated":"2026-04-28T17:32:55.030+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema06-ej/","created":"2026-04-28T16:54:25.785+02:00","updated":"2026-04-28T17:37:12.577+02:00"}
 ---
 
 # Ejercicios
+
 
 1. Estudiar la existencia y unicidad de los siguientes PVI:
 
