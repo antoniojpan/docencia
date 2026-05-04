@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-05-04T13:04:01.225+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-05-04T13:07:06.180+02:00"}
 ---
 
 
@@ -7,14 +7,7 @@
 # Tema 7: Sistemas de EDOs
 - [[04 MatII-Qui/Apuntes/matii-quim-tema07#Introducción\|Introducción]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema07#Sistemas homogéneos: forma general\|Sistemas homogéneos: forma general]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema07#Sistemas homogéneos: forma general\|Caso 1: matriz diagonalizable (autovalores reales y distintos)]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema07#Sistemas homogéneos: forma general\|Caso 2: autovalores complejos]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema07#Sistemas homogéneos: forma general\|Caso 3: autovalores reales repetidos (deficiente)]]
-	- [[04 MatII-Qui/Apuntes/matii-quim-tema07#Sistemas homogéneos: forma general\|Resumen]]
 - [[04 MatII-Qui/Apuntes/matii-quim-tema07#Caso no homogéneo: variación de constantes\|Caso no homogéneo: variación de constantes]]
-- [[04 MatII-Qui/Apuntes/matii-quim-tema07#Ejercicios de la hoja.\|Ejercicios de la hoja.]]
-- [[04 MatII-Qui/Apuntes/matii-quim-tema07#Ejercicios nuevos.\|Ejercicios nuevos.]]
-
 
 ## Introducción
 Los sistemas de ecuaciones diferenciales ordinarias (EDOs) son una herramienta fundamental para modelar fenómenos donde múltiples variables interactúan entre sí. Estos sistemas describen cómo evolucionan en el tiempo varias funciones incógnitas cuyos comportamientos están interconectados.  
