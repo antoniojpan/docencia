@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-05-04T13:07:06.180+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-05-06T07:57:31.346+02:00"}
 ---
 
 
@@ -56,6 +56,12 @@ y'(t) = c x(t) + d y(t),
 \end{cases}
 $$  
 donde $a, b, c, d$ son constantes.  
+
+---
+
+**Interpretación geométrica**
+Gráficamente, los sistemas de EDOs pueden interpretarse como un campo de flechas en el espacio $(x,y)$ de variables del sistema. El dato inicial $(x_0,y_0)$ es un punto del plano$(x,y)$, y la solución particular correspondiente sería la trayectoria que seguiría una partícula dejada caer en $(x_0,y_0)$ y arrastrada por un viento descrito por las flechas del sistema.
+![Pasted image 20260506075729.png](/img/user/imagenes/Pasted%20image%2020260506075729.png)
 ## Sistemas homogéneos: forma general
 Un sistema de EDOs lineales homogéneo de orden 2 con coeficientes constantes se puede escribir en la forma:
 $$
@@ -76,9 +82,25 @@ La solución depende de los autovalores ($\lambda$) y autovectores ($v$) de $A$.
   $$
   **Ejemplo**:
   Si $A = \begin{pmatrix} 0 & 4 \\ 1 & 0 \end{pmatrix}$, con $\lambda_1 = 2$, $\lambda_2 = -2$, y autovectores $\begin{pmatrix} 2 \\ 1 \end{pmatrix}$, $\begin{pmatrix} -2 \\ 1 \end{pmatrix}$, entonces:
-  $$
-  X(t) = C_1 e^{2t} \begin{pmatrix} 2 \\ 1 \end{pmatrix} + C_2 e^{-2t} \begin{pmatrix} -2 \\ 1 \end{pmatrix}.
-  $$
+   $$
+   X(t) = C_1 e^{2t} \begin{pmatrix} 2 \\ 1 \end{pmatrix} + C_2 e^{-2t} \begin{pmatrix} -2 \\ 1 \end{pmatrix}.
+   $$
+   **Ejemplo**:
+   Si $A = \begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix}$, con $\lambda_1 = 3$, $\lambda_2 = -1$, y autovectores $\begin{pmatrix} 1 \\ 1 \end{pmatrix}$, $\begin{pmatrix} 1 \\ -1 \end{pmatrix}$, entonces:
+    $$
+    X(t) = C_1 e^{3t} \begin{pmatrix} 1 \\ 1 \end{pmatrix} + C_2 e^{-t} \begin{pmatrix} 1 \\ -1 \end{pmatrix}.
+    $$
+    **Ejemplo**:
+    Si $A = \begin{pmatrix} -3 & 1 \\ 1 & -3 \end{pmatrix}$, con $\lambda_1 = -2$, $\lambda_2 = -4$, y autovectores $\begin{pmatrix} 1 \\ 1 \end{pmatrix}$, $\begin{pmatrix} 1 \\ -1 \end{pmatrix}$, entonces:
+    $$
+    X(t) = C_1 e^{-2t} \begin{pmatrix} 1 \\ 1 \end{pmatrix} + C_2 e^{-4t} \begin{pmatrix} 1 \\ -1 \end{pmatrix}.
+    $$
+![Pasted image 20260505102710.png|500](/img/user/imagenes/Pasted%20image%2020260505102710.png)
+**Diferentes casos:**
+- dos autovalores positivos: es un fuente
+- dos autovalores negativos: es un sumidero
+- uno positivo y otro negativo: es un punto de silla
+
 
 ---
 ### Caso 2: autovalores complejos
@@ -90,9 +112,16 @@ La solución depende de los autovalores ($\lambda$) y autovectores ($v$) de $A$.
   $$
   **Ejemplo**:
   Si $A = \begin{pmatrix} 4 & 4 \\ -1 & 4 \end{pmatrix}$, con $\lambda = 4 \pm 2i$ y autovector $\begin{pmatrix} 1 \\ \frac{i}{2} \end{pmatrix}$, entonces $u = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$, $w = \begin{pmatrix} 0 \\ \frac{1}{2} \end{pmatrix}$. La solución es:
-  $$
-  X(t) = e^{4t} \left( C_1 \begin{pmatrix} \cos(2t) \\ -\frac{1}{2} \sin(2t) \end{pmatrix} + C_2 \begin{pmatrix} \sin(2t) \\ \frac{1}{2} \cos(2t) \end{pmatrix} \right).
-  $$
+   $$
+   X(t) = e^{4t} \left( C_1 \begin{pmatrix} \cos(2t) \\ -\frac{1}{2} \sin(2t) \end{pmatrix} + C_2 \begin{pmatrix} \sin(2t) \\ \frac{1}{2} \cos(2t) \end{pmatrix} \right).
+   $$
+   **Ejemplo**:
+   Si $A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$, con $\lambda = \pm i$ y autovector $\begin{pmatrix} 1 \\ i \end{pmatrix}$, entonces $u = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$, $w = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$. La solución es:
+   $$
+   X(t) = C_1 \begin{pmatrix} \cos(t) \\ -\sin(t) \end{pmatrix} + C_2 \begin{pmatrix} \sin(t) \\ \cos(t) \end{pmatrix}.
+   $$
+![Pasted image 20260505104038.png](/img/user/imagenes/Pasted%20image%2020260505104038.png)
+
 
 ---
 

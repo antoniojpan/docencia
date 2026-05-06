@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07-ej/","created":"2026-05-04T13:03:26.650+02:00","updated":"2026-05-04T13:09:24.066+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07-ej/","created":"2026-05-04T13:03:26.650+02:00","updated":"2026-05-04T13:16:55.309+02:00"}
 ---
 
-[Volver al temario](Matemáticas%20II-%20Química-%20Índice).
+[[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
 # Ejercicios tema 7
 ## Ejercicios del pdf del campus.
 **Ejercicio 4a**
@@ -545,4 +545,4 @@ y(2) &\approx \frac{8}{3} \cdot 403.429 + \frac{1}{3} \approx 1081.478
 \end{aligned}
 $$
 
-[Volver al temario](Matemáticas%20II-%20Química-%20Índice).
+[[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
