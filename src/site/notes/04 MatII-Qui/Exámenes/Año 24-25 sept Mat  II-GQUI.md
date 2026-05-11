@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/examenes/ano-24-25-sept-mat-ii-gqui/","created":"2026-01-08T10:24:16.933+01:00","updated":"2026-01-13T12:06:00.848+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/examenes/ano-24-25-sept-mat-ii-gqui/","created":"2026-01-08T10:24:16.933+01:00","updated":"2026-05-11T12:07:00.616+02:00"}
 ---
 
 #### EXAMEN MATEMÁTICAS II. GRADO EN QUÍMICA. 11 de septiembre de 2025

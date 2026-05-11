@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05-ej/","created":"2026-03-19T10:50:41.183+01:00","updated":"2026-03-19T10:52:44.388+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema05-ej/","created":"2026-03-19T10:50:41.183+01:00","updated":"2026-05-11T11:56:35.341+02:00"}
 ---
 
-[Volver al temario](Matemáticas%20II-%20Química-%20Índice).
+[[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
 # Tema 5 - Ejercicios
 
 1.  Todas las funciones de la familia uniparamétrica
@@ -146,3 +146,5 @@ $$2xy \, dx + (x^2 - y) \, dy = 0; \quad -2x^2y + y^2 = 1$$
 29. Un tanque con capacidad de 500 litros, contiene 300 litros de agua. Una solución salina se bombea hacia el tanque a una velocidad de 3 l/m, la concentración de sal de este flujo de entrada es de 2 g/l. A su vez cuando se mezcla bien la solución sale a una velocidad de 2 l/m. ¿Cuánto tardará en que haya 500 gramos de sal en el tanque? ¿Cuándo se llena el tanque?
 
 30. Un depósito contiene 100 litros de una disolución salina cuya concentración es de 2.5 gramos de sal por litro. Una disolución con 2 gramos de sal por litro entra en el depósito a una razón de 5 litros por minuto y la mezcla bien agitada sale a la misma velocidad. ¿qué cantidad de sal hay a los 10 minutos?
+
+[[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].

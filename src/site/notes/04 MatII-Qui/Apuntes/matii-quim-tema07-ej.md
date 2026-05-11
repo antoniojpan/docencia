@@ -1,10 +1,34 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07-ej/","created":"2026-05-04T13:03:26.650+02:00","updated":"2026-05-04T13:16:55.309+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07-ej/","created":"2026-05-04T13:03:26.650+02:00","updated":"2026-05-11T12:03:52.986+02:00"}
 ---
 
 [[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
 # Ejercicios tema 7
-## Ejercicios del pdf del campus.
+
+**Ejercicio 1.** Escribir el sistema en forma matricial:
+
+(a) $\begin{cases} x' = x - y + t - 1 \\ y' = 2x + y - 3t^2 \end{cases}$
+
+(b) $\begin{cases} x' = -3x + 4y + e^{-t} \text{sen}(2t) \\ y' = 5x + 9y + 4e^{-t} \cos(2t) \end{cases}$
+
+---
+
+**Ejercicio 2**. Expresar en forma de sistema de ecuaciones el sistema matricial dado:
+
+(a) $\begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} 3 & -7 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} + \begin{pmatrix} 4 \\ 8 \end{pmatrix} \text{sen } t + \begin{pmatrix} t - 4 \\ 2t + 1 \end{pmatrix} e^{4t}$
+
+(b) $X' = \begin{pmatrix} 7 & 5 & -9 \\ 4 & 1 & 1 \\ 0 & -2 & 3 \end{pmatrix} X + \begin{pmatrix} 0 \\ 2 \\ 1 \end{pmatrix} e^{5t} - \begin{pmatrix} 8 \\ 0 \\ 3 \end{pmatrix} e^{-2t}$
+
+---
+
+**Ejercicio 3**. Comprobar que
+
+$$X = \begin{pmatrix} 5 \cos t \\ 3 \cos t - \text{sen } t \end{pmatrix} e^t$$
+
+es solución del sistema
+
+$$\begin{cases} x' = -2x + 5y \\ y' = -2x + 4y \end{cases}$$
+
 **Ejercicio 4a**
 Determinar la solución general del sistema diferencial:
 
@@ -103,6 +127,17 @@ La solución es:
 $$
 Y(t) = \begin{pmatrix} 3 \\ 3 \end{pmatrix} e^{t/2} + \begin{pmatrix} 0 \\ 2 \end{pmatrix} e^{-t/2}
 $$
+
+**Ejercicio 8**. El núcleo radiactivo se descompone de acuerdo con la ley
+
+$$\frac{dN}{dt} = -\lambda N,$$
+
+donde $N$ es la concentración del núcleo dado y $\lambda$ la constante particular de desintegración. En una serie radiactiva de dos núcleos diferentes se tiene el sistema
+
+$$\begin{cases} \dfrac{dN_1}{dt} = -\lambda_1 N_1 \\ \\ \dfrac{dN_2}{dt} = \lambda_1 N_1 - \lambda_2 N_2 \end{cases}$$
+
+Calcular la solución $N_2(t)$ con las condiciones $N_1(0) = N_0$ y $N_2(0) = 0$, siendo $\lambda_1 = 1$ y $\lambda_2 = 2$.
+
 **Ejercicio 9**
 Calcular la solución general del siguiente sistema:
 $$

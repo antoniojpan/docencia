@@ -1,7 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema06-ej/","created":"2026-04-28T16:54:25.785+02:00","updated":"2026-05-04T13:11:12.849+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema06-ej/","created":"2026-04-28T16:54:25.785+02:00","updated":"2026-05-11T11:56:46.798+02:00"}
 ---
 
+[[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
 # Ejercicios tema 6
 
 1. Estudiar la existencia y unicidad de los siguientes PVI:
@@ -213,3 +214,5 @@ donde $r(x)$ es:
 
 12. Una masa que pesa 24 kg, unida al extremo de un resorte, alarga a ésta 4 m. Al inicio, la masa se libera desde el reposo en un punto a 3 m hacia arriba de la posición de equilibrio. Encontrar la ecuación del movimiento. Además, encontrar la ecuación del movimiento si la masa anterior se libera desde la posición de equilibrio con una velocidad descendente de 2 m/s.  
 
+
+[[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].

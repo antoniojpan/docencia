@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-05-06T07:57:31.346+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-05-11T11:54:25.314+02:00"}
 ---
 
 
@@ -97,7 +97,7 @@ La solución depende de los autovalores ($\lambda$) y autovectores ($v$) de $A$.
     $$
 ![Pasted image 20260505102710.png|500](/img/user/imagenes/Pasted%20image%2020260505102710.png)
 **Diferentes casos:**
-- dos autovalores positivos: es un fuente
+- dos autovalores positivos: es una fuente
 - dos autovalores negativos: es un sumidero
 - uno positivo y otro negativo: es un punto de silla
 
@@ -138,10 +138,6 @@ La solución depende de los autovalores ($\lambda$) y autovectores ($v$) de $A$.
   X(t) = C_1 e^{5t} \begin{pmatrix} 1 \\ \frac{1}{2} \end{pmatrix} + C_2 e^{5t} \left( t \begin{pmatrix} 1 \\ \frac{1}{2} \end{pmatrix} + \begin{pmatrix} \frac{3}{2} \\ 1 \end{pmatrix} \right).
   $$
 
----
-
-
-
 ### Resumen
 
 | **Caso**              | **Condición**                    | **Método de Solución**                   |
@@ -150,6 +146,7 @@ La solución depende de los autovalores ($\lambda$) y autovectores ($v$) de $A$.
 | Autovalor deficiente  | $\lambda$ repetido, 1 autovector | Autovector generalizado.                 |
 | Autovalores complejos | $\lambda = \alpha \pm i\beta$    | Partes real e imaginaria del autovector. |
 
+---
 
 ## Caso no homogéneo: variación de constantes
 Si tenemos un sistema lineal **no homogéneo** con coeficientes constantes:
@@ -164,7 +161,9 @@ donde:
 * $X_h(t)$ es la solución general del sistema homogéneo $X' = AX$,
 * $X_p(t)$ es **una solución particular** del sistema completo.
 
+Definimos la **matriz fundamental** $\Phi(t)$ como una matriz cuyas columnas son $n=2$ soluciones linealmente independientes del sistema homogéneo. Esta matriz debe ser no singular, es decir, su determinante es $\det(\Phi(t)) \neq 0$.
 Usaremos el método de variación de constantes:
+
 **Teorema.** Sea $\Phi(x)$ una matriz fundamental del sistema lineal homogéneo
 $$
 X' = AX,

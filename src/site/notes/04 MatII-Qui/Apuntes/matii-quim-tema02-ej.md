@@ -1,7 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02-ej/","created":"2026-02-07T13:01:41.827+01:00","updated":"2026-02-07T13:02:01.632+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02-ej/","created":"2026-02-07T13:01:41.827+01:00","updated":"2026-05-11T11:55:52.190+02:00"}
 ---
 
+[[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
 # Hoja de Ejercicios: Resolución Numérica de Ecuaciones
 
 ## Ejercicio 1
@@ -199,3 +200,5 @@ Límites y puntos de prueba:
 * **Unicidad:** $f(0.1)=8.894$, $f(2.1)=-7.689$. $f^{\prime}(x)=-\frac{1}{x^{2}}-e^{x} < 0$. Solución única.
 * **Bisección (3 iteraciones):** $c_0 = 1.1$; $c_1 = 0.6$; $c_2 = 0.35$.
 **Aproximación final:** $c_3 = 0.475$.
+
+[[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].

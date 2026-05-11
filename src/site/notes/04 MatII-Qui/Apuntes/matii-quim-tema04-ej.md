@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04-ej/","created":"2026-03-05T08:33:36.717+01:00","updated":"2026-03-19T10:52:35.126+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04-ej/","created":"2026-03-05T08:33:36.717+01:00","updated":"2026-05-11T11:56:19.714+02:00"}
 ---
 
-[Volver al temario](Matemáticas%20II-%20Química-%20Índice).
+[[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
 # Tema 4: Métodos de integración numérica — Ejercicios aplicables
 
 ## Ejercicio 1
@@ -76,3 +76,4 @@ Aproximar mediante los métodos del **punto medio**, del **trapecio** y de **Sim
 Aproximar la integral del ejercicio anterior con las **reglas compuestas** con cinco nodos. Calcular el número de pasos necesarios para que el error sea menor que $0.01$ en la **regla de Simpson compuesta**.
 
 
+[[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].
