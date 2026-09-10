@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/matematicas-ii-quimica-indice/","created":"2026-07-27T11:52:22.778+02:00","updated":"2026-07-27T11:51:02.000+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/matematicas-ii-quimica-indice/","created":"2026-09-10T07:46:04.769+02:00","updated":"2026-09-10T07:48:11.325+02:00"}
 ---
 
 
@@ -23,10 +23,10 @@
 
 ---
 ## Exámenes
-- [[Año 23-24 Mat II-GQUI\|Año 23-24 Mat II-GQUI]] 
-- [[Año 24-25 jun Mat II-GQUI\|Año 24-25 jun Mat II-GQUI]], [[Año 24-25 jun R Mat II-GQUI\|Año 24-25 jun R Mat II-GQUI]]
-- [[Año 24-25 sept Mat  II-GQUI\|Año 24-25 sept Mat  II-GQUI]], [[Año 24-25 sept R Mat II-GQUI\|Año 24-25 sept R Mat II-GQUI]]
-- [[Año 25-26 sept Mat II-GQUI\|Año 25-26 sept Mat II-GQUI]]
+- [[04 MatII-Qui/Exámenes/matii-qui-examen-2324\|Año 23-24 Mat II-GQUI]]
+- [[04 MatII-Qui/Exámenes/matii-qui-examen-2425jun\|Año 24-25 jun Mat II-GQUI]] · [[04 MatII-Qui/Exámenes/matii-qui-examen-2425jun-sol\|Soluciones]] · [[04 MatII-Qui/Exámenes/matii-qui-examen-2425junR\|R]]
+- [[04 MatII-Qui/Exámenes/matii-qui-examen-2425sept\|Año 24-25 sept Mat II-GQUI]] · [[04 MatII-Qui/Exámenes/matii-qui-examen-2425sept-sol\|Soluciones]] · [[04 MatII-Qui/Exámenes/matii-qui-examen-2425septR\|R]] · [[04 MatII-Qui/Exámenes/matii-qui-examen-2425septR-sol\|Soluciones R]]
+
 
 ## Otros
 - [[04 MatII-Qui/Apuntes/Anexo- Hoja fórmulas\|Anexo- Hoja fórmulas]] 
