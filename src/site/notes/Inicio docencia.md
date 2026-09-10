@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/inicio-docencia/","tags":["gardenEntry"],"created":"2026-01-08T10:24:16.930+01:00","updated":"2026-01-08T10:59:03.687+01:00"}
+{"dg-publish":true,"permalink":"/inicio-docencia/","tags":["gardenEntry"],"created":"2026-01-08T10:24:16.930+01:00","updated":"2026-06-16T17:14:12.199+02:00"}
 ---
 
 # Material docencia
@@ -12,5 +12,5 @@ ATENCIÓN: Estos documentos son unas anotaciones rápidas e informales, elaborad
 - [[03 Variable Compleja/VC-indice\|Variable Compleja. Matemáticas]]
 
 ## Otros
-- [[Otro material/año 24-25 sept Cálculo Num-GCCMar\|año 24-25 sept Cálculo Num-GCCMar]]
-- [[Otro material/año 24-25 sept Mat II-GENO\|año 24-25 sept Mat II-GENO]]
+- [[Otro material/calcnum-ccmar-examen2425sept\|calcnum-ccmar-examen2425sept]]
+- [[Otro material/matii-enolog-examen2425sept\|matii-enolog-examen2425sept]]

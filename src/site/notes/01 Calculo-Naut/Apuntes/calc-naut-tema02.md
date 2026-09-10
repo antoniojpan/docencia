@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-01-08T10:24:16.928+01:00","updated":"2025-11-25T07:18:21.152+01:00"}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-06-01T16:15:31.522+02:00","updated":"2026-06-01T13:23:09.000+02:00"}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
@@ -188,7 +188,7 @@ Para optimizar $f(x,y)$ sujeto a una restricción (ligadura) $g(x,y) = c$. (Tamb
 
 **Pasos a seguir:**
 1.  **Definir la función Lagrangiana:**
-$$L(x, y, \lambda) = f(x, y) - \lambda (g(x, y) - c)$$
+$$L(\lambda,x, y) = f(x, y) - \lambda (g(x, y) - c)$$
 2.  **Construir la Matriz Hessiana Orlada ($\bar{H}$):**
     Esta matriz incluye las segundas derivadas de $L$ y las primeras derivadas de la restricción $g$.
     **Para 2 variables ($f(x,y)$ con $g(x,y)=c$):**

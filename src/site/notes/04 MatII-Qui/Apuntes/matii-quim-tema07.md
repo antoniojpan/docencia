@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-05-11T11:54:25.314+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-05-13T10:54:05.891+02:00"}
 ---
 
 
@@ -162,7 +162,9 @@ donde:
 * $X_p(t)$ es **una solución particular** del sistema completo.
 
 Definimos la **matriz fundamental** $\Phi(t)$ como una matriz cuyas columnas son $n=2$ soluciones linealmente independientes del sistema homogéneo. Esta matriz debe ser no singular, es decir, su determinante es $\det(\Phi(t)) \neq 0$.
-Usaremos el método de variación de constantes:
+
+
+Para resolver un sistema no homogéneo usaremos el método de variación de constantes, que se basa en el siguiente teorema:
 
 **Teorema.** Sea $\Phi(x)$ una matriz fundamental del sistema lineal homogéneo
 $$
