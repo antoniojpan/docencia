@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/inicio-docencia/","tags":["gardenEntry"],"created":"2026-01-08T10:24:16.930+01:00","updated":"2026-06-16T17:14:12.199+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/inicio-docencia/","tags":["gardenEntry"],"created":"2026-01-08T10:24:16.930+01:00","updated":"2026-09-14T12:14:04.110+02:00","dg-note-properties":{}}
 ---
 
 # Material docencia
@@ -8,7 +8,7 @@ ATENCIÓN: Estos documentos son unas anotaciones rápidas e informales, elaborad
 ## Asignaturas
 - [[04 MatII-Qui/Matemáticas II- Química- Índice\|Matemáticas II. Grado en Química]] 
 - [[01 Calculo-Naut/calc-naut-indice\|Cálculo. Grado en Náutica y Transporte Marítimo]]
-- [[02 Mat-CCMar/mat-CCmar-indice\|Matemáticas. Ciencias del Mar]]
+- [[02 Mat-CCMar/mat-ccmar-indice\|Matemáticas. Ciencias del Mar]]
 - [[03 Variable Compleja/VC-indice\|Variable Compleja. Matemáticas]]
 
 ## Otros

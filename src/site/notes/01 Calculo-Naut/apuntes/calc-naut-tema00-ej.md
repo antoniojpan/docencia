@@ -1,7 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema00-ej/","created":"2026-01-08T10:24:16.929+01:00","updated":"2025-11-04T10:58:19.932+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema00-ej/","created":"2026-01-08T10:24:16.929+01:00","updated":"2026-09-14T12:13:13.430+02:00","dg-note-properties":{}}
 ---
 
+[[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]
 
 # Ejercicios
 
