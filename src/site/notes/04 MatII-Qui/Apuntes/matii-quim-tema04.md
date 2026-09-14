@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-12T07:54:35.075+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema04/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-03-12T07:54:35.075+01:00","dg-note-properties":{}}
 ---
 
 
@@ -18,7 +18,7 @@
 
 ## 1. Introducción
 Consideremos la función $f(x) = e^{-x^2}$, cuya gráfica en el intervalo $[-2, 2]$ es:
-![Pasted image 20250210090748.png|400](/img/user/imagenes/Pasted%20image%2020250210090748.png)
+![Pasted image 20250210090748.png\|400](/img/user/imagenes/Pasted%20image%2020250210090748.png)
 **¿Cómo calcularías el área que encierra dicha función con el eje $OX$?**
 Sabemos que dicha área corresponde con el valor de la integral:
 $$
@@ -41,7 +41,7 @@ $$
 $$
 
 **Interpretación geométrica:** Aproximamos el área bajo la curva por el área de un rectángulo con base $[a, b]$ y altura $f\left(\frac{a + b}{2}\right)$.
-![Pasted image 20260303114141.png|500](/img/user/imagenes/Pasted%20image%2020260303114141.png)
+![Pasted image 20260303114141.png\|500](/img/user/imagenes/Pasted%20image%2020260303114141.png)
 
 ### 2.2 Cota del error
 El error cometido es:
@@ -60,7 +60,7 @@ $$
 \int_{a}^{b} f(x) \, dx \approx 2h \sum_{i=1}^{n} f(x_{2i-1}).
 $$
 
-![Pasted image 20260303114220.png|500](/img/user/imagenes/Pasted%20image%2020260303114220.png)
+![Pasted image 20260303114220.png\|500](/img/user/imagenes/Pasted%20image%2020260303114220.png)
 ### 2.4 Cota del error y cálculo del número de nodos
 Cota del error para el cálculo de nodos:
 $$
@@ -130,7 +130,7 @@ La aproximación es:
 $$
 \int_{a}^{b} f(x) \, dx \approx \frac{h}{2} \left( f(x_0) + 2 \sum_{i=1}^{n-1} f(x_{i}) + f(x_{n}) \right)
 $$
-![Pasted image 20260303114322.png|500](/img/user/imagenes/Pasted%20image%2020260303114322.png)
+![Pasted image 20260303114322.png\|500](/img/user/imagenes/Pasted%20image%2020260303114322.png)
 Cota del error:
 $$
 |E_{Tr}(f)| \leq \frac{(b - a)^3}{12n^2} \max_{x \in [a, b]} |f''(x)|
@@ -178,7 +178,7 @@ $$
 \int_{a}^{b} f(x) \, dx \approx \frac{b - a}{6} \left( f(a) + 4f\left(\frac{a + b}{2}\right) + f(b) \right)
 $$
 **Idea**: aproximamos la función con un polinomio de grado 2.
-![Pasted image 20260303115128.png|600](/img/user/imagenes/Pasted%20image%2020260303115128.png)
+![Pasted image 20260303115128.png\|600](/img/user/imagenes/Pasted%20image%2020260303115128.png)
 ### 4.2 Cota del error
 $$
 E_S(f) = -\frac{(b - a)^5}{2880} f^{iv}(\xi)
@@ -194,7 +194,7 @@ $$
 $$
 |E_S(f)| \leq \frac{(b - a)^5}{2880n^4} \max_{x \in [a, b]} |f^{iv}(x)|
 $$
-![Pasted image 20260303115558.png|600](/img/user/imagenes/Pasted%20image%2020260303115558.png)
+![Pasted image 20260303115558.png\|600](/img/user/imagenes/Pasted%20image%2020260303115558.png)
 ### Ejemplo
 Para calcular la integral $I = \int_{-1}^{1} \sqrt{1 - x^2} \, dx$ utilizando la regla compuesta de Simpson con cuatro subintervalos, seguimos los siguientes pasos. Tenemos $h=\frac{b-a}{2n}=\frac{1}{4}$
 $$
@@ -282,7 +282,7 @@ Como $n$ debe ser un número entero de subintervalos:
 **$n = 2$ subintervalos.**
 
 Aclaración:
-![Pasted image 20260312074806.png|600](/img/user/imagenes/Pasted%20image%2020260312074806.png)
+![Pasted image 20260312074806.png\|600](/img/user/imagenes/Pasted%20image%2020260312074806.png)
 1. Divides $[0, \pi/2]$ en **dos subintervalos**: $[0, \pi/4]$ y $[\pi/4, \pi/2]$.
     
 2. En cada uno usas el **punto medio** ($\pi/8$ y $3\pi/8$).

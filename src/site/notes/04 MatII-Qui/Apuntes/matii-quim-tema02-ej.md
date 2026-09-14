@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02-ej/","created":"2026-02-07T13:01:41.827+01:00","updated":"2026-05-11T11:55:52.190+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02-ej/","created":"2026-02-07T13:01:41.827+01:00","updated":"2026-05-11T11:55:52.190+02:00","dg-note-properties":{}}
 ---
 
 [[04 MatII-Qui/Matemáticas II- Química- Índice\|Volver al temario]].

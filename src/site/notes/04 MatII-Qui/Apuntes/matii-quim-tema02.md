@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-24T08:03:32.311+01:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-24T08:03:32.311+01:00","dg-note-properties":{}}
 ---
 
 
@@ -264,7 +264,7 @@ En lugar de hacer la "cuenta de la vieja", buscamos la **ecuación de la recta t
 **Corte con el eje X ($y=0$):**
 
 $$-2 = 4x - 8 \implies 4x = 6 \implies \mathbf{x_1 = 1.5}$$
-![Pasted image 20260224080115.png|400](/img/user/imagenes/Pasted%20image%2020260224080115.png)
+![Pasted image 20260224080115.png\|400](/img/user/imagenes/Pasted%20image%2020260224080115.png)
 Repetimos con $x_1 = 1.5$
 **Ecuación de la recta:**
 
@@ -272,7 +272,7 @@ $$y - 0.25 = 3(x - 1.5)$$
 **Corte con el eje X ($y=0$):**
 $$-0.25 = 3x - 4.5$$
 $$\mathbf{x_2 = \frac{4.25}{3} \approx 1.4166}$$
-![Pasted image 20260224080201.png|400](/img/user/imagenes/Pasted%20image%2020260224080201.png)
+![Pasted image 20260224080201.png\|400](/img/user/imagenes/Pasted%20image%2020260224080201.png)
 Como vemos, con solo dos rectas tangentes la precisión es excelente.
 
 

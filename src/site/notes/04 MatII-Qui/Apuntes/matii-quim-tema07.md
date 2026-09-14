@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-05-13T10:54:05.891+02:00"}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema07/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-05-13T10:54:05.891+02:00","dg-note-properties":{}}
 ---
 
 
@@ -95,7 +95,7 @@ La solución depende de los autovalores ($\lambda$) y autovectores ($v$) de $A$.
     $$
     X(t) = C_1 e^{-2t} \begin{pmatrix} 1 \\ 1 \end{pmatrix} + C_2 e^{-4t} \begin{pmatrix} 1 \\ -1 \end{pmatrix}.
     $$
-![Pasted image 20260505102710.png|500](/img/user/imagenes/Pasted%20image%2020260505102710.png)
+![Pasted image 20260505102710.png\|500](/img/user/imagenes/Pasted%20image%2020260505102710.png)
 **Diferentes casos:**
 - dos autovalores positivos: es una fuente
 - dos autovalores negativos: es un sumidero

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01/","created":"2026-09-14T10:31:59.783+02:00","updated":"2026-09-14T10:34:02.007+02:00"}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01/","created":"2026-09-14T10:31:59.783+02:00","updated":"2026-09-14T10:34:02.007+02:00","dg-note-properties":{}}
 ---
 
 # Tema 1: Sistemas de Ecuaciones Lineales y Matrices

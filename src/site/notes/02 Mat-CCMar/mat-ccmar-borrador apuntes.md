@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/mat-ccmar-borrador-apuntes/","created":"2026-01-08T10:24:16.930+01:00","updated":"2026-01-14T14:34:11.942+01:00"}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/mat-ccmar-borrador-apuntes/","created":"2026-01-08T10:24:16.930+01:00","updated":"2026-01-14T14:34:11.942+01:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-CCmar-indice\|volver al índice]]
@@ -332,7 +332,7 @@ Para encontrar máximos y mínimos locales:
 ### Integrales dobles
 
 **Idea:** De manera análoga a cómo en una variable sumamos una infinidad de rectángulos diminutos para calcular el área bajo una curva, en el cálculo de varias variables extendemos este concepto. Con las integrales dobles, sumamos una infinidad de prismas rectangulares infinitesimalmente delgados para determinar el volumen total que se encuentra bajo una superficie.
-![Pasted image 20251124121347.png|600](/img/user/imagenes/Pasted%20image%2020251124121347.png)
+![Pasted image 20251124121347.png\|600](/img/user/imagenes/Pasted%20image%2020251124121347.png)
 ##### Teorema de Fubini
 Permite calcular integrales dobles como integrales iteradas (o sucesivas).
 - **Sobre Rectángulos**: Si $\Omega = [a,b] \times [c,d]$: 
