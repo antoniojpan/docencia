@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema02-ej/","created":"2026-09-14T13:39:31.722+02:00","updated":"2026-09-14T13:44:44.569+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema02-ej/","created":"2026-09-14T13:39:31.722+02:00","updated":"2026-09-15T08:49:24.930+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -54,6 +54,26 @@
 
 ---
 
+> [!question] Ejercicio 4
+> Determina si el vector $v=(2,5,1)$ es combinación lineal de
+> $$u_1=(1,2,0),\qquad u_2=(0,1,1),\qquad u_3=(1,0,1).$$
+> En caso afirmativo, calcula los coeficientes y decide si la expresión es única.
+
+> [!question] Ejercicio 5
+> Considera los vectores de $\mathbb{R}^4$:
+> $$v_1=(1,0,1,2),\quad v_2=(0,1,1,1),\quad v_3=(1,1,2,3),\quad v_4=(2,-1,1,3).$$
+> Calcula el rango del conjunto y extrae una base del subespacio que generan.
+
+> [!question] Ejercicio 6
+> En $\mathbb{R}^4$, determina una base, unas ecuaciones paramétricas y la dimensión del subespacio definido por
+> $$
+> \begin{cases}
+> x+y+z+w=0\\
+> x-y+z-w=0.
+> \end{cases}
+> $$
+
+
 # Soluciones
 
 > [!success] Solución del Ejercicio 1
@@ -97,4 +117,27 @@
 > - (g) Dimensión: $1$
 > - (h) Dimensión: $2$
 > - (i) Dimensión: $2$
+
+> [!success] Solución del Ejercicio 4
+> Planteamos $v=au_1+bu_2+cu_3$. El sistema resultante es
+> $$a+c=2,\qquad 2a+b=5,\qquad b+c=1.$$
+> Se obtiene $a=2$, $b=1$ y $c=0$. Por tanto,
+> $$v=2u_1+u_2.$$
+> Los tres vectores son linealmente independientes, por lo que los coeficientes obtenidos son únicos.
+
+> [!success] Solución del Ejercicio 5
+> Se verifica que $v_3=v_1+v_2$ y $v_4=2v_1-v_2$. Por tanto, el conjunto tiene rango $2$ y una base del subespacio generado es
+> $$\{v_1,v_2\}=\{(1,0,1,2),(0,1,1,1)\}.$$
+
+> [!success] Solución del Ejercicio 6
+> Tomando $z=s$ y $w=t$, las ecuaciones dan $x=-s$ e $y=-t$. Así,
+> $$
+> (x,y,z,w)=s(-1,0,1,0)+t(0,-1,0,1).
+> $$
+> Una base es
+> $$\{(-1,0,1,0),(0,-1,0,1)\},$$
+> unas ecuaciones paramétricas son
+> $$\begin{cases}x=-s\\y=-t\\z=s\\w=t\end{cases},$$
+> y la dimensión es $2$.
+
 

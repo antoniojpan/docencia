@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-06-01T16:15:31.522+02:00","updated":"2026-06-01T13:23:09.000+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-06-01T16:15:31.522+02:00","updated":"2026-09-22T13:42:12.192+02:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
@@ -20,9 +20,12 @@ $$
 (x,y,z,\ldots) \mapsto (f_1,f_2,\ldots)
 $$
 Ejemplos:
-- Para cada punto de un mapa $(x,y)$ podemos dar su temperatura $T$: $$(x,y) \mapsto T(x,y)$$
-- Para cada punto de un mapa $(x,y)$ podemos dar la velocidad del viento $v_1,v_2$: $$(x,y) \mapsto (v_1(x,y),v_2(x,y))$$
-- Para cada valor de tiempo $t$ podemos dar un punto de un mapa $(x,y)$: $$t\mapsto (x(t),y(t))$$
+- Para cada punto de un mapa $(x,y)$ podemos dar su temperatura $T$: 
+$$(x,y) \mapsto T(x,y)$$
+- Para cada punto de un mapa $(x,y)$ podemos dar la velocidad del viento $v_1,v_2$: 
+$$(x,y) \mapsto (v_1(x,y),v_2(x,y))$$
+- Para cada valor de tiempo $t$ podemos dar un punto de un mapa $(x,y)$: 
+$$t\mapsto (x(t),y(t))$$
 ## 1. Dominio de Funciones
 
 El **dominio** de una función $f$ de varias variables, $Dom(f)$, es el conjunto de puntos $(x, y, \dots)$ del espacio $\mathbb{R}^n$ para los cuales la función está definida.

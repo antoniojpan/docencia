@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01-ej/","created":"2026-09-14T12:12:47.774+02:00","updated":"2026-09-14T13:39:56.398+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01-ej/","created":"2026-09-14T12:12:47.774+02:00","updated":"2026-09-15T08:48:55.751+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -53,6 +53,29 @@
 > Comprueba los resultados del **Ejercicio 3** multiplicando cada matriz por su correspondiente inversa (\\(A \cdot A^{-1} = I\\)).
 
 ---
+
+> [!question] Ejercicio 5
+> Resuelve mediante el método de Gauss el sistema:
+> $$
+> \begin{cases}
+> x+y+z=6\\
+> 2x-y+z=3\\
+> x+2y-z=2
+> \end{cases}
+> $$
+> Escribe la matriz ampliada, escalónala y clasifica el sistema.
+
+> [!question] Ejercicio 6
+> Sean
+> $$A=\begin{pmatrix}1&2&-1\\0&1&3\end{pmatrix},\qquad
+> B=\begin{pmatrix}2&0\\1&-1\\-1&2\end{pmatrix}.$$
+> Comprueba que los productos están definidos y calcula $AB$ y $BA$.
+
+> [!question] Ejercicio 7
+> Calcula mediante Gauss-Jordan la inversa de
+> $$A=\begin{pmatrix}1&1&0\\0&1&1\\1&0&1\end{pmatrix}.$$
+> Comprueba el resultado calculando $AA^{-1}$.
+
 
 # Soluciones
 
@@ -109,3 +132,22 @@
 >   $$E^{-1} = \begin{pmatrix} -3 & 2 & 1 \\ 2 & -1 & 0 \\ 1 & 0 & -1 \end{pmatrix}$$
 > - **(f)** Para $t = 1$, la inversa es:
 >   $$F^{-1} = \frac{1}{18} \begin{pmatrix} -5 & 7 & 1 \\ 1 & -5 & 7 \\ 7 & 1 & -5 \end{pmatrix}$$
+
+> [!success] Solución del Ejercicio 5
+> La matriz ampliada es
+> $$\left(\begin{array}{ccc|c}1&1&1&6\\2&-1&1&3\\1&2&-1&2\end{array}\right).$$
+> Su forma escalonada reducida es
+> $$\left(\begin{array}{ccc|c}1&0&0&1\\0&1&0&2\\0&0&1&3\end{array}\right).$$
+> Por tanto, el sistema es **Compatible Determinado (S.C.D.)** y su solución es $(x,y,z)=(1,2,3)$.
+
+> [!success] Solución del Ejercicio 6
+> $A$ es $2\times3$ y $B$ es $3\times2$, por lo que $AB$ y $BA$ están definidos:
+> $$AB=\begin{pmatrix}5&-4\\-2&5\end{pmatrix},\qquad
+> BA=\begin{pmatrix}2&4&-2\\1&1&-4\\-1&0&7\end{pmatrix}.$$
+
+> [!success] Solución del Ejercicio 7
+> Aplicando Gauss-Jordan a $(A\mid I)$ se obtiene
+> $$A^{-1}=\frac12\begin{pmatrix}1&-1&1\\1&1&-1\\-1&1&1\end{pmatrix}.$$
+> La comprobación da
+> $$AA^{-1}=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix}=I_3.$$
+
