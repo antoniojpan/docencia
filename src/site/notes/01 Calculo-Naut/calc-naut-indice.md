@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/calc-naut-indice/","created":"2026-01-08T10:24:16.927+01:00","updated":"2026-09-22T13:40:00.028+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/calc-naut-indice/","created":"2026-09-22T13:40:02.257+02:00","updated":"2026-09-22T13:40:00.000+02:00","dg-note-properties":{}}
 ---
 
 [[Inicio docencia\|Volver al índice de apuntes]]. 

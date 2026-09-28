@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema00-ej/","created":"2026-01-08T10:24:16.929+01:00","updated":"2026-09-14T12:13:13.430+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema00-ej/","created":"2026-09-14T12:13:16.075+02:00","updated":"2026-09-14T12:13:13.000+02:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-01-08T10:24:16.931+01:00","updated":"2026-02-24T08:03:32.311+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/04-mat-ii-qui/apuntes/matii-quim-tema02/","created":"2026-05-26T11:56:29.140+02:00","updated":"2026-02-24T08:03:32.000+01:00","dg-note-properties":{}}
 ---
 
 

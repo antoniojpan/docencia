@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/examenes/calc-naut-examenes/","created":"2026-01-09T11:14:22.815+01:00","updated":"2026-01-09T11:22:12.852+01:00","dg-note-properties":{"cssclasses":"paper"}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/examenes/calc-naut-examenes/","created":"2026-05-26T11:55:25.553+02:00","updated":"2026-01-09T11:22:12.000+01:00","dg-note-properties":{"cssclasses":"paper"}}
 ---
 
 # Exámenes anteriores

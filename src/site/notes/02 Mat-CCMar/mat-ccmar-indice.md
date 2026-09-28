@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/mat-ccmar-indice/","created":"2026-01-08T10:24:16.929+01:00","updated":"2026-09-15T08:57:12.141+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/mat-ccmar-indice/","created":"2026-09-15T08:57:14.230+02:00","updated":"2026-09-15T08:57:12.000+02:00","dg-note-properties":{}}
 ---
 
 [[Inicio docencia\|Volver al índice de apuntes]]. 
