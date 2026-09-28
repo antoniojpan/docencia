@@ -1,101 +1,172 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-05-26T11:54:19.935+02:00","updated":"2026-01-12T12:55:51.000+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-05-26T11:55:02.225+02:00","updated":"2026-09-28T10:07:27.332+02:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
-# Tema 3: Cálculo Integral de Varias Variables. Ejercicios.
+# Tema 3: Cálculo diferencial en varias variables. Ejercicios
 
-## 1. Integrales Dobles
+**Problema 1.1** Halla el domino de las siguientes funciones:
 
-### Definición y Cálculo General
-**Ejercicio 1**
-Dibuja la región de integración y calcula $\iint_{\Omega}f$ en los siguientes casos:
-1.  $f(x,y)=x \sin y - y e^{x}$ en $\Omega=[-1,1]\times[0,\pi/2]$.
-2.  $f(x,y)=x^{2}-y$ en $\Omega=\{(x,y)\in\mathbb{R}^{2}:x\in[-1,1], -x^{2}\le y\le x^{2}\}$.
-3.  $f(x,y)=xy-x^{3}$ en $\Omega=\{(x,y)\in\mathbb{R}^{2}:x\in[0,1], -1\le y\le x\}$.
-4.  $f(x,y)=2x\sin(x^{2}y)$ en $\Omega=\{(x,y)\in\mathbb{R}^{2}:x\in[0,2], |y|\leq x\}$.
-5.  $f(x,y)=y \sin x$ en $\Omega=\{(x,y)\in\mathbb{R}^{2}:|x|+|y|\le1\}$.
+1. $f(x,y)=x^{2}-y^{2}$  
+    
+2. $f(x,y)=\sqrt{x^{2}-4y^{2}}$  
+    
+3. $f(x,y)=\frac{x^{3}-y^{2}}{x-y}$  
+    
+4. $f(x,y)=e^{x/y}$  
+    
+5. $f(x,y)=log(xy)$  
+    
+6. $f(x,y)=cos(\frac{1}{x-y})$  
+    
+7. $f(x,y)=\frac{\sqrt{9-y^{2}}}{1+\sqrt{4-(x^{2}+y^{2})}}$  
+	
+8. $f(x,y)=\frac{x}{x^2-y}$
+    
 
-### Teorema de Fubini
-**Ejercicio 2**
-Sobre el recinto $\Omega=\{(x,y)\in\mathbb{R}^{2}:x^{2}+(y-1)^{2}\le1, x\ge0\}$ se consideran las funciones:
-$$f(x,y)=\frac{1}{\sqrt{1-x^{2}}} \quad \text{y} \quad g(x,y)=\sin(y-1)$$
-Aplica el teorema de Fubini a $\iint_{\Omega}f$ y $\iint_{\Omega}g$ en las dos ordenaciones posibles. Calcula las integrales en el orden más adecuado.
+### Derivadas parciales. Diferenciabilidad
 
-### Cambio de Orden de Integración
-**Ejercicio 3**
-Determina el recinto de integración y cambia el orden de integración en las siguientes integrales:
-1.  $\displaystyle \int_{0}^{3}\int_{4x/3}^{\sqrt{25-x^{2}}}f(x,y)\,dy\,dx$
-2.  $\displaystyle \int_{0}^{1}\int_{0}^{y}f(x,y)\,dx\,dy$
-3.  $\displaystyle \int_{0}^{\pi/2}\int_{-\sin(x/2)}^{\sin(x/2)}f(x,y)\,dy\,dx$
-4.  $\displaystyle \int_{0}^{e}\int_{0}^{\log x}f(x,y)\,dy\,dx$
+**Problema 3.1** Demuestra que las siguientes funciones son diferenciables en los conjuntos que se indican:
 
-**Ejercicio 4**
-Halla el valor de la integral (requiere cambiar el orden):
-$$\int_{0}^{\pi}\int_{x}^{\pi}\frac{\sin y}{y}\,dy\,dx$$
+1. $f(x,y,z)=x^{2}+y^{2}+z^{2}$ en $\mathbb{R}^{3}$  
+    
+2. $f(x,y,z)=sen(x+y+z)$ en $\mathbb{R}^{3}$  
+    
+3. $f(x,y)=e^{x}sen~y$ en $\mathbb{R}^{2}$  
+    
+4. $f(x,y)=(x^{2}+y^{2})e^{-xy}$ en $\mathbb{R}^{2}$  
+    
+5. $f(x,y)=\frac{x}{x^{2}+y^{2}}$ en $\mathbb{R}^{2}$  
+    
 
-### Aplicaciones
-**Ejercicio 5**
-Calcula las siguientes áreas:
-1.  Área limitada por las curvas $y=x$ y $y=2-x^{2}$.
-2.  Área encerrada por las curvas $xy=4$, $xy=8$, $xy^{3}=5$ y $xy^{3}=15$.
+**Problema 3.2** Sea la función $f(x,y)=\sqrt{x^{2}+y^{2}}.$  
 
-**Ejercicio 6**
-Sea $S$ una región del plano limitada por las curvas que se indican. Calcula la masa y el centro de gravedad de $S$ suponiendo que la densidad es constante e igual a $\rho$.
-1.  $y=x^{2}$, $x+y=2$.
-2.  $y+3=x^{2}$, $x^{2}=5-y$.
-3.  $y=\sin^{2}x$, $y=0$, $x\in[0,\pi]$.
-4.  $y=\sin x$, $y=\cos x$, $x\in[0,\pi/4]$.
+1. Demuestra que $\frac{\partial f}{\partial x}$ no está definida en (0,0).
+    
+2. ¿Es f diferenciable en (0,0)?
+    
+    
 
-**Ejercicio 7**
-Determina las coordenadas del centro de gravedad de la placa:
-$$B=\{(x,y)\in\mathbb{R}^{2}: 1\le x\le2, 1\le y\le3\}$$
-cuya densidad viene dada por la función $\sigma(x,y)=xy$.
+### Derivadas direccionales, vector gradiente y regla de la cadena
 
-**Ejercicio 8**
-Una placa metálica viene representada por el conjunto del plano:
-$$P=\{(x,y)\in\mathbb{R}^{2}: |y|\le1\}$$
-y su densidad es $\sigma(x,y)=y^{2}$. Calcula el centro de gravedad y los momentos de inercia con respecto a los ejes.
+**Problema 4.1** Calcular el gradiente de las siguientes funciones:
 
----
+1. $f(x,y)=3x^{2}-xy+y$  
+    
+2. $f(x,y)=x^{3}e^{-y}$  
+    
+3. $f(x,y)=\sqrt{1-(x^{2}+y^{2})}$  
+    
+4. $f(x,y,z)=xe^{y^{2}}+ye^{z}$  
+    
+5. $f(x,y,z)=x~sen~y+y~sen~z+z~sen~x$  
+    
+6. $f(x,y,z)=sen(x+xy^{2}+z^{2})$  
+    
 
-## 2. Integrales Triples
+**Problema 4.2** Halla la derivada direccional en el punto dado en la dirección indicada:
 
-### Cálculo General
-**Ejercicio 9**
-Calcula las siguientes integrales en los recintos que se indican:
-1.  $\displaystyle \iiint_{\Omega}(x^{2}+y^{2}+z^{2})\,dx\,dy\,dz$ donde $\Omega=[0,1]\times[0,1]\times[0,1]$.
-2.  $\displaystyle \iiint_{\Omega}x^{3}\,dx\,dy\,dz$ donde $\Omega=[0,1]\times[0,1]\times[0,1]$.
-3.  $\displaystyle \iiint_{\Omega}y e^{-xy}\,dx\,dy\,dz$ donde $\Omega=[0,1]\times[0,1]\times[0,1]$.
-4.  $\displaystyle \iiint_{\Omega}(2x+3y+z)\,dx\,dy\,dz$ donde $\Omega=[1,2]\times[-1,1]\times[0,1]$.
-5.  $\displaystyle \iiint_{\Omega}z e^{x+y}\,dx\,dy\,dz$ donde $\Omega=[0,1]\times[0,1]\times[0,1]$.
+1. $f(x,y)=xe^{y}-ye^{x}$ en (1,0) en la dirección de $(1,-\sqrt{3})$  
+    
+2. $f(x,y)=\frac{3x}{x-y}$ en (1.0) en la dirección de (1,-1)
+    
+3. $f(x,y,z)=x^{2}y+y^{2}z+z^{2}x$ en (1,-1,1) en la dirección de (1, -1,2)
+    
+4. $f(x,y,z)=log(\sqrt{x^{2}+y^{2}+z^{2}})$ en (2,0, 1) en la dirección de (1,2, 0)
+    
+5. $f(x,y,z)=e^{x}cos(yz)$ en (0,0,0) en la dirección de (2, 1, -2)
+    
 
-**Ejercicio 10**
-Calcula la integral $\iiint_{\Omega}x^{2}\cos x \,dx\,dy\,dz$, donde $\Omega$ es la región limitada por los planos:
-$$z=0, \quad z=\pi, \quad y=0, \quad x=0, \quad x+y=1$$
-Dibuja la región de integración.
+**Problema 4.3** Sea $f(x,y)=e^{x+2y}$ halla el conjunto de puntos $(x,y)\in\mathbb{R}^{2}$ tales que la derivada direccional de f en el punto (x, y) en la dirección del vector (4,3) sea igual a 2e.
 
-### Aplicaciones en Sólidos (3D)
-**Ejercicio 11**
-Calcula los siguientes volúmenes:
-1.  Volumen de la región limitada por $x^{2}+y^{2}\le4$ y $x^{2}+y^{2}+z^{2}\le16$.
-2.  Volumen del sólido limitado por los conos $z=1-\sqrt{x^{2}+y^{2}}$ y $z=-1+\sqrt{x^{2}+y^{2}}$.
-3.  Volumen de la región limitada por el paraboloide $z=x^{2}+y^{2}$ y por $x^{2}+y^{2}=4$ en $z\ge0$.
-4.  Volumen de la región limitada por $x^{2}+y^{2}+z^{2} < 2$, $x^{2}+y^{2}\le z$ y $z<6/5$.
+**Problema 4.4** Sea $f(x,y)=1+sen(3x+y)$, ¿existe algún vector $\vec{v}\in\mathbb{R}^{2}$ tal que la derivada direccional de f en el punto (0,0) en la dirección del vector $\vec{v}$ sea igual a 1?
 
----
+**Problema 4.5** La temperatura de cada punto de una hoja de metal viene dada por la función $T(x,y)=e^{x}cos~y+e^{y}cosx$.
 
-## 3. Cambio de Variables
+1. ¿En qué dirección crece la temperatura más rápidamente a partir del punto (0,0)?
+    
+2. ¿Y en qué dirección decrece más rápidamente?
+    
 
-**Ejercicio 12**
-Calcula, usando coordenadas polares, la integral de la función $f(x,y) = \sqrt{x^2 + y^2}$ sobre la región $\Omega$ definida por el círculo unitario:
-$$\Omega = \{ (x,y) \in \mathbb{R}^2 \mid x^2 + y^2 \le 1 \}$$
+**Problema 4.6** La densidad de una bola de metal centrada en el origen viene dada por la función $\rho(x,y,z)=ke^{-(x^{2}+y^{2}+z^{2})},$ k constante positiva
 
-**Ejercicio 13**
-Evalúa, usando coordenadas polares, la siguiente integral doble:
-$$\iint_{\Omega} (x^2 + y^2) \, dx \, dy$$
-Donde $\Omega$ es la mitad superior del disco de radio 2 (definida por $x^2 + y^2 \le 4$ y $y \ge 0$).
+1. ¿En qué dirección crece la densidad más rápidamente a partir del punto (x, y, z)?
+    
+2. ¿Y en qué dirección decrece más rápidamente?
+    
+3. ¿cuáles son los coeficientes de variación (derivadas direccionales) de la densidad en (x, y, z) en las direcciones $\vec{i},$ $\vec{j}$ y $\vec{k}$?
+    
 
-**Ejercicio 14**
-Calcula, usando coordenadas polares, la integral de la función exponencial sobre la región anular comprendida entre los círculos de radio 1 y radio 3 ($1 \le x^2 + y^2 \le 9$):
-$$\iint_{\Omega} e^{-(x^2+y^2)} \, dx \, dy$$
+**Problema 4.7**
+
+1. Sea $h(x,y)=2e^{-x^{2}}+e^{-3y^{2}}$ la altura de una montaña en la posición $(x,y)\in\mathbb{R}^{2}$ ¿En qué dirección desde (1.0) se debería comenzar a caminar para escalar lo más rápido posible?
+    
+2. Supongamos que la temperatura en cada punto $(x,y,z)\in\mathbb{R}^{3}$ viene dada por la función $T(x,y,z)=e^{-x}+e^{-2y}+e^{-3z}$ ¿En qué dirección debe moverse una persona situada en el punto (1, 1, 1) con el fin de enfriarse lo más rápido posible?
+    
+
+**Problema 4.8** Calcula las derivadas parciales $\frac{\partial z}{\partial x}$ y $\frac{\partial z}{\partial y}$  
+
+1. donde $z(x,y)=f(x+y)+f(x-y)$ siendo f una función real de variable real continua con derivada continua en R.
+    
+2. donde $z(u,v)=e^{uv}$ siendo las funciones $u(x,y)=log(x+y)$ y $v(x,y)=arctan(x/y)$.
+    
+
+**Problema 4.9** Calcula $h^{\prime}(0)$ si $h(t)=f(u(t),v(t),w(t))$ donde:
+
+$f(x,y,z)=\frac{log(1+x^{2}+2z^{2})}{1+y^{2}},$
+
+$(u(t),v(t),w(t))=(t+1,1-t^{2}, sent)$
+
+
+**Problema 4.10** Halla la ecuación del plano tangente y de la recta normal a la gráfica de las funciones $f(x,y)$ o a las superficies dadas en los puntos indicados:
+
+1. $f(x,y)=x^{2}+4y^{2}$ en $(x_{0},y_{0})=(2,-1)$  
+    
+2. $f(x,y)=log~x+y+x~cos~y$ en $(x_{0},y_{0})=(1,0)$  
+    
+3. $f(x,y)=\sqrt{x^{2}+y^{2}}$ en $(x_{0},y_{0})=(1,1/2)$  
+    
+4. $x^{3}-2y^{3}+z^{3}=0$ en $(x_{0},y_{0},z_{0})=(1,1,1)$  
+    
+5. $e^{z}cos~x~cos~y=0$ en $(x_{0},y_{0},z_{0})=(\pi/2,1,0)$  
+    
+6. $e^{xyz}=1$ en $(x_{0},y_{0},z_{0})=(1,2,0)$  
+### Optimización de funciones de varias variables
+
+**Problema 5.1** Halla los puntos críticos y determina los valores extremos locales de las siguientes funciones de dos variables:
+
+1. $f(x,y)=x^{2}+2y^{2}-4y$  
+    
+2. $f(x,y)=x^{2}-xy+y^{2}+2x+2y-6$  
+    
+3. $f(x,y)=8x^{3}-24xy+y^{3}$  
+    
+4. $f(x,y)=\frac{x-y}{1+x^{2}+y^{2}}$  
+    
+5. $f(x,y)=arctan(e^{2x}-2x)+\frac{y^{3}}{3}+\frac{y^{2}}{2}-2y+1$  
+    
+
+**Problema 5.2** Calcula los extremos de la función $f(x,y)=e^{-x^{2}+cy^{2}}$ para $c=0,1,-1.$  
+
+**Problema 5.3** Calcula y clasifica los puntos críticos de las siguientes funciones sujetas a las restricciones que se especifican:
+
+1. $f(x,y)=x^{2}+y^{2}$ en el conjunto $A=\{(x,y)\in\mathbb{R}^{2}:xy=1\}$  
+    
+2. $f(x,y)=xy$ en el conjunto $A=\{(x,y)\in\mathbb{R}^{2}:x^{2}+4y^{2}=4\}$  
+    
+3. $f(x,y)=x^{2}+y^{2}+6x-8y+25$ en el conjunto $A=\{(x,y)\in\mathbb{R}^{2}:x^{2}+4y^{2}=16\}$  
+    
+4. $f(x,y)=xy$ sujeta a $2x+3y-5=0$  
+    
+5. $f(x,y)=\frac{log~x}{x}+\frac{log~y}{y}$ sujeta a $x+y=1$ con $x, y>0$  
+    
+
+**Problema 5.4** Una empresa precisa vallar un terreno rectangular de $20m^{2}$. Para el lado más largo, la empresa desea vallas de hierro gris cuyo precio es $25 \in/m.$ Para el lado más corto, las vallas tienen que ser de alumninio blanco, a $20 \in/m$ ¿Cuáles son las dimensiones de los lados que permiten minimizar el coste cumpliendo que el área rectangular sea de $20m^{2}$?
+
+**Problema 5.5** Una caja rectangular sin tapa se fabrica con $12m^{2}$ de cartón. Calcula el volumen máximo de la caja.
+
+**Problema 5.6** Calcula la distancia máxima y la distancia mínima desde el origen a un punto de la elipse $x^{2}+4y^{2}=16$.
+
+**Problema 5.7** Supongamos que la temperatura en grados centígrados en cada punto (x, y) del disco limitado por la circunferencia $x^{2}+y^{2}=1$ viene dada por la función $T(x,y)=2x^{2}+y^{2}-y.$ Determina los puntos más calientes y los más fríos del disco indicando la temperatura alcanzada en dichos puntos.
+
+**Problema 5.8** Una empresa desea diseñar un tanque cilíndrico con extremos semiesféricos para almacenar $8000m^{3}$ de gas líquido. ¿Qué radio y qué altura se recomienda para la parte cilíndrica del tanque, a fin de que la empresa utilice la menor cantidad posible de material para construir el tanque?
