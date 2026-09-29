@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-09-28T10:07:11.680+02:00","updated":"2026-09-28T10:35:35.286+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-09-28T10:35:37.480+02:00","updated":"2026-09-29T07:32:05.315+02:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]
 
 # **TEMA 2: Cálculo diferencial e integral en una variable**
-Repaso intensivo de los conceptos clave del cálculo diferencial e integral de una variable, apoyándose en los números complejos del [[01 Calculo-Naut/apuntes/calc-naut-tema01\|Tema 1]]. El objetivo es asentar las bases matemáticas necesarias para afrontar con éxito los temas más avanzados de la asignatura.
+
 - [[01 Calculo-Naut/apuntes/calc-naut-tema02#1. Funciones, Límites y Continuidad\|1. Funciones, Límites y Continuidad]]
 - [[01 Calculo-Naut/apuntes/calc-naut-tema02#2. Concepto de Derivada\|2. Concepto de Derivada]]
 - [[01 Calculo-Naut/apuntes/calc-naut-tema02#3. La Integral Indefinida\|3. La Integral Indefinida]]

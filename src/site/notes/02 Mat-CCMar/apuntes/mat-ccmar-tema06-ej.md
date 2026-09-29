@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema06-ej/","created":"2026-09-14T12:14:08.574+02:00","updated":"2026-09-14T12:14:03.000+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema06-ej/","created":"2026-01-08T10:24:16.929+01:00","updated":"2026-09-14T12:14:03.974+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|volver al índice]]

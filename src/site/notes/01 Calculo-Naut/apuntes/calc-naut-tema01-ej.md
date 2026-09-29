@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema01-ej/","created":"2026-09-28T10:34:39.997+02:00","updated":"2026-09-28T10:34:40.000+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema01-ej/","created":"2026-09-29T07:32:48.019+02:00","updated":"2026-09-29T07:35:22.252+02:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]
@@ -45,3 +45,15 @@
     j. $z=-2+i$
     
     k. $z=-3+2i$
+
+1. Calcula las siguientes potencias.
+    
+    a. $(1+i)^{10}$
+    
+    b. $(\sqrt{3}+i)^{12}$
+    
+    c. $(1+\sqrt{3}\,i)^{5}$
+    
+    d. $\left(\dfrac{1}{2}+\dfrac{\sqrt{3}}{2}i\right)^{2024}$
+    
+    e. $\left(\dfrac{\sqrt{3}}{2}-\dfrac{1}{2}i\right)^{2025}$

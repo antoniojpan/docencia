@@ -1,17 +1,18 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema01/","created":"2026-09-28T10:34:31.283+02:00","updated":"2026-09-28T10:36:06.954+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema01/","created":"2026-09-29T07:43:49.861+02:00","updated":"2026-09-29T07:48:04.234+02:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]
 
 # **TEMA 1: Números complejos**
-Un número complejo es, esencialmente, un vector del plano. Esa es la razón de que sea el tema con el que se abre el curso: módulo y argumento son exactamente los dos datos que describen una dirección en el plano, y de ellos dependen tanto la trigonometría que usaremos en los temas siguientes como la interpretación de rumbos.
+
 
 - [[01 Calculo-Naut/apuntes/calc-naut-tema01#1. El número complejo y sus operaciones\|1. El número complejo y sus operaciones]]
 - [[01 Calculo-Naut/apuntes/calc-naut-tema01#2. Forma polar de un complejo\|2. Forma polar de un complejo]]
 - [[01 Calculo-Naut/apuntes/calc-naut-tema01#3. Cómo calcular el argumento en 3 pasos\|3. Cómo calcular el argumento en 3 pasos]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema01#4. Ejemplos resueltos\|4. Ejemplos resueltos]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema01#5. Operaciones en forma polar\|5. Operaciones en forma polar]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema01#4. Ejemplos resueltos: de la forma binómica a la polar\|4. Ejemplos resueltos: de la forma binómica a la polar]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema01#5. De la forma polar a la forma binómica\|5. De la forma polar a la forma binómica]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema01#6. Operaciones en forma polar\|6. Operaciones en forma polar]]
 
 ## 1. El número complejo y sus operaciones
 Un número complejo es de la forma
@@ -76,7 +77,7 @@ También se denotará por $z=re^{i\theta}$, o bien $r_{\theta}$.
 > [!note] Requisito
 > Se supone $z\neq 0$. Si $z=0$ no hay módulo que calcular más que $0$, y **el argumento no existe**: el origen no tiene dirección.
 
-## 3. Cómo calcular el argumento en 3 pasos
+### Cómo calcular el argumento en 3 pasos
 
 El módulo sale directamente de $\sqrt{a^2+b^2}$. El argumento se calcula siempre con la **misma receta de 3 pasos**:
 
@@ -98,7 +99,7 @@ $$
 
 ---
 
-## 4. Ejemplos resueltos
+### Ejemplos resueltos: de la forma binómica a la polar
 
 **1º cuadrante.** $z=1+\sqrt3\,i$ → $a=1>0$, $b=\sqrt3>0$.
 $$|z|=\sqrt{1+3}=2,\qquad \theta=\arctan\left(\tfrac{\sqrt3}{1}\right)=60^\circ=\tfrac{\pi}{3}$$
@@ -124,24 +125,43 @@ $$|z|=7,\qquad \theta=270^\circ=\tfrac{3\pi}{2}\;\checkmark$$
 > [!warning] El argumento no es un rumbo
 > Trabajaremos con $[0,360^\circ)$, que es lo natural en navegación. Pero ojo, los rumbos se miden **en sentido horario desde el Norte**. El argumento se mide **en sentido antihorario desde el Este**. Si un buque navega con rumbo $\beta$, el desplazamiento tiene argumento $\theta=90^\circ-\beta$.
 
-## 5. Operaciones en forma polar
+---
+
+## 3. De la forma polar a la forma binómica
+
+El paso inverso es inmediato: basta distribuir el módulo,
+$$
+z = r(\cos\theta + i\sin\theta) = r\cos\theta + r\sin\theta\, i,
+$$
+de modo que $a = r\cos\theta$ y $b = r\sin\theta$. 
+
+Por ejemplo, el complejo del primer ejemplo, $z=2e^{i\pi/3}=2e^{i60^\circ}$, pasa a binómica sustituyendo:
+$$z=2\left(\cos 60^\circ+i\sin 60^\circ\right)=2\left(\tfrac12+\tfrac{\sqrt3}{2}i\right)=1+\sqrt3\,i\;\checkmark$$
+
+## 4. Operaciones en forma polar
 
 * Conjugado (con $-\theta$ entendido módulo $360^\circ$):
 $$
-\overline{z}=r(\cos(-\theta)+i\sin(-\theta))=re^{-i\theta}.
+\overline{z}=re^{-i\theta}=r(\cos(-\theta)+i\sin(-\theta)).
 $$
 * Producto:
 $$
-z_1 z_2 = r_1 r_2 \big(\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2)\big)=r_1r_2e^{i(\theta_1+\theta_2)}.
+z_1 z_2 = r_1r_2e^{i(\theta_1+\theta_2)}=r_1 r_2 \big(\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2)\big).
 $$
 * Cociente:
 $$
-\frac{z_1}{z_2} = \frac{r_1}{r_2} \big(\cos(\theta_1-\theta_2)+i\sin(\theta_1-\theta_2)\big).
+\frac{z_1}{z_2} = \frac{r_1}{r_2}e^{i(\theta_1-\theta_2)} =  \frac{r_1}{r_2} \big(\cos(\theta_1-\theta_2)+i\sin(\theta_1-\theta_2)\big).
 $$
 * Potencias (De Moivre):
 $$
-z^n = r^n (\cos(n\theta)+i\sin(n\theta)), \quad n\in\mathbb{Z}^+.
+z^n =r^n e^{i n \theta}= r^n (\cos(n\theta)+i\sin(n\theta)).
 $$
+
+Con De Moivre, calcular potencias deja de ser un desarrollo gigante. **El paso clave es pasar el número a forma polar**; una vez escrito como $re^{i\theta}$, la potencia es solo elevar el módulo a $n$ y multiplicar el argumento por $n$. 
+**Ejemplo.**
+$$(1+i)^4=\left(\sqrt2\,e^{i\pi/4}\right)^4=(\sqrt2)^4\,e^{i4 \pi /4}=4\,e^{i\pi}=4(-1+0i)=-4\;\checkmark$$
+
+
 
 
 [[01 Calculo-Naut/apuntes/calc-naut-tema01-ej\|Ejercicios]]
