@@ -1,11 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01/","created":"2026-09-30T09:15:31.591+02:00","updated":"2026-09-30T09:29:31.748+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01/","created":"2026-09-30T09:15:31.591+02:00","updated":"2026-09-30T11:44:54.467+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
-
 # Tema 1: Sistemas de Ecuaciones Lineales y Matrices
-
 
 ## 1. Sistemas de Ecuaciones Lineales
 
@@ -128,6 +126,19 @@ Para resolver analíticamente estos sistemas, veremos primero el concepto de mat
        └               ┘
 ```
 
+
+Las matrices se pueden **sumar**, **restar** y **multiplicar**, dando lugar a un álgebra análoga a la de los números. Entre estas operaciones destaca también la **matriz inversa**.
+
+- **Suma y Resta**: operaciones que se realizan elemento a elemento (requieren matrices de la misma dimensión).
+- **Producto de Matrices**: se calcula multiplicando **cada fila por cada columna**.
+
+> [!example] Ejemplo 2.3: Producto de Matrices $2 \times 2$
+> $$\begin{pmatrix} 2 & 3 \\ 1 & 5 \end{pmatrix} \cdot \begin{pmatrix} -1 & 2 \\ 1 & 4 \end{pmatrix} = \begin{pmatrix} 2(-1)+3(1) & 2(2)+3(4) \\ 1(-1)+5(1) & 1(2)+5(4) \end{pmatrix} = \begin{pmatrix} 1 & 16 \\ 4 & 22 \end{pmatrix}$$
+
+**La matriz inversa.** Dada una matriz cuadrada $A$, su **matriz inversa** $A^{-1}$ verifica la relación:
+$$A^{-1} \cdot A = I \quad \text{o bien} \quad A \cdot A^{-1} = I$$
+donde $I$ representa la **matriz identidad**. La forma práctica de calcularla se estudia en el apartado 2.4 mediante el método de **Gauss-Jordan**.
+
 ---
 
 ### 2.1. Aplicaciones
@@ -153,25 +164,10 @@ Las matrices permiten expresar de forma compacta grandes cantidades de informaci
 > 
 > Iterando la expresión $X_{t+1} = A \cdot X_t$ se pueden **simular las poblaciones año tras año**, lo que permite predecir su evolución a largo plazo.
 
----
 
-### 2.2. Operaciones con Matrices
 
-Las matrices se pueden **sumar**, **restar** y **multiplicar**, dando lugar a un álgebra análoga a la de los números. Entre estas operaciones destaca también la **matriz inversa**.
 
-- **Suma y Resta**: operaciones que se realizan elemento a elemento (requieren matrices de la misma dimensión).
-- **Producto de Matrices**: se calcula multiplicando **cada fila por cada columna**.
-
-> [!example] Ejemplo 2.3: Producto de Matrices $2 \times 2$
-> $$\begin{pmatrix} 2 & 3 \\ 1 & 5 \end{pmatrix} \cdot \begin{pmatrix} -1 & 2 \\ 1 & 4 \end{pmatrix} = \begin{pmatrix} 2(-1)+3(1) & 2(2)+3(4) \\ 1(-1)+5(1) & 1(2)+5(4) \end{pmatrix} = \begin{pmatrix} 1 & 16 \\ 4 & 22 \end{pmatrix}$$
-
-**La matriz inversa.** Dada una matriz cuadrada $A$, su **matriz inversa** $A^{-1}$ verifica la relación:
-$$A^{-1} \cdot A = I \quad \text{o bien} \quad A \cdot A^{-1} = I$$
-donde $I$ representa la **matriz identidad**. La forma práctica de calcularla se estudia en el apartado 2.4 mediante el método de **Gauss-Jordan**.
-
----
-
-### 2.3. Tipos de Matrices
+### 2.2. Tipos de Matrices
 
 **Matriz fila y matriz columna.** La **matriz fila** tiene una sola fila y la **matriz columna** una sola columna:
 $$F = \begin{pmatrix} a & b & c \end{pmatrix}, \qquad C = \begin{pmatrix} a \\ b \\ c \end{pmatrix}$$
