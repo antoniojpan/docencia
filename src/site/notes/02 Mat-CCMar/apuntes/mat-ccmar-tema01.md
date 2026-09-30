@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01/","created":"2026-09-14T12:28:49.025+02:00","updated":"2026-09-14T12:28:06.000+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01/","created":"2026-09-30T09:15:31.591+02:00","updated":"2026-09-30T09:29:31.748+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -19,9 +19,12 @@
 - **Compatible Determinado (S.C.D.)**: Existe un **único valor** para cada incógnita que satisface el sistema (solución única).
 - **Compatible Indeterminado (S.C.I.)**: Existen **infinitos valores** de las incógnitas que satisfacen el sistema (infinitas soluciones).
 
+**Interpretación geométrica**:
+![Pasted image 20260930092851.png](/img/user/imagenes/Pasted%20image%2020260930092851.png)
+
 ---
 
-### 1.2. Ejemplos Resueltos de Resolución de Sistemas
+### 1.2. Ejemplos en dimensión 2
 
 > [!example] Ejemplo 1.1: Sistema Compatible Determinado ($2 \times 2$)
 > **Resolver el siguiente sistema:**
@@ -55,9 +58,11 @@
 > **Conclusión:** El sistema es **Compatible Indeterminado (S.C.I.)** con soluciones parametrizadas por $t \in \mathbb{R}$:
 > $$(x, y, z) = \left(-2 + \frac{t}{2}, \; \frac{5-t}{2}, \; t\right), \quad t \in \mathbb{R}$$
 
+
+
 ---
 
-### 1.3. Discusión de Sistemas con Parámetros
+### 1.3. Sistemas con Parámetros
 
 **Método de análisis.** Para discutir un sistema con parámetros, se analiza la existencia y unicidad de las soluciones en función de los valores que tome el parámetro genérico (habitualmente $a,\lambda, k,\ldots$).
 
@@ -98,6 +103,16 @@
 > 2. **Si $a = 0$:** Sustituyendo $a = 0$:
 >    $$\begin{cases} x + y = 20 \\ x + y = 22 \end{cases} \implies \text{No es posible } (20 \neq 22)$$
 >    El sistema es **Incompatible (S.I.)**.
+
+
+
+### 1.4 ¿Y para dimensiones más altas?
+
+**Interpretación geométrica:**
+
+![geometric_int.jpg](/img/user/imagenes/geometric_int.jpg)
+
+Para resolver analíticamente estos sistemas, veremos primero el concepto de matriz.
 
 ---
 
