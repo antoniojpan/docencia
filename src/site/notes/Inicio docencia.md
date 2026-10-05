@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/inicio-docencia/","tags":["gardenEntry"],"created":"2026-01-08T10:24:16.930+01:00","updated":"2026-09-14T12:14:04.110+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/inicio-docencia/","tags":["gardenEntry"],"created":"2026-01-08T10:24:16.930+01:00","updated":"2026-10-01T10:46:13.166+02:00","dg-note-properties":{}}
 ---
 
 # Material docencia
@@ -11,6 +11,3 @@ ATENCIÓN: Estos documentos son unas anotaciones rápidas e informales, elaborad
 - [[02 Mat-CCMar/mat-ccmar-indice\|Matemáticas. Ciencias del Mar]]
 - [[03 Variable Compleja/VC-indice\|Variable Compleja. Matemáticas]]
 
-## Otros
-- [[Otro material/calcnum-ccmar-examen2425sept\|calcnum-ccmar-examen2425sept]]
-- [[Otro material/matii-enolog-examen2425sept\|matii-enolog-examen2425sept]]

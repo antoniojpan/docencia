@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01/","created":"2026-09-30T09:15:31.591+02:00","updated":"2026-09-30T11:44:54.467+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01/","created":"2026-10-05T09:34:09.636+02:00","updated":"2026-10-05T09:34:07.000+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -251,12 +251,32 @@ Una de las principales funciones prácticas de las matrices es el **estudio y re
 > 1. Hacer cero en la tercera fila ($F_3 \leftarrow F_3 - 2F_1$):
 >    $$\left( \begin{array}{ccc|ccc} 1 & 2 & 0 & 1 & 0 & 0 \\ 0 & 1 & -2 & 0 & 1 & 0 \\ 0 & -3 & 1 & -2 & 0 & 1 \end{array} \right)$$
 > 2. Triangular la matriz ($F_3 \leftarrow F_3 + 3F_2$):
->    $$\left( \begin{array}{ccc|ccc} 1 & 2 & 0 & 1 & 0 & 0 \\ 0 & 1 & -2 & 0 & 1 & 0 \\ 0 & 0 & 1 & 1 & -1 & -1 \end{array} \right)$$
-> 3. Hacer ceros por encima de la diagonal ($F_2 \leftarrow F_2 + 2F_3$):
->    $$\left( \begin{array}{ccc|ccc} 1 & 2 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 2 & -1 & -2 \\ 0 & 0 & 1 & 1 & -1 & -1 \end{array} \right)$$
-> 4. Eliminar el último elemento ($F_1 \leftarrow F_1 - 2F_2$):
->    $$\left( \begin{array}{ccc|ccc} 1 & 0 & 0 & -3 & 2 & 4 \\ 0 & 1 & 0 & 2 & -1 & -2 \\ 0 & 0 & 1 & 1 & -1 & -1 \end{array} \right)$$
+>    $$\left( \begin{array}{ccc|ccc} 1 & 2 & 0 & 1 & 0 & 0 \\ 0 & 1 & -2 & 0 & 1 & 0 \\ 0 & 0 & -5 & -2 & 3 & 1 \end{array} \right)$$
+> 3. Normalizar la tercera fila ($F_3 \leftarrow -\frac{1}{5}F_3$):
+>    $$\left( \begin{array}{ccc|ccc} 1 & 2 & 0 & 1 & 0 & 0 \\ 0 & 1 & -2 & 0 & 1 & 0 \\ 0 & 0 & 1 & \frac{2}{5} & -\frac{3}{5} & -\frac{1}{5} \end{array} \right)$$
+> 4. Hacer ceros por encima de la diagonal ($F_2 \leftarrow F_2 + 2F_3$):
+>    $$\left( \begin{array}{ccc|ccc} 1 & 2 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & \frac{4}{5} & -\frac{1}{5} & -\frac{2}{5} \\ 0 & 0 & 1 & \frac{2}{5} & -\frac{3}{5} & -\frac{1}{5} \end{array} \right)$$
+> 5. Eliminar los dos elementos restantes de la primera fila ($F_1 \leftarrow F_1 - 2F_2$):
+>    $$\left( \begin{array}{ccc|ccc} 1 & 0 & 0 & -\frac{3}{5} & \frac{2}{5} & \frac{4}{5} \\ 0 & 1 & 0 & \frac{4}{5} & -\frac{1}{5} & -\frac{2}{5} \\ 0 & 0 & 1 & \frac{2}{5} & -\frac{3}{5} & -\frac{1}{5} \end{array} \right)$$
 > 
 > **Matriz Inversa Resultante:**
-> $$A^{-1} = \begin{pmatrix} -3 & 2 & 4 \\ 2 & -1 & -2 \\ 1 & -1 & -1 \end{pmatrix}$$
+> $$A^{-1} = \frac{1}{5}\begin{pmatrix} -3 & 2 & 4 \\ 4 & -1 & -2 \\ 2 & -3 & -1 \end{pmatrix}$$
+> 
+> **Comprobación.** Como $|A| = -5 \neq 0$, la inversa existe y el proceso de Gauss-Jordan no ha fallado. Además, la propiedad $|A \cdot A^{-1}| = 1$ obliga a que $|A^{-1}| = \dfrac{1}{|A|} = -\dfrac{1}{5}$, y en efecto el producto directo resulta
+> $$\begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & -2 \\ 2 & 1 & 1 \end{pmatrix} \cdot \frac{1}{5}\begin{pmatrix} -3 & 2 & 4 \\ 4 & -1 & -2 \\ 2 & -3 & -1 \end{pmatrix} = \frac{1}{5}\begin{pmatrix} 5 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 5 \end{pmatrix} = I$$
 
+---
+
+### 2.5. Determinantes
+
+Dada una matriz cuadrada $A \in \mathbb{R}^{n \times n}$, su **determinante**, denotado $|A|$ o $\det(A)$, es un escalar asociado a la matriz que condiciona su invertibilidad y, por tanto, la existencia y unicidad de soluciones del sistema $A \cdot X = B$. Geométricamente, $|A|$ es el **factor de escala** con el que la transformación $x \mapsto A x$ dilata áreas ($2 \times 2$) o volúmenes ($3 \times 3$); su **signo** indica si se conserva o se invierte la orientación.
+
+**Determinante de orden 2.**
+$$\begin{vmatrix} a & b \\ c & d \end{vmatrix} = ad - bc$$
+
+**Determinante de orden 3 (regla de Sarrus).** Se suman los productos de las tres diagonales **hacia abajo** y se restan los de las tres diagonales **hacia arriba** (para visualizarlas, se repiten mentalmente las dos primeras columnas a la derecha de la matriz):
+$$\begin{vmatrix} a & b & c \\ d & e & f \\ g & h & i \end{vmatrix} = aei + bfg + cdh - ceg - afh - bdi$$
+
+**Determinante de orden $n$ (desarrollo por cofactores).** Para $n > 3$ el determinante se define desarrollándolo según una fila o una columna:
+$$|A| = \sum_{j=1}^{n} a_{ij} \, C_{ij}, \qquad C_{ij} = (-1)^{i+j} \, M_{ij},$$
+donde $M_{ij}$ es el determinante de la submatriz que se obtiene suprimiendo la fila $i$ y la columna $j$. 
