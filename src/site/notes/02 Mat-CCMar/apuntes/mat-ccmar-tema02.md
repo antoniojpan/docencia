@@ -1,16 +1,18 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema02/","created":"2026-09-30T09:15:36.759+02:00","updated":"2026-09-30T09:15:35.000+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema02/","created":"2026-09-30T09:15:36.759+02:00","updated":"2026-10-06T11:38:23.171+02:00","dg-note-properties":{}}
 ---
 
 [Volver al índice](mat-ccmar-indice)
 # Tema 2: Espacios vectoriales
 
-## 2. Espacios vectoriales, combinación lineal y rango
-
-### 2.1. Definición de espacio vectorial y combinación lineal
+## 1. Introducción
 
 **Definición.** Un **espacio vectorial** es un conjunto de elementos (denominados vectores) dotado de dos operaciones internas y externas (suma de vectores $+$, y producto por un escalar real $\cdot$) que cumplen una serie de propiedades algebraicas que podemos considerar "naturales" si pensamos en los vectores **como si fuesen flechas**. Los ejemplos fundamentales son los espacios euclídeos $\mathbb{R}^2$ y $\mathbb{R}^3$, formados por tuplas numéricas de la forma $(x,y)$ o $(x,y,z)$ con $x,y,z \in \mathbb{R}$.
 ![Pasted image 20260914130513.png](/img/user/imagenes/Pasted%20image%2020260914130513.png)
+
+
+## 2. Dependencia lineal
+
 **Definición.** Dado un conjunto de vectores $\{\mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3, \dots\}$ de un espacio vectorial $V$, se dice que un vector $\mathbf{v} \in V$ es **combinación lineal** de dicha colección si existen escalares reales $a_1, a_2, a_3, \dots \in \mathbb{R}$ tales que:
 $$\mathbf{v} = a_1 \mathbf{u}_1 + a_2 \mathbf{u}_2 + a_3 \mathbf{u}_3 + \dots$$
 
@@ -36,7 +38,6 @@ $$\mathbf{v} = a_1 \mathbf{u}_1 + a_2 \mathbf{u}_2 + a_3 \mathbf{u}_3 + \dots$$
 
 ---
 
-### 2.2. Independencia lineal y cálculo del rango por Gauss
 
 **Definición.** Una colección de vectores $\{\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_k\}$ se dice que es **linealmente dependiente** si al menos uno de ellos se puede expresar como combinación lineal de los demás, lo que intuitivamente significa que "sobra" información en el conjunto. En caso contrario, si ningún vector depende linealmente de los demás, la colección es **linealmente independiente**.
 
