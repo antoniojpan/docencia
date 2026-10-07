@@ -1,8 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema03/","created":"2026-09-15T09:30:39.590+02:00","updated":"2026-10-01T07:49:13.229+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema03/","created":"2026-09-15T09:30:39.590+02:00","updated":"2026-10-07T07:43:43.021+02:00","dg-note-properties":{}}
 ---
 
-[Volver al índice](mat-ccmar-indice)
+[[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
+
 # Tema 3: Diagonalización
 
 ## 1. Motivación e Interpretación en Sistemas Dinámicos

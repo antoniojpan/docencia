@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema02/","created":"2026-09-30T09:15:36.759+02:00","updated":"2026-10-06T11:38:23.171+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema02/","created":"2026-09-30T09:15:36.759+02:00","updated":"2026-10-07T07:43:33.301+02:00","dg-note-properties":{}}
 ---
 
-[Volver al índice](mat-ccmar-indice)
+[[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
 # Tema 2: Espacios vectoriales
 
 ## 1. Introducción
