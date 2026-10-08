@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01-ej/","created":"2026-09-14T12:12:47.774+02:00","updated":"2026-09-15T08:48:55.751+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01-ej/","created":"2026-09-14T12:12:47.774+02:00","updated":"2026-10-07T11:41:34.108+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -50,7 +50,7 @@
 > Dando a $t$ el valor $1$, calcula las inversas de las matrices del **Ejercicio 2** (en los casos en que sean invertibles para ese valor de $t$).
 
 > [!question] Ejercicio 4
-> Comprueba los resultados del **Ejercicio 3** multiplicando cada matriz por su correspondiente inversa (\\(A \cdot A^{-1} = I\\)).
+> Comprueba los resultados del **Ejercicio 3** multiplicando cada matriz por su correspondiente inversa ($A \cdot A^{-1} = I$).
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema02/","created":"2026-09-30T09:15:36.759+02:00","updated":"2026-10-07T07:43:33.301+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema02/","created":"2026-09-30T09:15:36.759+02:00","updated":"2026-10-08T10:41:40.424+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -96,6 +96,8 @@ Para estudiar el número de vectores independientes que hay en un conjunto dado,
 
 **Definición.** Recíprocamente, a la colección de vectores $\{\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_k\}$ se le denomina **sistema generador** de dicho espacio vectorial.
 
+El espacio generado se dice que es un **subespacio vectorial** del espacio ambiente.
+
 ![Pasted image 20260914132401.png](/img/user/imagenes/Pasted%20image%2020260914132401.png)
 
 > [!example] Ejemplo 3.1: Determinación de un espacio generado y sistema generador
@@ -118,15 +120,15 @@ Para estudiar el número de vectores independientes que hay en un conjunto dado,
 
 **Definición.** La **dimensión** de un espacio o subespacio vectorial $S$, denotada como $\mathrm{dim}(S)$, es el número total de elementos (vectores) que componen cualquier base de $S$.
 
-En la práctica, obtendremos una base a partir de un sistema generador, eliminando aquellos vectores "que sobren", por ser linealmente dependientes de los otros.
+En la práctica, obtendremos una base a partir de un sistema generador, eliminando aquellos vectores "que sobren", por ser linealmente dependientes de los otros. Usaremos el método de Gauss.
 
 ---
 
 ### 3.3. Subespacios vectoriales y sus formas de representación
 
-**Definición.** Dado un espacio vectorial $V$, un **subespacio vectorial** $W$ es un subconjunto $W \subseteq V$ que posee estructura de espacio vectorial por sí mismo respecto a las operaciones de $V$. Por ejemplo, en $V = \mathbb{R}^3 = \{(x,y,z) : x,y,z \in \mathbb{R}\}$, el conjunto $W = \{(x,y,0) : x,y \in \mathbb{R}\}$ representa un subespacio vectorial contenido en $\mathbb{R}^3$ ($W \subseteq \mathbb{R}^3$).
+De momento, para "comunicarnos" un subespacio, nos han dado un sistema generador, o mejor, una base. Pero hay otras formas de representar el subespacio.
 
-> [!example] Ejemplo 3.2: Subespacio
+> [!example] Ejemplo 3.2: Subespacio mediante paramétricas
 > Considera el subespacio $W \subset \mathbb{R}^3$ definido por los vectores del sistema generador $B_W = \{ (1,1,2), (-2,1,0) \}$.
 > 
 > Un vector genérico $(x,y,z) \in W$ se expresa como combinación lineal de los elementos de $B_W$ introduciendo los parámetros $\lambda, \mu \in \mathbb{R}$:
