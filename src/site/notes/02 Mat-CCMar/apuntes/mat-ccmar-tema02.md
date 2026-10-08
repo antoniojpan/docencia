@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema02/","created":"2026-09-30T09:15:36.759+02:00","updated":"2026-10-08T10:41:40.424+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema02/","created":"2026-09-30T09:15:36.759+02:00","updated":"2026-10-08T11:57:47.056+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -149,12 +149,7 @@ De momento, para "comunicarnos" un subespacio, nos han dado un sistema generador
 $$\mathrm{dim}(V) = \mathrm{dim}(W) + n^\circ \text{ de ecuaciones implícitas independientes}$$
 Es decir, cuanto mayor es la dimensión del subespacio, menos ecuaciones implícitas son necesarias para describirlo.
 
-
----
-
-### 3.4. Conversiones entre formas de representación de subespacios
-
-#### 3.4.1. Paso de base a ecuaciones paramétricas e implícitas
+#### 3.3.1. Paso de base a ecuaciones paramétricas e implícitas
 
 **Algoritmo de conversión de Base a Implícitas:**
 1. Se construye la matriz cuya parte izquierda contiene los vectores de la base dispuestos por columnas y cuya última columna está formada por las variables $(x,y,z,\dots)$.
@@ -185,7 +180,7 @@ Es decir, cuanto mayor es la dimensión del subespacio, menos ecuaciones implíc
 
 ---
 
-#### 3.4.2. Paso de ecuaciones implícitas a base
+#### 3.3.2. Paso de ecuaciones implícitas a base
 
 **Algoritmo de conversión de Implícitas a Base:**
 1. Se plantea el sistema homogéneo dado por las ecuaciones implícitas.
@@ -220,7 +215,7 @@ Es decir, cuanto mayor es la dimensión del subespacio, menos ecuaciones implíc
 
 ---
 
-#### 3.4.3. Conversión completa en espacio ambiente $\mathbb{R}^4$
+#### 3.3.3. Ejemplo completo en espacio ambiente $\mathbb{R}^4$
 
 **Observación.** Cuando el espacio ambiente tiene dimensión $\mathrm{dim}(\mathbb{R}^4) = 4$, todo subespacio de dimensión $2$ requiere exactamente $4 - 2 = 2$ ecuaciones implícitas independientes para su completa caracterización.
 
