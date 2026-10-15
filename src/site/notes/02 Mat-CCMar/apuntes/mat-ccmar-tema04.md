@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04/","created":"2026-10-05T16:38:29.650+02:00","updated":"2026-10-14T10:40:30.054+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04/","created":"2026-10-15T11:42:08.697+02:00","updated":"2026-10-15T11:46:59.348+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -20,14 +20,14 @@ Según sus expresiones algebraicas y analíticas, las funciones elementales se c
 - **Logarítmicas**: $f(x) = \ln(x)$, $g(x) = \log(x)$
 
 
-**Operaciones.** XXXX
+**Operaciones.** Sobre funciones definidas en un intervalo común pueden realizarse las operaciones algebraicas habituales: suma, resta, producto y cociente (estas dos últimas con el denominador nunca nulo); así, si $f$ y $g$ están definidas en $I$, lo mismo ocurre con $f+g$, $f-g$ y $f \cdot g$, y con $f/g$ en el subconjunto de $I$ donde $g(x) \neq 0$.
 
 **Composición de funciones.** Las funciones elementales pueden combinarse mediante operaciones algebraicas y composición (encadenar funciones donde la salida de una es la entrada de la otra, por ejemplo, $x \mapsto x^2 \mapsto \operatorname{sen}(x^2)$).
 
 **Definición de Límite.** Llamamos **límite de una función** $f$ en $x_0$ al valor $L$ al que se acerca $f(x)$ cuando $x$ se acerca a $x_0$:
 
 $$\lim_{x \to x_0} f(x) = L$$
-**Continuidad.** XXXX
+**Continuidad.** Una función $f$ es continua en $x_0$ si el límite en ese punto existe y coincide con el valor de la función, $\lim_{x \to x_0} f(x) = f(x_0)$; geométricamente, su gráfica puede dibujarse sin levantar el lápiz.
 
 **Teorema de Bolzano (Existencia de raíces).** Sea $f: [a,b] \to \mathbb{R}$ una función continua en el intervalo cerrado $[a, b]$. Si $f(a)$ y $f(b)$ tienen signos contrarios (es decir, $f(a) \cdot f(b) < 0$), entonces la ecuación $f(x) = 0$ tiene al menos una solución dentro del intervalo abierto $(a, b)$:
 
@@ -45,9 +45,40 @@ $$f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$$
 
 **Interpretación geométrica.** Geométricamente, la derivada representa la **inclinación** de la recta tangente a la gráfica de $f$ en el punto $(x_0, f(x_0))$.
 
+
+**Reglas de derivación.** Conocidas las derivadas de las funciones elementales, la derivada de cualquier función construida a partir de ellas se obtiene mediante las siguientes reglas:
+
+| Regla | Enunciado |
+| :--- | :--- |
+| **Linealidad** | $(\alpha f + \beta g)'(x) = \alpha f'(x) + \beta g'(x)$ |
+| **Regla producto** | $(f \cdot g)'(x) = f'(x)\, g(x) + f(x)\, g'(x)$ |
+| **Regla cociente** | $\left(\frac{f}{g}\right)'(x) = \frac{f'(x)\, g(x) - f(x)\, g'(x)}{[g(x)]^2}$, con $g(x) \neq 0$ |
+| **Regla cadena** | $(f \circ g)'(x) = f'(g(x)) \cdot g'(x)$ |
+
+Derivadas de las funciones elementales:
+
+| Función $f(x)$          | Derivada $f'(x)$                   |
+| :---------------------- | :--------------------------------- |
+| $x^n$                   | $n x^{n-1}$                        |
+| $\sqrt{x}$              | $\dfrac{1}{2\sqrt{x}}$             |
+| $\sqrt[n]{x} = x^{1/n}$ | $\dfrac{1}{n}\, x^{\frac{1}{n}-1}$ |
+| $\dfrac{1}{x} = x^{-1}$ | $-\dfrac{1}{x^2}$                  |
+| $e^x$                   | $e^x$                              |
+| $a^x$                   | $a^x \ln a$                        |
+| $\ln x$                 | $\dfrac{1}{x}$                     |
+| $\log_a x$              | $\dfrac{1}{x \ln a}$               |
+| $\operatorname{sen} x$  | $\cos x$                           |
+| $\cos x$                | $-\operatorname{sen} x$            |
+| $\tan x$                | $\sec^2 x = \dfrac{1}{\cos^2 x}$   |
+| $\arcsin x$             | $\dfrac{1}{\sqrt{1-x^2}}$          |
+| $\arccos x$             | $-\dfrac{1}{\sqrt{1-x^2}}$         |
+| $\arctan x$             | $\dfrac{1}{1+x^2}$                 |
+
+
+
 ---
 
-### 2.1. Estudio de Funciones y Extremos Relativos
+## 3. Estudio de Funciones y Extremos Relativos
 
 **Análisis de extremos locales.** Para encontrar los máximos y mínimos locales de una función $f(x)$:
 
@@ -105,7 +136,7 @@ $$f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$$
 
 ---
 
-## 3. Polinomio de Taylor
+## 4. Polinomio de Taylor
 
 ### 3.1. Recta Tangente y Aproximación Polinómica
 
