@@ -1,14 +1,16 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04/","created":"2026-10-05T16:38:29.650+02:00","updated":"2026-10-05T16:30:21.000+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04/","created":"2026-10-05T16:38:29.650+02:00","updated":"2026-10-14T10:40:30.054+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
 
 # Tema 4: Cálculo Diferencial en una Variable
 
-## 1. Límite y Continuidad de Funciones
+## 1. Introducción
 
-**Concepto de límite y tipos de funciones.** Las funciones de una variable real asignan a cada valor del dominio un único valor de salida. Según sus expresiones algebraicas y analíticas, las funciones elementales se clasifican en:
+**Concepto de límite y tipos de funciones.** Las funciones de una variable real asignan a cada valor del dominio un único valor de salida. Su importancia radica en que reflejan las distintas formas en que las magnitudes del mundo están conectadas entre sí, y esas conexiones son importantes de cara a tener un conocimiento científico del mundo.
+
+Según sus expresiones algebraicas y analíticas, las funciones elementales se clasifican en:
 
 - **Polinómicas**: $f(x) = x^5 - 3x + 1$
 - **Racionales**: $f(x) = \frac{x^2+1}{x-2}$
@@ -17,15 +19,15 @@
 - **Exponenciales**: $f(x) = e^x$, $f(x) = 3^x$
 - **Logarítmicas**: $f(x) = \ln(x)$, $g(x) = \log(x)$
 
-### 1.1. Composición de Funciones y Definición de Límite
+
+**Operaciones.** XXXX
 
 **Composición de funciones.** Las funciones elementales pueden combinarse mediante operaciones algebraicas y composición (encadenar funciones donde la salida de una es la entrada de la otra, por ejemplo, $x \mapsto x^2 \mapsto \operatorname{sen}(x^2)$).
 
 **Definición de Límite.** Llamamos **límite de una función** $f$ en $x_0$ al valor $L$ al que se acerca $f(x)$ cuando $x$ se acerca a $x_0$:
 
 $$\lim_{x \to x_0} f(x) = L$$
-
-### 1.2. Teorema de Bolzano
+**Continuidad.** XXXX
 
 **Teorema de Bolzano (Existencia de raíces).** Sea $f: [a,b] \to \mathbb{R}$ una función continua en el intervalo cerrado $[a, b]$. Si $f(a)$ y $f(b)$ tienen signos contrarios (es decir, $f(a) \cdot f(b) < 0$), entonces la ecuación $f(x) = 0$ tiene al menos una solución dentro del intervalo abierto $(a, b)$:
 
