@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04/","created":"2026-10-15T11:42:08.697+02:00","updated":"2026-10-15T11:46:59.348+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04/","created":"2026-10-15T11:42:08.697+02:00","updated":"2026-10-16T10:42:54.206+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -48,12 +48,7 @@ $$f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$$
 
 **Reglas de derivación.** Conocidas las derivadas de las funciones elementales, la derivada de cualquier función construida a partir de ellas se obtiene mediante las siguientes reglas:
 
-| Regla | Enunciado |
-| :--- | :--- |
-| **Linealidad** | $(\alpha f + \beta g)'(x) = \alpha f'(x) + \beta g'(x)$ |
-| **Regla producto** | $(f \cdot g)'(x) = f'(x)\, g(x) + f(x)\, g'(x)$ |
-| **Regla cociente** | $\left(\frac{f}{g}\right)'(x) = \frac{f'(x)\, g(x) - f(x)\, g'(x)}{[g(x)]^2}$, con $g(x) \neq 0$ |
-| **Regla cadena** | $(f \circ g)'(x) = f'(g(x)) \cdot g'(x)$ |
+
 
 Derivadas de las funciones elementales:
 
@@ -75,6 +70,14 @@ Derivadas de las funciones elementales:
 | $\arctan x$             | $\dfrac{1}{1+x^2}$                 |
 
 
+Reglas de derivación:
+
+| Regla              | Enunciado                                                                                        |
+| :----------------- | :----------------------------------------------------------------------------------------------- |
+| **Linealidad**     | $(\alpha f + \beta g)'(x) = \alpha f'(x) + \beta g'(x)$                                          |
+| **Regla producto** | $(f \cdot g)'(x) = f'(x)\, g(x) + f(x)\, g'(x)$                                                  |
+| **Regla cociente** | $\left(\frac{f}{g}\right)'(x) = \frac{f'(x)\, g(x) - f(x)\, g'(x)}{[g(x)]^2}$, con $g(x) \neq 0$ |
+| **Regla cadena**   | $(f \circ g)'(x) = f'(g(x)) \cdot g'(x)$                                                         |
 
 ---
 
