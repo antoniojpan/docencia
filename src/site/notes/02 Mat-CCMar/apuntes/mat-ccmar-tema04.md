@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04/","created":"2026-10-15T11:42:08.697+02:00","updated":"2026-10-16T10:42:54.206+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04/","created":"2026-10-15T11:42:08.697+02:00","updated":"2026-10-19T10:46:53.404+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -115,7 +115,7 @@ Reglas de derivación:
 >
 > **Conclusión:** La función posee un máximo local en $\left(\frac{1}{3}, \frac{146}{27}\right)$ y un mínimo local en $(3, -8)$. Puesto que los límites en el infinito divergen a $-\infty$ y $+\infty$, la función **no posee extremos absolutos**.
 
-### 2.2. Optimización
+### Optimización
 
 **Problemas de optimización.** Consisten en determinar los valores de las variables que maximizan o minimizan una función objetivo sujeta a ciertas restricciones geométricas o físicas.
 

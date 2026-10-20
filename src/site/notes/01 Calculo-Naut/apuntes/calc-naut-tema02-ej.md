@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02-ej/","created":"2026-09-29T08:11:00.230+02:00","updated":"2026-09-29T08:10:58.000+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02-ej/","created":"2026-10-20T12:43:54.457+02:00","updated":"2026-10-20T12:43:44.601+02:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]
@@ -429,3 +429,15 @@
     (2) Calcular el área de la figura comprendida entre las parábolas $y = x^2$, $y = \frac{x^2}{2}$ y la recta $y = 2x$.
 
     (3) Calcular el área del segmento de parábola $y = x^2$, que corta a la recta $y = 4 - \frac{2}{3}x^2$.
+
+    (4) Calcular el área de la figura limitada por la parábola $y = x^2$ y la recta $y = x + 2$.
+
+    (5) Calcular el área de la figura limitada por $y = x^3$ y $y = x$.
+
+    (6) Calcular el área comprendida entre las curvas $y = \dfrac{3x}{x^2+2}$ e $y = x$. *(sustitución: $u = x^2+2$)*
+
+    (7) Calcular el área de la figura limitada por $y = x$ e $y = x\ln x$. *(integración por partes)*
+
+    (8) Calcular el área de la figura limitada por $y = \dfrac{2}{x(x-3)}$ e $y = -1$. *(fracciones parciales)*
+
+    (9) Calcular el área de la figura comprendida entre $y = \sin x$ e $y = \cos 2x$ en el intervalo $[0,\pi]$. *(ecuación cuadrática en $\sin x$; hay que partir la integral en tres trozos)*

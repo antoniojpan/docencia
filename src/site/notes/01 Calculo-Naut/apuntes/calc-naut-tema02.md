@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-09-28T10:35:37.480+02:00","updated":"2026-09-29T07:32:05.315+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-10-20T11:46:03.361+02:00","updated":"2026-10-20T11:45:54.179+02:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]
@@ -235,17 +235,19 @@ $$
 
 ## 4. La Integral Definida y sus Aplicaciones
 
-### **1. Integral de Riemann (Definida)**
+### 1. Introducción
+Cálculo de masa total de un alambre a partir de densidad local. Luego, ver como un área.
+
+**Integral de Riemann**
 
 La **integral definida** de una función $f(x)$ en un intervalo $[a, b]$, denotada como $\int_{a}^{b} f(x) dx$, representa el **área neta** entre la gráfica de la función y el eje x. Se define como el límite de una suma de áreas de rectángulos (Suma de Riemann).
 
 
-
-### **2. Teorema Fundamental del Cálculo**
+**Teorema Fundamental del Cálculo**
 
 Este teorema es el pilar que conecta el cálculo diferencial y el integral. Establece que la derivación y la integración son operaciones inversas.
 
-### **3. Regla de Barrow**
+**Regla de Barrow**
 
 Es la consecuencia práctica del Teorema Fundamental del Cálculo y nos permite calcular integrales definidas de forma sencilla. Si $F(x)$ es cualquier primitiva de $f(x)$, entonces:
 $$\int_{a}^{b} f(x) dx = [F(x)]_{a}^{b} = F(b) - F(a)$$
@@ -258,6 +260,51 @@ $$A = \int_{0}^{2} x^2 dx$$
 $$A = \left[ \frac{x^3}{3} \right]_{0}^{2} = \frac{2^3}{3} - \frac{0^3}{3} = \frac{8}{3} - 0 = \frac{8}{3}$$
 El área es $\frac{8}{3}$ unidades cuadradas.
 
+### Área entre dos curvas
+
+Cuando queremos el área **encerrada entre dos funciones** $f$ y $g$, primero hay que **hallar los cortes** de ambas curvas (resolver $f(x) = g(x)$): esos cortes son los límites de integración. Entre ellos, la función mayor es la que resta a la menor:
+$$A = \int_{a}^{b} \bigl[f(x) - g(x)\bigr]\, dx$$
+Si las curvas se cruzan dentro del intervalo, hay que **partir la integral en cada trozo** y comprobar en cada uno cuál va por encima.
+
+---
+
+### Ejemplo 4: Área entre una parábola y una recta
+
+Calcular el área encerrada por $y = x^2$ e $y = 2x + 3$.
+
+**1. Cortes de las dos funciones:**
+$$x^2 = 2x + 3 \;\Longrightarrow\; x^2 - 2x - 3 = 0 \;\Longrightarrow\; (x-3)(x+1) = 0$$
+$$x = -1, \quad x = 3$$
+Los cortes son $(-1, 1)$ y $(3, 9)$.
+
+**2. ¿Quién va arriba?** Probamos un punto intermedio, $x = 0$: $2\cdot 0 + 3 = 3 > 0 = 0^2$. La recta está por encima de la parábola en todo el intervalo $[-1, 3]$.
+
+**3. Integral:**
+$$A = \int_{-1}^{3} \bigl[(2x+3) - x^2\bigr]\, dx = \left[ x^2 + 3x - \frac{x^3}{3} \right]_{-1}^{3}$$
+$$A = \left(9 + 9 - 9\right) - \left(1 - 3 + \frac{1}{3}\right) = 9 - \left(-\frac{5}{3}\right) = \frac{32}{3}$$
+
+---
+
+### Ejemplo 5: Área entre dos curvas que se cruzan (partir la integral)
+
+Calcular el área encerrada por $y = \sin x$ e $y = \cos x$ en $[0, \pi]$.
+
+**1. Cortes de las dos funciones:**
+$$\sin x = \cos x \;\Longrightarrow\; \tan x = 1 \;\Longrightarrow\; x = \frac{\pi}{4} \quad \text{en } [0,\pi]$$
+
+**2. ¿Quién va arriba?**
+* En $\left[0, \frac{\pi}{4}\right]$: $\cos x \ge \sin x$ (p. ej. en $x=0$: $1 > 0$).
+* En $\left[\frac{\pi}{4}, \pi\right]$: $\sin x \ge \cos x$ (p. ej. en $x=\pi$: $0 > -1$).
+
+Como el orden cambia en el corte, **partimos la integral en dos**:
+$$A = \int_{0}^{\pi/4} (\cos x - \sin x)\, dx \;+\; \int_{\pi/4}^{\pi} (\sin x - \cos x)\, dx$$
+
+**3. Cálculo:**
+$$\int_{0}^{\pi/4} (\cos x - \sin x)\, dx = \Bigl[\sin x + \cos x\Bigr]_{0}^{\pi/4} = \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} - (0 + 1) = \sqrt{2} - 1$$
+$$\int_{\pi/4}^{\pi} (\sin x - \cos x)\, dx = \Bigl[-\cos x - \sin x\Bigr]_{\pi/4}^{\pi} = (1 - 0) - \left(-\frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2}\right) = 1 + \sqrt{2}$$
+$$A = (\sqrt{2} - 1) + (1 + \sqrt{2}) = 2\sqrt{2}$$
+
+---
 
 [[01 Calculo-Naut/apuntes/calc-naut-tema02-ej\|Ejercicios]]
 
