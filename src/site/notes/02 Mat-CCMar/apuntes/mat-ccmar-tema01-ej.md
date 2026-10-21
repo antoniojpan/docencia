@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01-ej/","created":"2026-09-14T12:12:47.774+02:00","updated":"2026-10-07T11:41:34.108+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema01-ej/","created":"2026-10-21T11:48:44.321+02:00","updated":"2026-10-21T11:48:35.277+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -8,7 +8,7 @@
 
 
 > [!question] Ejercicio 1
-> Resuelve los siguientes sistemas de ecuaciones lineales e indica de qué tipo son según el número de soluciones (Sistema Compatible Determinado, Sistema Compatible Indeterminado o Sistema Incompatible):
+> Resuelve los siguientes sistemas de ecuaciones lineales e indica de qué tipo son según el número de soluciones (Sistema Compatible Determinado, Sistema Compatible Indeterminado o Sistema Incompatible). En los sistemas con parámetros, discute el sistema según los valores del parámetro:
 >
 > **(a)** 
 > $$\begin{cases} ax + y = 3 \\ ax - y = 7 \end{cases}$$
@@ -27,6 +27,24 @@
 >
 > **(f)** 
 > $$\begin{cases} (1 + a)x + y + z = 2 \\ 2x + ay + 2z = 4 \\ x + y + z = a \end{cases}$$
+>
+> **(g)** 
+> $$\begin{cases} ax + y + z = 1 \\ x + ay + z = 1 \\ x + y + az = 1 \end{cases}$$
+>
+> **(h)** 
+> $$\begin{cases} x + y + z = 1 \\ x + 2y + 3z = 2 \\ ax + (a+1)y + (a+2)z = 3 \end{cases}$$
+>
+> **(i)** 
+> $$\begin{cases} x + y + z = 1 \\ x + 2y + 3z = a \\ 2x + 3y + 4z = 5 \end{cases}$$
+>
+> **(j)** 
+> $$\begin{cases} x + y + z = 1 \\ x + ay + (a+1)z = 2 \\ x + (a+1)y + (a+2)z = 3 \end{cases}$$
+>
+> **(k)** 
+> $$\begin{cases} ax + y + z = b \\ x + ay + z = b \\ x + y + az = b \end{cases}$$
+>
+> **(l)** 
+> $$\begin{cases} ax + y + z = 1 \\ x + ay + z = 1 \\ x + y + bz = 1 \end{cases}$$
 
 
 
@@ -76,7 +94,21 @@
 > $$A=\begin{pmatrix}1&1&0\\0&1&1\\1&0&1\end{pmatrix}.$$
 > Comprueba el resultado calculando $AA^{-1}$.
 
+> [!question] Ejercicio 8
+> Calcula mediante el método de Gauss-Jordan la inversa de las siguientes matrices de orden $4$:
+> **(a)**
+> $$A=\begin{pmatrix}1&0&0&0\\2&1&0&0\\3&2&1&0\\4&3&2&1\end{pmatrix}$$
+> **(b)**
+> $$A=\begin{pmatrix}1&1&1&1\\0&1&1&1\\0&0&1&1\\0&0&0&1\end{pmatrix}$$
+> **(c)**
+> $$A=\begin{pmatrix}2&1&0&0\\1&3&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix}$$
+> **(d)**
+> $$A=\begin{pmatrix}1&1&0&0\\0&1&1&0\\0&0&1&1\\1&0&0&2\end{pmatrix}$$
+> **(e)**
+> $$A=\begin{pmatrix}2&1&0&0\\1&2&1&0\\0&1&2&1\\0&0&1&2\end{pmatrix}$$
+> En todos los casos comprueba que $AA^{-1}=I_4$.
 
+---
 # Soluciones
 
 > [!success] Solución del Ejercicio 1
@@ -104,6 +136,32 @@
 > - Si $a = 0$: **Sistema Incompatible (S.I.)**.
 > - Si $a = 2$: **Sistema Compatible Indeterminado (S.C.I.)** con 1 parámetro. Solución: $(x, y, z) = (0, 2, 0) + t(0, -1, 1)$ con $t \in \mathbb{R}$.
 > - Si $a \neq 0$ y $a \neq 2$: **Sistema Compatible Determinado (S.C.D.)**. Solución: $(x, y, z) = \left(\frac{2 - a}{a}, \; -2, \; \frac{a^2 + 3a - 2}{a}\right)$.
+>
+> **(g)** $\det A = (a-1)^2(a+2)$.
+> - Si $a \neq 1$ y $a \neq -2$: **Sistema Compatible Determinado (S.C.D.)**. Por simetría $x=y=z$, y de la primera ecuación $(a+2)x=1$. Solución: $(x, y, z) = \left(\frac{1}{a+2}, \; \frac{1}{a+2}, \; \frac{1}{a+2}\right)$.
+> - Si $a = 1$: las tres ecuaciones se reducen a $x+y+z=1$: **Sistema Compatible Indeterminado (S.C.I.)** con 2 parámetros. Solución: $(x, y, z) = (1-u-v, \; u, \; v)$ con $u, v \in \mathbb{R}$.
+> - Si $a = -2$: sumando las tres ecuaciones se obtiene $0=3$: **Sistema Incompatible (S.I.)**.
+>
+> **(h)** La tercera fila de coeficientes es $(a-1)\cdot$(primera fila) $+$ (segunda fila), luego el sistema es compatible si y solo si $3 = (a-1)\cdot 1 + 2 = a+1$.
+> - Si $a = 2$: **Sistema Compatible Indeterminado (S.C.I.)** con 1 parámetro. Solución: $(x, y, z) = (t, \; 1-2t, \; t)$ con $t \in \mathbb{R}$.
+> - Si $a \neq 2$: **Sistema Incompatible (S.I.)**.
+>
+> **(i)** La tercera fila de coeficientes es la suma de las dos primeras, luego el sistema es compatible si y solo si $5 = 1 + a$.
+> - Si $a = 4$: **Sistema Compatible Indeterminado (S.C.I.)** con 1 parámetro. Solución: $(x, y, z) = (t-2, \; 3-2t, \; t)$ con $t \in \mathbb{R}$.
+> - Si $a \neq 4$: **Sistema Incompatible (S.I.)**.
+>
+> **(j)** $\det A = -1$ es constante, luego no hay valores críticos: **Sistema Compatible Determinado (S.C.D.)** para cualquier valor del parámetro. Solución: $(x, y, z) = (0, \; a-1, \; 2-a)$.
+>
+> **(k)** $\det A = (a-1)^2(a+2)$.
+> - Si $a \neq 1$ y $a \neq -2$: **Sistema Compatible Determinado (S.C.D.)**. Por simetría $x=y=z$, y de la primera ecuación $(a+2)x=b$. Solución: $(x, y, z) = \left(\frac{b}{a+2}, \; \frac{b}{a+2}, \; \frac{b}{a+2}\right)$.
+> - Si $a = 1$: las tres ecuaciones son $x+y+z=b$, compatible para cualquier valor de $b$: **Sistema Compatible Indeterminado (S.C.I.)** con 2 parámetros. Solución: $(x, y, z) = (b-u-v, \; u, \; v)$ con $u, v \in \mathbb{R}$.
+> - Si $a = -2$: sumando las tres ecuaciones se obtiene $0=3b$. Si $b \neq 0$: **Sistema Incompatible (S.I.)**. Si $b = 0$: **Sistema Compatible Indeterminado (S.C.I.)** con 1 parámetro. Solución: $(x, y, z) = (t, \; t, \; t)$ con $t \in \mathbb{R}$.
+>
+> **(l)** $\det A = (a-1)\big(b(a+1)-2\big)$.
+> - Si $a \neq 1$ y $b(a+1) \neq 2$: **Sistema Compatible Determinado (S.C.D.)**. Solución: $(x, y, z) = \left(\frac{b-1}{ab+b-2}, \; \frac{b-1}{ab+b-2}, \; \frac{a-1}{ab+b-2}\right)$.
+> - Si $a = 1$ y $b = 1$: las tres ecuaciones son $x+y+z=1$: **Sistema Compatible Indeterminado (S.C.I.)** con 2 parámetros. Solución: $(x, y, z) = (1-u-v, \; u, \; v)$ con $u, v \in \mathbb{R}$.
+> - Si $a = 1$ y $b \neq 1$: la matriz pasa a ser $\begin{pmatrix}1&1&1\\1&1&1\\1&1&b\end{pmatrix}$ y el sistema es compatible: **Sistema Compatible Indeterminado (S.C.I.)** con 1 parámetro. Solución: $(x, y, z) = (t, \; 1-t, \; 0)$ con $t \in \mathbb{R}$.
+> - Si $a \neq 1$ y $b(a+1) = 2$: **Sistema Incompatible (S.I.)**.
 
 ---
 
@@ -147,7 +205,21 @@
 
 > [!success] Solución del Ejercicio 7
 > Aplicando Gauss-Jordan a $(A\mid I)$ se obtiene
-> $$A^{-1}=\frac12\begin{pmatrix}1&-1&1\\1&1&-1\\-1&1&1\end{pmatrix}.$$
-> La comprobación da
-> $$AA^{-1}=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix}=I_3.$$
+> $$A^{-1}=\frac{1}{2}\begin{pmatrix}1&-1&1\\1&1&-1\\-1&1&1\end{pmatrix}.$$
 
+
+> [!success] Solución del Ejercicio 8
+> **(a)**
+> $$A^{-1}=\begin{pmatrix}1&0&0&0\\-2&1&0&0\\1&-2&1&0\\0&1&-2&1\end{pmatrix}$$
+>
+> **(b)**
+> $$A^{-1}=\begin{pmatrix}1&-1&0&0\\0&1&-1&0\\0&0&1&-1\\0&0&0&1\end{pmatrix}$$
+>
+> **(c)**
+> $$A^{-1}=\begin{pmatrix}\frac{3}{5}&-\frac{1}{5}&0&0\\-\frac{1}{5}&\frac{2}{5}&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix}$$
+>
+> **(d)**
+> $$A^{-1}=\begin{pmatrix}2&-2&2&-1\\-1&2&-2&1\\1&-1&2&-1\\-1&1&-1&1\end{pmatrix}$$
+>
+> **(e)**
+> $$A^{-1}=\frac{1}{5}\begin{pmatrix}4&-3&2&-1\\-3&6&-4&2\\2&-4&6&-3\\-1&2&-3&4\end{pmatrix}$$
