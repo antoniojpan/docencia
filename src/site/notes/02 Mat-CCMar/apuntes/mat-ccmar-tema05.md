@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05/","created":"2026-10-05T14:12:07.995+02:00","updated":"2026-10-05T14:12:05.552+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05/","created":"2026-10-23T09:16:31.114+02:00","updated":"2026-10-23T09:16:30.327+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -12,16 +12,20 @@
 
 Las funciones de varias variables son transformaciones matemáticas que dependen de más de una entrada de datos y/o pueden devolver varios valores numéricos. Se clasifican según sus espacios de origen (dominio) y llegada (codominio):
 
-- **Campos escalares ($f: \mathbb{R}^2 \to \mathbb{R}$):** Asignan un único valor numérico a un par de entradas $(x, y)$.
+- **Campos escalares en el plano o en el espacio ($f: \mathbb{R}^N \to \mathbb{R}$):** Asignan un único valor numérico a un par de entradas $(x, y)$.
   - *Ejemplo real:* El coste total $f(x, y) = x \cdot y$ al comprar $x \text{ kg}$ de tomates a un precio de $y \text{ €/kg}$.
-- **Curvas en el espacio ($\mathbf{g}: \mathbb{R} \to \mathbb{R}^2$):** Dependen de una única variable independiente (habitualmente el tiempo $t$) y devuelven una posición vectorial.
+- **Curvas en el espacio ($\mathbf{g}: \mathbb{R} \to \mathbb{R}^N$):** Dependen de una única variable independiente (habitualmente el tiempo $t$) y devuelven una posición vectorial.
   - *Ejemplo real:* La latitud y longitud de un ciclista en función del tiempo: $t \mapsto (x(t), y(t))$.
 - **Campos vectoriales en el plano ($\mathbf{f}: \mathbb{R}^2 \to \mathbb{R}^2$):** Asignan un vector de velocidad o fuerza a cada punto del plano.
   - *Ejemplo real:* La velocidad del viento $(u, v)$ en cada posición geográfica $(x, y)$.
 - **Campos vectoriales en el espacio ($\mathbf{f}: \mathbb{R}^3 \to \mathbb{R}^3$):** Describen la velocidad o fuerza en un punto tridimensional.
   - *Ejemplo real:* La velocidad de una corriente de agua o aire $(u, v, w)$ en un punto espacial $(x, y, z)$.
 
-### 1.2. Representación Gráfica y Curvas de Nivel
+### 1.2. Representación Gráfica
+
+Cada tipo de función exige una representación gráfica distinta. En el plano distinguimos tres casos fundamentales: los **campos escalares** ($f: \mathbb{R}^2 \to \mathbb{R}$) se visualizan mediante curvas de nivel, las **curvas parametrizadas** ($\mathbf{g}: \mathbb{R} \to \mathbb{R}^2$) mediante su trayectoria, y los **campos vectoriales** ($\mathbf{f}: \mathbb{R}^2 \to \mathbb{R}^2$) mediante flechas o líneas de campo.
+
+#### 1.2.1. Campos escalares: curvas de nivel
 
 Para visualizar un campo escalar $f: \mathbb{R}^2 \to \mathbb{R}$, resulta muy útil emplear **curvas de nivel**. Una curva de nivel es el conjunto de puntos $(x, y)$ del plano donde la función toma un valor constante $c$:
 
@@ -30,9 +34,106 @@ $$f(x, y) = c$$
 - **Isotermas:** Curvas de nivel donde la temperatura permanece constante.
 - **Isobaras:** Curvas de nivel donde la presión atmosférica es constante.
 
+![campo-escalar-curvas-nivel.png\|500](/img/user/imagenes/campo-escalar-curvas-nivel.png)
+
+En la figura, el color indica el valor de $f$ (mapa de calor) y las líneas blancas son las curvas de nivel $f(x,y)=c$ para $c=1,2,4,6,8$. Obsérvese que las curvas se acumulan donde la función crece más deprisa: la separación entre curvas mide, de forma cualitativa, el módulo del gradiente.
+
+La misma información puede verse en tres dimensiones: la **gráfica** de $f$ es una superficie (la "montaña"), y las curvas de nivel son los **cortes horizontales** de esa superficie a distintas alturas, proyectados sobre el plano $z=0$:
+
+![campo-escalar-superficie-3d.png\|520](/img/user/imagenes/campo-escalar-superficie-3d.png)
+
+En esta figura se ha representado la "montaña gaussiana" $f(x,y)=3e^{-(x^2+y^2)/2}$. Cada curva de nivel de la base es la proyección de los puntos de la superficie que están a la misma altura $c$. Las dos representaciones son complementarias: el mapa de curvas de nivel es fácil de leer y de superponer a un plano (un mapa topográfico), mientras que la superficie muestra de un vistazo la forma global del campo y la posición de sus máximos, mínimos y pendientes.
+
+#### 1.2.2. Curvas parametrizadas en el plano
+
+Una curva en el plano es la imagen de una función $\mathbf{g}: \mathbb{R} \to \mathbb{R}^2$,
+
+$$\mathbf{g}(t) = \big(x(t),\, y(t)\big),$$
+
+donde $t$ recorre un intervalo (habitualmente el tiempo). La gráfica es la **trayectoria** de la curva, es decir, el conjunto de puntos recorridos; el parámetro $t$ añade dos informaciones que la trayectoria por sí sola no contiene:
+
+- **Orientación:** el sentido en que se recorre la curva al aumentar $t$.
+- **Velocidad:** el vector tangente $\mathbf{g}'(t) = (x'(t), y'(t))$, que indica dirección y rapidez de recorrido en cada instante.
+
+![curva-parametrizada-plano.png\|500](/img/user/imagenes/curva-parametrizada-plano.png)
+
+En la figura se representa la curva cerrada $\mathbf{g}(t)=\big(r(t)\cos t,\; r(t)\sin t\big)$ con $r(t)=1+0{,}35\,\mathrm{sen}(4t)$ y $t \in [0, 2\pi]$. El punto rojo es $\mathbf{g}(t_0)$ y la flecha verde su vector velocidad $\mathbf{g}'(t_0)$.
+
+#### 1.2.3. Campos vectoriales en el plano
+
+Un campo vectorial en el plano asigna un vector a cada punto:
+
+$$\mathbf{f}(x,y) = \big(u(x,y),\, v(x,y)\big).$$
+
+Se representa dibujando en cada punto $(x,y)$ una flecha con origen en él y dirección y sentido del vector $\mathbf{f}(x,y)$. Para que la imagen sea legible se suele:
+
+- **Normalizar o escalar las flechas**, ya que su longitud real puede variar en órdenes de magnitud y tapar el dibujo.
+- **Colorear según la norma** $\|\mathbf{f}(x,y)\|$, lo que añade información cuantitativa.
+- **Superponer líneas de campo** (*streamlines*), curvas tangentes en cada punto al campo, que describen las trayectorias de las partículas.
+
+![campo-vectorial-plano.png\|500](/img/user/imagenes/campo-vectorial-plano.png)
+
+En la figura se muestra el campo de rotación $\mathbf{f}(x,y)=(-y,\,x)$: las flechas giran alrededor del origen, el color codifica $\|\mathbf{f}\|=\sqrt{x^2+y^2}$ y las líneas negras son circunferencias, es decir, las trayectorias de una partícula arrastrada por el campo.
+
+> [!note]- Código Python para generar las figuras
+> ```python
+> import numpy as np
+> import matplotlib.pyplot as plt
+>
+> # --- 1. Curvas de nivel de un campo escalar ---
+> x = np.linspace(-3, 3, 400); y = np.linspace(-3, 3, 400)
+> X, Y = np.meshgrid(x, y); f = X**2 + Y**2
+> fig, ax = plt.subplots(figsize=(5.6, 4.8))
+> cf = ax.contourf(X, Y, f, levels=20, cmap="viridis", alpha=0.85)
+> cs = ax.contour(X, Y, f, levels=[1, 2, 4, 6, 8], colors="white")
+> ax.clabel(cs, fmt=lambda v: f"$c={v:g}$"); fig.colorbar(cf, ax=ax)
+> ax.set_aspect("equal"); ax.set(xlabel="$x$", ylabel="$y$")
+> fig.savefig("campo-escalar-curvas-nivel.png", dpi=160)
+>
+> # --- 1b. La misma idea en 3D: superficie + curvas proyectadas ---
+> fig = plt.figure(figsize=(6.4, 5.2))
+> ax = fig.add_subplot(111, projection="3d")
+> Z = 3*np.exp(-(X**2 + Y**2)/2)
+> surf = ax.plot_surface(X, Y, Z, cmap="terrain", linewidth=0)
+> ax.contour(X, Y, Z, levels=10, zdir="z", offset=0, cmap="terrain")
+> ax.view_init(elev=32, azim=-58); fig.colorbar(surf, ax=ax, shrink=0.55)
+> fig.savefig("campo-escalar-superficie-3d.png", dpi=160)
+>
+> # --- 2. Curva parametrizada en el plano ---
+> t = np.linspace(0, 2*np.pi, 800); r = 1 + 0.35*np.sin(4*t)
+> gx, gy = r*np.cos(t), r*np.sin(t)
+> fig, ax = plt.subplots(figsize=(5.6, 5))
+> ax.plot(gx, gy, lw=2.4); ax.set_aspect("equal")
+> ax.set(xlabel="$x$", ylabel="$y$")
+> fig.savefig("curva-parametrizada-plano.png", dpi=160)
+>
+> # --- 3. Campo vectorial en el plano ---
+> x = np.linspace(-2.5, 2.5, 21); y = np.linspace(-2.5, 2.5, 21)
+> X, Y = np.meshgrid(x, y); U, V = -Y, X
+> fig, ax = plt.subplots(figsize=(5.6, 5))
+> q = ax.quiver(X, Y, U, V, np.hypot(U, V), cmap="plasma", pivot="mid")
+> ax.streamplot(X, Y, U, V, color="black", linewidth=0.7)
+> fig.colorbar(q, ax=ax); ax.set_aspect("equal")
+> ax.set(xlabel="$x$", ylabel="$y$")
+> fig.savefig("campo-vectorial-plano.png", dpi=160)
+> ```
+
 ---
 
-## 2. Límites y Continuidad
+## 2. Dominio, Límites y Continuidad
+
+### 2.1. Dominio
+
+El **dominio** de una función $f$ de varias variables, $Dom(f)$, es el conjunto de puntos donde está definida. Hay que identificar las operaciones con restricciones:
+
+1. **Denominadores:** si $f=\frac{g}{h}$, debe ser $h(x,y)\neq 0$.
+2. **Raíces de índice par:** si $f=\sqrt{g}$, debe ser $g(x,y)\ge 0$.
+3. **Logaritmos:** si $f=\log g$, debe ser $g(x,y)>0$.
+4. **Trigonométricas inversas:** si $f=\arcsin g$ o $\arccos g$, debe ser $g(x,y)\in[-1,1]$.
+
+Los polinomios, $e^{g}$, $\operatorname{sen} g$ y $\cos g$ están definidos siempre que lo esté $g$.
+
+### 2.2. Límites y Continuidad
 
 El cálculo de límites en funciones de varias variables presenta una elevada complejidad al existir infinitos caminos de aproximación a un punto del plano o del espacio.
 
@@ -80,6 +181,17 @@ Hallar la **derivada parcial** de una función respecto a una variable consiste 
 
 ---
 
+### 3.2. Diferenciabilidad
+
+Una función $f$ es **diferenciable** en $P_0=(a,b)$ si, cerca de ese punto, se puede aproximar por un plano (una función lineal) con un error que se hace despreciable al acercarse a $P_0$. Que existan las derivadas parciales **no garantiza** la diferenciabilidad: la función puede tener un "pico" al movernos en otras direcciones.
+
+**Condición suficiente (la que se aplica en la práctica):** si $f_x$ y $f_y$ existen y son continuas en un entorno de $(a,b)$, entonces $f$ es diferenciable en $(a,b)$.
+
+- Diferenciable $\implies$ continua.
+- Diferenciable $\implies$ existen todas las derivadas parciales (el recíproco es falso).
+
+---
+
 ## 4. Gradiente y Derivada Direccional
 
 ### 4.1. El Vector Gradiente
@@ -92,11 +204,12 @@ $$\nabla f = \left( \frac{\partial f}{\partial x}, \; \frac{\partial f}{\partial
 
 ### 4.2. Derivada Direccional
 
-Para calcular la variación o incremento de la función $f(x, y)$ en una dirección arbitraria dada por un vector $v = (a, b)$, se utiliza la **derivada direccional**:
+La **derivada direccional** de $f$ en un punto $P$ en la dirección de un **vector unitario** $\vec u$ mide la tasa de cambio de $f$ en esa dirección:
 
-$$D_v f = a \frac{\partial f}{\partial x} + b \frac{\partial f}{\partial y} = \nabla f \cdot v$$
+$$D_{\vec u}f(P) = \nabla f(P) \cdot \vec u$$
 
-- Si $D_v f = 0$, significa que el movimiento en la dirección $v$ se realiza a lo largo de una **curva de nivel** (sin cambio en el valor de la función).
+- Si $D_{\vec u}f = 0$, el movimiento en la dirección $\vec u$ se realiza a lo largo de una **curva de nivel** (sin cambio en el valor de la función).
+- Si la dirección viene dada por un vector $\vec v$ no unitario, primero se normaliza: $\vec u = \dfrac{\vec v}{\|\vec v\|}$.
 
 > [!example] Ejemplo 4.1: Gradiente y Derivada Direccional
 > Dada la función $f(x, y) = x^2 y + \sqrt{x}$:
@@ -105,9 +218,9 @@ $$D_v f = a \frac{\partial f}{\partial x} + b \frac{\partial f}{\partial y} = \n
 >    $$\frac{\partial f}{\partial x} = 2yx + \frac{1}{2\sqrt{x}}, \qquad \frac{\partial f}{\partial y} = x^2$$
 >    $$\nabla f = \left( 2yx + \frac{1}{2\sqrt{x}}, \; x^2 \right)$$
 >
-> 2. **Calcular la derivada direccional en el punto $(2, 1)$ según la dirección $v = (3, 5)$:**
->    $$D_{(3,5)} f(2, 1) = 3 \left( 2(1)(2) + \frac{1}{2\sqrt{2}} \right) + 5 (2^2) = 3 \left( 4 + \frac{1}{2\sqrt{2}} \right) + 20 \approx \mathbf{34.12}$$
->    *Interpretación:* Si nos encontramos en la posición $(2, 1)$ y nos desplazamos en la dirección $(3, 5)$, la altitud o valor de la función aumenta a una razón de $34.12$ unidades.
+> 2. **Calcular la derivada direccional en el punto $(2, 1)$ en la dirección de $\vec v = (3, 5)$.** Como $\|\vec v\|=\sqrt{34}$, hay que normalizar:
+>    $$D_{\vec u} f(2, 1) = \frac{3\left( 4 + \frac{1}{2\sqrt{2}} \right) + 5\,(4)}{\sqrt{34}} \approx \mathbf{5.67}$$
+>    *Interpretación:* Si nos encontramos en la posición $(2, 1)$ y nos desplazamos en la dirección $(3, 5)$, la altitud o valor de la función aumenta a una razón de $5.67$ unidades por unidad de longitud.
 
 > [!example] Ejemplo 4.2: Máximo Ascenso en una Montaña
 > Dada la superficie de una montaña descrita por $A(x, y) = \frac{x^2 + y^2}{10} + 50$, determinar hacia dónde debemos movernos desde el punto $(2, -1)$ para llegar lo más rápido posible a la cima.
@@ -120,7 +233,9 @@ $$D_v f = a \frac{\partial f}{\partial x} + b \frac{\partial f}{\partial y} = \n
 
 ---
 
-## 5. Operadores Diferenciales en Campos Vectoriales
+## 5. Operadores Diferenciales
+
+A cada tipo de objeto geométrico le corresponde un operador diferencial natural: el **gradiente** actúa sobre campos escalares, la **derivada** sobre curvas y el **rotacional** y la **divergencia** sobre campos vectoriales.
 
 ### 5.1. Rotacional
 
@@ -148,6 +263,46 @@ La **divergencia** mide la cantidad de flujo que se origina (fuente/manantial) o
 > [!example] Ejemplo 5.2: Cálculo de la Divergencia
 > Para el campo $\mathbf{f}(x, y, z) = \left( \frac{x}{y}, \; z - y, \; \frac{x^2}{z} \right)$:
 > $$\operatorname{Div}(\mathbf{f}) = \frac{\partial}{\partial x}\left(\frac{x}{y}\right) + \frac{\partial}{\partial y}(z - y) + \frac{\partial}{\partial z}\left(\frac{x^2}{z}\right) = \frac{1}{y} - 1 - \frac{x^2}{z^2} = \mathbf{\frac{z^2 - yz^2 - x^2 y}{y z^2}}$$
+
+### 5.3. Vector Tangente en Curvas
+
+Así como el gradiente describe la variación de un campo escalar y el rotacional/divergencia la de un campo vectorial, el operador diferencial natural de una curva $\mathbf{g}(t) = (x(t), y(t))$ es su **vector derivada**:
+
+$$\mathbf{g}'(t) = \big(x'(t),\, y'(t)\big)$$
+
+- **Interpretación física:** Si $t$ es el tiempo, $\mathbf{g}'(t)$ es el **vector velocidad**: apunta en la dirección de avance y su módulo $\|\mathbf{g}'(t)\|$ es la rapidez.
+- **Interpretación geométrica:** $\mathbf{g}'(t)$ es tangente a la trayectoria de la curva en el punto $\mathbf{g}(t)$. La recta tangente en $t_0$ es
+  $$\mathbf{g}(t_0) + \lambda\, \mathbf{g}'(t_0), \qquad \lambda \in \mathbb{R}.$$
+- **Curva regular:** Si $\mathbf{g}'(t) \neq \mathbf{0}$ para todo $t$, la curva es *regular* y admite el **vector tangente unitario**
+  $$\mathbf{T}(t) = \frac{\mathbf{g}'(t)}{\|\mathbf{g}'(t)\|},$$
+  que solo depende de la trayectoria y de su orientación, no de la rapidez con que se recorra. Si $\mathbf{g}'(t_0) = \mathbf{0}$ puede aparecer una **cúspide** o un punto singular.
+
+**Relación con el gradiente.** Si la curva $\mathbf{g}(t)$ recorre una curva de nivel $f(x,y) = c$, entonces $f(\mathbf{g}(t)) = c$ para todo $t$; derivando por la regla de la cadena:
+
+$$\nabla f(\mathbf{g}(t)) \cdot \mathbf{g}'(t) = 0.$$
+
+Es decir, **el gradiente es perpendicular a las curvas de nivel**: $\nabla f$ apunta en la dirección de máximo crecimiento y el vector tangente en la dirección en que $f$ no cambia.
+
+![gradiente-tangente-curva-nivel.png\|480](/img/user/imagenes/gradiente-tangente-curva-nivel.png)
+
+> [!example] Ejemplo 5.3: Vector Tangente y Ortogonalidad con el Gradiente
+> Dada la curva $\mathbf{g}(t) = (t, t^2)$ y el campo escalar $f(x, y) = x^2 + y^2$:
+>
+> 1. **Vector tangente en $t = 1$:**
+>    $$\mathbf{g}'(t) = (1, 2t) \implies \mathbf{g}'(1) = \mathbf{(1, 2)}$$
+>    La recta tangente en $\mathbf{g}(1) = (1, 1)$ es $(1, 1) + \lambda(1, 2)$, es decir, $y = 2x - 1$.
+> 2. **Vector tangente unitario en $t = 1$:**
+>    $$\|\mathbf{g}'(1)\| = \sqrt{1 + 4} = \sqrt{5} \implies \mathbf{T}(1) = \left( \frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}} \right)$$
+> 3. **¿Es $\mathbf{g}$ una curva de nivel de $f$?** No: $f(\mathbf{g}(t)) = t^2 + t^4$ no es constante, luego $\nabla f \cdot \mathbf{g}' \neq 0$. En efecto, en $t=1$:
+>    $$\nabla f(1,1) = (2, 2), \qquad \nabla f \cdot \mathbf{g}'(1) = 2 + 4 = 6 \neq 0$$
+>    La curva **no** es una curva de nivel: al movernos por ella, $f$ aumenta. Para la circunferencia $\mathbf{g}(t) = (\cos t, \sin t)$, en cambio, $f(\mathbf{g}(t)) = 1$ es constante y se comprueba que $\nabla f \cdot \mathbf{g}' = (2\cos t, 2\sin t) \cdot (-\sin t, \cos t) = 0$.
+
+> [!summary] Qué operador para cada objeto
+> | Objeto | Representación | Operador diferencial natural |
+> |---|---|---|
+> | Campo escalar $f: \mathbb{R}^2 \to \mathbb{R}$ | Curvas de nivel / superficie | Gradiente $\nabla f$ |
+> | Curva $\mathbf{g}: \mathbb{R} \to \mathbb{R}^2$ | trayectoria + orientación | Derivada $\mathbf{g}'(t)$ (tangente) |
+> | Campo vectorial $\mathbf{f}: \mathbb{R}^2 \to \mathbb{R}^2$ | Flechas / líneas de campo | Rotacional, divergencia |
 
 ---
 

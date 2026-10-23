@@ -1,229 +1,258 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema04/","created":"2026-09-28T10:35:58.018+02:00","updated":"2026-09-28T10:35:54.764+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema04/","created":"2026-10-23T09:22:29.966+02:00","updated":"2026-10-23T09:22:21.794+02:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
 # Tema 4: Cálculo diferencial en varias variables
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#0. Introducción\|0. Introducción]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#1. Dominio de Funciones\|1. Dominio de Funciones]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#2. Derivadas Parciales y Diferenciabilidad\|2. Derivadas Parciales y Diferenciabilidad]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#3. Derivadas Direccionales, Gradiente y Regla de la Cadena\|3. Derivadas Direccionales, Gradiente y Regla de la Cadena]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#4. Plano Tangente y Recta Normal\|4. Plano Tangente y Recta Normal]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#5. Optimización de Funciones\|5. Optimización de Funciones]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04#1. Funciones de Varias Variables\|1. Funciones de Varias Variables]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04#2. Dominio, Límites y Continuidad\|2. Dominio, Límites y Continuidad]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04#3. Derivadas Parciales\|3. Derivadas Parciales]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04#4. Gradiente y Derivada Direccional\|4. Gradiente y Derivada Direccional]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04#5. Operadores Diferenciales\|5. Operadores Diferenciales]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04#6. Optimización en Varias Variables\|6. Optimización en Varias Variables]]
 
-## 0. Introducción
-Varias variables en varias variables:
-$$
-f:\mathbb R^n \to \mathbb R^m
-$$
-$$
-(x,y,z,\ldots) \mapsto (f_1,f_2,\ldots)
-$$
-Ejemplos:
-- Para cada punto de un mapa $(x,y)$ podemos dar su temperatura $T$: 
-$$(x,y) \mapsto T(x,y)$$
-- Para cada punto de un mapa $(x,y)$ podemos dar la velocidad del viento $v_1,v_2$: 
-$$(x,y) \mapsto (v_1(x,y),v_2(x,y))$$
-- Para cada valor de tiempo $t$ podemos dar un punto de un mapa $(x,y)$: 
-$$t\mapsto (x(t),y(t))$$
-## 1. Dominio de Funciones
+## 1. Funciones de Varias Variables
 
-El **dominio** de una función $f$ de varias variables, $Dom(f)$, es el conjunto de puntos $(x, y, \dots)$ del espacio $\mathbb{R}^n$ para los cuales la función está definida.
+### 1.1. Concepto y Tipos de Funciones
 
-Para hallar el dominio, debemos identificar las operaciones que tienen restricciones:
+Las funciones de varias variables dependen de más de una entrada y/o devuelven varios valores. Se clasifican según sus espacios de origen y llegada:
 
-1. **Denominadores:** El denominador no puede ser cero.
-    
-    - Si $f(x,y) = \frac{g(x,y)}{h(x,y)}$, se debe cumplir $h(x,y) \neq 0$.
-        
-2. **Raíces Cuadradas (y de índice par):** El argumento de la raíz (radicando) no puede ser negativo.
-    
-    - Si $f(x,y) = \sqrt{g(x,y)}$, se debe cumplir $g(x,y) \geq 0$.
-        
-3. **Logaritmos:** El argumento del logaritmo debe ser estrictamente positivo.
-    
-    - Si $f(x,y) = \log(g(x,y))$, se debe cumplir $g(x,y) > 0$.
-        
-4. **Funciones Trigonométricas Inversas:** (Como $arcsin, arccos$) sus argumentos están restringidos a $[-1, 1]$.
-    
+- **Campos escalares ($f: \mathbb{R}^N \to \mathbb{R}$):** asignan un único valor numérico a cada punto.
+  - *Ejemplo náutico:* la profundidad del fondo marino en cada posición $(x,y)$ de la carta náutica (las isóbatas son sus curvas de nivel).
+- **Curvas en el plano o en el espacio ($\mathbf{g}: \mathbb{R} \to \mathbb{R}^N$):** dependen de una única variable (habitualmente el tiempo $t$) y devuelven una posición.
+  - *Ejemplo náutico:* la derrota del buque, $t \mapsto (x(t), y(t))$.
+- **Campos vectoriales en el plano ($\mathbf{f}: \mathbb{R}^2 \to \mathbb{R}^2$):** asignan un vector a cada punto del plano.
+  - *Ejemplo náutico:* el viento $(u,v)$ en cada posición $(x,y)$.
+- **Campos vectoriales en el espacio ($\mathbf{f}: \mathbb{R}^3 \to \mathbb{R}^3$):** dan un vector en cada punto del espacio.
+  - *Ejemplo náutico:* la corriente marina o la velocidad del aire $(u,v,w)$ en un punto $(x,y,z)$.
 
-**Nota:** Funciones como polinomios, $e^{g(x,y)}$, $\sin(g(x,y))$ y $\cos(g(x,y))$ están definidas siempre que su argumento $g(x,y)$ lo esté.
+En el tema 4 trabajamos sobre todo con el primer tipo (campos escalares), pero conviene conocer los otros dos porque aparecen constantemente en navegación.
 
-## 2. Derivadas Parciales y Diferenciabilidad
-En varias variables existen la correspondientes nociones de límite y de continuidad. Dado su dificultad técnica no serán tratadas aquí, sino que nos ocuparemos directamente de la generalización del concepto de derivada.
+### 1.2. Representación Gráfica
 
-### Derivadas Parciales
-La **derivada parcial** de $f(x,y)$ con respecto a $x$ en un punto $(a,b)$ se calcula tratando $y$ como una constante y derivando con respecto a $x$. Se denota $\frac{\partial f}{\partial x}(a,b)$ o $f_x(a,b)$.
+Cada tipo exige una representación distinta: los **campos escalares** se visualizan mediante curvas de nivel, las **curvas parametrizadas** mediante su trayectoria y los **campos vectoriales** mediante flechas o líneas de campo.
 
-- **Cálculo práctico:** 
-	- Para hallar $\frac{\partial f}{\partial x}$, deriva $f$ con respecto a $x$ tratando $y$ como una constante.
-	- Para hallar $\frac{\partial f}{\partial y}$, deriva $f$ con respecto a $y$ tratando $x$ como una constante.
+#### 1.2.1. Campos escalares: curvas de nivel
 
-### Diferenciabilidad
-Una función $f$ es **diferenciable** en un punto $P_0 = (a,b)$ si sus derivadas parciales existen en $P_0$ y hay una buena aproximación de orden 1 de la función cerca de $P_0$
-$$
-P_f: (x,y)\mapsto f(a,b)+\begin{pmatrix} \frac{\partial f}{\partial x} \frac{\partial f}{\partial y}\end{pmatrix}\cdot \begin{pmatrix}x-a \\ y-b\end{pmatrix}
-$$
-**Ejemplo:**
-Sea la función $f(x, y) = x^2 + y^3 - 5$ en el punto $P_0 = (1, 3)$.
+Para visualizar un campo escalar $f:\mathbb{R}^2\to\mathbb{R}$ se usan las **curvas de nivel**: el conjunto de puntos donde la función toma un valor constante $c$,
+$$f(x,y)=c.$$
 
-1.  **Calculamos el valor de la función en el punto:**
-$f(1, 3) = (1)^2 + (3)^3 - 5 = 1 + 27 - 5 = 23$
+- **Isóbatas:** curvas de nivel de la profundidad (cartas náuticas).
+- **Isotermas:** curvas de nivel de la temperatura.
 
-2.  **Calculamos las derivadas parciales:**
+![campo-escalar-curvas-nivel.png\|500](/img/user/imagenes/campo-escalar-curvas-nivel.png)
 
-* $\frac{\partial f}{\partial x} = 2x$ (tratando $y^3 - 5$ como una constante)
-* $\frac{\partial f}{\partial y} = 3y^2$ (tratando $x^2 - 5$ como una constante)
+El color indica el valor de $f$ y las líneas blancas son curvas de nivel $f(x,y)=c$ para $c=1,2,4,6,8$. Obsérvese que las curvas se acumulan donde la función crece más deprisa: la separación entre curvas mide, cualitativamente, el módulo del gradiente.
 
-3.  **Evaluamos las derivadas parciales en el punto $(1, 3)$:**
+La misma información en tres dimensiones: la **gráfica** de $f$ es una superficie (la "montaña") y las curvas de nivel son sus cortes horizontales proyectados sobre el plano $z=0$:
 
-* $\frac{\partial f}{\partial x}(1, 3) = 2(1) = 2$
-* $\frac{\partial f}{\partial y}(1, 3) = 3(3)^2 = 3 \cdot 9 = 27$
+![campo-escalar-superficie-3d.png\|520](/img/user/imagenes/campo-escalar-superficie-3d.png)
 
-4.  **Construimos la aproximación lineal $P_f$ (plano tangente):**
-Usando la fórmula $P_f(x,y) = f(a,b) + \frac{\partial f}{\partial x}(a,b)(x-a) + \frac{\partial f}{\partial y}(a,b)(y-b)$:
-$$
-P_f: (x,y) \mapsto 23 + \begin{pmatrix} 2 & 27 \end{pmatrix}\\ \cdot \begin{pmatrix}x-1 \\ y-3 \end{pmatrix}
-$$
-de donde
-$$P_f(x, y) = 2x + 27y - 60$$
+#### 1.2.2. Curvas parametrizadas en el plano
 
+Una curva en el plano es la imagen de una función $\mathbf{g}:\mathbb{R}\to\mathbb{R}^2$,
+$$\mathbf{g}(t)=\big(x(t),\,y(t)\big),$$
+donde $t$ recorre un intervalo (habitualmente el tiempo). La gráfica es la **trayectoria**; el parámetro añade dos informaciones que la trayectoria por sí sola no contiene:
 
-**Condición Suficiente de Diferenciabilidad (Criterio práctico)**:
-Si las derivadas parciales $\frac{\partial f}{\partial x}$ y $\frac{\partial f}{\partial y}$ existen y son continuas en un entorno (una región abierta) alrededor de un punto $(a,b)$, entonces $f$ es diferenciable en $(a,b)$.
+- **Orientación:** el sentido en que se recorre al aumentar $t$.
+- **Velocidad:** el vector tangente $\mathbf{g}'(t)=\big(x'(t),y'(t)\big)$, que indica dirección y rapidez en cada instante.
 
-**Ejemplo**: En el ejemplo anterior, dado que las derivadas parciales $f_x = 2x$ y $f_y = 3y^2$ son continuas en todo $\mathbb{R}^2$, la función $f$ es diferenciable en todos sus puntos, incluido el $(1, 3)$.
+![curva-parametrizada-plano.png\|500](/img/user/imagenes/curva-parametrizada-plano.png)
 
-**Relaciones importantes:**
-- Diferenciable $\implies$ Continua.
-- Diferenciable $\implies$ Existen todas las derivadas parciales.
-- El contrario no es cierto: que existan las derivadas parciales no implica diferenciabilidad
+#### 1.2.3. Campos vectoriales en el plano
 
+Un campo vectorial asigna un vector a cada punto:
+$$\mathbf{f}(x,y)=\big(u(x,y),\,v(x,y)\big).$$
+Se representa dibujando en cada punto una flecha con la dirección y sentido del vector. Para que sea legible se suele:
 
-## 3. Derivadas Direccionales, Gradiente y Regla de la Cadena
+- **Normalizar o escalar las flechas**, ya que su longitud real puede tapar el dibujo.
+- **Colorear según la norma** $\|\mathbf{f}(x,y)\|$, lo que añade información cuantitativa.
+- **Superponer líneas de campo** (*streamlines*), curvas tangentes al campo en cada punto: son las trayectorias de una partícula arrastrada por el viento o la corriente.
 
-### Vector Gradiente
-El **vector gradiente** de una función $f$ en un punto $P$, denotado $\nabla f(P)$, es el vector de sus derivadas parciales.
-- Para $f(x,y)$: $\nabla f(x,y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)$  
-- Para $f(x,y,z)$: $\nabla f(x,y,z) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right)$  
+![campo-vectorial-plano.png\|500](/img/user/imagenes/campo-vectorial-plano.png)
 
-### Derivada Direccional
-La **derivada direccional** de $f$ en un punto $P$ en la dirección de un **vector unitario** $\vec{u}$ mide la tasa de cambio de $f$ en esa dirección.
-Cálculo:
-$$D_{\vec{u}}f(P) = \nabla f(P) \cdot \vec{u}$$
-(Es el producto escalar del gradiente por el vector unitario).
+En la figura, el campo de rotación $\mathbf{f}(x,y)=(-y,x)$: las flechas giran alrededor del origen, el color codifica $\|\mathbf{f}\|$ y las líneas negras son las trayectorias de una partícula.
 
-¡Importante! El vector de dirección $\vec{u}$ debe ser unitario ($\|\vec{u}\| = 1$). Si te dan una dirección $\vec{v}$ que no es unitaria (como en el Problema 4.2), primero debes normalizarla:
-$$\vec{u} = \frac{\vec{v}}{\|\vec{v}\|}$$
-donde $\|\vec{v}\| = \sqrt{v_1^2 + v_2^2 + \dots}$
+## 2. Dominio, Límites y Continuidad
 
-### Propiedades del Gradiente
-El gradiente $\nabla f(P)$ nos da información clave sobre el cambio de $f$ en el punto $P$:
-1. **Máximo Crecimiento:** La dirección de máximo crecimiento (o "máxima pendiente") de $f$ es la dirección del propio vector gradiente, $\nabla f(P)$.
-    - La _tasa_ de ese crecimiento (la derivada direccional máxima) es la norma del gradiente, $\|\nabla f(P)\|$.
-2. **Máximo Decrecimiento:** La dirección de máximo decrecimiento de $f$ es la opuesta al gradiente, $-\nabla f(P)$.
-    - La _tasa_ de ese decrecimiento es $-\|\nabla f(P)\|$.
-3. **Sin Cambio:** La derivada direccional es cero en cualquier dirección perpendicular a $\nabla f(P)$.
+### 2.1. Dominio
 
-### Regla de la Cadena
-Se usa cuando las variables de una función dependen de otras.
-Caso 1 (Problema 4.8): $z = f(u, v)$ donde $u = u(x,y)$ y $v = v(x,y)$.
-$$\frac{\partial z}{\partial x} = \frac{\partial f}{\partial u}\frac{\partial u}{\partial x} + \frac{\partial f}{\partial v}\frac{\partial v}{\partial x}$$$$\frac{\partial z}{\partial y} = \frac{\partial f}{\partial u}\frac{\partial u}{\partial y} + \frac{\partial f}{\partial v}\frac{\partial v}{\partial y}$$
-Caso 2 (Problema 4.9): $h(t) = f(x(t), y(t), z(t))$.
-$$h'(t) = \frac{df}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt} + \frac{\partial f}{\partial z}\frac{dz}{dt}$$
-## 4. Plano Tangente y Recta Normal
-Se usan para aproximar superficies. Hay dos casos comunes:
+El **dominio** de una función $f$ de varias variables, $Dom(f)$, es el conjunto de puntos donde está definida. Hay que identificar las operaciones con restricciones:
 
-**Caso 1: Gráfica de una función** $z = f(x,y)$ **en** $P_0 = (x_0, y_0, z_0)$  
-- Plano Tangente:
-    
-    $z - z_0 = \frac{\partial f}{\partial x}(x_0, y_0)(x - x_0) + \frac{\partial f}{\partial y}(x_0, y_0)(y - y_0)$
-    
-Coincide con la gráfica de la aproximación a $f$, $P_f$, vista anteriormente.
+1. **Denominadores:** si $f=\frac{g}{h}$, debe ser $h(x,y)\neq 0$.
+2. **Raíces de índice par:** si $f=\sqrt{g}$, debe ser $g(x,y)\ge 0$.
+3. **Logaritmos:** si $f=\log g$, debe ser $g(x,y)>0$.
+4. **Trigonométricas inversas:** si $f=\arcsin g$ o $\arccos g$, debe ser $g(x,y)\in[-1,1]$.
 
-**Caso 2: Superficie implícita $F(x,y,z) = k$ en $P_0 = (x_0, y_0, z_0)$**
-(Nota: El Caso 1 es un caso particular de éste si tomamos $F(x,y,z) = f(x,y) - z$ y $k=0$).
-1. Calcula el vector gradiente de $F$ en $P_0$:    
-    $\nabla F(P_0) = \left( \frac{\partial F}{\partial x}(P_0), \frac{\partial F}{\partial y}(P_0), \frac{\partial F}{\partial z}(P_0) \right)$
-    Este vector es normal (perpendicular) a la superficie en $P_0$.
-    
-2. Ecuación del Plano Tangente:
-    $\nabla F(P_0) \cdot (x-x_0, y-y_0, z-z_0) = 0$
-    Es decir:
-    $\frac{\partial F}{\partial x}(P_0)(x-x_0) + \frac{\partial F}{\partial y}(P_0)(y-y_0) + \frac{\partial F}{\partial z}(P_0)(z-z_0) = 0$
-    
-3. Ecuación de la Recta Normal (paramétrica):
-    $\vec{r}(t) = (x_0, y_0, z_0) + t \cdot \nabla F(P_0)$
+Los polinomios, $e^{g}$, $\operatorname{sen} g$ y $\cos g$ están definidos siempre que lo esté $g$.
 
-## 5. Optimización de Funciones
+### 2.2. Límites y Continuidad
 
-### Extremos Locales (Sin restricciones)
-Para hallar los máximos, mínimos o puntos de silla de $f(x,y)$ en una región abierta.
+El cálculo de límites en varias variables es técnicamente delicado, porque hay infinitos caminos de aproximación a un punto; en este curso no lo necesitaremos en detalle.
 
-Paso 1: Encontrar Puntos Críticos
-Los puntos críticos son los candidatos a ser extremos. Son los puntos $(a,b)$ donde:
-$$\nabla f(a,b) = (0,0)$$ 
-(es decir, $\frac{\partial f}{\partial x} = 0$ y $\frac{\partial f}{\partial y} = 0$), o   
+**Criterio de continuidad:** una función de varias variables es continua en un punto si y solo si todas sus **funciones componentes** son continuas en dicho punto.
 
-Paso 2: Clasificar Puntos Críticos (Criterio de la Segunda Derivada)
-Calculamos el Hessiano, $D(x,y)$, en cada punto crítico $(a,b)$.
-1. Calcula las segundas derivadas: $f_{xx}$, $f_{yy}$, $f_{xy}$.
-    
-2. Calcula el determinante de la matriz Hessiana:
-$$
-H(x,y)=\begin{pmatrix}f_{xx} & f_{xy} \\ f_{yx} & f_{yy}\end{pmatrix},
-$$
-es decir,
-$$D(x,y) = f_{xx}(x,y) \cdot f_{yy}(x,y) - (f_{xy}(x,y))^2$$
-3. En el punto crítico $(a,b)$:
-    
-    - Si $D(a,b) > 0$ y $f_{xx}(a,b) > 0$ $\implies$ **Mínimo Local**.
-        
-    - Si $D(a,b) > 0$ y $f_{xx}(a,b) < 0$ $\implies$ **Máximo Local**.
-        
-    - Si $D(a,b) < 0$ $\implies$ **Punto de Silla**.
-        
-    - Si $D(a,b) = 0$ $\implies$ El criterio no decide.
-        
+En la práctica, todas las funciones del curso son continuas en su dominio (polinomios, exponenciales, senos, cocientes con denominador no nulo, etc.).
 
-### Extremos Condicionados (Multiplicadores de Lagrange)
-Para optimizar $f(x,y)$ sujeto a una restricción (ligadura) $g(x,y) = c$. (También funciona para $f(x,y,z)$ con $g(x,y,z) = c$).
+## 3. Derivadas Parciales
 
-**Pasos a seguir:**
-1.  **Definir la función Lagrangiana:**
-$$L(\lambda,x, y) = f(x, y) - \lambda (g(x, y) - c)$$
-2.  **Construir la Matriz Hessiana Orlada ($\bar{H}$):**
-    Esta matriz incluye las segundas derivadas de $L$ y las primeras derivadas de la restricción $g$.
-    **Para 2 variables ($f(x,y)$ con $g(x,y)=c$):**
-    $$
-    \bar{H} = \begin{pmatrix}
-    0 & g_x & g_y \\
-    g_x & L_{xx} & L_{xy} \\
-    g_y & L_{yx} & L_{yy}
-    \end{pmatrix}
-    $$
-    Donde $g_x = \frac{\partial g}{\partial x}$, $L_{xx} = \frac{\partial^2 L}{\partial x^2} = f_{xx} - \lambda g_{xx}$, $L_{xy} = f_{xy} - \lambda g_{xy}$, etc.
+### 3.1. Definición e Interpretación
 
-3.  **Evaluar el Determinante:** Se evalúa $\det(\bar{H})$ en cada punto candidato $(x_0, y_0, \lambda_0)$ que encontraste.
-    * Si $\det(\bar{H}) > 0$: El punto es un **Máximo Local**.
-    * Si $\det(\bar{H}) < 0$: El punto es un **Mínimo Local**.
-    * Si $\det(\bar{H}) = 0$: El criterio no concluye.
+Hallar la **derivada parcial** respecto a una variable consiste en derivar de la manera tradicional respecto a esa variable, tratando las demás como constantes. Se denota $\frac{\partial f}{\partial x}$ o $f_x$.
 
-### Extremos Absolutos en Conjuntos Compactos (Cerrados y Acotados)
+- **Cálculo práctico:**
+  - Para $\frac{\partial f}{\partial x}$, deriva respecto a $x$ tratando $y$ como constante.
+  - Para $\frac{\partial f}{\partial y}$, deriva respecto a $y$ tratando $x$ como constante.
+- **Interpretación:** $\frac{\partial f}{\partial x}$ mide la tasa de variación de $f$ cuando solo se mueve $x$; es decir, la influencia de $x$ en el valor de la función.
 
-Para hallar el máximo y mínimo absoluto de una función continua $f$ en una región cerrada y acotada $A$ (como un disco, Problema 5.7).
+### 3.2. Diferenciabilidad
 
-**Método (Teorema de Weierstrass):**
+Una función $f$ es **diferenciable** en $P_0=(a,b)$ si, cerca de ese punto, se puede aproximar por un plano (una función lineal) con un error que se hace despreciable al acercarse a $P_0$. Es la generalización de que una curva tenga recta tangente.
 
-1. **Interior:** Encuentra todos los puntos críticos de $f$ que estén _dentro_ de la región $A$ (usando el método de extremos locales $\nabla f = 0$).
-    
-2. **Frontera:** Encuentra los puntos extremos de $f$ _sobre la frontera_ de $A$. (Esto se hace usando Multiplicadores de Lagrange, donde la frontera es la restricción $g(x,y)=c$).
-    
-3. **Comparar:** Evalúa $f$ en todos los puntos obtenidos en los pasos 1 y 2.
-    
-    - El valor más grande es el **Máximo Absoluto**.
-        
-    - El valor más pequeño es el **Mínimo Absoluto**.
+Que existan las derivadas parciales **no garantiza** la diferenciabilidad: la función puede tener derivadas parciales y aun así presentar un "pico" al movernos en otras direcciones. Por eso se usa este criterio práctico:
 
+**Condición suficiente (la que se aplica en la práctica):** si $f_x$ y $f_y$ existen y son continuas en un entorno de $(a,b)$, entonces $f$ es diferenciable en $(a,b)$.
+
+- Diferenciable $\implies$ continua.
+- Diferenciable $\implies$ existen todas las derivadas parciales (el recíproco es falso).
+
+**Ejemplo:** Sea $f(x,y)=x^2+y^3-5$ en $P_0=(1,3)$.
+
+1. Valor en el punto: $f(1,3)=1+27-5=23$.
+2. Derivadas parciales: $f_x=2x$, $f_y=3y^2$; en $(1,3)$, $f_x(1,3)=2$ y $f_y(1,3)=27$.
+3. Como $f_x$ y $f_y$ son continuas en todo $\mathbb{R}^2$, $f$ es diferenciable en $(1,3)$ y en cualquier otro punto.
+
+### 3.3. Plano Tangente y Recta Normal
+
+La aproximación lineal de $f$ cerca de $P_0=(x_0,y_0)$ es precisamente el **plano tangente** a su gráfica en ese punto. Para la gráfica de $z=f(x,y)$, con $z_0=f(x_0,y_0)$:
+
+**Plano tangente:**
+$$z-z_0=\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0)+\frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)$$
+
+**Recta normal** (perpendicular al plano tangente):
+$$(x,y,z)=(x_0,y_0,z_0)+t\,\bigl(f_x(x_0,y_0),\,f_y(x_0,y_0),\,-1\bigr)$$
+
+**Ejemplo (continuación):** para $f(x,y)=x^2+y^3-5$ en $(1,3)$, con $z_0=23$:
+$$z-23=2(x-1)+27(y-3)\quad\Longrightarrow\quad z=2x+27y-60$$
+y la recta normal:
+$$(x,y,z)=(1,3,23)+t\,(2,27,-1)$$
+
+## 4. Gradiente y Derivada Direccional
+
+### 4.1. El Vector Gradiente
+
+Dado un campo escalar $f(x,y)$, el **gradiente** es el vector formado por las derivadas parciales primeras:
+$$\nabla f=\left(\frac{\partial f}{\partial x},\;\frac{\partial f}{\partial y}\right).$$
+Para $f(x,y,z)$: $\nabla f=\left(f_x,\,f_y,\,f_z\right)$.
+
+**Propiedades del gradiente** en un punto $P$:
+
+1. **Máximo crecimiento:** la dirección de máximo crecimiento (o "máxima pendiente") es la del propio gradiente $\nabla f(P)$; la tasa de ese crecimiento es $\|\nabla f(P)\|$.
+2. **Máximo decrecimiento:** la dirección opuesta, $-\nabla f(P)$; la tasa es $-\|\nabla f(P)\|$.
+3. **Sin cambio:** la derivada direccional es cero en cualquier dirección perpendicular a $\nabla f(P)$. En particular, **el gradiente es perpendicular a la curva de nivel** que pasa por $P$.
+
+### 4.2. Derivada Direccional
+
+La **derivada direccional** de $f$ en un punto $P$ en la dirección de un **vector unitario** $\vec u$ mide la tasa de cambio de $f$ en esa dirección:
+$$D_{\vec u}f(P)=\nabla f(P)\cdot\vec u.$$
+
+- Si $D_{\vec u}f=0$, el movimiento en la dirección $\vec u$ se realiza a lo largo de una **curva de nivel** (sin cambio en el valor de la función).
+- Si la dirección viene dada por un vector $\vec v$ no unitario, primero se normaliza:
+$$\vec u=\frac{\vec v}{\|\vec v\|},\qquad \|\vec v\|=\sqrt{v_1^2+v_2^2+\dots}$$
+(Es lo que hay que hacer en el Problema 4.2.)
+
+## 5. Operadores Diferenciales
+
+A cada tipo de objeto geométrico le corresponde un operador diferencial natural: el **gradiente** actúa sobre campos escalares, la **derivada** sobre curvas y el **rotacional** y la **divergencia** sobre campos vectoriales.
+
+### 5.1. Rotacional
+
+El **rotacional** mide la tendencia de un campo vectorial a girar o inducir rotación en el flujo alrededor de cada punto (por ejemplo, el giro de una corriente o de una borrasca).
+
+- **En $\mathbb{R}^2\to\mathbb{R}^2$:** para $\mathbf{f}(x,y)=(f_1,f_2)$,
+$$\operatorname{rot}(\mathbf{f})=\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y}.$$
+- **En $\mathbb{R}^3\to\mathbb{R}^3$:** para $\mathbf{f}(x,y,z)=(f_1,f_2,f_3)$,
+$$\operatorname{rot}(\mathbf{f})=\nabla\times\mathbf{f}=\left(\frac{\partial f_3}{\partial y}-\frac{\partial f_2}{\partial z},\;\frac{\partial f_1}{\partial z}-\frac{\partial f_3}{\partial x},\;\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y}\right).$$
+
+### 5.2. Divergencia
+
+La **divergencia** mide el flujo que se origina (fuente/manantial) o se destruye (sumidero) por unidad de volumen alrededor de cada punto. Su signo distingue una surgencia de una zona de convergencia.
+
+- **En $\mathbb{R}^2$:** $\operatorname{div}(\mathbf{f})=\frac{\partial f_1}{\partial x}+\frac{\partial f_2}{\partial y}$.
+- **En $\mathbb{R}^3$:** $\operatorname{div}(\mathbf{f})=\frac{\partial f_1}{\partial x}+\frac{\partial f_2}{\partial y}+\frac{\partial f_3}{\partial z}$.
+
+### 5.3. Vector Tangente en Curvas
+
+El operador diferencial natural de una curva $\mathbf{g}(t)=(x(t),y(t))$ es su **vector derivada**:
+$$\mathbf{g}'(t)=\big(x'(t),\,y'(t)\big).$$
+
+- **Interpretación física:** si $t$ es el tiempo, $\mathbf{g}'(t)$ es el **vector velocidad**: apunta en la dirección de avance y su módulo $\|\mathbf{g}'(t)\|$ es la rapidez.
+- **Interpretación geométrica:** $\mathbf{g}'(t)$ es tangente a la trayectoria en $\mathbf{g}(t)$. La recta tangente en $t_0$ es $\mathbf{g}(t_0)+\lambda\,\mathbf{g}'(t_0)$.
+- **Curva regular:** si $\mathbf{g}'(t)\neq\mathbf{0}$ para todo $t$, admite el **vector tangente unitario**
+$$\mathbf{T}(t)=\frac{\mathbf{g}'(t)}{\|\mathbf{g}'(t)\|},$$
+que depende de la trayectoria y de su orientación, no de la rapidez. Si $\mathbf{g}'(t_0)=\mathbf{0}$ puede aparecer una **cúspide** o punto singular.
+
+**Relación con el gradiente.** Si $\mathbf{g}(t)$ recorre una curva de nivel $f(x,y)=c$, entonces $f(\mathbf{g}(t))=c$ para todo $t$; derivando (regla de la cadena) se obtiene
+$$\nabla f(\mathbf{g}(t))\cdot\mathbf{g}'(t)=0:$$
+el gradiente es perpendicular a la curva de nivel, como ya sabíamos por la propiedad 3 del gradiente.
+
+![gradiente-tangente-curva-nivel.png\|480](/img/user/imagenes/gradiente-tangente-curva-nivel.png)
+
+> [!summary] Qué operador para cada objeto
+> | Objeto | Representación | Operador diferencial natural |
+> |---|---|---|
+> | Campo escalar $f:\mathbb{R}^2\to\mathbb{R}$ | Curvas de nivel / superficie | Gradiente $\nabla f$ |
+> | Curva $\mathbf{g}:\mathbb{R}\to\mathbb{R}^2$ | Trayectoria + orientación | Derivada $\mathbf{g}'(t)$ (tangente) |
+> | Campo vectorial $\mathbf{f}:\mathbb{R}^2\to\mathbb{R}^2$ | Flechas / líneas de campo | Rotacional $\operatorname{rot}$, divergencia $\operatorname{div}$ |
+
+## 6. Optimización en Varias Variables
+
+### 6.1. Puntos Críticos y Matriz Hessiana
+
+Para hallar los extremos relativos (máximos y mínimos locales) de $f(x,y)$:
+
+**Paso 1: puntos críticos.** Resolver el sistema
+$$\nabla f=(0,0)\iff\begin{cases}f_x(x,y)=0\\ f_y(x,y)=0\end{cases}$$
+
+**Paso 2: clasificar con el Hessiano.** Calcular las segundas derivadas y
+$$H(x,y)=\begin{pmatrix}f_{xx}&f_{xy}\\ f_{yx}&f_{yy}\end{pmatrix},\qquad D(x,y)=f_{xx}f_{yy}-(f_{xy})^2.$$
+
+**Paso 3: criterio.** En cada punto crítico $(a,b)$:
+
+- Si $D(a,b)>0$ y $f_{xx}(a,b)>0$ $\implies$ **mínimo local**.
+- Si $D(a,b)>0$ y $f_{xx}(a,b)<0$ $\implies$ **máximo local**.
+- Si $D(a,b)<0$ $\implies$ **punto de silla**.
+- Si $D(a,b)=0$ $\implies$ el criterio no decide.
+
+### 6.2. Ejemplos Resueltos Paso a Paso
+
+**Ejemplo:** Estudiar los extremos de $f(x,y)=5-x^2-y^2$.
+
+1. $\nabla f=(-2x,-2y)=(0,0)\implies (0,0)$ es el único punto crítico.
+2. $f_{xx}=-2$, $f_{xy}=0$, $f_{yy}=-2$, luego $H=\begin{pmatrix}-2&0\\0&-2\end{pmatrix}$ y $D=4>0$.
+3. $D>0$ y $f_{xx}<0$: en $(0,0)$ hay un **máximo local**, con $f(0,0)=5$.
+
+**Ejemplo:** Estudiar los extremos de $f(x,y)=x^3+y^3-3xy$.
+
+1. $f_x=3x^2-3y=0\implies y=x^2$; $f_y=3y^2-3x=0\implies x^4=x$, de donde $x=0$ o $x=1$. Puntos críticos: $(0,0)$ y $(1,1)$.
+2. $H(x,y)=\begin{pmatrix}6x&-3\\-3&6y\end{pmatrix}$.
+3. En $(0,0)$: $D=-9<0\implies$ **punto de silla**. En $(1,1)$: $D=27>0$ y $f_{xx}=6>0\implies$ **mínimo local** ($f(1,1)=-1$).
+
+### 6.3. Extremos Condicionados: Multiplicadores de Lagrange
+
+Para optimizar $f(x,y)$ sujeta a una restricción (ligadura) $g(x,y)=c$. También vale para $f(x,y,z)$ con $g(x,y,z)=c$.
+
+**Pasos:**
+
+1. **Función Lagrangiana:**
+$$L(\lambda,x,y)=f(x,y)-\lambda\bigl(g(x,y)-c\bigr)$$
+2. **Puntos candidatos:** resolver $\nabla L=0$, es decir,
+$$\begin{cases}f_x=\lambda g_x\\ f_y=\lambda g_y\\ g(x,y)=c\end{cases}$$
+3. **Clasificar con el Hessiano orlado:**
+$$\bar H=\begin{pmatrix}0&g_x&g_y\\ g_x&L_{xx}&L_{xy}\\ g_y&L_{yx}&L_{yy}\end{pmatrix},$$
+donde $L_{xx}=f_{xx}-\lambda g_{xx}$, $L_{xy}=f_{xy}-\lambda g_{xy}$, etc. Evaluado en cada candidato $(x_0,y_0,\lambda_0)$:
+   - $\det(\bar H)>0$ $\implies$ **máximo local**.
+   - $\det(\bar H)<0$ $\implies$ **mínimo local**.
+   - $\det(\bar H)=0$ $\implies$ el criterio no concluye.
 
 [[01 Calculo-Naut/apuntes/calc-naut-tema04-ej\|Ejercicios]]
