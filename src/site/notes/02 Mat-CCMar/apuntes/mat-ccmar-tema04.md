@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04/","created":"2026-10-15T11:42:08.697+02:00","updated":"2026-10-19T10:46:53.404+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04/","created":"2026-10-24T08:54:48.779+02:00","updated":"2026-10-24T08:54:34.351+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -107,13 +107,13 @@ Reglas de derivación:
 > | **Comportamiento $f(x)$** | Creciente ($\nearrow$) | **Máximo local** | Decreciente ($\searrow$) | **Mínimo local** | Creciente ($\nearrow$) |
 >
 > **Paso 3: Evaluación de los puntos y estudio global**
->
-> - **Máximo local:** En $x = \frac{1}{3}$, $f\left(\frac{1}{3}\right) = \left(\frac{1}{3}\right)^3 - 5\left(\frac{1}{3}\right)^2 + 3\left(\frac{1}{3}\right) + 1 = \frac{146}{27}$. Punto: $\left(\frac{1}{3}, \frac{146}{27}\right)$.
+> 
+> - **Máximo local:** En $x = \frac{1}{3}$, $f\left(\frac{1}{3}\right) = \left(\frac{1}{3}\right)^3 - 5\left(\frac{1}{3}\right)^2 + 3\left(\frac{1}{3}\right) + 1 = \frac{40}{27}$. Punto: $\left(\frac{1}{3}, \frac{40}{27}\right)$.
 > - **Mínimo local:** En $x = 3$, $f(3) = 3^3 - 5(3)^2 + 3(3) + 1 = -8$. Punto: $(3, -8)$.
 > - **Límites en el infinito:**
 >   $$\lim_{x \to -\infty} f(x) = -\infty, \qquad \lim_{x \to \infty} f(x) = \infty$$
->
-> **Conclusión:** La función posee un máximo local en $\left(\frac{1}{3}, \frac{146}{27}\right)$ y un mínimo local en $(3, -8)$. Puesto que los límites en el infinito divergen a $-\infty$ y $+\infty$, la función **no posee extremos absolutos**.
+> 
+> **Conclusión:** La función posee un máximo local en $\left(\frac{1}{3}, \frac{40}{27}\right)$ y un mínimo local en $(3, -8)$. Puesto que los límites en el infinito divergen a $-\infty$ y $+\infty$, la función **no posee extremos absolutos**.
 
 ### Optimización
 

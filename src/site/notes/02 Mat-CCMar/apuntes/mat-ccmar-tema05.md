@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05/","created":"2026-10-23T09:16:31.114+02:00","updated":"2026-10-23T09:16:30.327+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05/","created":"2026-10-23T09:16:31.114+02:00","updated":"2026-10-23T12:39:37.887+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
 
-# Tema 5: Derivación en Varias Variables
+# Tema 5: Cálculo diferencial en Varias Variables
 
 ## 1. Funciones de Varias Variables
 
