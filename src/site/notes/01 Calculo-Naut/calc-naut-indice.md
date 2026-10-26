@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/calc-naut-indice/","created":"2026-09-28T10:35:47.755+02:00","updated":"2026-10-14T08:00:59.652+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/calc-naut-indice/","created":"2026-09-28T10:35:47.755+02:00","updated":"2026-10-26T07:32:33.876+01:00","dg-note-properties":{}}
 ---
 
 [[Inicio docencia\|Volver al índice de apuntes]]. 
@@ -10,12 +10,10 @@
 	[[01 Calculo-Naut/apuntes/calc-naut-tema01-ej\|Ejercicios]]
 - [[01 Calculo-Naut/apuntes/calc-naut-tema02\|Tema 2: Cálculo diferencial e integral en una variable]]. 
 	[[01 Calculo-Naut/apuntes/calc-naut-tema02-ej\|Ejercicios]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema03\|Tema 3: Sucesiones y Series]]. 
+- [[01 Calculo-Naut/apuntes/calc-naut-tema03\|Tema 3: Cálculo diferencial en varias variables]]. 
 	[[01 Calculo-Naut/apuntes/calc-naut-tema03-ej\|Ejercicios]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04\|Tema 4: Cálculo diferencial en varias variables]]. 
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04\|Tema 4: Cálculo integral en varias variables]]. 
 	[[01 Calculo-Naut/apuntes/calc-naut-tema04-ej\|Ejercicios]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema05\|Tema 5: Cálculo integral en varias variables]]. 
-	[[01 Calculo-Naut/apuntes/calc-naut-tema05-ej\|Ejercicios]]
 
 ### Exámenes
 [[01 Calculo-Naut/examenes/calc-naut-examenes\|calc-naut-examenes]] 

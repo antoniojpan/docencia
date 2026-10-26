@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05/","created":"2026-10-23T09:16:31.114+02:00","updated":"2026-10-23T12:39:37.887+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05/","created":"2026-10-23T09:16:31.114+02:00","updated":"2026-10-24T08:57:02.305+02:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -75,50 +75,6 @@ Se representa dibujando en cada punto $(x,y)$ una flecha con origen en él y dir
 
 En la figura se muestra el campo de rotación $\mathbf{f}(x,y)=(-y,\,x)$: las flechas giran alrededor del origen, el color codifica $\|\mathbf{f}\|=\sqrt{x^2+y^2}$ y las líneas negras son circunferencias, es decir, las trayectorias de una partícula arrastrada por el campo.
 
-> [!note]- Código Python para generar las figuras
-> ```python
-> import numpy as np
-> import matplotlib.pyplot as plt
->
-> # --- 1. Curvas de nivel de un campo escalar ---
-> x = np.linspace(-3, 3, 400); y = np.linspace(-3, 3, 400)
-> X, Y = np.meshgrid(x, y); f = X**2 + Y**2
-> fig, ax = plt.subplots(figsize=(5.6, 4.8))
-> cf = ax.contourf(X, Y, f, levels=20, cmap="viridis", alpha=0.85)
-> cs = ax.contour(X, Y, f, levels=[1, 2, 4, 6, 8], colors="white")
-> ax.clabel(cs, fmt=lambda v: f"$c={v:g}$"); fig.colorbar(cf, ax=ax)
-> ax.set_aspect("equal"); ax.set(xlabel="$x$", ylabel="$y$")
-> fig.savefig("campo-escalar-curvas-nivel.png", dpi=160)
->
-> # --- 1b. La misma idea en 3D: superficie + curvas proyectadas ---
-> fig = plt.figure(figsize=(6.4, 5.2))
-> ax = fig.add_subplot(111, projection="3d")
-> Z = 3*np.exp(-(X**2 + Y**2)/2)
-> surf = ax.plot_surface(X, Y, Z, cmap="terrain", linewidth=0)
-> ax.contour(X, Y, Z, levels=10, zdir="z", offset=0, cmap="terrain")
-> ax.view_init(elev=32, azim=-58); fig.colorbar(surf, ax=ax, shrink=0.55)
-> fig.savefig("campo-escalar-superficie-3d.png", dpi=160)
->
-> # --- 2. Curva parametrizada en el plano ---
-> t = np.linspace(0, 2*np.pi, 800); r = 1 + 0.35*np.sin(4*t)
-> gx, gy = r*np.cos(t), r*np.sin(t)
-> fig, ax = plt.subplots(figsize=(5.6, 5))
-> ax.plot(gx, gy, lw=2.4); ax.set_aspect("equal")
-> ax.set(xlabel="$x$", ylabel="$y$")
-> fig.savefig("curva-parametrizada-plano.png", dpi=160)
->
-> # --- 3. Campo vectorial en el plano ---
-> x = np.linspace(-2.5, 2.5, 21); y = np.linspace(-2.5, 2.5, 21)
-> X, Y = np.meshgrid(x, y); U, V = -Y, X
-> fig, ax = plt.subplots(figsize=(5.6, 5))
-> q = ax.quiver(X, Y, U, V, np.hypot(U, V), cmap="plasma", pivot="mid")
-> ax.streamplot(X, Y, U, V, color="black", linewidth=0.7)
-> fig.colorbar(q, ax=ax); ax.set_aspect("equal")
-> ax.set(xlabel="$x$", ylabel="$y$")
-> fig.savefig("campo-vectorial-plano.png", dpi=160)
-> ```
-
----
 
 ## 2. Dominio, Límites y Continuidad
 

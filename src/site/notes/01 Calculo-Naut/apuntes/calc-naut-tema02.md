@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-10-20T11:46:03.361+02:00","updated":"2026-10-20T11:45:54.179+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-10-20T11:46:03.361+02:00","updated":"2026-10-26T12:29:21.696+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]
@@ -8,6 +8,7 @@
 
 - [[01 Calculo-Naut/apuntes/calc-naut-tema02#1. Funciones, Límites y Continuidad\|1. Funciones, Límites y Continuidad]]
 - [[01 Calculo-Naut/apuntes/calc-naut-tema02#2. Concepto de Derivada\|2. Concepto de Derivada]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema02#2.3. Aproximación de funciones: polinomios de Taylor\|2.3. Aproximación de funciones: polinomios de Taylor]]
 - [[01 Calculo-Naut/apuntes/calc-naut-tema02#3. La Integral Indefinida\|3. La Integral Indefinida]]
 - [[01 Calculo-Naut/apuntes/calc-naut-tema02#4. La Integral Definida y sus Aplicaciones\|4. La Integral Definida y sus Aplicaciones]]
 
@@ -116,6 +117,40 @@ $$
 & \qquad 10.\;& \lim_{x \to 0} \frac{\ln(1+x)}{x}
 \end{aligned}
 $$
+
+
+### **2.3. Aproximación de funciones: polinomios de Taylor**
+
+La recta tangente aproxima una función cerca de un punto $a$ usando su valor y su pendiente:
+$$y(x)=f(a)+f'(a)(x-a).$$
+Esta aproximación es exacta en $a$ y suele ser útil para valores próximos a él. Podemos mejorarla incorporando información sobre cómo cambia la pendiente, es decir, sobre la curvatura de la función.
+
+Si $f$ tiene derivadas hasta orden $n$ en un entorno de $a$, su **polinomio de Taylor de orden $n$** alrededor de $a$ es
+$$P_n(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+Los primeros órdenes muestran la idea:
+$$P_0(x)=f(a),\qquad P_1(x)=T_1(x),\qquad P_2(x)=T_1(x)+\frac{f''(a)}{2}(x-a)^2.$$
+Así, el término cuadrático corrige la aproximación lineal teniendo en cuenta la curvatura; los términos siguientes incorporan información adicional sobre la variación de la función. Cerca de $a$, se usa $P_n(x)$ como aproximación de $f(x)$:
+$$f(x)\approx P_n(x).$$
+
+El error es el resto $R_n(x)=f(x)-P_n(x)$. Si $f$ tiene derivada de orden $n+1$ continua entre $a$ y $x$, el teorema de Taylor garantiza que, para algún $\xi$ entre ambos puntos,
+$$R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-a)^{n+1}.$$
+En particular, si $|f^{(n+1)}(t)|\le M$ en ese intervalo, entonces
+$$|R_n(x)|\le \frac{M}{(n+1)!}|x-a|^{n+1}.$$
+La fórmula permite controlar el error cuando se conoce una cota para la derivada correspondiente.
+
+**Ejemplo.** Aproximar $\sqrt{4.1}$ mediante la recta tangente y mediante el polinomio de Taylor de orden 2 de $f(x)=\sqrt{x}$ alrededor de $a=4$.
+
+Como $f(4)=2$ y $f'(4)=\frac14$, la aproximación por la recta tangente es
+$$y(x)=2+\frac14(x-4),\qquad y(4.1)=2.025.$$
+Además, $f''(x)=-\frac{1}{4x^{3/2}}$, por lo que $f''(4)=-\frac1{32}$. El término cuadrático da
+$$P_2(x)=2+\frac14(x-4)-\frac1{64}(x-4)^2,$$
+$$P_2(4.1)=2.02484375.$$
+El valor es aproximadamente $\sqrt{4.1}\approx2.02485$: en este caso, añadir la corrección cuadrática mejora la aproximación de la tangente.
+
+Cuando el punto de desarrollo es $a=0$, el polinomio se llama **polinomio de Maclaurin**. Por ejemplo, para $e^x$:
+$$P_3(x)=1+x+\frac{x^2}{2}+\frac{x^3}{6},$$
+que proporciona una aproximación de $e^x$ para valores de $x$ próximos a $0$.
+
 
 
 ---

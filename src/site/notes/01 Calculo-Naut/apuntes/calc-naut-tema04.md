@@ -1,258 +1,206 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema04/","created":"2026-10-23T09:22:29.966+02:00","updated":"2026-10-23T09:22:21.794+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema04/","created":"2026-09-28T10:35:58.018+02:00","updated":"2026-10-26T07:32:36.998+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
-# Tema 4: Cálculo diferencial en varias variables
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#1. Funciones de Varias Variables\|1. Funciones de Varias Variables]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#2. Dominio, Límites y Continuidad\|2. Dominio, Límites y Continuidad]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#3. Derivadas Parciales\|3. Derivadas Parciales]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#4. Gradiente y Derivada Direccional\|4. Gradiente y Derivada Direccional]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#5. Operadores Diferenciales\|5. Operadores Diferenciales]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema04#6. Optimización en Varias Variables\|6. Optimización en Varias Variables]]
-
-## 1. Funciones de Varias Variables
-
-### 1.1. Concepto y Tipos de Funciones
-
-Las funciones de varias variables dependen de más de una entrada y/o devuelven varios valores. Se clasifican según sus espacios de origen y llegada:
-
-- **Campos escalares ($f: \mathbb{R}^N \to \mathbb{R}$):** asignan un único valor numérico a cada punto.
-  - *Ejemplo náutico:* la profundidad del fondo marino en cada posición $(x,y)$ de la carta náutica (las isóbatas son sus curvas de nivel).
-- **Curvas en el plano o en el espacio ($\mathbf{g}: \mathbb{R} \to \mathbb{R}^N$):** dependen de una única variable (habitualmente el tiempo $t$) y devuelven una posición.
-  - *Ejemplo náutico:* la derrota del buque, $t \mapsto (x(t), y(t))$.
-- **Campos vectoriales en el plano ($\mathbf{f}: \mathbb{R}^2 \to \mathbb{R}^2$):** asignan un vector a cada punto del plano.
-  - *Ejemplo náutico:* el viento $(u,v)$ en cada posición $(x,y)$.
-- **Campos vectoriales en el espacio ($\mathbf{f}: \mathbb{R}^3 \to \mathbb{R}^3$):** dan un vector en cada punto del espacio.
-  - *Ejemplo náutico:* la corriente marina o la velocidad del aire $(u,v,w)$ en un punto $(x,y,z)$.
-
-En el tema 4 trabajamos sobre todo con el primer tipo (campos escalares), pero conviene conocer los otros dos porque aparecen constantemente en navegación.
-
-### 1.2. Representación Gráfica
-
-Cada tipo exige una representación distinta: los **campos escalares** se visualizan mediante curvas de nivel, las **curvas parametrizadas** mediante su trayectoria y los **campos vectoriales** mediante flechas o líneas de campo.
-
-#### 1.2.1. Campos escalares: curvas de nivel
-
-Para visualizar un campo escalar $f:\mathbb{R}^2\to\mathbb{R}$ se usan las **curvas de nivel**: el conjunto de puntos donde la función toma un valor constante $c$,
-$$f(x,y)=c.$$
-
-- **Isóbatas:** curvas de nivel de la profundidad (cartas náuticas).
-- **Isotermas:** curvas de nivel de la temperatura.
-
-![campo-escalar-curvas-nivel.png\|500](/img/user/imagenes/campo-escalar-curvas-nivel.png)
-
-El color indica el valor de $f$ y las líneas blancas son curvas de nivel $f(x,y)=c$ para $c=1,2,4,6,8$. Obsérvese que las curvas se acumulan donde la función crece más deprisa: la separación entre curvas mide, cualitativamente, el módulo del gradiente.
-
-La misma información en tres dimensiones: la **gráfica** de $f$ es una superficie (la "montaña") y las curvas de nivel son sus cortes horizontales proyectados sobre el plano $z=0$:
-
-![campo-escalar-superficie-3d.png\|520](/img/user/imagenes/campo-escalar-superficie-3d.png)
-
-#### 1.2.2. Curvas parametrizadas en el plano
-
-Una curva en el plano es la imagen de una función $\mathbf{g}:\mathbb{R}\to\mathbb{R}^2$,
-$$\mathbf{g}(t)=\big(x(t),\,y(t)\big),$$
-donde $t$ recorre un intervalo (habitualmente el tiempo). La gráfica es la **trayectoria**; el parámetro añade dos informaciones que la trayectoria por sí sola no contiene:
-
-- **Orientación:** el sentido en que se recorre al aumentar $t$.
-- **Velocidad:** el vector tangente $\mathbf{g}'(t)=\big(x'(t),y'(t)\big)$, que indica dirección y rapidez en cada instante.
-
-![curva-parametrizada-plano.png\|500](/img/user/imagenes/curva-parametrizada-plano.png)
-
-#### 1.2.3. Campos vectoriales en el plano
-
-Un campo vectorial asigna un vector a cada punto:
-$$\mathbf{f}(x,y)=\big(u(x,y),\,v(x,y)\big).$$
-Se representa dibujando en cada punto una flecha con la dirección y sentido del vector. Para que sea legible se suele:
-
-- **Normalizar o escalar las flechas**, ya que su longitud real puede tapar el dibujo.
-- **Colorear según la norma** $\|\mathbf{f}(x,y)\|$, lo que añade información cuantitativa.
-- **Superponer líneas de campo** (*streamlines*), curvas tangentes al campo en cada punto: son las trayectorias de una partícula arrastrada por el viento o la corriente.
-
-![campo-vectorial-plano.png\|500](/img/user/imagenes/campo-vectorial-plano.png)
-
-En la figura, el campo de rotación $\mathbf{f}(x,y)=(-y,x)$: las flechas giran alrededor del origen, el color codifica $\|\mathbf{f}\|$ y las líneas negras son las trayectorias de una partícula.
-
-## 2. Dominio, Límites y Continuidad
-
-### 2.1. Dominio
-
-El **dominio** de una función $f$ de varias variables, $Dom(f)$, es el conjunto de puntos donde está definida. Hay que identificar las operaciones con restricciones:
-
-1. **Denominadores:** si $f=\frac{g}{h}$, debe ser $h(x,y)\neq 0$.
-2. **Raíces de índice par:** si $f=\sqrt{g}$, debe ser $g(x,y)\ge 0$.
-3. **Logaritmos:** si $f=\log g$, debe ser $g(x,y)>0$.
-4. **Trigonométricas inversas:** si $f=\arcsin g$ o $\arccos g$, debe ser $g(x,y)\in[-1,1]$.
-
-Los polinomios, $e^{g}$, $\operatorname{sen} g$ y $\cos g$ están definidos siempre que lo esté $g$.
-
-### 2.2. Límites y Continuidad
-
-El cálculo de límites en varias variables es técnicamente delicado, porque hay infinitos caminos de aproximación a un punto; en este curso no lo necesitaremos en detalle.
-
-**Criterio de continuidad:** una función de varias variables es continua en un punto si y solo si todas sus **funciones componentes** son continuas en dicho punto.
-
-En la práctica, todas las funciones del curso son continuas en su dominio (polinomios, exponenciales, senos, cocientes con denominador no nulo, etc.).
-
-## 3. Derivadas Parciales
-
-### 3.1. Definición e Interpretación
-
-Hallar la **derivada parcial** respecto a una variable consiste en derivar de la manera tradicional respecto a esa variable, tratando las demás como constantes. Se denota $\frac{\partial f}{\partial x}$ o $f_x$.
-
-- **Cálculo práctico:**
-  - Para $\frac{\partial f}{\partial x}$, deriva respecto a $x$ tratando $y$ como constante.
-  - Para $\frac{\partial f}{\partial y}$, deriva respecto a $y$ tratando $x$ como constante.
-- **Interpretación:** $\frac{\partial f}{\partial x}$ mide la tasa de variación de $f$ cuando solo se mueve $x$; es decir, la influencia de $x$ en el valor de la función.
-
-### 3.2. Diferenciabilidad
-
-Una función $f$ es **diferenciable** en $P_0=(a,b)$ si, cerca de ese punto, se puede aproximar por un plano (una función lineal) con un error que se hace despreciable al acercarse a $P_0$. Es la generalización de que una curva tenga recta tangente.
-
-Que existan las derivadas parciales **no garantiza** la diferenciabilidad: la función puede tener derivadas parciales y aun así presentar un "pico" al movernos en otras direcciones. Por eso se usa este criterio práctico:
-
-**Condición suficiente (la que se aplica en la práctica):** si $f_x$ y $f_y$ existen y son continuas en un entorno de $(a,b)$, entonces $f$ es diferenciable en $(a,b)$.
-
-- Diferenciable $\implies$ continua.
-- Diferenciable $\implies$ existen todas las derivadas parciales (el recíproco es falso).
-
-**Ejemplo:** Sea $f(x,y)=x^2+y^3-5$ en $P_0=(1,3)$.
-
-1. Valor en el punto: $f(1,3)=1+27-5=23$.
-2. Derivadas parciales: $f_x=2x$, $f_y=3y^2$; en $(1,3)$, $f_x(1,3)=2$ y $f_y(1,3)=27$.
-3. Como $f_x$ y $f_y$ son continuas en todo $\mathbb{R}^2$, $f$ es diferenciable en $(1,3)$ y en cualquier otro punto.
-
-### 3.3. Plano Tangente y Recta Normal
-
-La aproximación lineal de $f$ cerca de $P_0=(x_0,y_0)$ es precisamente el **plano tangente** a su gráfica en ese punto. Para la gráfica de $z=f(x,y)$, con $z_0=f(x_0,y_0)$:
-
-**Plano tangente:**
-$$z-z_0=\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0)+\frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)$$
-
-**Recta normal** (perpendicular al plano tangente):
-$$(x,y,z)=(x_0,y_0,z_0)+t\,\bigl(f_x(x_0,y_0),\,f_y(x_0,y_0),\,-1\bigr)$$
-
-**Ejemplo (continuación):** para $f(x,y)=x^2+y^3-5$ en $(1,3)$, con $z_0=23$:
-$$z-23=2(x-1)+27(y-3)\quad\Longrightarrow\quad z=2x+27y-60$$
-y la recta normal:
-$$(x,y,z)=(1,3,23)+t\,(2,27,-1)$$
-
-## 4. Gradiente y Derivada Direccional
-
-### 4.1. El Vector Gradiente
-
-Dado un campo escalar $f(x,y)$, el **gradiente** es el vector formado por las derivadas parciales primeras:
-$$\nabla f=\left(\frac{\partial f}{\partial x},\;\frac{\partial f}{\partial y}\right).$$
-Para $f(x,y,z)$: $\nabla f=\left(f_x,\,f_y,\,f_z\right)$.
-
-**Propiedades del gradiente** en un punto $P$:
-
-1. **Máximo crecimiento:** la dirección de máximo crecimiento (o "máxima pendiente") es la del propio gradiente $\nabla f(P)$; la tasa de ese crecimiento es $\|\nabla f(P)\|$.
-2. **Máximo decrecimiento:** la dirección opuesta, $-\nabla f(P)$; la tasa es $-\|\nabla f(P)\|$.
-3. **Sin cambio:** la derivada direccional es cero en cualquier dirección perpendicular a $\nabla f(P)$. En particular, **el gradiente es perpendicular a la curva de nivel** que pasa por $P$.
-
-### 4.2. Derivada Direccional
-
-La **derivada direccional** de $f$ en un punto $P$ en la dirección de un **vector unitario** $\vec u$ mide la tasa de cambio de $f$ en esa dirección:
-$$D_{\vec u}f(P)=\nabla f(P)\cdot\vec u.$$
-
-- Si $D_{\vec u}f=0$, el movimiento en la dirección $\vec u$ se realiza a lo largo de una **curva de nivel** (sin cambio en el valor de la función).
-- Si la dirección viene dada por un vector $\vec v$ no unitario, primero se normaliza:
-$$\vec u=\frac{\vec v}{\|\vec v\|},\qquad \|\vec v\|=\sqrt{v_1^2+v_2^2+\dots}$$
-(Es lo que hay que hacer en el Problema 4.2.)
-
-## 5. Operadores Diferenciales
-
-A cada tipo de objeto geométrico le corresponde un operador diferencial natural: el **gradiente** actúa sobre campos escalares, la **derivada** sobre curvas y el **rotacional** y la **divergencia** sobre campos vectoriales.
-
-### 5.1. Rotacional
-
-El **rotacional** mide la tendencia de un campo vectorial a girar o inducir rotación en el flujo alrededor de cada punto (por ejemplo, el giro de una corriente o de una borrasca).
-
-- **En $\mathbb{R}^2\to\mathbb{R}^2$:** para $\mathbf{f}(x,y)=(f_1,f_2)$,
-$$\operatorname{rot}(\mathbf{f})=\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y}.$$
-- **En $\mathbb{R}^3\to\mathbb{R}^3$:** para $\mathbf{f}(x,y,z)=(f_1,f_2,f_3)$,
-$$\operatorname{rot}(\mathbf{f})=\nabla\times\mathbf{f}=\left(\frac{\partial f_3}{\partial y}-\frac{\partial f_2}{\partial z},\;\frac{\partial f_1}{\partial z}-\frac{\partial f_3}{\partial x},\;\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y}\right).$$
-
-### 5.2. Divergencia
-
-La **divergencia** mide el flujo que se origina (fuente/manantial) o se destruye (sumidero) por unidad de volumen alrededor de cada punto. Su signo distingue una surgencia de una zona de convergencia.
-
-- **En $\mathbb{R}^2$:** $\operatorname{div}(\mathbf{f})=\frac{\partial f_1}{\partial x}+\frac{\partial f_2}{\partial y}$.
-- **En $\mathbb{R}^3$:** $\operatorname{div}(\mathbf{f})=\frac{\partial f_1}{\partial x}+\frac{\partial f_2}{\partial y}+\frac{\partial f_3}{\partial z}$.
-
-### 5.3. Vector Tangente en Curvas
-
-El operador diferencial natural de una curva $\mathbf{g}(t)=(x(t),y(t))$ es su **vector derivada**:
-$$\mathbf{g}'(t)=\big(x'(t),\,y'(t)\big).$$
-
-- **Interpretación física:** si $t$ es el tiempo, $\mathbf{g}'(t)$ es el **vector velocidad**: apunta en la dirección de avance y su módulo $\|\mathbf{g}'(t)\|$ es la rapidez.
-- **Interpretación geométrica:** $\mathbf{g}'(t)$ es tangente a la trayectoria en $\mathbf{g}(t)$. La recta tangente en $t_0$ es $\mathbf{g}(t_0)+\lambda\,\mathbf{g}'(t_0)$.
-- **Curva regular:** si $\mathbf{g}'(t)\neq\mathbf{0}$ para todo $t$, admite el **vector tangente unitario**
-$$\mathbf{T}(t)=\frac{\mathbf{g}'(t)}{\|\mathbf{g}'(t)\|},$$
-que depende de la trayectoria y de su orientación, no de la rapidez. Si $\mathbf{g}'(t_0)=\mathbf{0}$ puede aparecer una **cúspide** o punto singular.
-
-**Relación con el gradiente.** Si $\mathbf{g}(t)$ recorre una curva de nivel $f(x,y)=c$, entonces $f(\mathbf{g}(t))=c$ para todo $t$; derivando (regla de la cadena) se obtiene
-$$\nabla f(\mathbf{g}(t))\cdot\mathbf{g}'(t)=0:$$
-el gradiente es perpendicular a la curva de nivel, como ya sabíamos por la propiedad 3 del gradiente.
-
-![gradiente-tangente-curva-nivel.png\|480](/img/user/imagenes/gradiente-tangente-curva-nivel.png)
-
-> [!summary] Qué operador para cada objeto
-> | Objeto | Representación | Operador diferencial natural |
-> |---|---|---|
-> | Campo escalar $f:\mathbb{R}^2\to\mathbb{R}$ | Curvas de nivel / superficie | Gradiente $\nabla f$ |
-> | Curva $\mathbf{g}:\mathbb{R}\to\mathbb{R}^2$ | Trayectoria + orientación | Derivada $\mathbf{g}'(t)$ (tangente) |
-> | Campo vectorial $\mathbf{f}:\mathbb{R}^2\to\mathbb{R}^2$ | Flechas / líneas de campo | Rotacional $\operatorname{rot}$, divergencia $\operatorname{div}$ |
-
-## 6. Optimización en Varias Variables
-
-### 6.1. Puntos Críticos y Matriz Hessiana
-
-Para hallar los extremos relativos (máximos y mínimos locales) de $f(x,y)$:
-
-**Paso 1: puntos críticos.** Resolver el sistema
-$$\nabla f=(0,0)\iff\begin{cases}f_x(x,y)=0\\ f_y(x,y)=0\end{cases}$$
-
-**Paso 2: clasificar con el Hessiano.** Calcular las segundas derivadas y
-$$H(x,y)=\begin{pmatrix}f_{xx}&f_{xy}\\ f_{yx}&f_{yy}\end{pmatrix},\qquad D(x,y)=f_{xx}f_{yy}-(f_{xy})^2.$$
-
-**Paso 3: criterio.** En cada punto crítico $(a,b)$:
-
-- Si $D(a,b)>0$ y $f_{xx}(a,b)>0$ $\implies$ **mínimo local**.
-- Si $D(a,b)>0$ y $f_{xx}(a,b)<0$ $\implies$ **máximo local**.
-- Si $D(a,b)<0$ $\implies$ **punto de silla**.
-- Si $D(a,b)=0$ $\implies$ el criterio no decide.
-
-### 6.2. Ejemplos Resueltos Paso a Paso
-
-**Ejemplo:** Estudiar los extremos de $f(x,y)=5-x^2-y^2$.
-
-1. $\nabla f=(-2x,-2y)=(0,0)\implies (0,0)$ es el único punto crítico.
-2. $f_{xx}=-2$, $f_{xy}=0$, $f_{yy}=-2$, luego $H=\begin{pmatrix}-2&0\\0&-2\end{pmatrix}$ y $D=4>0$.
-3. $D>0$ y $f_{xx}<0$: en $(0,0)$ hay un **máximo local**, con $f(0,0)=5$.
-
-**Ejemplo:** Estudiar los extremos de $f(x,y)=x^3+y^3-3xy$.
-
-1. $f_x=3x^2-3y=0\implies y=x^2$; $f_y=3y^2-3x=0\implies x^4=x$, de donde $x=0$ o $x=1$. Puntos críticos: $(0,0)$ y $(1,1)$.
-2. $H(x,y)=\begin{pmatrix}6x&-3\\-3&6y\end{pmatrix}$.
-3. En $(0,0)$: $D=-9<0\implies$ **punto de silla**. En $(1,1)$: $D=27>0$ y $f_{xx}=6>0\implies$ **mínimo local** ($f(1,1)=-1$).
-
-### 6.3. Extremos Condicionados: Multiplicadores de Lagrange
-
-Para optimizar $f(x,y)$ sujeta a una restricción (ligadura) $g(x,y)=c$. También vale para $f(x,y,z)$ con $g(x,y,z)=c$.
-
-**Pasos:**
-
-1. **Función Lagrangiana:**
-$$L(\lambda,x,y)=f(x,y)-\lambda\bigl(g(x,y)-c\bigr)$$
-2. **Puntos candidatos:** resolver $\nabla L=0$, es decir,
-$$\begin{cases}f_x=\lambda g_x\\ f_y=\lambda g_y\\ g(x,y)=c\end{cases}$$
-3. **Clasificar con el Hessiano orlado:**
-$$\bar H=\begin{pmatrix}0&g_x&g_y\\ g_x&L_{xx}&L_{xy}\\ g_y&L_{yx}&L_{yy}\end{pmatrix},$$
-donde $L_{xx}=f_{xx}-\lambda g_{xx}$, $L_{xy}=f_{xy}-\lambda g_{xy}$, etc. Evaluado en cada candidato $(x_0,y_0,\lambda_0)$:
-   - $\det(\bar H)>0$ $\implies$ **máximo local**.
-   - $\det(\bar H)<0$ $\implies$ **mínimo local**.
-   - $\det(\bar H)=0$ $\implies$ el criterio no concluye.
-
-[[01 Calculo-Naut/apuntes/calc-naut-tema04-ej\|Ejercicios]]
+# Tema 4: Cálculo Integral de Varias Variables
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04#1. Integrales Dobles\|1. Integrales Dobles]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04#2. Integrales Triples\|2. Integrales Triples]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04#3. Cambio de Variables\|3. Cambio de Variables]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema04#Ejercicios\|Ejercicios]]
+
+
+## 1. Integrales Dobles
+
+**Idea:** De manera análoga a cómo en una variable sumamos una infinidad de rectángulos diminutos para calcular el área bajo una curva, en el cálculo de varias variables extendemos este concepto. Con las integrales dobles, sumamos una infinidad de prismas rectangulares infinitesimalmente delgados para determinar el volumen total que se encuentra bajo una superficie.
+![Pasted image 20251124121347.png\|600](/img/user/imagenes/Pasted%20image%2020251124121347.png)
+### Teorema de Fubini
+Permite calcular integrales dobles como integrales iteradas (o sucesivas).
+- **Sobre Rectángulos**: Si $\Omega = [a,b] \times [c,d]$: 
+$$\iint_{\Omega} f(x,y) \, dA = \int_a^b \left( \int_c^d f(x,y) \, dy \right) dx = \int_c^d \left( \int_a^b f(x,y) \, dx \right) dy$$
+- **Sobre Regiones Generales:**
+     - Tipo I (Vertical): $\Omega = \{(x,y) \in \mathbb{R}^2 : a \le x \le b, \, g_1(x) \le y \le g_2(x)\}$, 
+$$\iint_{\Omega} f(x,y) \, dA = \int_a^b \int_{g_1(x)}^{g_2(x)} f(x,y) \, dy \, dx$$
+    - Tipo II (Horizontal): $\Omega = \{(x,y) \in \mathbb{R}^2 : c \le y \le d, \, h_1(y) \le x \le h_2(y)\}$, 
+$$\iint_{\Omega} f(x,y) \, dA = \int_c^d \int_{h_1(y)}^{h_2(y)} f(x,y) \, dx \, dy$$
+### Cambio de Orden de Integración
+Consiste en describir una región de Tipo I como una región de Tipo II (o viceversa) para facilitar la integración. Es fundamental dibujar la región de integración.
+
+### Aplicaciones
+- **Volumen bajo superficie:** $V = \iint_{\Omega} (z_{techo}(x,y) - z_{suelo}(x,y)) \, dA$
+- **Área (2D):** $A(\Omega) = \iint_{\Omega} 1 \, dA$
+
+Dada una lámina $\Omega$ con función de densidad superficial $\sigma(x,y)$:
+- **Masa:** $M = \iint_{\Omega} \sigma(x,y) \, dA$
+- **Centro de Gravedad $(\bar{x}, \bar{y})$:**
+    - $\bar{x} = \frac{M_y}{M}$
+    - $\bar{y} = \frac{M_x}{M}$
+    siendo 
+    - $M_x = \iint_{\Omega} y \cdot \sigma(x,y) \, dA$
+    - $M_y = \iint_{\Omega} x \cdot \sigma(x,y) \, dA$
+    Nota: Si la densidad es constante, el centro de gravedad se llama centroide.
+
+---
+
+## 2. Integrales Triples
+
+Se calculan de forma análoga a las dobles, usando el Teorema de Fubini.
+
+- Sobre Cajas Rectangulares: Si $\Omega = [a,b] \times [c,d] \times [e,f]$:
+    
+    $$\iiint_{\Omega} f(x,y,z) \, dV = \int_a^b \int_c^d \int_e^f f(x,y,z) \, dz \, dy \, dx \quad \text{(y los otros 5 órdenes)}$$
+    
+Ejemplo: 
+Calcular la integral de la función $f(x,y,z) = x + yz$ sobre la caja $B = [0,1] \times [0,2] \times [0,1]$.
+Al ser una caja rectangular, los límites son constantes. Podemos elegir cualquier orden. Usaremos el orden $dz\,dy\,dx$.
+
+$$I = \int_0^1 \int_0^2 \int_0^1 (x + yz) \, dz \, dy \, dx$$
+
+**Resolución paso a paso:**
+    $$\int_0^1 (x + yz) \, dz = \left[ xz + y\frac{z^2}{2} \right]_{z=0}^{z=1} = \left(x(1) + \frac{y}{2}\right) - 0 = x + \frac{y}{2}$$
+    $$\int_0^2 \left( x + \frac{y}{2} \right) \, dy = \left[ xy + \frac{y^2}{4} \right]_{y=0}^{y=2} = \left(2x + \frac{4}{4}\right) - 0 = 2x + 1$$
+        $$\int_0^1 (2x + 1) \, dx = \left[ x^2 + x \right]_0^1 = (1+1) - 0 = \mathbf{2}$$
+    
+
+- Sobre Regiones Generales: Si $W \subset \mathbb{R}^3$ se proyecta sobre una región $\Omega$ en el plano $XY$, y está limitada superior e inferiormente por $z=u_2(x,y)$ y $z=u_1(x,y)$:
+    
+    $$\iiint_W f(x,y,z) \, dV = \iint_{\Omega} \left( \int_{u_1(x,y)}^{u_2(x,y)} f(x,y,z) \, dz \right) dA$$
+    - Otra forma de hacerlo consiste en  proyectar sobre el eje $z$, dando lugar a un intervalo $[a,b]$, y luego integrar la sección horizontal (rebanadas) $\Omega_z$ resultante para cada $z$:
+    $$\iiint_W f(x,y,z) \, dV = \int_a^b \left( \iint_{\Omega(z)} f(x,y,z) \, dA \right) dz$$
+    Ejemplo: Imagina un tetraedro (una pirámide triangular) limitado por los planos coordenados ($x=0, y=0, z=0$) y el plano inclinado $x + y + z = 1$.
+
+El objetivo: Calcular $\iiint_W 2z \, dV$ usando el método de rebanadas horizontales.
+
+- **Límites de $z$:** El sólido va desde el suelo ($z=0$) hasta el pico más alto donde $x=0, y=0$, por lo que $z=1$. El intervalo es $[0,1]$.
+    
+- **La sección $\Omega(z)$:** Para un $z$ fijo, cortamos la pirámide horizontalmente. La forma resultante es un **triángulo** en el plano $XY$ limitado por $x=0$, $y=0$ y la recta $x+y = 1-z$ (despejando de la ecuación del plano).
+    
+
+Planteamiento:
+
+La integral se ve así: $\int_0^1 \left[ \iint_{\Omega(z)} f(x,y,z) \, dA \right] dz$
+
+1. Resolvemos primero la integral doble (la rebanada):
+    
+    Como la función a integrar es $2z$, y dentro de la integral doble $z$ es una constante, podemos sacarla fuera de la integral interior:
+    
+    $$\iint_{\Omega(z)} 2z \, dA = 2z \cdot \iint_{\Omega(z)} 1 \, dA = 2z \cdot \text{Área}(\Omega(z))$$
+    
+    Nota: $\iint 1 dA$ es simplemente el área de la región.
+    
+    La región $\Omega(z)$ es un triángulo rectángulo con catetos de longitud $(1-z)$.
+    
+    $$\text{Área} = \frac{\text{base} \cdot \text{altura}}{2} = \frac{(1-z)(1-z)}{2} = \frac{(1-z)^2}{2}$$
+    
+    Por tanto, el resultado de la integral interior es:
+    
+    $$2z \cdot \frac{(1-z)^2}{2} = z(1-z)^2$$
+    
+2. Resolvemos la integral exterior (respecto a $z$):
+    
+    Ahora integramos ese resultado desde $z=0$ hasta $z=1$:
+    
+    $$I = \int_0^1 z(1-z)^2 \, dz$$
+    
+    Expandimos el binomio: $(1-z)^2 = 1 - 2z + z^2$. Multiplicamos por $z$:
+    
+    $$I = \int_0^1 (z - 2z^2 + z^3) \, dz$$
+    
+    Calculamos la primitiva:
+    
+    $$\left[ \frac{z^2}{2} - \frac{2z^3}{3} + \frac{z^4}{4} \right]_0^1 = \frac{1}{2} - \frac{2}{3} + \frac{1}{4}$$
+    
+    Mínimo común múltiplo (12):
+    
+    $$\frac{6}{12} - \frac{8}{12} + \frac{3}{12} = \frac{1}{12}$$
+    
+
+**Resultado Final:** $\mathbf{\frac{1}{12}}$
+
+### Aplicaciones en Sólidos (3D)
+
+Dada una región sólida $W$ con función de densidad volumétrica $\rho(x,y,z)$:
+
+- **Masa:** $M = \iiint_W \rho(x,y,z) \, dV$
+    
+
+## 3. Cambio de Variables
+### Jacobiano
+Si un cambio de variables viene dado por $x=x(u,v)$ e $y=y(u,v)$, el Jacobiano de la transformación es:
+$$J(u,v) = \det \begin{pmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} \end{pmatrix}$$
+La fórmula del cambio de variable es:
+$$\iint_{\Omega} f(x,y) \, dx \, dy = \iint_{\Omega^*} f(x(u,v), y(u,v)) \, |J(u,v)| \, du \, dv$$
+Para 3D, el Jacobiano es el determinante de la matriz 3x3 de derivadas parciales.
+
+### Coordenadas Polares (en 2D)
+Es un cambio de variable específico para simetría circular.
+- **Transformación:** $x = r \cos \theta$, $y = r \sin \theta$ 
+- **Jacobiano:** $J(r, \theta) = r$
+- **Elemento de área:** $dA = r \, dr \, d\theta$
+##### Ejemplo: volumen bajo un Paraboloide
+
+Imagina que queremos calcular la integral doble de la función $f(x, y) = x^2 + y^2$ sobre una región $D$, donde $D$ es un círculo centrado en el origen con radio 2.
+
+$$I = \iint_D (x^2 + y^2) \, dA$$
+Si intentáramos resolver esto con $x$ e $y$, la integral se vería así:
+$$\int_{-2}^{2} \int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}} (x^2 + y^2) \, dy \, dx$$
+
+Resolver esas raíces cuadradas dentro de la integral es largo y complicado.
+Transformaremos todo a términos de radio ($r$) y ángulo ($\theta$).
+1.  **Cambio de Variables:** $x^2 + y^2$ se convierte en $r^2$.
+2.  **El Diferencial de Área:** $dA$ no es solo $dr \, d\theta$. Debes multiplicar por el Jacobiano, que es **$r$**.
+    $$dx \, dy \Rightarrow r \, dr \, d\theta$$
+3.  **Nuevos Límites:**
+    * **Radio ($r$):** Como es un círculo de radio 2, $r$ va de $0$ a $2$.
+    * **Ángulo ($\theta$):** Como es el círculo completo, $\theta$ da la vuelta entera, de $0$ a $2\pi$.
+
+
+Sustituimos todo en la integral original:
+$$I = \int_{0}^{2\pi} \int_{0}^{2} \underbrace{(r^2)}_{\text{función}} \cdot \underbrace{r \, dr \, d\theta}_{\text{dA (con el Jacobiano)}}$$
+$$I = \int_{0}^{2\pi} \int_{0}^{2} r^3 \, dr \, d\theta$$
+
+**Paso A: Integral interna (respecto a $r$)**
+Integramos $r^3$:
+$$\left[ \frac{r^4}{4} \right]_{0}^{2} = \frac{2^4}{4} - \frac{0^4}{4} = \frac{16}{4} = 4$$
+
+**Paso B: Integral externa (respecto a $\theta$)**
+Ahora integramos la constante que nos quedó ($4$):
+$$\int_{0}^{2\pi} 4 \, d\theta = \left[ 4\theta \right]_{0}^{2\pi}$$
+$$= 4(2\pi) - 4(0)$$
+
+**Resultado Final:**
+$$8\pi$$
+
+
+### Coordenadas Cilíndricas (en 3D)
+
+Extensión de las polares a 3D. Útil para cilindros, conos, paraboloides.
+
+- **Transformación:** $x = r \cos \theta$, $y = r \sin \theta$, $z = z$
+    
+- **Relación útil:** $x^2 + y^2 = r^2$
+    
+- **Elemento de volumen:** $dV = r \, dz \, dr \, d\theta$
+    
+
+### Coordenadas Esféricas (en 3D)
+
+Útil para esferas y conos. (Convención ISO: $\rho$ = radio, $\phi$ = ángulo polar (desde Z+), $\theta$ = ángulo azimutal (desde X+)).
+
+- **Transformación:**
+    
+    - $x = \rho \sin \phi \cos \theta$
+        
+    - $y = \rho \sin \phi \sin \theta$
+        
+    - $z = \rho \cos \phi$
+        
+- **Relaciones útiles:** $x^2 + y^2 + z^2 = \rho^2$, $x^2 + y^2 = \rho^2 \sin^2 \phi$
+    
+- **Elemento de volumen (Jacobiano = $\rho^2 \sin \phi$):** $dV = \rho^2 \sin \phi \, d\rho \, d\phi \, d\theta$
+    
+
+---
+
+## Ejercicios
+[[01 Calculo-Naut/apuntes/calc-naut-tema04-ej\|Enlace]].

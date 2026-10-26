@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02-ej/","created":"2026-10-20T12:43:54.457+02:00","updated":"2026-10-20T12:43:44.601+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02-ej/","created":"2026-10-20T12:43:54.457+02:00","updated":"2026-10-26T07:36:26.123+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]
@@ -244,7 +244,25 @@
 
     (6) Calcular los extremos relativos de $f(x) = \frac{(x - 1)(x - 2)}{x^2}$
 
-7. Calcular las siguientes integrales.
+7. Aproximaciones mediante polinomios de Taylor.
+
+    (1) Para $f(x)=e^x$, calcula el polinomio de Taylor de orden 3 alrededor de $a=0$ y úsalo para aproximar $e^{0.1}$.
+
+    (2) Calcula el polinomio de Taylor de orden 4 de $\cos x$ alrededor de $a=0$ y aproxímate con él a $\cos(0.05)$.
+
+    (3) Calcula el polinomio de Taylor de orden 5 de $\ln(1+x)$ alrededor de $a=0$ y úsalo para aproximar $\ln(1.1)$.
+
+    (4) Calcula el polinomio de Taylor de orden 3 de $\sin x$ alrededor de $a=0$ y úsalo para aproximar $\sin(0.2)$.
+
+    (5) Calcula el polinomio de Taylor de orden 2 de $\sqrt{x}$ alrededor de $a=4$.
+
+    (6) Calcula el polinomio de Taylor de orden 3 de $1/x$ alrededor de $a=1$ y úsalo para aproximar $1/1.1$.
+
+    (7) Calcula el polinomio de Taylor de orden 2 de $\sqrt{x}$ alrededor de $a=4$. Compara la aproximación de $\sqrt{4.1}$ que proporciona con la de la recta tangente en $x=4$. ¿Cuál es más precisa?
+
+    (8) Para $f(x)=\sqrt{x}$ y $a=4$, usa el resto de Taylor para obtener una cota del error al aproximar $\sqrt{4.1}$ con el polinomio de orden 2. Puedes usar que $|f'''(x)|\le 3/256$ para $4\le x\le 4.1$.
+
+8. Calcular las siguientes integrales.
 
     (1) $\int x^{5}dx$
 
@@ -408,7 +426,7 @@
 
     (81) $\int \frac{x^2 - 3x + 4}{x^3 - 3x^2 + 3x - 1}dx$
 
-8. Calcular las siguientes integrales definidas.
+9. Calcular las siguientes integrales definidas.
 
     (1) $\int_{1}^{2} (x^2 - 2x + 3)dx$
 
@@ -422,7 +440,7 @@
 
     (6) $\int_{e}^{e^2} \frac{dx}{x\ln x}$
 
-9. Aplicaciones de la integral: cálculo de áreas.
+10. Aplicaciones de la integral: cálculo de áreas.
 
     (1) Calcular el área de la figura limitada por la parábola $y = 4x - x^2$ y el eje de abcisas.
 
