@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-10-20T11:46:03.361+02:00","updated":"2026-10-26T12:29:21.696+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-10-20T11:46:03.361+02:00","updated":"2026-10-26T12:59:39.817+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]
@@ -128,7 +128,7 @@ Esta aproximación es exacta en $a$ y suele ser útil para valores próximos a �
 Si $f$ tiene derivadas hasta orden $n$ en un entorno de $a$, su **polinomio de Taylor de orden $n$** alrededor de $a$ es
 $$P_n(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
 Los primeros órdenes muestran la idea:
-$$P_0(x)=f(a),\qquad P_1(x)=T_1(x),\qquad P_2(x)=T_1(x)+\frac{f''(a)}{2}(x-a)^2.$$
+$$P_0(x)=f(a),\qquad P_1(x)=y(x),\qquad P_2(x)=y(x)+\frac{f''(a)}{2}(x-a)^2.$$
 Así, el término cuadrático corrige la aproximación lineal teniendo en cuenta la curvatura; los términos siguientes incorporan información adicional sobre la variación de la función. Cerca de $a$, se usa $P_n(x)$ como aproximación de $f(x)$:
 $$f(x)\approx P_n(x).$$
 

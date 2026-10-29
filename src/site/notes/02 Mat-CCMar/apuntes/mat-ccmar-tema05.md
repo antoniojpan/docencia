@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05/","created":"2026-10-23T09:16:31.114+02:00","updated":"2026-10-24T08:57:02.305+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05/","created":"2026-10-29T07:11:58.752+01:00","updated":"2026-10-29T07:28:46.294+01:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -148,9 +148,11 @@ Una función $f$ es **diferenciable** en $P_0=(a,b)$ si, cerca de ese punto, se 
 
 ---
 
-## 4. Gradiente y Derivada Direccional
+## 4. Operadores Diferenciales
 
-### 4.1. El Vector Gradiente
+A cada tipo de objeto geométrico le corresponde un operador diferencial natural: el **gradiente** actúa sobre campos escalares, la **derivada** sobre curvas y el **rotacional** y la **divergencia** sobre campos vectoriales.
+
+### 4.1. Gradiente
 
 Dado un campo escalar $f(x, y)$, el **gradiente** es un vector formado por las derivadas parciales primeras de la función en cada punto:
 
@@ -187,13 +189,7 @@ $$D_{\vec u}f(P) = \nabla f(P) \cdot \vec u$$
 > Evaluando en el punto $(2, -1)$:
 > $$\nabla A(2, -1) = \mathbf{\left( \frac{2}{5}, \; -\frac{1}{5} \right)}$$
 
----
-
-## 5. Operadores Diferenciales
-
-A cada tipo de objeto geométrico le corresponde un operador diferencial natural: el **gradiente** actúa sobre campos escalares, la **derivada** sobre curvas y el **rotacional** y la **divergencia** sobre campos vectoriales.
-
-### 5.1. Rotacional
+### 4.3. Rotacional
 
 El **rotacional** mide la tendencia de un campo vectorial a girar o inducir rotación en el flujo alrededor de cada punto.
 
@@ -203,24 +199,24 @@ El **rotacional** mide la tendencia de un campo vectorial a girar o inducir rota
 - **En $\mathbb{R}^3 \to \mathbb{R}^3$:** Para $\mathbf{f}(x, y, z) = (f_1, f_2, f_3)$:
   $$\operatorname{rot}(\mathbf{f}) = \nabla \times \mathbf{f} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ f_1 & f_2 & f_3 \end{vmatrix} = \left( \frac{\partial f_3}{\partial y} - \frac{\partial f_2}{\partial z}, \; \frac{\partial f_1}{\partial z} - \frac{\partial f_3}{\partial x}, \; \frac{\partial f_2}{\partial x} - \frac{\partial f_1}{\partial y} \right)$$
 
-> [!example] Ejemplo 5.1: Rotacional en el Plano y en el Espacio
+> [!example] Ejemplo: Rotacional en el Plano y en el Espacio
 > 1. **Para $\mathbf{f}(x, y) = (x^2 y, \; x + y)$:**
 >    $$\operatorname{rot}(\mathbf{f}) = \frac{\partial (x+y)}{\partial x} - \frac{\partial (x^2 y)}{\partial y} = \mathbf{1 - x^2}$$
 > 2. **Para $\mathbf{f}(x, y, z) = \left( xy, \; x^2 - y, \; \frac{1}{z} \right)$:**
 >    $$\operatorname{rot}(\mathbf{f}) = \left( 0 - 0, \; 0 - 0, \; 2x - x \right) = \mathbf{(0, 0, x)}$$
 
-### 5.2. Divergencia
+### 4.4. Divergencia
 
 La **divergencia** mide la cantidad de flujo que se origina (fuente/manantial) o se destruye (sumidero) por unidad de volumen alrededor de cada punto.
 
 - **En $\mathbb{R}^2$:** $\operatorname{Div}(\mathbf{f}) = \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y}$
 - **En $\mathbb{R}^3$:** $\operatorname{Div}(\mathbf{f}) = \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z}$
 
-> [!example] Ejemplo 5.2: Cálculo de la Divergencia
+> [!example] Ejemplo: Cálculo de la Divergencia
 > Para el campo $\mathbf{f}(x, y, z) = \left( \frac{x}{y}, \; z - y, \; \frac{x^2}{z} \right)$:
 > $$\operatorname{Div}(\mathbf{f}) = \frac{\partial}{\partial x}\left(\frac{x}{y}\right) + \frac{\partial}{\partial y}(z - y) + \frac{\partial}{\partial z}\left(\frac{x^2}{z}\right) = \frac{1}{y} - 1 - \frac{x^2}{z^2} = \mathbf{\frac{z^2 - yz^2 - x^2 y}{y z^2}}$$
 
-### 5.3. Vector Tangente en Curvas
+### 4.5. Vector Tangente en Curvas
 
 Así como el gradiente describe la variación de un campo escalar y el rotacional/divergencia la de un campo vectorial, el operador diferencial natural de una curva $\mathbf{g}(t) = (x(t), y(t))$ es su **vector derivada**:
 
@@ -241,7 +237,7 @@ Es decir, **el gradiente es perpendicular a las curvas de nivel**: $\nabla f$ ap
 
 ![gradiente-tangente-curva-nivel.png\|480](/img/user/imagenes/gradiente-tangente-curva-nivel.png)
 
-> [!example] Ejemplo 5.3: Vector Tangente y Ortogonalidad con el Gradiente
+> [!example] Ejemplo: Vector Tangente y Ortogonalidad con el Gradiente
 > Dada la curva $\mathbf{g}(t) = (t, t^2)$ y el campo escalar $f(x, y) = x^2 + y^2$:
 >
 > 1. **Vector tangente en $t = 1$:**
@@ -262,7 +258,7 @@ Es decir, **el gradiente es perpendicular a las curvas de nivel**: $\nabla f$ ap
 
 ---
 
-## 6. Optimización en Varias Variables
+## 5. Optimización en Varias Variables
 
 ### 6.1. Puntos Críticos y Matriz Hessiana
 

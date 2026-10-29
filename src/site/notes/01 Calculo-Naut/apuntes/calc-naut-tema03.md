@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03/","created":"2026-10-23T09:22:29.966+02:00","updated":"2026-10-26T07:32:30.043+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03/","created":"2026-10-29T07:14:58.775+01:00","updated":"2026-10-29T07:29:59.795+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
@@ -7,9 +7,8 @@
 - [[01 Calculo-Naut/apuntes/calc-naut-tema03#1. Funciones de Varias Variables\|1. Funciones de Varias Variables]]
 - [[01 Calculo-Naut/apuntes/calc-naut-tema03#2. Dominio, Límites y Continuidad\|2. Dominio, Límites y Continuidad]]
 - [[01 Calculo-Naut/apuntes/calc-naut-tema03#3. Derivadas Parciales\|3. Derivadas Parciales]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema03#4. Gradiente y Derivada Direccional\|4. Gradiente y Derivada Direccional]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema03#5. Operadores Diferenciales\|5. Operadores Diferenciales]]
-- [[01 Calculo-Naut/apuntes/calc-naut-tema03#6. Optimización en Varias Variables\|6. Optimización en Varias Variables]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema03#4. Operadores Diferenciales\|4. Operadores Diferenciales]]
+- [[01 Calculo-Naut/apuntes/calc-naut-tema03#5. Optimización en Varias Variables\|5. Optimización en Varias Variables]]
 
 ## 1. Funciones de Varias Variables
 
@@ -137,77 +136,117 @@ $$z-23=2(x-1)+27(y-3)\quad\Longrightarrow\quad z=2x+27y-60$$
 y la recta normal:
 $$(x,y,z)=(1,3,23)+t\,(2,27,-1)$$
 
-## 4. Gradiente y Derivada Direccional
+## 4. Operadores Diferenciales
 
-### 4.1. El Vector Gradiente
+A cada tipo de objeto geométrico le corresponde un operador diferencial natural: el **gradiente** actúa sobre campos escalares, la **derivada** sobre curvas y el **rotacional** y la **divergencia** sobre campos vectoriales.
 
-Dado un campo escalar $f(x,y)$, el **gradiente** es el vector formado por las derivadas parciales primeras:
-$$\nabla f=\left(\frac{\partial f}{\partial x},\;\frac{\partial f}{\partial y}\right).$$
-Para $f(x,y,z)$: $\nabla f=\left(f_x,\,f_y,\,f_z\right)$.
+### 4.1. Gradiente
 
-**Propiedades del gradiente** en un punto $P$:
+Dado un campo escalar $f(x, y)$, el **gradiente** es un vector formado por las derivadas parciales primeras de la función en cada punto:
 
-1. **Máximo crecimiento:** la dirección de máximo crecimiento (o "máxima pendiente") es la del propio gradiente $\nabla f(P)$; la tasa de ese crecimiento es $\|\nabla f(P)\|$.
-2. **Máximo decrecimiento:** la dirección opuesta, $-\nabla f(P)$; la tasa es $-\|\nabla f(P)\|$.
-3. **Sin cambio:** la derivada direccional es cero en cualquier dirección perpendicular a $\nabla f(P)$. En particular, **el gradiente es perpendicular a la curva de nivel** que pasa por $P$.
+$$\nabla f = \left( \frac{\partial f}{\partial x}, \; \frac{\partial f}{\partial y} \right)$$
+
+- **Propiedad fundamental:** El vector gradiente $\nabla f(x_0, y_0)$ apunta siempre en la **dirección de máximo crecimiento** de la función en ese punto, y su módulo representa la tasa máxima de aumento.
 
 ### 4.2. Derivada Direccional
 
 La **derivada direccional** de $f$ en un punto $P$ en la dirección de un **vector unitario** $\vec u$ mide la tasa de cambio de $f$ en esa dirección:
-$$D_{\vec u}f(P)=\nabla f(P)\cdot\vec u.$$
 
-- Si $D_{\vec u}f=0$, el movimiento en la dirección $\vec u$ se realiza a lo largo de una **curva de nivel** (sin cambio en el valor de la función).
-- Si la dirección viene dada por un vector $\vec v$ no unitario, primero se normaliza:
-$$\vec u=\frac{\vec v}{\|\vec v\|},\qquad \|\vec v\|=\sqrt{v_1^2+v_2^2+\dots}$$
-(Es lo que hay que hacer en el Problema 4.2.)
+$$D_{\vec u}f(P) = \nabla f(P) \cdot \vec u$$
 
-## 5. Operadores Diferenciales
+- Si $D_{\vec u}f = 0$, el movimiento en la dirección $\vec u$ se realiza a lo largo de una **curva de nivel** (sin cambio en el valor de la función).
+- Si la dirección viene dada por un vector $\vec v$ no unitario, primero se normaliza: $\vec u = \dfrac{\vec v}{\|\vec v\|}$.
 
-A cada tipo de objeto geométrico le corresponde un operador diferencial natural: el **gradiente** actúa sobre campos escalares, la **derivada** sobre curvas y el **rotacional** y la **divergencia** sobre campos vectoriales.
+> [!example] Ejemplo 4.1: Gradiente y Derivada Direccional
+> Dada la función $f(x, y) = x^2 y + \sqrt{x}$:
+>
+> 1. **Calcular el gradiente $\nabla f$:**
+>    $$\frac{\partial f}{\partial x} = 2yx + \frac{1}{2\sqrt{x}}, \qquad \frac{\partial f}{\partial y} = x^2$$
+>    $$\nabla f = \left( 2yx + \frac{1}{2\sqrt{x}}, \; x^2 \right)$$
+>
+> 2. **Calcular la derivada direccional en el punto $(2, 1)$ en la dirección de $\vec v = (3, 5)$.** Como $\|\vec v\|=\sqrt{34}$, hay que normalizar:
+>    $$D_{\vec u} f(2, 1) = \frac{3\left( 4 + \frac{1}{2\sqrt{2}} \right) + 5\,(4)}{\sqrt{34}} \approx \mathbf{5.67}$$
+>    *Interpretación:* Si nos encontramos en la posición $(2, 1)$ y nos desplazamos en la dirección $(3, 5)$, la altitud o valor de la función aumenta a una razón de $5.67$ unidades por unidad de longitud.
 
-### 5.1. Rotacional
+> [!example] Ejemplo 4.2: Máximo Ascenso en una Montaña
+> Dada la superficie de una montaña descrita por $A(x, y) = \frac{x^2 + y^2}{10} + 50$, determinar hacia dónde debemos movernos desde el punto $(2, -1)$ para llegar lo más rápido posible a la cima.
+>
+> **Solución:**
+> Debemos movernos en la dirección del gradiente $\nabla A(2, -1)$:
+> $$\nabla A = \left( \frac{2x}{10}, \; \frac{2y}{10} \right) = \left( \frac{x}{5}, \; \frac{y}{5} \right)$$
+> Evaluando en el punto $(2, -1)$:
+> $$\nabla A(2, -1) = \mathbf{\left( \frac{2}{5}, \; -\frac{1}{5} \right)}$$
 
-El **rotacional** mide la tendencia de un campo vectorial a girar o inducir rotación en el flujo alrededor de cada punto (por ejemplo, el giro de una corriente o de una borrasca).
+### 4.3. Rotacional
 
-- **En $\mathbb{R}^2\to\mathbb{R}^2$:** para $\mathbf{f}(x,y)=(f_1,f_2)$,
-$$\operatorname{rot}(\mathbf{f})=\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y}.$$
-- **En $\mathbb{R}^3\to\mathbb{R}^3$:** para $\mathbf{f}(x,y,z)=(f_1,f_2,f_3)$,
-$$\operatorname{rot}(\mathbf{f})=\nabla\times\mathbf{f}=\left(\frac{\partial f_3}{\partial y}-\frac{\partial f_2}{\partial z},\;\frac{\partial f_1}{\partial z}-\frac{\partial f_3}{\partial x},\;\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y}\right).$$
+El **rotacional** mide la tendencia de un campo vectorial a girar o inducir rotación en el flujo alrededor de cada punto.
 
-### 5.2. Divergencia
+- **En $\mathbb{R}^2 \to \mathbb{R}^2$:** Para $\mathbf{f}(x, y) = (f_1, f_2)$:
+  $$\operatorname{rot}(\mathbf{f}) = \frac{\partial f_2}{\partial x} - \frac{\partial f_1}{\partial y} = \begin{vmatrix} \frac{\partial}{\partial x} & \frac{\partial}{\partial y} \\ f_1 & f_2 \end{vmatrix}$$
 
-La **divergencia** mide el flujo que se origina (fuente/manantial) o se destruye (sumidero) por unidad de volumen alrededor de cada punto. Su signo distingue una surgencia de una zona de convergencia.
+- **En $\mathbb{R}^3 \to \mathbb{R}^3$:** Para $\mathbf{f}(x, y, z) = (f_1, f_2, f_3)$:
+  $$\operatorname{rot}(\mathbf{f}) = \nabla \times \mathbf{f} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ f_1 & f_2 & f_3 \end{vmatrix} = \left( \frac{\partial f_3}{\partial y} - \frac{\partial f_2}{\partial z}, \; \frac{\partial f_1}{\partial z} - \frac{\partial f_3}{\partial x}, \; \frac{\partial f_2}{\partial x} - \frac{\partial f_1}{\partial y} \right)$$
 
-- **En $\mathbb{R}^2$:** $\operatorname{div}(\mathbf{f})=\frac{\partial f_1}{\partial x}+\frac{\partial f_2}{\partial y}$.
-- **En $\mathbb{R}^3$:** $\operatorname{div}(\mathbf{f})=\frac{\partial f_1}{\partial x}+\frac{\partial f_2}{\partial y}+\frac{\partial f_3}{\partial z}$.
+> [!example] Ejemplo: Rotacional en el Plano y en el Espacio
+> 1. **Para $\mathbf{f}(x, y) = (x^2 y, \; x + y)$:**
+>    $$\operatorname{rot}(\mathbf{f}) = \frac{\partial (x+y)}{\partial x} - \frac{\partial (x^2 y)}{\partial y} = \mathbf{1 - x^2}$$
+> 2. **Para $\mathbf{f}(x, y, z) = \left( xy, \; x^2 - y, \; \frac{1}{z} \right)$:**
+>    $$\operatorname{rot}(\mathbf{f}) = \left( 0 - 0, \; 0 - 0, \; 2x - x \right) = \mathbf{(0, 0, x)}$$
 
-### 5.3. Vector Tangente en Curvas
+### 4.4. Divergencia
 
-El operador diferencial natural de una curva $\mathbf{g}(t)=(x(t),y(t))$ es su **vector derivada**:
-$$\mathbf{g}'(t)=\big(x'(t),\,y'(t)\big).$$
+La **divergencia** mide la cantidad de flujo que se origina (fuente/manantial) o se destruye (sumidero) por unidad de volumen alrededor de cada punto.
 
-- **Interpretación física:** si $t$ es el tiempo, $\mathbf{g}'(t)$ es el **vector velocidad**: apunta en la dirección de avance y su módulo $\|\mathbf{g}'(t)\|$ es la rapidez.
-- **Interpretación geométrica:** $\mathbf{g}'(t)$ es tangente a la trayectoria en $\mathbf{g}(t)$. La recta tangente en $t_0$ es $\mathbf{g}(t_0)+\lambda\,\mathbf{g}'(t_0)$.
-- **Curva regular:** si $\mathbf{g}'(t)\neq\mathbf{0}$ para todo $t$, admite el **vector tangente unitario**
-$$\mathbf{T}(t)=\frac{\mathbf{g}'(t)}{\|\mathbf{g}'(t)\|},$$
-que depende de la trayectoria y de su orientación, no de la rapidez. Si $\mathbf{g}'(t_0)=\mathbf{0}$ puede aparecer una **cúspide** o punto singular.
+- **En $\mathbb{R}^2$:** $\operatorname{Div}(\mathbf{f}) = \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y}$
+- **En $\mathbb{R}^3$:** $\operatorname{Div}(\mathbf{f}) = \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z}$
 
-**Relación con el gradiente.** Si $\mathbf{g}(t)$ recorre una curva de nivel $f(x,y)=c$, entonces $f(\mathbf{g}(t))=c$ para todo $t$; derivando (regla de la cadena) se obtiene
-$$\nabla f(\mathbf{g}(t))\cdot\mathbf{g}'(t)=0:$$
-el gradiente es perpendicular a la curva de nivel, como ya sabíamos por la propiedad 3 del gradiente.
+> [!example] Ejemplo: Cálculo de la Divergencia
+> Para el campo $\mathbf{f}(x, y, z) = \left( \frac{x}{y}, \; z - y, \; \frac{x^2}{z} \right)$:
+> $$\operatorname{Div}(\mathbf{f}) = \frac{\partial}{\partial x}\left(\frac{x}{y}\right) + \frac{\partial}{\partial y}(z - y) + \frac{\partial}{\partial z}\left(\frac{x^2}{z}\right) = \frac{1}{y} - 1 - \frac{x^2}{z^2} = \mathbf{\frac{z^2 - yz^2 - x^2 y}{y z^2}}$$
+
+### 4.5. Vector Tangente en Curvas
+
+Así como el gradiente describe la variación de un campo escalar y el rotacional/divergencia la de un campo vectorial, el operador diferencial natural de una curva $\mathbf{g}(t) = (x(t), y(t))$ es su **vector derivada**:
+
+$$\mathbf{g}'(t) = \big(x'(t),\, y'(t)\big)$$
+
+- **Interpretación física:** Si $t$ es el tiempo, $\mathbf{g}'(t)$ es el **vector velocidad**: apunta en la dirección de avance y su módulo $\|\mathbf{g}'(t)\|$ es la rapidez.
+- **Interpretación geométrica:** $\mathbf{g}'(t)$ es tangente a la trayectoria de la curva en el punto $\mathbf{g}(t)$. La recta tangente en $t_0$ es
+  $$\mathbf{g}(t_0) + \lambda\, \mathbf{g}'(t_0), \qquad \lambda \in \mathbb{R}.$$
+- **Curva regular:** Si $\mathbf{g}'(t) \neq \mathbf{0}$ para todo $t$, la curva es *regular* y admite el **vector tangente unitario**
+  $$\mathbf{T}(t) = \frac{\mathbf{g}'(t)}{\|\mathbf{g}'(t)\|},$$
+  que solo depende de la trayectoria y de su orientación, no de la rapidez con que se recorra. Si $\mathbf{g}'(t_0) = \mathbf{0}$ puede aparecer una **cúspide** o un punto singular.
+
+**Relación con el gradiente.** Si la curva $\mathbf{g}(t)$ recorre una curva de nivel $f(x,y) = c$, entonces $f(\mathbf{g}(t)) = c$ para todo $t$; derivando por la regla de la cadena:
+
+$$\nabla f(\mathbf{g}(t)) \cdot \mathbf{g}'(t) = 0.$$
+
+Es decir, **el gradiente es perpendicular a las curvas de nivel**: $\nabla f$ apunta en la dirección de máximo crecimiento y el vector tangente en la dirección en que $f$ no cambia.
 
 ![gradiente-tangente-curva-nivel.png\|480](/img/user/imagenes/gradiente-tangente-curva-nivel.png)
+
+> [!example] Ejemplo: Vector Tangente y Ortogonalidad con el Gradiente
+> Dada la curva $\mathbf{g}(t) = (t, t^2)$ y el campo escalar $f(x, y) = x^2 + y^2$:
+>
+> 1. **Vector tangente en $t = 1$:**
+>    $$\mathbf{g}'(t) = (1, 2t) \implies \mathbf{g}'(1) = \mathbf{(1, 2)}$$
+>    La recta tangente en $\mathbf{g}(1) = (1, 1)$ es $(1, 1) + \lambda(1, 2)$, es decir, $y = 2x - 1$.
+> 2. **Vector tangente unitario en $t = 1$:**
+>    $$\|\mathbf{g}'(1)\| = \sqrt{1 + 4} = \sqrt{5} \implies \mathbf{T}(1) = \left( \frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}} \right)$$
+> 3. **¿Es $\mathbf{g}$ una curva de nivel de $f$?** No: $f(\mathbf{g}(t)) = t^2 + t^4$ no es constante, luego $\nabla f \cdot \mathbf{g}' \neq 0$. En efecto, en $t=1$:
+>    $$\nabla f(1,1) = (2, 2), \qquad \nabla f \cdot \mathbf{g}'(1) = 2 + 4 = 6 \neq 0$$
+>    La curva **no** es una curva de nivel: al movernos por ella, $f$ aumenta. Para la circunferencia $\mathbf{g}(t) = (\cos t, \sin t)$, en cambio, $f(\mathbf{g}(t)) = 1$ es constante y se comprueba que $\nabla f \cdot \mathbf{g}' = (2\cos t, 2\sin t) \cdot (-\sin t, \cos t) = 0$.
 
 > [!summary] Qué operador para cada objeto
 > | Objeto | Representación | Operador diferencial natural |
 > |---|---|---|
-> | Campo escalar $f:\mathbb{R}^2\to\mathbb{R}$ | Curvas de nivel / superficie | Gradiente $\nabla f$ |
-> | Curva $\mathbf{g}:\mathbb{R}\to\mathbb{R}^2$ | Trayectoria + orientación | Derivada $\mathbf{g}'(t)$ (tangente) |
-> | Campo vectorial $\mathbf{f}:\mathbb{R}^2\to\mathbb{R}^2$ | Flechas / líneas de campo | Rotacional $\operatorname{rot}$, divergencia $\operatorname{div}$ |
+> | Campo escalar $f: \mathbb{R}^2 \to \mathbb{R}$ | Curvas de nivel / superficie | Gradiente $\nabla f$ |
+> | Curva $\mathbf{g}: \mathbb{R} \to \mathbb{R}^2$ | trayectoria + orientación | Derivada $\mathbf{g}'(t)$ (tangente) |
+> | Campo vectorial $\mathbf{f}: \mathbb{R}^2 \to \mathbb{R}^2$ | Flechas / líneas de campo | Rotacional, divergencia |
 
-## 6. Optimización en Varias Variables
+## 5. Optimización en Varias Variables
 
-### 6.1. Puntos Críticos y Matriz Hessiana
+### 5.1. Puntos Críticos y Matriz Hessiana
 
 Para hallar los extremos relativos (máximos y mínimos locales) de $f(x,y)$:
 
@@ -224,7 +263,7 @@ $$H(x,y)=\begin{pmatrix}f_{xx}&f_{xy}\\ f_{yx}&f_{yy}\end{pmatrix},\qquad D(x,y)
 - Si $D(a,b)<0$ $\implies$ **punto de silla**.
 - Si $D(a,b)=0$ $\implies$ el criterio no decide.
 
-### 6.2. Ejemplos Resueltos Paso a Paso
+### 5.2. Ejemplos Resueltos Paso a Paso
 
 **Ejemplo:** Estudiar los extremos de $f(x,y)=5-x^2-y^2$.
 
