@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04-ej/","created":"2026-10-05T13:34:11.530+02:00","updated":"2026-10-05T13:34:09.322+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04-ej/","created":"2026-11-03T11:40:41.728+01:00","updated":"2026-11-03T11:36:35.409+01:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -188,6 +188,8 @@
 > **(b)** Radio de la base $r = 8$ y altura $h = 16$.
 >
 > **(c)** Profundidad y ancho: $3\text{ m}$. Largo: $31.25\text{ m}$.
+>
+> 🔗 Ilustración interactiva: [modelo 3D y curva del área superficial](https://antoniojpan.github.io/visualizations/piscina-optimizacion.html) — permite mover la profundidad $h$ y comparar el mínimo teórico ($h \approx 5.95\text{ m}$, $A \approx 212.61\text{ m}^2$) con el óptimo factible ($h = 3\text{ m}$, $A = 299.25\text{ m}^2$).
 
 > [!success] Solución del Ejercicio 4
 > Polinomio de Taylor:
