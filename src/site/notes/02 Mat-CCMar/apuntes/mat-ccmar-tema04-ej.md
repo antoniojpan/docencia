@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04-ej/","created":"2026-11-03T11:40:41.728+01:00","updated":"2026-11-03T11:36:35.409+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema04-ej/","created":"2026-11-03T11:40:41.728+01:00","updated":"2026-11-05T10:45:35.501+01:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -185,8 +185,62 @@
 >
 > **(a)** El valor máximo del producto es $192$.
 >
+> **1. Sistema y parametrización ($z = \alpha$)**
+>
+> $$\begin{cases} 
+> x + y + z = 18 \\ 
+> x - 2y = 0 \\ 
+> z = \alpha 
+> \end{cases} 
+> \implies 
+> \begin{cases} 
+> x + y = 18 - \alpha \\ 
+> x = 2y 
+> \end{cases}$$
+>
+> $$2y + y = 18 - \alpha \implies 3y = 18 - \alpha$$
+>
+> **Solución parametrizada:**
+> $$\begin{cases} 
+> x = \dfrac{36 - 2\alpha}{3} \\[1.5ex]
+> y = \dfrac{18 - \alpha}{3} \\[1.5ex]
+> z = \alpha 
+> \end{cases}
+> \qquad \text{Dominio: } \alpha \in (0, 18)$$
+> **2. Función producto $P(\alpha)$**
+>
+> $$P(\alpha) = x \cdot y \cdot z = \left(\frac{36 - 2\alpha}{3}\right) \left(\frac{18 - \alpha}{3}\right) \alpha$$
+>
+> $$P(\alpha) = \frac{2}{9}\alpha^3 - 8\alpha^2 + 72\alpha$$
+> **3. Maximización**
+>
+> $$P'(\alpha) = \frac{2}{3}\alpha^2 - 16\alpha + 72 = 0$$
+>
+> $$\alpha^2 - 24\alpha + 108 = 0 \implies (\alpha - 6)(\alpha - 18) = 0$$
+>
+> - $\alpha = 18 \text{ (descartado por dominio)}$
+> - $\alpha = 6 \in (0, 18)$
+>
+> **Comprobación de máximo:**
+> $$P''(\alpha) = \frac{4}{3}\alpha - 16 \implies P''(6) = -8 < 0 \quad (\text{Máximo})$$
+>
+> **4. Resultado final**
+>
+> $$\alpha = 6 \implies 
+> \begin{cases} 
+> x = 8 \\ 
+> y = 4 \\ 
+> z = 6 
+> \end{cases}$$
+>
+> $$\mathbf{P_{\text{máx}} = 8 \cdot 4 \cdot 6 = 192}$$
+> 
+> ---
+> 
 > **(b)** Radio de la base $r = 8$ y altura $h = 16$.
 >
+> ---
+> 
 > **(c)** Profundidad y ancho: $3\text{ m}$. Largo: $31.25\text{ m}$.
 >
 > 🔗 Ilustración interactiva: [modelo 3D y curva del área superficial](https://antoniojpan.github.io/visualizations/piscina-optimizacion.html) — permite mover la profundidad $h$ y comparar el mínimo teórico ($h \approx 5.95\text{ m}$, $A \approx 212.61\text{ m}^2$) con el óptimo factible ($h = 3\text{ m}$, $A = 299.25\text{ m}^2$).
