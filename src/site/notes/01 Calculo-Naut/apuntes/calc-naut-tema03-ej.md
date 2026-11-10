@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-10-23T11:22:50.687+02:00","updated":"2026-10-26T07:32:30.044+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-11-10T07:45:43.935+01:00","updated":"2026-11-10T07:45:33.228+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
@@ -106,6 +106,45 @@
 > **(a)** Sea $h(x,y)=2e^{-x^{2}}+e^{-3y^{2}}$ la altura de una montaña en la posición $(x,y)$. ¿En qué dirección desde $(1,0)$ se debe caminar para escalar lo más rápido posible?
 >
 > **(b)** La temperatura en cada punto $(x,y,z)$ es $T(x,y,z)=e^{-x}+e^{-2y}+e^{-3z}$. ¿En qué dirección debe moverse una persona situada en $(1,1,1)$ para enfriarse lo más rápido posible?
+
+> [!question] Problema 4.8
+> La altitud de una montaña en la posición $(x,y)$ viene dada por
+> $$h(x,y)=10-x^{2}-2y^{2}.$$
+> Estamos situados en el punto $(1,1)$. Se pide:
+>
+> **(a)** ¿Qué altitud tenemos?
+>
+> **(b)** Si nos movemos en la dirección $(3,1)$, ¿estamos subiendo o bajando?
+>
+> **(c)** ¿Hacia dónde tenemos que movernos para no cambiar de altitud?
+>
+> **(d)** ¿En qué dirección debemos movernos para bajar lo más rápido posible?
+
+> [!question] Problema 4.9
+> La sonda (profundidad del fondo marino), medida en metros, en una zona de navegación viene dada por
+> $$s(x,y)=20-2x^{2}-xy-y^{2}.$$
+> El buque se encuentra en el punto $(1,2)$. Se pide:
+>
+> **(a)** ¿Qué sonda hay en ese punto?
+>
+> **(b)** Si navegamos en la dirección $(1,1)$, ¿la profundidad aumenta o disminuye?
+>
+> **(c)** ¿Hacia dónde debemos navegar para mantener la sonda constante?
+>
+> **(d)** ¿En qué dirección disminuye la sonda lo más rápidamente posible (es decir, hacia dónde se va a aguas más someras)?
+
+> [!question] Problema 4.10
+> La altitud de una ladera viene dada por
+> $$h(x,y)=x\,e^{y}.$$
+> Estamos en el punto $(2,0)$. Se pide:
+>
+> **(a)** ¿Qué altitud tenemos?
+>
+> **(b)** Si nos movemos en la dirección $(1,1)$, ¿estamos subiendo o bajando?
+>
+> **(c)** ¿Hacia dónde tenemos que movernos para no cambiar de altitud?
+>
+> **(d)** ¿En qué dirección debemos movernos para bajar lo más rápido posible?
 
 ## 5. Operadores diferenciales y curvas
 
@@ -298,6 +337,39 @@
 > **(a)** $\nabla h=(-4xe^{-x^{2}},\, -6ye^{-3y^{2}})$, luego $\nabla h(1,0)=(-4/e,\,0)$: se debe caminar en la dirección $(-1,0)$ (hacia $x$ decreciente).
 >
 > **(b)** $\nabla T=(-e^{-x},\,-2e^{-2y},\,-3e^{-3z})$ y $\nabla T(1,1,1)=\left(-e^{-1},\,-2e^{-2},\,-3e^{-3}\right)$. Para enfriarse hay que moverse en la dirección de máximo decrecimiento, $-\nabla T(1,1,1)=\left(e^{-1},\,2e^{-2},\,3e^{-3}\right)$.
+
+> [!success] Solución del Problema 4.8
+> **(a)** $h(1,1)=10-1-2=7$.
+>
+> **(b)** $\nabla h=(-2x,\,-4y)$, luego $\nabla h(1,1)=(-2,-4)$. Con $\vec u=\frac{1}{\sqrt{10}}(3,1)$:
+> $$D_{\vec u}h(1,1)=\frac{-6-4}{\sqrt{10}}=-\sqrt{10}\approx-3.16<0,$$
+> es decir, **estamos bajando**.
+>
+> **(c)** Hay que moverse en una dirección perpendicular al gradiente, $\nabla h(1,1)\cdot\vec v=0$: $-2v_1-4v_2=0$, o sea $v_1=-2v_2$. Sirve la dirección $(-2,1)$ (o la opuesta), normalizada $\frac{1}{\sqrt5}(-2,1)$; es la tangente a la curva de nivel $10-x^{2}-2y^{2}=7$.
+>
+> **(d)** La dirección de máximo decrecimiento es $-\nabla h(1,1)=(2,4)$, es decir, $\frac{1}{\sqrt5}(2,4)=\frac{2}{\sqrt5}(1,2)$.
+
+> [!success] Solución del Problema 4.9
+> **(a)** $s(1,2)=20-2-2-4=12$ m.
+>
+> **(b)** $\nabla s=(-4x-y,\,-x-2y)$, luego $\nabla s(1,2)=(-6,-5)$. Con $\vec u=\frac{1}{\sqrt2}(1,1)$:
+> $$D_{\vec u}s(1,2)=\frac{-6-5}{\sqrt2}=-\frac{11}{\sqrt2}<0,$$
+> de modo que la sonda **disminuye**: navegamos hacia aguas menos profundas.
+>
+> **(c)** Buscamos $\vec v$ con $\nabla s(1,2)\cdot\vec v=0$, esto es, $-6v_1-5v_2=0$. Sirve la dirección $(5,-6)$ (o la opuesta), normalizada $\frac{1}{\sqrt{61}}(5,-6)$; es la tangente a la isóbata $s=12$.
+>
+> **(d)** La sonda disminuye más rápidamente en la dirección $-\nabla s(1,2)=(6,5)$, es decir, $\frac{1}{\sqrt{61}}(6,5)$.
+
+> [!success] Solución del Problema 4.10
+> **(a)** $h(2,0)=2\,e^{0}=2$.
+>
+> **(b)** $\nabla h=(e^{y},\,x\,e^{y})$, luego $\nabla h(2,0)=(1,2)$. Con $\vec u=\frac{1}{\sqrt2}(1,1)$:
+> $$D_{\vec u}h(2,0)=\frac{1+2}{\sqrt2}=\frac{3}{\sqrt2}>0,$$
+> es decir, **estamos subiendo**.
+>
+> **(c)** Imponiendo $\nabla h(2,0)\cdot\vec v=0$ resulta $v_1+2v_2=0$. Sirve la dirección $(-2,1)$ (o la opuesta), normalizada $\frac{1}{\sqrt5}(-2,1)$; es la tangente a la curva de nivel $x\,e^{y}=2$.
+>
+> **(d)** La dirección de máximo decrecimiento es $-\nabla h(2,0)=(-1,-2)$, es decir, $\frac{1}{\sqrt5}(-1,-2)$.
 
 > [!success] Solución del Problema 5.1
 > Divergencias:
