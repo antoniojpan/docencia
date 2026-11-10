@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-11-10T07:45:43.935+01:00","updated":"2026-11-10T07:45:33.228+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-11-10T12:32:46.098+01:00","updated":"2026-11-10T12:35:31.169+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
@@ -176,6 +176,28 @@
 > **(c)** $\mathbf{g}(t) = (\cos^3 t, \; \operatorname{sen}^3 t)$ en $t = \frac{\pi}{4}$.
 >
 > **(d)** Comprueba que $\mathbf{g}(t) = (2\cos t, \; 3\operatorname{sen} t)$ es una curva de nivel de $f(x,y) = \frac{x^2}{4} + \frac{y^2}{9}$ y verifica que $\nabla f \cdot \mathbf{g}' = 0$ en $t = \frac{\pi}{3}$.
+
+> [!question] Problema 5.4
+> Una embarcación sigue la derrota
+> $$\mathbf{r}(t)=(2t^{2},\,4t),\qquad 0\leq t\leq 3,$$
+> donde las coordenadas se miden en millas náuticas y $t$ en horas. El eje $x$ apunta hacia el este y el eje $y$ hacia el norte.
+>
+> **(a)** ¿Cuál es la posición de la embarcación al cabo de $1$ hora?
+>
+> **(b)** Calcula su velocidad vectorial y su rapidez en ese instante, indicando las unidades. ¿Hacia dónde se dirige?
+>
+> **(c)** Representa aproximadamente la trayectoria y dibuja el vector velocidad en el punto obtenido. ¿Se desplaza con rapidez constante?
+
+> [!question] Problema 5.5
+> Un ciclista da vueltas a una pista circular siguiendo el recorrido
+> $$\mathbf{s}(t)=\bigl(3\cos(2t),\,3\operatorname{sen}(2t)\bigr),\qquad t\geq 0,$$
+> donde las coordenadas se miden en kilómetros y $t$ en horas.
+>
+> **(a)** ¿Cuál es su posición en el instante $t=\frac{\pi}{6}$?
+>
+> **(b)** Calcula su velocidad vectorial y su rapidez en ese instante.
+>
+> **(c)** ¿Es constante la rapidez aunque cambie el vector velocidad? 
 
 ## 6. Optimización
 
@@ -407,6 +429,36 @@
 >
 > **(d)** $f(\mathbf{g}(t)) = \frac{4\cos^2 t}{4} + \frac{9\operatorname{sen}^2 t}{9} = \cos^2 t + \operatorname{sen}^2 t = 1$: es la curva de nivel $f = 1$ (una elipse). $\nabla f = \left(\frac{x}{2}, \frac{2y}{9}\right)$ y $\mathbf{g}'(t) = (-2\operatorname{sen} t, \; 3\cos t)$. En $t = \frac{\pi}{3}$: $\mathbf{g}\left(\frac{\pi}{3}\right) = \left(1, \frac{3\sqrt{3}}{2}\right)$, $\nabla f = \left(\frac{1}{2}, \frac{\sqrt{3}}{3}\right)$ y $\mathbf{g}' = \left(-\sqrt{3}, \frac{3}{2}\right)$. Por tanto
 > $$\nabla f \cdot \mathbf{g}' = \frac{1}{2}(-\sqrt{3}) + \frac{\sqrt{3}}{3}\cdot\frac{3}{2} = -\frac{\sqrt{3}}{2} + \frac{\sqrt{3}}{2} = 0.$$
+
+> [!success] Solución del Problema 5.4
+> **(a)** La posición es
+> $$\mathbf{r}(1)=(2,4),$$
+> es decir, $2$ millas náuticas al este y $4$ millas náuticas al norte del origen de coordenadas.
+>
+> **(b)** Derivando cada componente,
+> $$\mathbf{r}'(t)=(4t,4)\quad\Longrightarrow\quad \mathbf{r}'(1)=(4,4)\ \mathrm{nmi/h}.$$
+> Por tanto, la embarcación se dirige hacia el noreste, formando $45^\circ$ con la dirección este. Su rapidez es
+> $$\|\mathbf{r}'(1)\|=\sqrt{4^{2}+4^{2}}=4\sqrt{2}\ \mathrm{nmi/h}\approx 5.66\ \text{nudos}.$$
+> El vector $(4,4)$ es tangente a la derrota en $(2,4)$.
+>
+> **(c)** Como $t=y/4$, la trayectoria es la parte $y\geq0$ de la parábola $x=y^{2}/8$. En $(2,4)$ hay que dibujar el vector $(4,4)$ tangente a esa curva, apuntando hacia el noreste. Además,
+> $$\|\mathbf{r}'(t)\|=4\sqrt{t^{2}+1}\ \mathrm{nmi/h},$$
+> que depende de $t$: la rapidez **no es constante**, sino que aumenta durante la maniobra.
+
+> [!success] Solución del Problema 5.5
+> **(a)** Como $2t=\pi/3$, la posición es
+> $$\mathbf{s}\left(\frac{\pi}{6}\right)=\left(3\cos\frac{\pi}{3},\,3\operatorname{sen}\frac{\pi}{3}\right)=\left(\frac{3}{2},\,\frac{3\sqrt{3}}{2}\right)\ \mathrm{km}.$$
+>
+> **(b)** La velocidad vectorial es
+> $$\mathbf{s}'(t)=\bigl(-6\operatorname{sen}(2t),\,6\cos(2t)\bigr)\ \mathrm{km/h},$$
+> de donde
+> $$\mathbf{s}'\left(\frac{\pi}{6}\right)=(-3\sqrt{3},\,3)\ \mathrm{km/h}.$$
+> La rapidez es
+> $$\left\|\mathbf{s}'\left(\frac{\pi}{6}\right)\right\|=\sqrt{27+9}=6\ \mathrm{km/h}.$$
+>
+> **(c)** En cualquier instante,
+> $$\|\mathbf{s}'(t)\|=\sqrt{36\operatorname{sen}^{2}(2t)+36\cos^{2}(2t)}=6\ \mathrm{km/h},$$
+> así que la rapidez es constante, aunque las componentes y la dirección del vector velocidad cambian. 
 
 > [!success] Solución del Problema 6.1
 > Clasificación mediante el Hessiano:
