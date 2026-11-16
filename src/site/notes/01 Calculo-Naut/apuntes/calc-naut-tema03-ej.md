@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-11-10T12:32:46.098+01:00","updated":"2026-11-16T15:55:24.096+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-11-16T16:03:16.001+01:00","updated":"2026-11-16T16:03:03.296+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
@@ -7,7 +7,7 @@
 
 ## 1. Funciones de varias variables
 
-> [!question] Problema 1.1
+> [!question] Problema 1
 > Describe el tipo de función (campo escalar, curva parametrizada o campo vectorial) y qué representa:
 >
 > **(a)** La temperatura del agua en cada punto de un mapa.
@@ -18,12 +18,12 @@
 >
 > **(d)** La profundidad del fondo marino en cada posición $(x,y)$.
 
-> [!question] Problema 1.2
+> [!question] Problema 2
 > Para $f(x,y)=x^2+y^2$, dibuja las curvas de nivel $f=1$, $f=4$ y $f=9$ e indica qué forma tienen.
 
 ## 3. Derivadas parciales y diferenciabilidad
 
-> [!question] Problema 3.1
+> [!question] Problema 3
 > Calcula las derivadas parciales que se indican:
 >
 > **(a)** $f(x, y) = x^{y+1}$; $f_x$, $f_y$, $f_{xy}$
@@ -43,7 +43,7 @@
 > **(h)** $z = \frac{\sqrt{x+y}}{x}$; $z_x$, $z_y$
 
 
-> [!question] Problema 3.3
+> [!question] Problema 4
 > Halla la ecuación del plano tangente y de la recta normal a la gráfica de las siguientes funciones en los puntos indicados:
 >
 > **(a)** $f(x,y)=x^{2}+4y^{2}$ en $(x_0,y_0)=(2,-1)$
@@ -54,10 +54,10 @@
 
 ## 4. Gradiente y derivada direccional
 
-> [!question] Problema 4.1
-> Calcula el gradiente de las funciones del Problema 3.1.
+> [!question] Problema 5
+> Calcula el gradiente de las funciones del Problema 3.
 
-> [!question] Problema 4.2
+> [!question] Problema 6
 > Halla la derivada direccional en el punto y en la dirección indicados:
 >
 > **(a)** $f(x,y)=xe^{y}-ye^{x}$ en $(1,0)$ en la dirección de $(1,-\sqrt{3})$
@@ -70,20 +70,20 @@
 >
 > **(e)** $f(x,y,z)=e^{x}\cos(yz)$ en $(0,0,0)$ en la dirección de $(2,1,-2)$
 
-> [!question] Problema 4.3
+> [!question] Problema 7
 > Sea $f(x,y)=e^{x+2y}$. Halla el conjunto de puntos $(x,y)\in\mathbb{R}^{2}$ tales que la derivada direccional en $(x,y)$ en la dirección $(4,3)$ sea $2e$.
 
-> [!question] Problema 4.4
+> [!question] Problema 8
 > Sea $f(x,y)=1+\operatorname{sen}(3x+y)$. ¿Existe algún vector $\vec v\in\mathbb{R}^{2}$ tal que la derivada direccional de $f$ en $(0,0)$ en la dirección de $\vec v$ sea igual a $1$?
 
-> [!question] Problema 4.5
+> [!question] Problema 9
 > La temperatura de cada punto de una hoja de metal viene dada por $T(x,y)=e^{x}\cos y+e^{y}\cos x$.
 >
 > **(a)** ¿En qué dirección crece la temperatura más rápidamente a partir de $(0,0)$?
 >
 > **(b)** ¿Y en qué dirección decrece más rápidamente?
 
-> [!question] Problema 4.6
+> [!question] Problema 10
 > La densidad de una bola de metal centrada en el origen es $\rho(x,y,z)=ke^{-(x^{2}+y^{2}+z^{2})}$, con $k$ constante positiva.
 >
 > **(a)** ¿En qué dirección crece la densidad más rápidamente a partir de $(x,y,z)$?
@@ -92,12 +92,12 @@
 >
 > **(c)** ¿Cuáles son las derivadas direccionales de la densidad en las direcciones $\vec i$, $\vec j$ y $\vec k$?
 
-> [!question] Problema 4.7
+> [!question] Problema 11
 > **(a)** Sea $h(x,y)=2e^{-x^{2}}+e^{-3y^{2}}$ la altura de una montaña en la posición $(x,y)$. ¿En qué dirección desde $(1,0)$ se debe caminar para escalar lo más rápido posible?
 >
 > **(b)** La temperatura en cada punto $(x,y,z)$ es $T(x,y,z)=e^{-x}+e^{-2y}+e^{-3z}$. ¿En qué dirección debe moverse una persona situada en $(1,1,1)$ para enfriarse lo más rápido posible?
 
-> [!question] Problema 4.8
+> [!question] Problema 12
 > La altitud de una montaña en la posición $(x,y)$ viene dada por
 > $$h(x,y)=10-x^{2}-2y^{2}.$$
 > Estamos situados en el punto $(1,1)$. Se pide:
@@ -110,7 +110,7 @@
 >
 > **(d)** ¿En qué dirección debemos movernos para bajar lo más rápido posible?
 
-> [!question] Problema 4.9
+> [!question] Problema 13
 > La sonda (profundidad del fondo marino), medida en metros, en una zona de navegación viene dada por
 > $$s(x,y)=20-2x^{2}-xy-y^{2}.$$
 > El buque se encuentra en el punto $(1,2)$. Se pide:
@@ -123,7 +123,7 @@
 >
 > **(d)** ¿En qué dirección disminuye la sonda lo más rápidamente posible (es decir, hacia dónde se va a aguas más someras)?
 
-> [!question] Problema 4.10
+> [!question] Problema 14
 > La altitud de una ladera viene dada por
 > $$h(x,y)=x\,e^{y}.$$
 > Estamos en el punto $(2,0)$. Se pide:
@@ -138,7 +138,7 @@
 
 ## 5. Operadores diferenciales y curvas
 
-> [!question] Problema 5.1
+> [!question] Problema 15
 > Calcula la divergencia de las siguientes funciones:
 >
 > **(a)** $\mathbf{f}(x, y, z) = (x + 2y, \; x + 3z, \; 2y + 3z)$
@@ -153,10 +153,10 @@
 >
 > **(f)** $\mathbf{f}(x, y) = (x^y, \; y^x)$
 
-> [!question] Problema 5.2
-> Calcula el rotacional de las funciones **(a)**, **(c)** y **(e)** del Problema 5.1.
+> [!question] Problema 16
+> Calcula el rotacional de las funciones **(a)**, **(c)** y **(e)** del Problema 15.
 
-> [!question] Problema 5.3
+> [!question] Problema 17
 > Para las siguientes curvas, calcula el vector tangente $\mathbf{g}'(t)$, el vector tangente unitario $\mathbf{T}(t)$ y la recta tangente en el punto indicado. Indica también si la curva es regular.
 >
 > **(a)** $\mathbf{g}(t) = (t^2, \; t^3)$ en $t = 1$. ¿Qué ocurre en $t = 0$?
@@ -167,7 +167,7 @@
 >
 > **(d)** Comprueba que $\mathbf{g}(t) = (2\cos t, \; 3\operatorname{sen} t)$ es una curva de nivel de $f(x,y) = \frac{x^2}{4} + \frac{y^2}{9}$ y verifica que $\nabla f \cdot \mathbf{g}' = 0$ en $t = \frac{\pi}{3}$.
 
-> [!question] Problema 5.4
+> [!question] Problema 18
 > Una embarcación sigue la derrota
 > $$\mathbf{r}(t)=(2t^{2},\,4t),\qquad 0\leq t\leq 3,$$
 > donde las coordenadas se miden en millas náuticas y $t$ en horas. El eje $x$ apunta hacia el este y el eje $y$ hacia el norte.
@@ -178,7 +178,7 @@
 >
 > **(c)** Representa aproximadamente la trayectoria y dibuja el vector velocidad en el punto obtenido. ¿Se desplaza con rapidez constante?
 
-> [!question] Problema 5.5
+> [!question] Problema 19
 > Un ciclista da vueltas a una pista circular siguiendo el recorrido
 > $$\mathbf{s}(t)=\bigl(3\cos(2t),\,3\operatorname{sen}(2t)\bigr),\qquad t\geq 0,$$
 > donde las coordenadas se miden en kilómetros y $t$ en horas.
@@ -191,7 +191,7 @@
 
 ## 6. Optimización
 
-> [!question] Problema 6.1
+> [!question] Problema 20
 > Clasifica los puntos críticos de las siguientes funciones mediante el Hessiano:
 >
 > **(a)** $f(x, y) = x^3 + y^3 - 3xy$
@@ -206,7 +206,7 @@
 >
 > **(f)** $f(x, y) = 2x^3 + 2y^3 - x^2 y^2$
 
-> [!question] Problema 6.2
+> [!question] Problema 21
 > Calcula y clasifica los puntos críticos de las siguientes funciones sujetas a las restricciones que se especifican mediante multiplicadores de Lagrange:
 >
 > **(a)** $f(x,y)=x^{2}+y^{2}$ sujeta a $xy=1$
@@ -219,273 +219,213 @@
 >
 > **(e)** $f(x,y)=\dfrac{\log x}{x}+\dfrac{\log y}{y}$ sujeta a $x+y=1$ con $x,y>0$
 
-> [!question] Problema 6.3
+> [!question] Problema 22
 > Una empresa precisa vallar un terreno rectangular de $20\,\mathrm{m}^{2}$. Para el lado más largo desea vallas de hierro gris a $25\ \text{€/m}$; para el lado más corto, vallas de aluminio blanco a $20\ \text{€/m}$. ¿Qué dimensiones minimizan el coste manteniendo el área de $20\,\mathrm{m}^{2}$?
 
-> [!question] Problema 6.4
+> [!question] Problema 23
 > Una caja rectangular sin tapa se fabrica con $12\,\mathrm{m}^{2}$ de cartón. Calcula el volumen máximo.
 
-> [!question] Problema 6.5
+> [!question] Problema 24
 > Calcula la distancia máxima y mínima desde el origen a un punto de la elipse $x^{2}+4y^{2}=16$.
 
-> [!question] Problema 6.6
+> [!question] Problema 25
 > Una empresa desea diseñar un tanque cilíndrico con extremos semiesféricos para almacenar $8000\,\mathrm{m}^{3}$. ¿Qué radio y qué altura debe tener la parte cilíndrica para usar la menor cantidad posible de material?
 
 ---
 
 # Soluciones
 
-> [!success] Solución del Problema 1.1
+> [!success] Solución del Problema 1
 > **(a)** Campo escalar $f:\mathbb{R}^2\to\mathbb{R}$.
 >
-> **(b)** Curva parametrizada $\mathbf{g}:\mathbb{R}\to\mathbb{R}^2$ (la derrota).
+> **(b)** Curva parametrizada $\mathbf{g}:\mathbb{R}\to\mathbb{R}^2$.
 >
 > **(c)** Campo vectorial $\mathbf{f}:\mathbb{R}^2\to\mathbb{R}^2$.
 >
-> **(d)** Campo escalar $f:\mathbb{R}^2\to\mathbb{R}$; sus curvas de nivel son las isóbatas de la carta náutica.
+> **(d)** Campo escalar $f:\mathbb{R}^2\to\mathbb{R}$.
 
-> [!success] Solución del Problema 1.2
-> Las curvas de nivel son circunferencias centradas en el origen de radios $1$, $2$ y $3$ respectivamente. La separación entre ellas disminuye al alejarse del origen, lo que indica que $|\nabla f|$ crece con la distancia.
+> [!success] Solución del Problema 2
+> Circunferencias centradas en el origen y de radios $1$, $2$ y $3$, respectivamente.
 
-> [!success] Solución del Problema 3.1
-> Derivadas parciales:
+> [!success] Solución del Problema 3
+> **(a)** $f_x=(y+1)x^y$, $f_y=x^{y+1}\ln x$, $f_{xy}=x^y(1+(y+1)\ln x)$.
 >
-> **(a)** $f_x = (y + 1)x^y, \quad f_y = x^{y+1} \ln x, \quad f_{xy} = x^y(1 + (y + 1) \ln x)$
+> **(b)** $f_x=\frac{2x}{y+x^2}$, $f_y=\frac{1}{y+x^2}$, $f_{xy}=-\frac{2x}{(y+x^2)^2}$.
 >
-> **(b)** $f_x = \frac{2x}{y+x^2}, \quad f_y = \frac{1}{y+x^2}, \quad f_{xy} = -\frac{2x}{(y+x^2)^2}$
+> **(c)** $f_x=-\operatorname{sen}x-\frac{y}{x^2}\left(1+\tan^2\frac{y}{x}\right)$, $f_y=\frac{1}{x}\left(1+\tan^2\frac{y}{x}\right)-\cos y$.
 >
-> **(c)** $f_x = -\operatorname{sen} x - \frac{y}{x^2}\left(1 + \tan^2 \frac{y}{x}\right), \quad f_y = \frac{1}{x}\left(1 + \tan^2 \frac{y}{x}\right) - \cos y$
+> **(d)** $f_x=2xy^3$, $f_{xx}=2y^3$, $f_{xy}=6xy^2$, $f_{yy}=6x^2y-60y^2$, $f_{xxyyy}=12$, $\frac{\partial^5 f}{\partial x^2\partial y^3}=12$.
 >
-> **(d)** $f_x = 2xy^3, \quad f_{xx} = 2y^3, \quad f_{xy} = 6xy^2, \quad f_{yy} = 6x^2y - 60y^2, \quad f_{xxyyy} = 12, \quad \frac{\partial^5 f}{\partial x^2 \partial y^3} = 12$
+> **(e)** $f_x=y$, $f_y=x$, $f_{yz}=0$, $f_z=1$, $f_{xy}=1$.
 >
-> **(e)** $f_x = y, \quad f_y = x, \quad f_{yz} = 0, \quad f_z = 1, \quad f_{xy} = 1$
+> **(f)** $f_x=z\,2^{xz}\ln2$, $f_y=0$, $f_z=x\,2^{xz}\ln2$, $f_{xx}=z^2\,2^{xz}(\ln2)^2$, $f_{xy}=0$.
 >
-> **(f)** $f_x = z \cdot 2^{xz} \ln 2, \quad f_y = 0, \quad f_z = x \cdot 2^{xz} \ln 2, \quad f_{xx} = z^2 \cdot 2^{xz}(\ln 2)^2, \quad f_{xy} = 0$
+> **(g)** $f_x=ye^{xy}\cos y^2$, $f_y=e^{xy}(x\cos y^2-2y\operatorname{sen}y^2)$.
 >
-> **(g)** $f_x = y e^{xy} \cos y^2, \quad f_y = e^{xy}(x \cos y^2 - 2y \operatorname{sen} y^2)$
->
-> **(h)** $z_x = -\frac{\sqrt{x+y}}{x^2} + \frac{1}{2x\sqrt{x+y}}, \quad z_y = \frac{1}{2x\sqrt{x+y}}$
+> **(h)** $z_x=-\frac{\sqrt{x+y}}{x^2}+\frac{1}{2x\sqrt{x+y}}$, $z_y=\frac{1}{2x\sqrt{x+y}}$.
 
-> [!success] Solución del Problema 3.2
-> Diferenciabilidad:
+> [!success] Solución del Problema 4
+> **(a)** Plano tangente: $z=4x-8y-8$. Recta normal: $(x,y,z)=(2,-1,8)+t(4,-8,-1)$.
 >
-> **(a)** Sus derivadas parciales ($2x, 2y, 2z$) son continuas en $\mathbb{R}^3$; por tanto es diferenciable en todo $\mathbb{R}^3$.
+> **(b)** Plano tangente: $z=2x+y-1$. Recta normal: $(x,y,z)=(1,0,1)+t(2,1,-1)$.
 >
-> **(b)** $f_x=e^{x}\operatorname{sen} y$, $f_y=e^{x}\cos y$, continuas en $\mathbb{R}^2$; es diferenciable en todo $\mathbb{R}^2$.
->
-> **(c)** $f_x=2xe^{-xy}-y(x^{2}+y^{2})e^{-xy}$, $f_y=2ye^{-xy}-x(x^{2}+y^{2})e^{-xy}$, continuas en $\mathbb{R}^2$; es diferenciable en todo $\mathbb{R}^2$.
->
-> **(d)** En $(0,0)$ la derivada parcial $f_x(0,0)=\lim_{h\to 0}\frac{|h|}{h}$ no existe, luego $f$ **no es diferenciable** en el origen (es continua, pero presenta un "pico").
+> **(c)** Plano tangente: $z=\frac{\sqrt5}{2}+\frac{2}{\sqrt5}(x-1)+\frac{1}{\sqrt5}\left(y-\frac12\right)$. Recta normal: $(x,y,z)=\left(1,\frac12,\frac{\sqrt5}{2}\right)+t\left(\frac{2}{\sqrt5},\frac{1}{\sqrt5},-1\right)$.
 
-> [!success] Solución del Problema 3.3
-> **(a)** $z_0=8$, $f_x=2x$, $f_y=8y$, luego $f_x(2,-1)=4$ y $f_y(2,-1)=-8$. Plano: $z=4x-8y-8$. Recta normal: $(x,y,z)=(2,-1,8)+t\,(4,-8,-1)$.
+> [!success] Solución del Problema 5
+> **(a)** $\nabla f=\left((y+1)x^y,\;x^{y+1}\ln x\right)$.
 >
-> **(b)** $z_0=1$, $f_x=\frac1x+\cos y$, $f_y=1-x\operatorname{sen} y$, luego $f_x(1,0)=2$ y $f_y(1,0)=1$. Plano: $z=2x+y-1$. Recta normal: $(x,y,z)=(1,0,1)+t\,(2,1,-1)$.
+> **(b)** $\nabla f=\left(\frac{2x}{y+x^2},\;\frac{1}{y+x^2}\right)$.
 >
-> **(c)** $z_0=\sqrt5/2$, $f_x=\frac{x}{\sqrt{x^2+y^2}}$, $f_y=\frac{y}{\sqrt{x^2+y^2}}$, luego $f_x=\frac{2}{\sqrt5}$ y $f_y=\frac{1}{\sqrt5}$. Plano: $z=\frac{\sqrt5}{2}+\frac{2}{\sqrt5}(x-1)+\frac{1}{\sqrt5}\left(y-\frac12\right)$. Recta normal: $(x,y,z)=\left(1,\frac12,\frac{\sqrt5}{2}\right)+t\left(\frac{2}{\sqrt5},\frac{1}{\sqrt5},-1\right)$.
+> **(c)** $\nabla f=\left(-\operatorname{sen}x-\frac{y}{x^2}\left(1+\tan^2\frac{y}{x}\right),\;\frac{1}{x}\left(1+\tan^2\frac{y}{x}\right)-\cos y\right)$.
+>
+> **(d)** $\nabla f=\left(2xy^3,\;3x^2y^2-20y^3\right)$.
+>
+> **(e)** $\nabla f=(y,x,1)$.
+>
+> **(f)** $\nabla f=\left(z\,2^{xz}\ln2,\;0,\;x\,2^{xz}\ln2\right)$.
+>
+> **(g)** $\nabla f=\left(ye^{xy}\cos y^2,\;e^{xy}(x\cos y^2-2y\operatorname{sen}y^2)\right)$.
+>
+> **(h)** $\nabla z=\left(-\frac{\sqrt{x+y}}{x^2}+\frac{1}{2x\sqrt{x+y}},\;\frac{1}{2x\sqrt{x+y}}\right)$.
 
-> [!success] Solución del Problema 4.1
-> Gradiente de las funciones del Problema 3.1 (utilizando $f_y = 3x^2y^2 - 20y^3$ para el apartado **(d)**):
+> [!success] Solución del Problema 6
+> **(a)** $D_{\vec u}f(1,0)=\frac12+\frac{\sqrt3}{2}(e-1)\approx1.99$.
 >
-> **(a)** $\nabla f = \left((y + 1)x^y, \; x^{y+1} \ln x\right)$
+> **(b)** $D_{\vec u}f(1,0)=-\frac{3\sqrt2}{2}$.
 >
-> **(b)** $\nabla f = \left(\frac{2x}{y+x^2}, \; \frac{1}{y+x^2}\right)$
+> **(c)** $D_{\vec u}f(1,-1,1)=\sqrt6$.
 >
-> **(c)** $\nabla f = \left(-\operatorname{sen} x - \frac{y}{x^2}\left(1 + \tan^2 \frac{y}{x}\right), \; \frac{1}{x}\left(1 + \tan^2 \frac{y}{x}\right) - \cos y\right)$
+> **(d)** $D_{\vec u}f(2,0,1)=\frac{2\sqrt5}{25}$.
 >
-> **(d)** $\nabla f = \left(2xy^3, \; 3x^2y^2 - 20y^3\right)$
->
-> **(e)** $\nabla f = (y, \; x, \; 1)$
->
-> **(f)** $\nabla f = \left(z \cdot 2^{xz} \ln 2, \; 0, \; x \cdot 2^{xz} \ln 2\right)$
->
-> **(g)** $\nabla f = \left(y e^{xy} \cos y^2, \; e^{xy}(x \cos y^2 - 2y \operatorname{sen} y^2)\right)$
->
-> **(h)** $\nabla f = \left(-\frac{\sqrt{x+y}}{x^2} + \frac{1}{2x\sqrt{x+y}}, \; \frac{1}{2x\sqrt{x+y}}\right)$
+> **(e)** $D_{\vec u}f(0,0,0)=\frac23$.
 
-> [!success] Solución del Problema 4.2
-> Derivadas direccionales (con $\vec u$ unitario):
->
-> **(a)** $\nabla f=(e^{y}-ye^{x},\; xe^{y}-e^{x})$, $\nabla f(1,0)=(1,\,1-e)$, $\vec u=\left(\tfrac12,\,-\tfrac{\sqrt3}{2}\right)$:
-> $$D_{\vec u}f(1,0)=\frac12+\frac{\sqrt3}{2}(e-1)\approx 1.99$$
->
-> **(b)** $f_x=-\dfrac{3y}{(x-y)^{2}}$, $f_y=\dfrac{3x}{(x-y)^{2}}$; en $(1,0)$: $\nabla f=(0,3)$, $\vec u=\left(\tfrac{1}{\sqrt2},-\tfrac{1}{\sqrt2}\right)$:
-> $$D_{\vec u}f(1,0)=-\frac{3}{\sqrt2}=-\frac{3\sqrt2}{2}$$
->
-> **(c)** $\nabla f=(2xy+z^{2},\; x^{2}+2yz,\; y^{2}+2zx)$; en $(1,-1,1)$: $(-1,-1,3)$, $\vec u=\frac{1}{\sqrt6}(1,-1,2)$:
-> $$D_{\vec u}f=\frac{-1+1+6}{\sqrt6}=\sqrt6$$
->
-> **(d)** $\nabla f=\dfrac{(x,y,z)}{x^{2}+y^{2}+z^{2}}$; en $(2,0,1)$: $\left(\tfrac25,0,\tfrac15\right)$, $\vec u=\frac{1}{\sqrt5}(1,2,0)$:
-> $$D_{\vec u}f=\frac{2}{5\sqrt5}=\frac{2\sqrt5}{25}$$
->
-> **(e)** $\nabla f=\left(e^{x}\cos(yz),\; -ze^{x}\operatorname{sen}(yz),\; -ye^{x}\operatorname{sen}(yz)\right)$; en $(0,0,0)$: $(1,0,0)$, $\vec u=\frac13(2,1,-2)$:
-> $$D_{\vec u}f=\frac23$$
+> [!success] Solución del Problema 7
+> La recta $x+2y=1$.
 
-> [!success] Solución del Problema 4.3
-> $\nabla f=e^{x+2y}(1,2)$ y $\vec u=\frac{1}{5}(4,3)$, luego
-> $$D_{\vec u}f=e^{x+2y}\cdot\frac{4+6}{5}=2e^{x+2y}.$$
-> Igualando a $2e$: $e^{x+2y}=e$, es decir, la recta $x+2y=1$.
+> [!success] Solución del Problema 8
+> Sí; las direcciones unitarias son $(0,1)$ y $\left(\frac35,-\frac45\right)$.
 
-> [!success] Solución del Problema 4.4
-> $\nabla f(0,0)=(3,1)$, con $\|\nabla f(0,0)\|=\sqrt{10}>1$. Como $D_{\vec u}f(0,0)=\nabla f(0,0)\cdot\vec u$ recorre de forma continua el intervalo $[-\sqrt{10},\sqrt{10}]$ al girar $\vec u$, **sí existe** (de hecho, dos direcciones): basta tomar $\vec u=(\cos\theta,\operatorname{sen}\theta)$ con $3\cos\theta+\operatorname{sen}\theta=1$.
+> [!success] Solución del Problema 9
+> **(a)** $\frac{1}{\sqrt2}(1,1)$.
+>
+> **(b)** $\frac{1}{\sqrt2}(-1,-1)$.
 
-> [!success] Solución del Problema 4.5
-> $\nabla T=(e^{x}\cos y-e^{y}\operatorname{sen} x,\; -e^{x}\operatorname{sen} y+e^{y}\cos x)$ y $\nabla T(0,0)=(1,1)$.
+> [!success] Solución del Problema 10
+> **(a)** $-\frac{1}{\sqrt{x^2+y^2+z^2}}(x,y,z)$, hacia el origen, si $(x,y,z)\neq(0,0,0)$.
 >
-> **(a)** La temperatura crece más rápidamente en la dirección $(1,1)$, es decir, $\frac{1}{\sqrt2}(1,1)$.
+> **(b)** $\frac{1}{\sqrt{x^2+y^2+z^2}}(x,y,z)$, alejándose del origen, si $(x,y,z)\neq(0,0,0)$.
 >
-> **(b)** Decrece más rápidamente en la dirección opuesta, $\frac{1}{\sqrt2}(-1,-1)$.
+> **(c)** $\rho_x=-2kxe^{-(x^2+y^2+z^2)}$, $\rho_y=-2kye^{-(x^2+y^2+z^2)}$, $\rho_z=-2kze^{-(x^2+y^2+z^2)}$.
 
-> [!success] Solución del Problema 4.6
-> $\nabla\rho=-2k\,e^{-(x^{2}+y^{2}+z^{2})}(x,y,z)$.
+> [!success] Solución del Problema 11
+> **(a)** En la dirección $(-1,0)$.
 >
-> **(a)** Crece más rápidamente en la dirección $-\frac{1}{\sqrt{x^{2}+y^{2}+z^{2}}}(x,y,z)$ (hacia el origen).
->
-> **(b)** Decrece más rápidamente en la dirección $\frac{1}{\sqrt{x^{2}+y^{2}+z^{2}}}(x,y,z)$ (alejándose del origen).
->
-> **(c)** $\rho_x=-2kx\,e^{-(x^{2}+y^{2}+z^{2})}$, $\rho_y=-2ky\,e^{-(x^{2}+y^{2}+z^{2})}$, $\rho_z=-2kz\,e^{-(x^{2}+y^{2}+z^{2})}$.
+> **(b)** En la dirección $\left(e^{-1},2e^{-2},3e^{-3}\right)$.
 
-> [!success] Solución del Problema 4.7
-> **(a)** $\nabla h=(-4xe^{-x^{2}},\, -6ye^{-3y^{2}})$, luego $\nabla h(1,0)=(-4/e,\,0)$: se debe caminar en la dirección $(-1,0)$ (hacia $x$ decreciente).
+> [!success] Solución del Problema 12
+> **(a)** $7$.
 >
-> **(b)** $\nabla T=(-e^{-x},\,-2e^{-2y},\,-3e^{-3z})$ y $\nabla T(1,1,1)=\left(-e^{-1},\,-2e^{-2},\,-3e^{-3}\right)$. Para enfriarse hay que moverse en la dirección de máximo decrecimiento, $-\nabla T(1,1,1)=\left(e^{-1},\,2e^{-2},\,3e^{-3}\right)$.
+> **(b)** Bajando.
+>
+> **(c)** En cualquiera de las direcciones $\pm\frac{1}{\sqrt5}(-2,1)$.
+>
+> **(d)** En la dirección $\frac{1}{\sqrt5}(1,2)$.
 
-> [!success] Solución del Problema 4.8
-> **(a)** $h(1,1)=10-1-2=7$.
+> [!success] Solución del Problema 13
+> **(a)** $12$ m.
 >
-> **(b)** $\nabla h=(-2x,\,-4y)$, luego $\nabla h(1,1)=(-2,-4)$. Con $\vec u=\frac{1}{\sqrt{10}}(3,1)$:
-> $$D_{\vec u}h(1,1)=\frac{-6-4}{\sqrt{10}}=-\sqrt{10}\approx-3.16<0,$$
-> es decir, **estamos bajando**.
+> **(b)** Disminuye.
 >
-> **(c)** Hay que moverse en una dirección perpendicular al gradiente, $\nabla h(1,1)\cdot\vec v=0$: $-2v_1-4v_2=0$, o sea $v_1=-2v_2$. Sirve la dirección $(-2,1)$ (o la opuesta), normalizada $\frac{1}{\sqrt5}(-2,1)$; es la tangente a la curva de nivel $10-x^{2}-2y^{2}=7$.
+> **(c)** En cualquiera de las direcciones $\pm\frac{1}{\sqrt{61}}(5,-6)$.
 >
-> **(d)** La dirección de máximo decrecimiento es $-\nabla h(1,1)=(2,4)$, es decir, $\frac{1}{\sqrt5}(2,4)=\frac{2}{\sqrt5}(1,2)$.
+> **(d)** En la dirección $\frac{1}{\sqrt{61}}(6,5)$.
 
-> [!success] Solución del Problema 4.9
-> **(a)** $s(1,2)=20-2-2-4=12$ m.
+> [!success] Solución del Problema 14
+> **(a)** $2$.
 >
-> **(b)** $\nabla s=(-4x-y,\,-x-2y)$, luego $\nabla s(1,2)=(-6,-5)$. Con $\vec u=\frac{1}{\sqrt2}(1,1)$:
-> $$D_{\vec u}s(1,2)=\frac{-6-5}{\sqrt2}=-\frac{11}{\sqrt2}<0,$$
-> de modo que la sonda **disminuye**: navegamos hacia aguas menos profundas.
+> **(b)** Subiendo.
 >
-> **(c)** Buscamos $\vec v$ con $\nabla s(1,2)\cdot\vec v=0$, esto es, $-6v_1-5v_2=0$. Sirve la dirección $(5,-6)$ (o la opuesta), normalizada $\frac{1}{\sqrt{61}}(5,-6)$; es la tangente a la isóbata $s=12$.
+> **(c)** En cualquiera de las direcciones $\pm\frac{1}{\sqrt5}(-2,1)$.
 >
-> **(d)** La sonda disminuye más rápidamente en la dirección $-\nabla s(1,2)=(6,5)$, es decir, $\frac{1}{\sqrt{61}}(6,5)$.
+> **(d)** En la dirección $\frac{1}{\sqrt5}(-1,-2)$.
 
-> [!success] Solución del Problema 4.10
-> **(a)** $h(2,0)=2\,e^{0}=2$.
+> [!success] Solución del Problema 15
+> **(a)** $\operatorname{div}(\mathbf{f})=4$.
 >
-> **(b)** $\nabla h=(e^{y},\,x\,e^{y})$, luego $\nabla h(2,0)=(1,2)$. Con $\vec u=\frac{1}{\sqrt2}(1,1)$:
-> $$D_{\vec u}h(2,0)=\frac{1+2}{\sqrt2}=\frac{3}{\sqrt2}>0,$$
-> es decir, **estamos subiendo**.
+> **(b)** $\operatorname{div}(\mathbf{f})=0$.
 >
-> **(c)** Imponiendo $\nabla h(2,0)\cdot\vec v=0$ resulta $v_1+2v_2=0$. Sirve la dirección $(-2,1)$ (o la opuesta), normalizada $\frac{1}{\sqrt5}(-2,1)$; es la tangente a la curva de nivel $x\,e^{y}=2$.
+> **(c)** $\operatorname{div}(\mathbf{f})=2x$.
 >
-> **(d)** La dirección de máximo decrecimiento es $-\nabla h(2,0)=(-1,-2)$, es decir, $\frac{1}{\sqrt5}(-1,-2)$.
+> **(d)** $\operatorname{div}(\mathbf{f})=3x$.
+>
+> **(e)** $\operatorname{div}(\mathbf{f})=-\frac{1}{(x+y)^2}+1-xy\operatorname{sen}(xyz)$.
+>
+> **(f)** $\operatorname{div}(\mathbf{f})=yx^{y-1}+xy^{x-1}$.
 
-> [!success] Solución del Problema 5.1
-> Divergencias:
+> [!success] Solución del Problema 16
+> **(a)** $\operatorname{rot}(\mathbf{f})=(-1,0,-1)$.
 >
-> **(a)** $\operatorname{div}(\mathbf{f}) = 4$
+> **(c)** $\operatorname{rot}(\mathbf{f})=\left(-\operatorname{sen}y+\frac{1}{x-z},\;-3,\;\frac{1}{x-z}-1\right)$.
 >
-> **(b)** $\operatorname{div}(\mathbf{f}) = 0$
->
-> **(c)** $\operatorname{div}(\mathbf{f}) = 2x$
->
-> **(d)** $\operatorname{div}(\mathbf{f}) = 3x$
->
-> **(e)** $\operatorname{div}(\mathbf{f}) = -\frac{1}{(x+y)^2} + 1 - xy \operatorname{sen}(xyz)$
->
-> **(f)** $\operatorname{div}(\mathbf{f}) = y x^{y-1} + x y^{x-1}$
+> **(e)** $\operatorname{rot}(\mathbf{f})=\left(-xz\operatorname{sen}(xyz)-1,\;yz\operatorname{sen}(xyz),\;\frac{1}{(x+y)^2}\right)$.
 
-> [!success] Solución del Problema 5.2
-> Rotacionales:
+> [!success] Solución del Problema 17
+> **(a)** $\mathbf{g}'(t)=(2t,3t^2)$, $\mathbf{T}(1)=\frac{1}{\sqrt{13}}(2,3)$ y recta tangente $y=\frac32x-\frac12$. La curva no es regular en $t=0$, donde presenta una cúspide.
 >
-> **(a)** $\operatorname{rot}(\mathbf{f}) = (-1, \; 0, \; -1)$
+> **(b)** $\mathbf{g}'(t)=e^t(\cos t-\operatorname{sen}t,\operatorname{sen}t+\cos t)$, $\|\mathbf{g}'(t)\|=\sqrt2e^t$, $\mathbf{T}(t)=\frac{1}{\sqrt2}(\cos t-\operatorname{sen}t,\operatorname{sen}t+\cos t)$ y recta tangente en $t=0$: $y=x-1$. La curva es regular en todo $\mathbb{R}$.
 >
-> **(c)** $\operatorname{rot}(\mathbf{f}) = \left(-\operatorname{sen} y + \frac{1}{x-z}, \; -3, \; \frac{1}{x-z} - 1\right)$
+> **(c)** $\mathbf{g}'(\pi/4)=\frac{3\sqrt2}{4}(-1,1)$, $\mathbf{T}(\pi/4)=\frac{1}{\sqrt2}(-1,1)$ y recta tangente $y=-x+\frac{\sqrt2}{2}$. La curva es regular salvo en $t=\frac{k\pi}{2}$, con $k\in\mathbb{Z}$.
 >
-> **(e)** $\operatorname{rot}(\mathbf{f}) = \left(-xz \operatorname{sen}(xyz) - 1, \; yz \operatorname{sen}(xyz), \; \frac{1}{(x+y)^2}\right)$
+> **(d)** Es la elipse de nivel $f=1$ y $\nabla f\cdot\mathbf{g}'=0$ en $t=\frac{\pi}{3}$.
 
-> [!success] Solución del Problema 5.3
-> Vectores tangentes:
+> [!success] Solución del Problema 18
+> **(a)** $\mathbf{r}(1)=(2,4)$ millas náuticas.
 >
-> **(a)** $\mathbf{g}'(t) = (2t, \; 3t^2)$. En $t = 1$: $\mathbf{g}'(1) = (2, 3)$, $\|\mathbf{g}'(1)\| = \sqrt{13}$ y $\mathbf{T}(1) = \left(\frac{2}{\sqrt{13}}, \frac{3}{\sqrt{13}}\right)$. Recta tangente en $(1,1)$: $(1,1) + \lambda(2,3)$, es decir, $y = \frac{3}{2}x - \frac{1}{2}$.
-> En $t = 0$ se tiene $\mathbf{g}'(0) = (0,0)$: la curva **no es regular** en ese punto y presenta una **cúspide** (parábola semicúbica).
+> **(b)** $\mathbf{r}'(1)=(4,4)\ \mathrm{nmi/h}$, con rapidez $4\sqrt2\ \mathrm{nmi/h}\approx5.66$ nudos. Se dirige hacia el noreste, formando $45^\circ$ con la dirección este.
 >
-> **(b)** $\mathbf{g}'(t) = e^t(\cos t - \operatorname{sen} t, \; \operatorname{sen} t + \cos t)$, de donde $\|\mathbf{g}'(t)\| = \sqrt{2}\,e^t$ y $\mathbf{T}(t) = \frac{1}{\sqrt{2}}(\cos t - \operatorname{sen} t, \; \operatorname{sen} t + \cos t)$. En $t = 0$: $\mathbf{g}'(0) = (1, 1)$, $\|\mathbf{g}'(0)\| = \sqrt{2}$ y $\mathbf{T}(0) = \left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right)$. Recta tangente en $(1,0)$: $y = x - 1$. La curva (espiral logarítmica) es regular en todo $\mathbb{R}$.
->
-> **(c)** $\mathbf{g}'(t) = (-3\cos^2 t \operatorname{sen} t, \; 3\operatorname{sen}^2 t \cos t)$. En $t = \frac{\pi}{4}$: $\mathbf{g}'\left(\frac{\pi}{4}\right) = \left(-\frac{3\sqrt{2}}{4}, \frac{3\sqrt{2}}{4}\right)$, $\left\|\mathbf{g}'\left(\frac{\pi}{4}\right)\right\| = \frac{3}{2}$ y $\mathbf{T}\left(\frac{\pi}{4}\right) = \left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$. El punto es $\left(\frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}\right)$ y la recta tangente es $y = -x + \frac{\sqrt{2}}{2}$. La curva (astroide) es regular salvo en $t = 0, \frac{\pi}{2}, \pi, \frac{3\pi}{2}$, donde $\mathbf{g}' = \mathbf{0}$ y aparecen las cuatro cúspides.
->
-> **(d)** $f(\mathbf{g}(t)) = \frac{4\cos^2 t}{4} + \frac{9\operatorname{sen}^2 t}{9} = \cos^2 t + \operatorname{sen}^2 t = 1$: es la curva de nivel $f = 1$ (una elipse). $\nabla f = \left(\frac{x}{2}, \frac{2y}{9}\right)$ y $\mathbf{g}'(t) = (-2\operatorname{sen} t, \; 3\cos t)$. En $t = \frac{\pi}{3}$: $\mathbf{g}\left(\frac{\pi}{3}\right) = \left(1, \frac{3\sqrt{3}}{2}\right)$, $\nabla f = \left(\frac{1}{2}, \frac{\sqrt{3}}{3}\right)$ y $\mathbf{g}' = \left(-\sqrt{3}, \frac{3}{2}\right)$. Por tanto
-> $$\nabla f \cdot \mathbf{g}' = \frac{1}{2}(-\sqrt{3}) + \frac{\sqrt{3}}{3}\cdot\frac{3}{2} = -\frac{\sqrt{3}}{2} + \frac{\sqrt{3}}{2} = 0.$$
+> **(c)** La trayectoria es la parábola $x=\frac{y^2}{8}$, con $y\geq0$, y el vector velocidad en $(2,4)$ es $(4,4)$. La rapidez no es constante: $\|\mathbf{r}'(t)\|=4\sqrt{t^2+1}\ \mathrm{nmi/h}$.
 
-> [!success] Solución del Problema 5.4
-> **(a)** La posición es
-> $$\mathbf{r}(1)=(2,4),$$
-> es decir, $2$ millas náuticas al este y $4$ millas náuticas al norte del origen de coordenadas.
+> [!success] Solución del Problema 19
+> **(a)** $\left(\frac32,\frac{3\sqrt3}{2}\right)\ \mathrm{km}$.
 >
-> **(b)** Derivando cada componente,
-> $$\mathbf{r}'(t)=(4t,4)\quad\Longrightarrow\quad \mathbf{r}'(1)=(4,4)\ \mathrm{nmi/h}.$$
-> Por tanto, la embarcación se dirige hacia el noreste, formando $45^\circ$ con la dirección este. Su rapidez es
-> $$\|\mathbf{r}'(1)\|=\sqrt{4^{2}+4^{2}}=4\sqrt{2}\ \mathrm{nmi/h}\approx 5.66\ \text{nudos}.$$
-> El vector $(4,4)$ es tangente a la derrota en $(2,4)$.
+> **(b)** $\mathbf{s}'(\pi/6)=(-3\sqrt3,3)\ \mathrm{km/h}$ y rapidez $6\ \mathrm{km/h}$.
 >
-> **(c)** Como $t=y/4$, la trayectoria es la parte $y\geq0$ de la parábola $x=y^{2}/8$. En $(2,4)$ hay que dibujar el vector $(4,4)$ tangente a esa curva, apuntando hacia el noreste. Además,
-> $$\|\mathbf{r}'(t)\|=4\sqrt{t^{2}+1}\ \mathrm{nmi/h},$$
-> que depende de $t$: la rapidez **no es constante**, sino que aumenta durante la maniobra.
+> **(c)** Sí; $\|\mathbf{s}'(t)\|=6\ \mathrm{km/h}$ para todo $t$.
 
-> [!success] Solución del Problema 5.5
-> **(a)** Como $2t=\pi/3$, la posición es
-> $$\mathbf{s}\left(\frac{\pi}{6}\right)=\left(3\cos\frac{\pi}{3},\,3\operatorname{sen}\frac{\pi}{3}\right)=\left(\frac{3}{2},\,\frac{3\sqrt{3}}{2}\right)\ \mathrm{km}.$$
+> [!success] Solución del Problema 20
+> **(a)** $(0,0)$: punto de silla; $(1,1)$: mínimo relativo.
 >
-> **(b)** La velocidad vectorial es
-> $$\mathbf{s}'(t)=\bigl(-6\operatorname{sen}(2t),\,6\cos(2t)\bigr)\ \mathrm{km/h},$$
-> de donde
-> $$\mathbf{s}'\left(\frac{\pi}{6}\right)=(-3\sqrt{3},\,3)\ \mathrm{km/h}.$$
-> La rapidez es
-> $$\left\|\mathbf{s}'\left(\frac{\pi}{6}\right)\right\|=\sqrt{27+9}=6\ \mathrm{km/h}.$$
+> **(b)** $(2,3)$: máximo relativo.
 >
-> **(c)** En cualquier instante,
-> $$\|\mathbf{s}'(t)\|=\sqrt{36\operatorname{sen}^{2}(2t)+36\cos^{2}(2t)}=6\ \mathrm{km/h},$$
-> así que la rapidez es constante, aunque las componentes y la dirección del vector velocidad cambian. 
+> **(c)** $(0,0)$: el criterio del Hessiano no decide.
+>
+> **(d)** $(2,1)$: máximo relativo; $(2,-1)$ y $(-2,1)$: puntos de silla; $(-2,-1)$: mínimo relativo.
+>
+> **(e)** $(1,2)$: máximo relativo.
+>
+> **(f)** $(3,3)$: punto de silla; $(0,0)$: el criterio del Hessiano no decide.
 
-> [!success] Solución del Problema 6.1
-> Clasificación mediante el Hessiano:
+> [!success] Solución del Problema 21
+> **(a)** Mínimos en $(1,1)$ y $(-1,-1)$, con $f=2$. No existe máximo.
 >
-> **(a)** Puntos críticos: $(0, 0)$ (punto de silla) y $(1, 1)$ (mínimo relativo).
+> **(b)** Máximos en $(\sqrt2,\sqrt2/2)$ y $(-\sqrt2,-\sqrt2/2)$, con $f=1$; mínimos en $(-\sqrt2,\sqrt2/2)$ y $(\sqrt2,-\sqrt2/2)$, con $f=-1$.
 >
-> **(b)** Punto crítico: $(2, 3)$ (máximo relativo).
+> **(c)** Mínimo aproximado en $(-2.22,1.66)$, con $f\approx6.07$; máximo aproximado en $(3.78,-0.65)$, con $f\approx67.6$.
 >
-> **(c)** Punto crítico: $(0, 0)$ (el criterio no decide).
+> **(d)** Máximo en $\left(\frac54,\frac56\right)$, con $f=\frac{25}{24}$.
 >
-> **(d)** Puntos críticos: $(2, 1)$ (máximo relativo), $(2, -1)$ (punto de silla), $(-2, 1)$ (punto de silla) y $(-2, -1)$ (mínimo relativo).
->
-> **(e)** Punto crítico: $(1, 2)$ (máximo relativo).
->
-> **(f)** Puntos críticos: $(3, 3)$ (punto de silla) y $(0, 0)$ (el criterio no decide).
+> **(e)** Máximo en $\left(\frac12,\frac12\right)$, con $f=-4\ln2$.
 
-> [!success] Solución del Problema 6.2
-> **(a)** De $2x=\lambda y$, $2y=\lambda x$ y $xy=1$ se deduce $x^{2}=y^{2}$, luego $y=x$ (la opción $y=-x$ daría $xy=-x^{2}=1$, imposible). Puntos: $(1,1)$ y $(-1,-1)$, ambos con $f=2$: son **mínimos** (la función no está acotada superiormente sobre la hipérbola).
+> [!success] Solución del Problema 22
+> Si el lado más caro debe ser necesariamente el más largo: cuadrado de lado $\sqrt{20}\approx4.47$ m y coste $90\sqrt{20}\approx402.5$ €.
 >
-> **(b)** Parametrizando $x=2\cos t$, $y=\operatorname{sen} t$ resulta $f=\operatorname{sen} 2t$. **Máximos** en $(\sqrt2,\sqrt2/2)$ y $(-\sqrt2,-\sqrt2/2)$, con $f=1$; **mínimos** en $(-\sqrt2,\sqrt2/2)$ y $(\sqrt2,-\sqrt2/2)$, con $f=-1$.
->
-> **(c)** $f=(x+3)^{2}+(y-4)^{2}$, el cuadrado de la distancia al punto $(-3,4)$. Con $x=4\cos t$, $y=2\operatorname{sen} t$ se obtiene un único **mínimo** en $(-2.22,\,1.66)$ con $f\approx 6.07$ y un único **máximo** en $(3.78,\,-0.65)$ con $f\approx 67.6$.
->
-> **(d)** De $y=2\lambda$, $x=3\lambda$ y $2x+3y=5$: $x=\frac54$, $y=\frac56$, con $f=\frac{25}{24}$, que es un **máximo** (sobre la recta $f\to-\infty$).
->
-> **(e)** Por simetría y $x+y=1$: $x=y=\frac12$, con $f=-4\log 2\approx-2.77$, que es un **máximo** (en los extremos del intervalo $f\to-\infty$).
+> Sin esa restricción: lados de $4$ m y $5$ m, con la valla de $25$ €/m en los lados de $4$ m, y coste mínimo $400$ €.
 
-> [!success] Solución del Problema 6.3
-> Con lados $L$ (largo, a $25$ €/m) y $W$ (corto, a $20$ €/m), el coste es $C=2(25L+20W)=50L+40W$ con $LW=20$. Al no existir restricción de precio la solución de $\nabla C=\lambda\nabla g$ da $L=4$, $W=5$ y $C=400$ €: el óptimo usa los lados de $5$ m con la valla **barata**, lo que contradice el enunciado. Exigiendo $L\ge W$ (el lado caro es el largo), el mínimo se alcanza en el límite $L=W=\sqrt{20}\approx4.47$ m, con $C=90\sqrt{20}\approx402.5$ €.
->
-> **Respuesta habitual:** lados de $5$ m y $4$ m con coste $400$ € (colocando la valla de $25$ €/m en los lados de $4$ m) o, si el enunciado se toma al pie de la letra, el cuadrado de $\sqrt{20}$ m con $\approx402.5$ €.
+> [!success] Solución del Problema 23
+> Base $2\times2$ m, altura $1$ m y volumen máximo $4\ \mathrm{m}^3$.
 
-> [!success] Solución del Problema 6.4
-> Con base $x\times y$ y altura $z$: $xy+2xz+2yz=12$ y $V=xyz$. El máximo se alcanza para $x=y=2z$. Sustituyendo, $x^{2}+4xz=12$ con $z=x/2$, es decir, $x^{2}+2x^{2}=12$, de donde $x=y=2$ m y $z=1$ m. El volumen máximo es $V=4\ \mathrm{m}^{3}$.
+> [!success] Solución del Problema 24
+> Distancia mínima $2$, en $(0,\pm2)$; distancia máxima $4$, en $(\pm4,0)$.
 
-> [!success] Solución del Problema 6.5
-> Con $x=4\cos t$, $y=2\operatorname{sen} t$: $r^{2}=x^{2}+y^{2}=16\cos^{2}t+4\operatorname{sen}^{2}t=4+12\cos^{2}t$. Por tanto $r^{2}$ varía entre $4$ y $16$: **distancia mínima** $2$ en $(0,\pm2)$ y **máxima** $4$ en $(\pm4,0)$.
-
-> [!success] Solución del Problema 6.6
-> Con radio $r$ y altura $h$: volumen $\pi r^{2}h+\frac43\pi r^{3}=8000$ y superficie $2\pi rh+4\pi r^{2}$. Despejando $h$ y sustituyendo, $S=\frac{16000}{r}+\frac{4}{3}\pi r^{2}$, cuyo mínimo cumple $r^{3}=\frac{6000}{\pi}$, es decir, $r\approx12.4$ m. Entonces $h=0$: el tanque óptimo es **esférico** (la esfera minimiza la superficie para un volumen dado).
+> [!success] Solución del Problema 25
+> $r=\sqrt[3]{\frac{6000}{\pi}}\approx12.4$ m y $h=0$: el tanque óptimo es una esfera.
