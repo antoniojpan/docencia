@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-11-10T12:32:46.098+01:00","updated":"2026-11-10T12:35:31.169+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-11-10T12:32:46.098+01:00","updated":"2026-11-16T15:55:24.096+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
@@ -42,16 +42,6 @@
 >
 > **(h)** $z = \frac{\sqrt{x+y}}{x}$; $z_x$, $z_y$
 
-> [!question] Problema 3.2
-> Estudia la diferenciabilidad de las siguientes funciones en los conjuntos que se indican:
->
-> **(a)** $f(x,y,z)=x^{2}+y^{2}+z^{2}$ en $\mathbb{R}^{3}$
->
-> **(b)** $f(x,y)=e^{x}\operatorname{sen} y$ en $\mathbb{R}^{2}$
->
-> **(c)** $f(x,y)=(x^{2}+y^{2})e^{-xy}$ en $\mathbb{R}^{2}$
->
-> **(d)** $f(x,y)=\sqrt{x^{2}+y^{2}}$ en $(0,0)$
 
 > [!question] Problema 3.3
 > Halla la ecuación del plano tangente y de la recta normal a la gráfica de las siguientes funciones en los puntos indicados:
