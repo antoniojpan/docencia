@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03/","created":"2026-11-17T11:01:05.342+01:00","updated":"2026-11-17T11:00:52.884+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03/","created":"2026-11-17T16:38:48.232+01:00","updated":"2026-11-17T16:38:42.369+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
@@ -306,14 +306,64 @@ Para optimizar $f(x,y)$ sujeta a una restricción (ligadura) $g(x,y)=c$. Tambié
 **Pasos:**
 
 1. **Función Lagrangiana:**
-$$L(\lambda,x,y)=f(x,y)-\lambda\bigl(g(x,y)-c\bigr)$$
+$$L(x,y,\lambda)=f(x,y)-\lambda\bigl(g(x,y)-c\bigr)$$
 2. **Puntos candidatos:** resolver $\nabla L=0$, es decir,
 $$\begin{cases}f_x=\lambda g_x\\ f_y=\lambda g_y\\ g(x,y)=c\end{cases}$$
 3. **Clasificar con el Hessiano orlado:**
-$$\bar H=\begin{pmatrix}0&g_x&g_y\\ g_x&L_{xx}&L_{xy}\\ g_y&L_{yx}&L_{yy}\end{pmatrix},$$
+$$\bar H=\begin{pmatrix}L_{xx}&L_{xy}&g_x\\ L_{yx}&L_{yy}&g_y\\ g_x&g_y&0\end{pmatrix},$$
 donde $L_{xx}=f_{xx}-\lambda g_{xx}$, $L_{xy}=f_{xy}-\lambda g_{xy}$, etc. Evaluado en cada candidato $(x_0,y_0,\lambda_0)$:
    - $\det(\bar H)>0$ $\implies$ **máximo local**.
    - $\det(\bar H)<0$ $\implies$ **mínimo local**.
    - $\det(\bar H)=0$ $\implies$ el criterio no concluye.
+
+#### Ejemplos resueltos
+
+**Ejemplo 1: extremos sobre una circunferencia.** Hallar y clasificar los extremos de $f(x,y)=x+y$ sujetos a $x^2+y^2=1$.
+
+1. **Puntos candidatos.** Planteamos el lagrangiano y sus condiciones:
+   $$L=x+y-\lambda(x^2+y^2-1),\qquad
+   \begin{cases}
+   1=2\lambda x,\\
+   1=2\lambda y,\\
+   x^2+y^2=1.
+   \end{cases}$$
+   Las dos primeras ecuaciones implican $\lambda\neq 0$ y $x=y$. Sustituyendo en la ligadura, $2x^2=1$. Obtenemos dos candidatos, cada uno con su multiplicador:
+   $$P_1=\left(\frac1{\sqrt2},\frac1{\sqrt2}\right),\quad \lambda_1=\frac1{\sqrt2};
+   \qquad
+   P_2=\left(-\frac1{\sqrt2},-\frac1{\sqrt2}\right),\quad \lambda_2=-\frac1{\sqrt2}.$$
+2. **Clasificación con el Hessiano orlado.** Como $g_x=2x$, $g_y=2y$, $L_{xx}=L_{yy}=-2\lambda$ y $L_{xy}=0$,
+   $$\bar H(x,y,\lambda)=
+   \begin{pmatrix}
+   -2\lambda&0&2x\\
+   0&-2\lambda&2y\\
+   2x&2y&0
+   \end{pmatrix},
+   \qquad \det(\bar H)=8\lambda(x^2+y^2)=8\lambda,$$
+   donde hemos usado la ligadura $x^2+y^2=1$. Por tanto:
+   - En $(P_1,\lambda_1)$: $\det(\bar H)=4\sqrt2>0$, luego $P_1$ es un **máximo local condicionado**.
+   - En $(P_2,\lambda_2)$: $\det(\bar H)=-4\sqrt2<0$, luego $P_2$ es un **mínimo local condicionado**.
+
+   Como la circunferencia es cerrada y acotada, y $f(P_1)=\sqrt2$ y $f(P_2)=-\sqrt2$, son respectivamente el máximo y el mínimo globales.
+
+**Ejemplo 2: mínimo con una ligadura lineal.** Hallar y clasificar los extremos de $f(x,y)=x^2+2y^2$ sujetos a $x+y=3$.
+
+1. **Puntos candidatos.** Planteamos el lagrangiano y sus condiciones:
+   $$L=x^2+2y^2-\lambda(x+y-3),\qquad
+   \begin{cases}
+   2x=\lambda,\\
+   4y=\lambda,\\
+   x+y=3.
+   \end{cases}$$
+   De $2x=4y$ obtenemos $x=2y$. La ligadura da $3y=3$, luego hay un único candidato:
+   $$P=(2,1),\qquad \lambda=4.$$
+2. **Clasificación con el Hessiano orlado.** Como $g_x=g_y=1$, $L_{xx}=2$, $L_{yy}=4$ y $L_{xy}=0$,
+   $$\bar H(P,4)=
+   \begin{pmatrix}
+   2&0&1\\
+   0&4&1\\
+   1&1&0
+   \end{pmatrix},
+   \qquad \det(\bar H)=-6<0.$$
+   Por tanto, $P=(2,1)$ es un **mínimo local condicionado**, con $f(2,1)=6$.
 
 [[01 Calculo-Naut/apuntes/calc-naut-tema03-ej\|Ejercicios]]
