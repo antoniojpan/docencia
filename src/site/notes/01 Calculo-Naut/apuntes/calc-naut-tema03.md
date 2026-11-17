@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03/","created":"2026-10-29T07:14:58.775+01:00","updated":"2026-10-29T07:29:59.795+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03/","created":"2026-11-17T11:01:05.342+01:00","updated":"2026-11-17T11:00:52.884+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
@@ -248,6 +248,18 @@ Es decir, **el gradiente es perpendicular a las curvas de nivel**: $\nabla f$ ap
 
 ### 5.1. Puntos Críticos y Matriz Hessiana
 
+Muchos problemas de navegación consisten en encontrar el mejor valor de una magnitud: minimizar el consumo de combustible o el tiempo de travesía, o maximizar la velocidad alcanzada. Cuando las variables pueden tomar valores libremente, sin ninguna restricción, buscamos **extremos sin ligaduras**. Geométricamente, se trata de localizar los valles, las cumbres y los puntos de silla de la superficie $z=f(x,y)$, distinguiendo su naturaleza mediante las derivadas de segundo orden.
+
+**Ejemplo sencillo.** Hay que elegir la ubicación $(x,y)$ de un depósito que abastecerá a dos puertos situados en $A=(1,0)$ y $B=(0,1)$. Por ahora podemos instalarlo en cualquier punto, incluso en el mar. Como modelo simplificado del coste logístico, minimizamos la suma de las distancias al cuadrado:
+$$f(x,y)=(x-1)^2+y^2+x^2+(y-1)^2=2\left(x-\frac12\right)^2+2\left(y-\frac12\right)^2+1.$$
+El mínimo se alcanza en $P=(\frac12,\frac12)$, el punto medio entre ambos puertos.
+
+![optimizacion-sin-ligaduras.png\|500](/img/user/imagenes/optimizacion-sin-ligaduras.png)
+
+Las curvas de nivel del coste son circunferencias centradas en $P$: el mínimo sin ligaduras se encuentra en su centro común.
+
+![optimizacion-sin-ligaduras-niveles.png\|500](/img/user/imagenes/optimizacion-sin-ligaduras-niveles.png)
+
 Para hallar los extremos relativos (máximos y mínimos locales) de $f(x,y)$:
 
 **Paso 1: puntos críticos.** Resolver el sistema
@@ -278,6 +290,16 @@ $$H(x,y)=\begin{pmatrix}f_{xx}&f_{xy}\\ f_{yx}&f_{yy}\end{pmatrix},\qquad D(x,y)
 3. En $(0,0)$: $D=-9<0\implies$ **punto de silla**. En $(1,1)$: $D=27>0$ y $f_{xx}=6>0\implies$ **mínimo local** ($f(1,1)=-1$).
 
 ### 6.3. Extremos Condicionados: Multiplicadores de Lagrange
+
+En la práctica, las variables no suelen ser independientes: al diseñar una ruta o distribuir recursos hay que respetar condiciones como mantener una distancia fija, seguir una derrota determinada o no superar el combustible disponible. En la **optimización con ligaduras** solo consideramos los puntos que cumplen esas restricciones, y el método de Lagrange permite encontrar los candidatos a máximos y mínimos comparando cómo varían la función objetivo y la ligadura.
+
+**Ejemplo sencillo.** Consideremos la misma situación, pero ahora el depósito estará en un nuevo puerto, de modo que deberá situarse sobre la costa. En nuestro modelo, el tramo de costa entre $A$ y $B$ es el arco $x^2+y^2=1$, con $x,y\geq 0$. Mantenemos la misma función de coste $f$ y añadimos esta ligadura. Las condiciones de Lagrange implican $x=y$; junto con $x^2+y^2=1$, se obtiene el nuevo puerto $P=(\frac{1}{\sqrt2},\frac{1}{\sqrt2})$.
+
+![optimizacion-con-ligaduras.png\|500](/img/user/imagenes/optimizacion-con-ligaduras.png)
+
+Al añadir la ligadura, el óptimo es el punto de contacto entre la costa y la curva de nivel de menor coste que la alcanza: ambas curvas son **tangentes** en el nuevo puerto.
+
+![optimizacion-con-ligaduras-niveles.png\|500](/img/user/imagenes/optimizacion-con-ligaduras-niveles.png)
 
 Para optimizar $f(x,y)$ sujeta a una restricción (ligadura) $g(x,y)=c$. También vale para $f(x,y,z)$ con $g(x,y,z)=c$.
 
