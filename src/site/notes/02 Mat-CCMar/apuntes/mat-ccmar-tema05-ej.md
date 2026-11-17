@@ -1,14 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05-ej/","created":"2026-10-23T09:33:10.033+02:00","updated":"2026-10-23T09:33:03.100+02:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05-ej/","created":"2026-11-17T10:46:13.282+01:00","updated":"2026-11-17T10:46:01.864+01:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
 
 # Hoja de Ejercicios Tema 5: Derivación en Varias Variables
 
-## 3. Derivadas parciales y diferenciabilidad
-
-> [!question] Problema 3.1
+> [!question] Ejercicio 1
 > Calcula las derivadas parciales que se indican:
 >
 > **(a)** $f(x, y) = x^{y+1}$; $f_x$, $f_y$, $f_{xy}$
@@ -27,49 +25,20 @@
 >
 > **(h)** $z = \frac{\sqrt{x+y}}{x}$; $z_x$, $z_y$
 
-> [!question] Problema 3.2
-> Estudia la diferenciabilidad de las siguientes funciones en los conjuntos que se indican:
->
-> **(a)** $f(x,y,z)=x^{2}+y^{2}+z^{2}$ en $\mathbb{R}^{3}$
->
-> **(b)** $f(x,y)=e^{x}\operatorname{sen} y$ en $\mathbb{R}^{2}$
->
-> **(c)** $f(x,y)=(x^{2}+y^{2})e^{-xy}$ en $\mathbb{R}^{2}$
->
-> **(d)** $f(x,y)=\sqrt{x^{2}+y^{2}}$ en $(0,0)$
+> [!question] Ejercicio 2
+> Calcula el gradiente de las funciones del Ejercicio 1.
 
-## 4. Gradiente y derivada direccional
 
-> [!question] Problema 4.1
-> Calcula el gradiente de las funciones del Problema 3.1.
-
-> [!question] Problema 4.2
-> Halla la derivada direccional en el punto y en la dirección indicados:
->
-> **(a)** $f(x,y)=xe^{y}-ye^{x}$ en $(1,0)$ en la dirección de $(1,-\sqrt{3})$
->
-> **(b)** $f(x,y)=\dfrac{3x}{x-y}$ en $(1,0)$ en la dirección de $(1,-1)$
->
-> **(c)** $f(x,y,z)=x^{2}y+y^{2}z+z^{2}x$ en $(1,-1,1)$ en la dirección de $(1,-1,2)$
->
-> **(d)** $f(x,y,z)=\log\sqrt{x^{2}+y^{2}+z^{2}}$ en $(2,0,1)$ en la dirección de $(1,2,0)$
->
-> **(e)** $f(x,y,z)=e^{x}\cos(yz)$ en $(0,0,0)$ en la dirección de $(2,1,-2)$
-
-> [!question] Problema 4.3
-> Sea $f(x,y)=e^{x+2y}$. Halla el conjunto de puntos $(x,y)\in\mathbb{R}^{2}$ tales que la derivada direccional en $(x,y)$ en la dirección $(4,3)$ sea $2e$.
-
-> [!question] Problema 4.4
-> Sea $f(x,y)=1+\operatorname{sen}(3x+y)$. ¿Existe algún vector $\vec v\in\mathbb{R}^{2}$ tal que la derivada direccional de $f$ en $(0,0)$ en la dirección de $\vec v$ sea igual a $1$?
-
-> [!question] Problema 4.5
+> [!question] Ejercicio 3
 > La temperatura de cada punto de una hoja de metal viene dada por $T(x,y)=e^{x}\cos y+e^{y}\cos x$.
 >
 > **(a)** ¿En qué dirección crece la temperatura más rápidamente a partir de $(0,0)$?
 >
 > **(b)** ¿Y en qué dirección decrece más rápidamente?
+> 
+> **(c)** ¿Qué temperatura hay en el punto $(0,0)$?
 
-> [!question] Problema 4.6
+> [!question] Ejercicio 4
 > La densidad de una bola de metal centrada en el origen es $\rho(x,y,z)=ke^{-(x^{2}+y^{2}+z^{2})}$, con $k$ constante positiva.
 >
 > **(a)** ¿En qué dirección crece la densidad más rápidamente a partir de $(x,y,z)$?
@@ -78,14 +47,12 @@
 >
 > **(c)** ¿Cuáles son las derivadas direccionales de la densidad en las direcciones $\vec i$, $\vec j$ y $\vec k$?
 
-> [!question] Problema 4.7
+> [!question] Ejercicio 5
 > **(a)** Sea $h(x,y)=2e^{-x^{2}}+e^{-3y^{2}}$ la altura de una montaña en la posición $(x,y)$. ¿En qué dirección desde $(1,0)$ se debe caminar para escalar lo más rápido posible?
 >
 > **(b)** La temperatura en cada punto $(x,y,z)$ es $T(x,y,z)=e^{-x}+e^{-2y}+e^{-3z}$. ¿En qué dirección debe moverse una persona situada en $(1,1,1)$ para enfriarse lo más rápido posible?
 
-## 5. Operadores diferenciales y curvas
-
-> [!question] Problema 5.1
+> [!question] Ejercicio 6
 > Calcula la divergencia de las siguientes funciones:
 >
 > **(a)** $\mathbf{f}(x, y, z) = (x + 2y, \; x + 3z, \; 2y + 3z)$
@@ -100,10 +67,10 @@
 >
 > **(f)** $\mathbf{f}(x, y) = (x^y, \; y^x)$
 
-> [!question] Problema 5.2
-> Calcula el rotacional de las funciones **(a)**, **(c)** y **(e)** del Problema 5.1.
+> [!question] Ejercicio 7
+> Calcula el rotacional de las funciones **(a)**, **(c)** y **(e)** del Ejercicio 6.
 
-> [!question] Problema 5.3
+> [!question] Ejercicio 8
 > Para las siguientes curvas, calcula el vector tangente $\mathbf{g}'(t)$, el vector tangente unitario $\mathbf{T}(t)$ y la recta tangente en el punto indicado. Indica también si la curva es regular.
 >
 > **(a)** $\mathbf{g}(t) = (t^2, \; t^3)$ en $t = 1$. ¿Qué ocurre en $t = 0$?
@@ -114,9 +81,16 @@
 >
 > **(d)** Comprueba que $\mathbf{g}(t) = (2\cos t, \; 3\operatorname{sen} t)$ es una curva de nivel de $f(x,y) = \frac{x^2}{4} + \frac{y^2}{9}$ y verifica que $\nabla f \cdot \mathbf{g}' = 0$ en $t = \frac{\pi}{3}$.
 
-## 6. Optimización
+> [!question] Ejercicio 9
+> Un pez equipado con un localizador GPS se mueve alrededor de un arrecife. Su posición en el plano, medida en metros, viene dada por $\mathbf r(t) = (10\cos t, \; 6\operatorname{sen}t)$, donde $t$ es el tiempo en minutos y $0 \leq t \leq 2\pi$.
+>
+> **(a)** ¿Qué posición ocupa en los instantes $t = 0$, $t = \frac{\pi}{2}$ y $t = \pi$? ¿Qué curva describe su trayectoria?
+>
+> **(b)** Calcula su vector velocidad $\mathbf v(t) = \mathbf r'(t)$ y su velocidad en $t = \frac{\pi}{2}$. Interpreta gráficamente el resultado.
+>
+> **(c)** Calcula su rapidez $\|\mathbf v(t)\|$ y determínala en $t = \frac{\pi}{2}$.
 
-> [!question] Problema 6.1
+> [!question] Ejercicio 10
 > Clasifica los puntos críticos de las siguientes funciones mediante el Hessiano:
 >
 > **(a)** $f(x, y) = x^3 + y^3 - 3xy$
@@ -135,7 +109,7 @@
 
 # Soluciones
 
-> [!success] Solución del Problema 3.1
+> [!success] Solución del Ejercicio 1
 > Derivadas parciales:
 >
 > **(a)** $f_x = (y + 1)x^y, \quad f_y = x^{y+1} \ln x, \quad f_{xy} = x^y(1 + (y + 1) \ln x)$
@@ -154,19 +128,8 @@
 >
 > **(h)** $z_x = -\frac{\sqrt{x+y}}{x^2} + \frac{1}{2x\sqrt{x+y}}, \quad z_y = \frac{1}{2x\sqrt{x+y}}$
 
-> [!success] Solución del Problema 3.2
-> Diferenciabilidad:
->
-> **(a)** Sus derivadas parciales ($2x, 2y, 2z$) son continuas en $\mathbb{R}^3$; por tanto es diferenciable en todo $\mathbb{R}^3$.
->
-> **(b)** $f_x=e^{x}\operatorname{sen} y$, $f_y=e^{x}\cos y$, continuas en $\mathbb{R}^2$; es diferenciable en todo $\mathbb{R}^2$.
->
-> **(c)** $f_x=2xe^{-xy}-y(x^{2}+y^{2})e^{-xy}$, $f_y=2ye^{-xy}-x(x^{2}+y^{2})e^{-xy}$, continuas en $\mathbb{R}^2$; es diferenciable en todo $\mathbb{R}^2$.
->
-> **(d)** En $(0,0)$ la derivada parcial $f_x(0,0)=\lim_{h\to 0}\frac{|h|}{h}$ no existe, luego $f$ **no es diferenciable** en el origen (es continua, pero presenta un "pico").
-
-> [!success] Solución del Problema 4.1
-> Gradiente de las funciones del Problema 3.1 (utilizando $f_y = 3x^2y^2 - 20y^3$ para el apartado **(d)**):
+> [!success] Solución del Ejercicio 2
+> Gradiente de las funciones del Ejercicio 1 (utilizando $f_y = 3x^2y^2 - 20y^3$ para el apartado **(d)**):
 >
 > **(a)** $\nabla f = \left((y + 1)x^y, \; x^{y+1} \ln x\right)$
 >
@@ -184,40 +147,14 @@
 >
 > **(h)** $\nabla f = \left(-\frac{\sqrt{x+y}}{x^2} + \frac{1}{2x\sqrt{x+y}}, \; \frac{1}{2x\sqrt{x+y}}\right)$
 
-> [!success] Solución del Problema 4.2
-> Derivadas direccionales (con $\vec u$ unitario):
->
-> **(a)** $\nabla f=(e^{y}-ye^{x},\; xe^{y}-e^{x})$, $\nabla f(1,0)=(1,\,1-e)$, $\vec u=\left(\tfrac12,\,-\tfrac{\sqrt3}{2}\right)$:
-> $$D_{\vec u}f(1,0)=\frac12+\frac{\sqrt3}{2}(e-1)\approx 1.99$$
->
-> **(b)** $f_x=-\dfrac{3y}{(x-y)^{2}}$, $f_y=\dfrac{3x}{(x-y)^{2}}$; en $(1,0)$: $\nabla f=(0,3)$, $\vec u=\left(\tfrac{1}{\sqrt2},-\tfrac{1}{\sqrt2}\right)$:
-> $$D_{\vec u}f(1,0)=-\frac{3}{\sqrt2}=-\frac{3\sqrt2}{2}$$
->
-> **(c)** $\nabla f=(2xy+z^{2},\; x^{2}+2yz,\; y^{2}+2zx)$; en $(1,-1,1)$: $(-1,-1,3)$, $\vec u=\frac{1}{\sqrt6}(1,-1,2)$:
-> $$D_{\vec u}f=\frac{-1+1+6}{\sqrt6}=\sqrt6$$
->
-> **(d)** $\nabla f=\dfrac{(x,y,z)}{x^{2}+y^{2}+z^{2}}$; en $(2,0,1)$: $\left(\tfrac25,0,\tfrac15\right)$, $\vec u=\frac{1}{\sqrt5}(1,2,0)$:
-> $$D_{\vec u}f=\frac{2}{5\sqrt5}=\frac{2\sqrt5}{25}$$
->
-> **(e)** $\nabla f=\left(e^{x}\cos(yz),\; -ze^{x}\operatorname{sen}(yz),\; -ye^{x}\operatorname{sen}(yz)\right)$; en $(0,0,0)$: $(1,0,0)$, $\vec u=\frac13(2,1,-2)$:
-> $$D_{\vec u}f=\frac23$$
-
-> [!success] Solución del Problema 4.3
-> $\nabla f=e^{x+2y}(1,2)$ y $\vec u=\frac{1}{5}(4,3)$, luego
-> $$D_{\vec u}f=e^{x+2y}\cdot\frac{4+6}{5}=2e^{x+2y}.$$
-> Igualando a $2e$: $e^{x+2y}=e$, es decir, la recta $x+2y=1$.
-
-> [!success] Solución del Problema 4.4
-> $\nabla f(0,0)=(3,1)$, con $\|\nabla f(0,0)\|=\sqrt{10}>1$. Como $D_{\vec u}f(0,0)=\nabla f(0,0)\cdot\vec u$ recorre de forma continua el intervalo $[-\sqrt{10},\sqrt{10}]$ al girar $\vec u$, **sí existe** (de hecho, dos direcciones): basta tomar $\vec u=(\cos\theta,\operatorname{sen}\theta)$ con $3\cos\theta+\operatorname{sen}\theta=1$.
-
-> [!success] Solución del Problema 4.5
+> [!success] Solución del Ejercicio 3
 > $\nabla T=(e^{x}\cos y-e^{y}\operatorname{sen} x,\; -e^{x}\operatorname{sen} y+e^{y}\cos x)$ y $\nabla T(0,0)=(1,1)$.
 >
 > **(a)** La temperatura crece más rápidamente en la dirección $(1,1)$, es decir, $\frac{1}{\sqrt2}(1,1)$.
 >
 > **(b)** Decrece más rápidamente en la dirección opuesta, $\frac{1}{\sqrt2}(-1,-1)$.
 
-> [!success] Solución del Problema 4.6
+> [!success] Solución del Ejercicio 4
 > $\nabla\rho=-2k\,e^{-(x^{2}+y^{2}+z^{2})}(x,y,z)$.
 >
 > **(a)** Crece más rápidamente en la dirección $-\frac{1}{\sqrt{x^{2}+y^{2}+z^{2}}}(x,y,z)$ (hacia el origen).
@@ -226,12 +163,12 @@
 >
 > **(c)** $\rho_x=-2kx\,e^{-(x^{2}+y^{2}+z^{2})}$, $\rho_y=-2ky\,e^{-(x^{2}+y^{2}+z^{2})}$, $\rho_z=-2kz\,e^{-(x^{2}+y^{2}+z^{2})}$.
 
-> [!success] Solución del Problema 4.7
+> [!success] Solución del Ejercicio 5
 > **(a)** $\nabla h=(-4xe^{-x^{2}},\, -6ye^{-3y^{2}})$, luego $\nabla h(1,0)=(-4/e,\,0)$: se debe caminar en la dirección $(-1,0)$ (hacia $x$ decreciente).
 >
 > **(b)** $\nabla T=(-e^{-x},\,-2e^{-2y},\,-3e^{-3z})$ y $\nabla T(1,1,1)=\left(-e^{-1},\,-2e^{-2},\,-3e^{-3}\right)$. Para enfriarse hay que moverse en la dirección de máximo decrecimiento, $-\nabla T(1,1,1)=\left(e^{-1},\,2e^{-2},\,3e^{-3}\right)$.
 
-> [!success] Solución del Problema 5.1
+> [!success] Solución del Ejercicio 6
 > Divergencias:
 >
 > **(a)** $\operatorname{div}(\mathbf{f}) = 4$
@@ -246,7 +183,7 @@
 >
 > **(f)** $\operatorname{div}(\mathbf{f}) = y x^{y-1} + x y^{x-1}$
 
-> [!success] Solución del Problema 5.2
+> [!success] Solución del Ejercicio 7
 > Rotacionales:
 >
 > **(a)** $\operatorname{rot}(\mathbf{f}) = (-1, \; 0, \; -1)$
@@ -255,7 +192,7 @@
 >
 > **(e)** $\operatorname{rot}(\mathbf{f}) = \left(-xz \operatorname{sen}(xyz) - 1, \; yz \operatorname{sen}(xyz), \; \frac{1}{(x+y)^2}\right)$
 
-> [!success] Solución del Problema 5.3
+> [!success] Solución del Ejercicio 8
 > Vectores tangentes:
 >
 > **(a)** $\mathbf{g}'(t) = (2t, \; 3t^2)$. En $t = 1$: $\mathbf{g}'(1) = (2, 3)$, $\|\mathbf{g}'(1)\| = \sqrt{13}$ y $\mathbf{T}(1) = \left(\frac{2}{\sqrt{13}}, \frac{3}{\sqrt{13}}\right)$. Recta tangente en $(1,1)$: $(1,1) + \lambda(2,3)$, es decir, $y = \frac{3}{2}x - \frac{1}{2}$.
@@ -268,7 +205,16 @@
 > **(d)** $f(\mathbf{g}(t)) = \frac{4\cos^2 t}{4} + \frac{9\operatorname{sen}^2 t}{9} = \cos^2 t + \operatorname{sen}^2 t = 1$: es la curva de nivel $f = 1$ (una elipse). $\nabla f = \left(\frac{x}{2}, \frac{2y}{9}\right)$ y $\mathbf{g}'(t) = (-2\operatorname{sen} t, \; 3\cos t)$. En $t = \frac{\pi}{3}$: $\mathbf{g}\left(\frac{\pi}{3}\right) = \left(1, \frac{3\sqrt{3}}{2}\right)$, $\nabla f = \left(\frac{1}{2}, \frac{\sqrt{3}}{3}\right)$ y $\mathbf{g}' = \left(-\sqrt{3}, \frac{3}{2}\right)$. Por tanto
 > $$\nabla f \cdot \mathbf{g}' = \frac{1}{2}(-\sqrt{3}) + \frac{\sqrt{3}}{3}\cdot\frac{3}{2} = -\frac{\sqrt{3}}{2} + \frac{\sqrt{3}}{2} = 0.$$
 
-> [!success] Solución del Problema 6.1
+> [!success] Solución del Ejercicio 9
+> **(a)** Las posiciones son $\mathbf r(0) = (10,0)$, $\mathbf r\left(\frac{\pi}{2}\right) = (0,6)$ y $\mathbf r(\pi) = (-10,0)$, medidas en metros. Además,
+> $$\frac{x^2}{100} + \frac{y^2}{36} = \cos^2 t + \operatorname{sen}^2 t = 1,$$
+> por lo que el pez recorre una elipse de semiejes $10$ m y $6$ m.
+>
+> **(b)** El vector velocidad es $\mathbf v(t) = \mathbf r'(t) = (-10\operatorname{sen}t, \; 6\cos t)$ m/min. En particular, $\mathbf v\left(\frac{\pi}{2}\right) = (-10,0)$ m/min: cuando el pez está en $(0,6)$, se desplaza en la dirección negativa del eje $x$, tangente a la elipse.
+>
+> **(c)** Su rapidez es $\|\mathbf v(t)\| = \sqrt{100\operatorname{sen}^2t + 36\cos^2t}$ m/min, y en $t = \frac{\pi}{2}$ vale $10$ m/min.
+
+> [!success] Solución del Ejercicio 10
 > Clasificación mediante el Hessiano:
 >
 > **(a)** Puntos críticos: $(0, 0)$ (punto de silla) y $(1, 1)$ (mínimo relativo).
