@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-10-20T11:46:03.361+02:00","updated":"2026-10-26T12:59:39.817+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema02/","created":"2026-11-23T07:46:42.133+01:00","updated":"2026-11-23T07:46:30.041+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|Volver al índice]]
@@ -271,7 +271,51 @@ $$
 ## 4. La Integral Definida y sus Aplicaciones
 
 ### 1. Introducción
-Cálculo de masa total de un alambre a partir de densidad local. Luego, ver como un área.
+Queremos calcular la **masa total de un alambre sin pesarlo**, conociendo únicamente su densidad. La densidad lineal se mide en kilogramos por metro ($\mathrm{kg/m}$): si vale $2\,\mathrm{kg/m}$, cada metro de alambre tiene una masa de $2\,\mathrm{kg}$.
+
+**Etapa 1. Un alambre con densidad constante**
+
+Un alambre mide $5\,\mathrm{m}$ y tiene una densidad de $2\,\mathrm{kg/m}$ en todos sus puntos. Cada metro aporta $2\,\mathrm{kg}$, de modo que
+$$M=5\,\mathrm{m}\cdot 2\,\mathrm{kg/m}=10\,\mathrm{kg}.$$
+Aquí basta una multiplicación: $\text{masa total}=\text{longitud}\times\text{densidad}$.
+
+**Etapa 2. Un alambre con tres densidades**
+
+Ahora el alambre mide $6\,\mathrm{m}$ y está formado por tres tramos de $2\,\mathrm{m}$ cada uno. Ya no podemos multiplicar por una única densidad, así que calculamos la masa de cada tramo por separado:
+
+- Primer tramo: $2\,\mathrm{m}\cdot 2\,\mathrm{kg/m}=4\,\mathrm{kg}$.
+- Segundo tramo: $2\,\mathrm{m}\cdot 5\,\mathrm{kg/m}=10\,\mathrm{kg}$.
+- Tercer tramo: $2\,\mathrm{m}\cdot 1\,\mathrm{kg/m}=2\,\mathrm{kg}$.
+
+Después sumamos las tres masas:
+$$M=4+10+2=16\,\mathrm{kg}.$$
+La estrategia ha pasado de hacer **una multiplicación** a hacer **una suma de multiplicaciones**.
+
+**Etapa 3. Una densidad que cambia en cada punto**
+
+Consideremos ahora un alambre de $4\,\mathrm{m}$. A una distancia $x$ del extremo izquierdo, su densidad es $\rho(x)=x^3-6x^2+9x+2$, medida en $\mathrm{kg/m}$. Al principio vale $2\,\mathrm{kg/m}$; al cabo de $1\,\mathrm{m}$ ha subido a $6\,\mathrm{kg/m}$, a los $2\,\mathrm{m}$ ha bajado a $4\,\mathrm{kg/m}$, a los $3\,\mathrm{m}$ vale $2\,\mathrm{kg/m}$ y al final vuelve a subir a $6\,\mathrm{kg/m}$.
+
+No hay una única densidad que podamos multiplicar por $4\,\mathrm{m}$. Repetimos la estrategia anterior: dividimos el alambre en trozos tan pequeños que, dentro de cada uno, la densidad apenas cambia. En el dibujo, cada trozo da lugar a un rectángulo estrecho cuya área aproxima su masa. Con más rectángulos y más estrechos, la suma de sus áreas se aproxima mejor a la masa total; al pasar al límite obtenemos una **integral definida**.
+
+Un trocito de longitud $dx$ situado en la posición $x$ tiene una masa aproximada de $\rho(x)\,dx$. La integral suma las aportaciones de todos esos trocitos desde $x=0$ hasta $x=4$:
+$$M=\int_0^4\left(x^3-6x^2+9x+2\right)\,dx.$$
+Dejamos el cálculo indicado: ahora lo importante es entender **qué está sumando** la integral.
+
+![integral-definida-alambre-densidad.png\|1100](/img/user/imagenes/integral-definida-alambre-densidad.png)
+
+**¿Por qué aparece un área?** En el dibujo, la longitud se representa en horizontal y la densidad en vertical. Por tanto,
+$$\text{longitud}\times\text{densidad}=\text{base}\times\text{altura}=\text{área}.$$
+En la primera etapa hay un solo rectángulo; en la segunda, sumamos tres rectángulos; en la tercera, sumamos muchos rectángulos estrechos y después hacemos tender su anchura a cero. Aunque lo representamos como un área, sus unidades son $\mathrm{m}\cdot(\mathrm{kg/m})=\mathrm{kg}$ y, por eso, sigue representando una masa.
+
+**La idea general.** Para un alambre situado entre $x=a$ y $x=b$, con densidad $\rho(x)$, procedemos igual: lo dividimos en trozos de longitudes $\Delta x_i$, elegimos un punto $x_i^*$ en cada trozo y aproximamos su masa por $\rho(x_i^*)\Delta x_i$. Al refinar la división obtenemos
+$$M=\lim_{\max \Delta x_i\to 0}\sum_{i=1}^{n}\rho(x_i^*)\Delta x_i=\int_a^b\rho(x)\,dx.$$
+La integral definida es, por tanto, una manera de **sumar las aportaciones de una cantidad que cambia de punto a punto**.
+
+**Otros ejemplos en náutica**
+
+- **Distancia recorrida.** Si la corredera indica una velocidad variable $v(t)$, la distancia es $d=\int_{t_1}^{t_2}v(t)\,dt$: sumamos las distancias recorridas en pequeños intervalos de tiempo.
+- **Combustible consumido.** Si $c(t)$ es el consumo instantáneo en $\mathrm{L/h}$, el total gastado es $C=\int_{t_1}^{t_2}c(t)\,dt$. Esto permite estimar el combustible necesario y la autonomía de la embarcación.
+- **Volumen de desplazamiento.** Si $A_s(x)$ es el área sumergida de cada sección del casco, $V=\int_0^L A_s(x)\,dx$ suma los volúmenes de finas rodajas a lo largo de la eslora. Multiplicando $V$ por $\rho_{\text{agua}}$ obtenemos la masa de agua desplazada.
 
 **Integral de Riemann**
 

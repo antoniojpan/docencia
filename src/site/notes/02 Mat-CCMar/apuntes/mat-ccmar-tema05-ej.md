@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05-ej/","created":"2026-11-17T10:46:13.282+01:00","updated":"2026-11-17T10:46:01.864+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/02-mat-cc-mar/apuntes/mat-ccmar-tema05-ej/","created":"2026-11-17T10:46:13.282+01:00","updated":"2026-11-19T10:30:03.819+01:00","dg-note-properties":{}}
 ---
 
 [[02 Mat-CCMar/mat-ccmar-indice\|Volver al índice]]
@@ -41,11 +41,10 @@
 > [!question] Ejercicio 4
 > La densidad de una bola de metal centrada en el origen es $\rho(x,y,z)=ke^{-(x^{2}+y^{2}+z^{2})}$, con $k$ constante positiva.
 >
-> **(a)** ¿En qué dirección crece la densidad más rápidamente a partir de $(x,y,z)$?
+> **(a)** ¿En qué dirección crece la densidad más rápidamente a partir de $(1,1,2)$?
 >
 > **(b)** ¿Y en qué dirección decrece más rápidamente?
->
-> **(c)** ¿Cuáles son las derivadas direccionales de la densidad en las direcciones $\vec i$, $\vec j$ y $\vec k$?
+
 
 > [!question] Ejercicio 5
 > **(a)** Sea $h(x,y)=2e^{-x^{2}}+e^{-3y^{2}}$ la altura de una montaña en la posición $(x,y)$. ¿En qué dirección desde $(1,0)$ se debe caminar para escalar lo más rápido posible?
@@ -68,7 +67,9 @@
 > **(f)** $\mathbf{f}(x, y) = (x^y, \; y^x)$
 
 > [!question] Ejercicio 7
-> Calcula el rotacional de las funciones **(a)**, **(c)** y **(e)** del Ejercicio 6.
+> Calcula el rotacional de las funciones del Ejercicio 6.
+> Si representan flujos de agua, cuál es el eje de giro en el punto $P=(0,1,0)$ o $P=(0,1)$ (según la dimensión)?
+
 
 > [!question] Ejercicio 8
 > Para las siguientes curvas, calcula el vector tangente $\mathbf{g}'(t)$, el vector tangente unitario $\mathbf{T}(t)$ y la recta tangente en el punto indicado. Indica también si la curva es regular.
