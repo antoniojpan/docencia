@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-11-16T16:03:16.001+01:00","updated":"2026-11-16T16:03:03.296+01:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/01-calculo-naut/apuntes/calc-naut-tema03-ej/","created":"2026-11-16T16:03:16.001+01:00","updated":"2026-11-23T11:42:43.430+01:00","dg-note-properties":{}}
 ---
 
 [[01 Calculo-Naut/calc-naut-indice\|volver al índice]]
 # Hoja de Ejercicios Tema 3: Derivación en Varias Variables
 
-## 1. Funciones de varias variables
+
 
 > [!question] Problema 1
 > Describe el tipo de función (campo escalar, curva parametrizada o campo vectorial) y qué representa:
@@ -21,7 +21,7 @@
 > [!question] Problema 2
 > Para $f(x,y)=x^2+y^2$, dibuja las curvas de nivel $f=1$, $f=4$ y $f=9$ e indica qué forma tienen.
 
-## 3. Derivadas parciales y diferenciabilidad
+
 
 > [!question] Problema 3
 > Calcula las derivadas parciales que se indican:
@@ -52,7 +52,7 @@
 >
 > **(c)** $f(x,y)=\sqrt{x^{2}+y^{2}}$ en $(x_0,y_0)=(1,1/2)$
 
-## 4. Gradiente y derivada direccional
+
 
 > [!question] Problema 5
 > Calcula el gradiente de las funciones del Problema 3.
@@ -136,7 +136,7 @@
 >
 > **(d)** ¿En qué dirección debemos movernos para bajar lo más rápido posible?
 
-## 5. Operadores diferenciales y curvas
+
 
 > [!question] Problema 15
 > Calcula la divergencia de las siguientes funciones:
@@ -189,7 +189,7 @@
 >
 > **(c)** ¿Es constante la rapidez aunque cambie el vector velocidad? 
 
-## 6. Optimización
+
 
 > [!question] Problema 20
 > Clasifica los puntos críticos de las siguientes funciones mediante el Hessiano:
